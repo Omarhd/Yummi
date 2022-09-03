@@ -16,6 +16,20 @@
 		4C9EA42228C3A83F0053FE38 /* YummiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA42128C3A83F0053FE38 /* YummiTests.swift */; };
 		4C9EA42C28C3A83F0053FE38 /* YummiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA42B28C3A83F0053FE38 /* YummiUITests.swift */; };
 		4C9EA42E28C3A83F0053FE38 /* YummiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA42D28C3A83F0053FE38 /* YummiUITestsLaunchTests.swift */; };
+		4C9EA44428C3A97E0053FE38 /* AuthFeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA44328C3A97E0053FE38 /* AuthFeeds.swift */; };
+		4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA44528C3A9930053FE38 /* AuthClient.swift */; };
+		4C9EA44928C3A9B10053FE38 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA44828C3A9B10053FE38 /* Results.swift */; };
+		4C9EA44B28C3A9CB0053FE38 /* APiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA44A28C3A9CB0053FE38 /* APiClient.swift */; };
+		4C9EA44D28C3A9E00053FE38 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA44C28C3A9E00053FE38 /* HTTPMethods.swift */; };
+		4C9EA44F28C3A9F00053FE38 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA44E28C3A9F00053FE38 /* HTTPHeaders.swift */; };
+		4C9EA45128C3A9FE0053FE38 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA45028C3A9FE0053FE38 /* EndPoints.swift */; };
+		4C9EA45328C3AA0B0053FE38 /* APiErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA45228C3AA0B0053FE38 /* APiErrors.swift */; };
+		4C9EA45528C3AAAE0053FE38 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA45428C3AAAE0053FE38 /* AppManager.swift */; };
+		4C9EA45728C3AABB0053FE38 /* Utitlites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA45628C3AABB0053FE38 /* Utitlites.swift */; };
+		4C9EA45928C3AB390053FE38 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA45828C3AB390053FE38 /* Bundle.swift */; };
+		4C9EA45B28C3AB490053FE38 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA45A28C3AB490053FE38 /* Vibration.swift */; };
+		4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA45C28C3AB600053FE38 /* StringLocalization.swift */; };
+		4C9EA46128C3ABDD0053FE38 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA46028C3ABDD0053FE38 /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,20 @@
 		4C9EA42728C3A83F0053FE38 /* YummiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YummiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9EA42B28C3A83F0053FE38 /* YummiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITests.swift; sourceTree = "<group>"; };
 		4C9EA42D28C3A83F0053FE38 /* YummiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C9EA44328C3A97E0053FE38 /* AuthFeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFeeds.swift; sourceTree = "<group>"; };
+		4C9EA44528C3A9930053FE38 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
+		4C9EA44828C3A9B10053FE38 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		4C9EA44A28C3A9CB0053FE38 /* APiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APiClient.swift; sourceTree = "<group>"; };
+		4C9EA44C28C3A9E00053FE38 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		4C9EA44E28C3A9F00053FE38 /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
+		4C9EA45028C3A9FE0053FE38 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		4C9EA45228C3AA0B0053FE38 /* APiErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APiErrors.swift; sourceTree = "<group>"; };
+		4C9EA45428C3AAAE0053FE38 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		4C9EA45628C3AABB0053FE38 /* Utitlites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utitlites.swift; sourceTree = "<group>"; };
+		4C9EA45828C3AB390053FE38 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		4C9EA45A28C3AB490053FE38 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
+		4C9EA45C28C3AB600053FE38 /* StringLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLocalization.swift; sourceTree = "<group>"; };
+		4C9EA46028C3ABDD0053FE38 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +127,16 @@
 		4C9EA40928C3A83B0053FE38 /* Yummi */ = {
 			isa = PBXGroup;
 			children = (
-				4C9EA40A28C3A83B0053FE38 /* AppDelegate.swift */,
-				4C9EA40C28C3A83B0053FE38 /* SceneDelegate.swift */,
-				4C9EA40E28C3A83B0053FE38 /* ViewController.swift */,
-				4C9EA41028C3A83B0053FE38 /* Main.storyboard */,
+				4C9EA45F28C3ABCB0053FE38 /* Common */,
+				4C9EA44028C3A9430053FE38 /* Localizations */,
+				4C9EA43F28C3A9270053FE38 /* Utilit */,
+				4C9EA43E28C3A90B0053FE38 /* Configurations */,
+				4C9EA43D28C3A8B70053FE38 /* Networking */,
+				4C9EA43C28C3A8A30053FE38 /* Extensions */,
+				4C9EA43A28C3A85A0053FE38 /* App */,
+				4C9EA43B28C3A8820053FE38 /* Scenes */,
+				4C9EA45E28C3ABA90053FE38 /* StoryBoards */,
 				4C9EA41328C3A83F0053FE38 /* Assets.xcassets */,
-				4C9EA41528C3A83F0053FE38 /* LaunchScreen.storyboard */,
 				4C9EA41828C3A83F0053FE38 /* Info.plist */,
 			);
 			path = Yummi;
@@ -125,6 +157,112 @@
 				4C9EA42D28C3A83F0053FE38 /* YummiUITestsLaunchTests.swift */,
 			);
 			path = YummiUITests;
+			sourceTree = "<group>";
+		};
+		4C9EA43A28C3A85A0053FE38 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA40A28C3A83B0053FE38 /* AppDelegate.swift */,
+				4C9EA40C28C3A83B0053FE38 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4C9EA43B28C3A8820053FE38 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA40E28C3A83B0053FE38 /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4C9EA43C28C3A8A30053FE38 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA45828C3AB390053FE38 /* Bundle.swift */,
+				4C9EA45A28C3AB490053FE38 /* Vibration.swift */,
+				4C9EA45C28C3AB600053FE38 /* StringLocalization.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C9EA43D28C3A8B70053FE38 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA44228C3A9640053FE38 /* APis */,
+				4C9EA44128C3A95A0053FE38 /* Core */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4C9EA43E28C3A90B0053FE38 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		4C9EA43F28C3A9270053FE38 /* Utilit */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA45428C3AAAE0053FE38 /* AppManager.swift */,
+				4C9EA45628C3AABB0053FE38 /* Utitlites.swift */,
+			);
+			path = Utilit;
+			sourceTree = "<group>";
+		};
+		4C9EA44028C3A9430053FE38 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		4C9EA44128C3A95A0053FE38 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA44828C3A9B10053FE38 /* Results.swift */,
+				4C9EA44A28C3A9CB0053FE38 /* APiClient.swift */,
+				4C9EA44C28C3A9E00053FE38 /* HTTPMethods.swift */,
+				4C9EA44E28C3A9F00053FE38 /* HTTPHeaders.swift */,
+				4C9EA45028C3A9FE0053FE38 /* EndPoints.swift */,
+				4C9EA45228C3AA0B0053FE38 /* APiErrors.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4C9EA44228C3A9640053FE38 /* APis */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA44728C3A9980053FE38 /* Auth */,
+			);
+			path = APis;
+			sourceTree = "<group>";
+		};
+		4C9EA44728C3A9980053FE38 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA44328C3A97E0053FE38 /* AuthFeeds.swift */,
+				4C9EA44528C3A9930053FE38 /* AuthClient.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		4C9EA45E28C3ABA90053FE38 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA41528C3A83F0053FE38 /* LaunchScreen.storyboard */,
+				4C9EA41028C3A83B0053FE38 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		4C9EA45F28C3ABCB0053FE38 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA46028C3ABDD0053FE38 /* Global.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +396,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9EA44F28C3A9F00053FE38 /* HTTPHeaders.swift in Sources */,
+				4C9EA45928C3AB390053FE38 /* Bundle.swift in Sources */,
+				4C9EA44D28C3A9E00053FE38 /* HTTPMethods.swift in Sources */,
+				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
+				4C9EA44928C3A9B10053FE38 /* Results.swift in Sources */,
+				4C9EA45528C3AAAE0053FE38 /* AppManager.swift in Sources */,
+				4C9EA45328C3AA0B0053FE38 /* APiErrors.swift in Sources */,
 				4C9EA40F28C3A83B0053FE38 /* ViewController.swift in Sources */,
+				4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */,
 				4C9EA40B28C3A83B0053FE38 /* AppDelegate.swift in Sources */,
+				4C9EA45728C3AABB0053FE38 /* Utitlites.swift in Sources */,
+				4C9EA45128C3A9FE0053FE38 /* EndPoints.swift in Sources */,
 				4C9EA40D28C3A83B0053FE38 /* SceneDelegate.swift in Sources */,
+				4C9EA45B28C3AB490053FE38 /* Vibration.swift in Sources */,
+				4C9EA44428C3A97E0053FE38 /* AuthFeeds.swift in Sources */,
+				4C9EA44B28C3A9CB0053FE38 /* APiClient.swift in Sources */,
+				4C9EA46128C3ABDD0053FE38 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,6 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
@@ -445,6 +598,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -465,6 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
@@ -473,6 +628,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
