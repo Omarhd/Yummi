@@ -35,6 +35,7 @@
 		4C9EA46A28C3B54D0053FE38 /* UIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA46928C3B54D0053FE38 /* UIViews.swift */; };
 		4C9EA46C28C3B66A0053FE38 /* StaticDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA46B28C3B66A0053FE38 /* StaticDataModel.swift */; };
 		4C9EA46F28C3B8990053FE38 /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA46E28C3B8990053FE38 /* SlideCollectionViewCell.swift */; };
+		4C9EA47628C3D48F0053FE38 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA47528C3D48F0053FE38 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,9 @@
 		4C9EA46928C3B54D0053FE38 /* UIViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViews.swift; sourceTree = "<group>"; };
 		4C9EA46B28C3B66A0053FE38 /* StaticDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDataModel.swift; sourceTree = "<group>"; };
 		4C9EA46E28C3B8990053FE38 /* SlideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionViewCell.swift; sourceTree = "<group>"; };
+		4C9EA47528C3D48F0053FE38 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		4C9EA47728C3D4E40053FE38 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		4C9EA47828C3D4F80053FE38 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				4C9EA46428C3B23F0053FE38 /* OnBoarding */,
-				4C9EA40E28C3A83B0053FE38 /* HomeViewController.swift */,
+				4C9EA47928C3D6950053FE38 /* Home */,
+				4C9EA47B28C3D6AB0053FE38 /* Settings */,
+				4C9EA47A28C3D6A00053FE38 /* Notifications */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -210,6 +216,9 @@
 		4C9EA43E28C3A90B0053FE38 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				4C9EA47528C3D48F0053FE38 /* Configuration.swift */,
+				4C9EA47728C3D4E40053FE38 /* Staging.xcconfig */,
+				4C9EA47828C3D4F80053FE38 /* Release.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -318,6 +327,28 @@
 				4C9EA46728C3B29B0053FE38 /* OnBoardingViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4C9EA47928C3D6950053FE38 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA40E28C3A83B0053FE38 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4C9EA47A28C3D6A00053FE38 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		4C9EA47B28C3D6AB0053FE38 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,6 +493,7 @@
 				4C9EA45328C3AA0B0053FE38 /* APiErrors.swift in Sources */,
 				4C9EA40F28C3A83B0053FE38 /* HomeViewController.swift in Sources */,
 				4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */,
+				4C9EA47628C3D48F0053FE38 /* Configuration.swift in Sources */,
 				4C9EA40B28C3A83B0053FE38 /* AppDelegate.swift in Sources */,
 				4C9EA45728C3AABB0053FE38 /* Utitlites.swift in Sources */,
 				4C9EA46C28C3B66A0053FE38 /* StaticDataModel.swift in Sources */,
@@ -780,6 +812,135 @@
 			};
 			name = Release;
 		};
+		4C9EA47128C3D3EC0053FE38 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Staging;
+		};
+		4C9EA47228C3D3EC0053FE38 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Yummi/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.Yummi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+		4C9EA47328C3D3EC0053FE38 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.YummiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yummi.app/Yummi";
+			};
+			name = Staging;
+		};
+		4C9EA47428C3D3EC0053FE38 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.YummiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Yummi;
+			};
+			name = Staging;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -787,37 +948,41 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C9EA42F28C3A83F0053FE38 /* Debug */,
+				4C9EA47128C3D3EC0053FE38 /* Staging */,
 				4C9EA43028C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Staging;
 		};
 		4C9EA43128C3A83F0053FE38 /* Build configuration list for PBXNativeTarget "Yummi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C9EA43228C3A83F0053FE38 /* Debug */,
+				4C9EA47228C3D3EC0053FE38 /* Staging */,
 				4C9EA43328C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Staging;
 		};
 		4C9EA43428C3A83F0053FE38 /* Build configuration list for PBXNativeTarget "YummiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C9EA43528C3A83F0053FE38 /* Debug */,
+				4C9EA47328C3D3EC0053FE38 /* Staging */,
 				4C9EA43628C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Staging;
 		};
 		4C9EA43728C3A83F0053FE38 /* Build configuration list for PBXNativeTarget "YummiUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C9EA43828C3A83F0053FE38 /* Debug */,
+				4C9EA47428C3D3EC0053FE38 /* Staging */,
 				4C9EA43928C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Staging;
 		};
 /* End XCConfigurationList section */
 	};

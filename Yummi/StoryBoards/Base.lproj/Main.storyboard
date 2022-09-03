@@ -21,11 +21,24 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="🏡 Home" largeTitleDisplayMode="always" id="wSn-Zl-Gmm"/>
+                    <navigationItem key="navigationItem" title="🏡 Home" largeTitleDisplayMode="always" id="wSn-Zl-Gmm">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="pJy-el-jSO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xsN-SH-lKx">
+                                <rect key="frame" x="302" y="5" width="92" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="bag.fill" catalog="system" symbolScale="large"/>
+                                    <attributedString key="attributedTitle"/>
+                                </buttonConfiguration>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1670" y="-962"/>
+            <point key="canvasLocation" x="1670" y="-881"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kn8-Io-YiN">
@@ -89,7 +102,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DoF-3L-DM6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="-962"/>
+            <point key="canvasLocation" x="880" y="-881"/>
         </scene>
         <!--Alerts-->
         <scene sceneID="zqJ-AZ-SAR">
@@ -290,7 +303,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ3-O6-czF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1789.8550724637682" y="434.59821428571428"/>
+            <point key="canvasLocation" x="1670" y="435"/>
         </scene>
         <!--Settings-->
         <scene sceneID="XNr-gK-wfi">
@@ -299,7 +312,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="slider.horizontal.3" catalog="system" id="IGe-NL-uYJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Sy4-kb-F3J">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="99.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
@@ -320,6 +333,7 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
         <image name="bell.circle.fill" catalog="system" width="128" height="121"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="house.circle.fill" catalog="system" width="128" height="121"/>

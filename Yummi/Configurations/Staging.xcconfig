@@ -1,0 +1,17 @@
+//
+//  Staging.xcconfig
+//  Yummi
+//
+//  Created by Omar Abdulrahman on 03/09/2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+FIREBASE_GOOGLE_SERVICE_INFO_PLIST_FILENAME = Debug/GoogleService-Info
+
+SLASH = /
+STORE_TYPE = STAGING
+
+BASE_URL = http:$(SLASH)/138.68.83.187:3002/api
+AUTH_BASE_URL = http:$(SLASH)/138.68.83.187:4141/api
