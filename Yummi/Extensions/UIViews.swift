@@ -13,3 +13,24 @@ extension UIView {
         set { self.layer.cornerRadius = newValue}
     }
 }
+
+class CardView: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initailSetup()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        initailSetup()
+    }
+    
+    private func initailSetup() {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = .zero
+        layer.cornerRadius = 8
+        layer.shadowOpacity = 0.1
+        cornerRadius = 8
+    }
+}
