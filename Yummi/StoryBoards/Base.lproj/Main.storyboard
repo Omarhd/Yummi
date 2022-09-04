@@ -274,10 +274,10 @@
                     <tabBarItem key="tabBarItem" title="Alerts" image="bell.circle.fill" catalog="system" id="LMk-hu-6VE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="CYA-lk-bL0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="100.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -475,13 +475,13 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="slider.horizontal.3" catalog="system" id="IGe-NL-uYJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Sy4-kb-F3J">
-                        <rect key="frame" x="0.0" y="44" width="414" height="99.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="28"/>
+                            <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="22"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
