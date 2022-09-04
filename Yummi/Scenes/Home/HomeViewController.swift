@@ -8,9 +8,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
+    @IBOutlet weak var chefCollectionView: UICollectionView!
     
     var categories: [DishCategory] = [
         .init(id: "1", name: "Hello", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"),
@@ -19,36 +20,38 @@ class HomeViewController: UIViewController {
         .init(id: "1", name: "Hello", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60")]
     
     var dishs: [Dish] = [
-        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "any type of food"),
-        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "any type of food"),
-        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "any type of food"),
+        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"),
+        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"),
+        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"),
         .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "any type of food"),
         .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "any type of food"),
         .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "any type of food")]
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         registerNibs()
     }
     
     private func registerNibs() {
         categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifire)
-        
         popularCollectionView.register(UINib(nibName: PopularCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: PopularCollectionViewCell.identifire)
-
+        chefCollectionView.register(UINib(nibName: ChefCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: ChefCollectionViewCell.identifire)
+        
     }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-   
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case categoryCollectionView:
             return categories.count
         case popularCollectionView:
+            return dishs.count
+        case chefCollectionView:
             return dishs.count
         default:
             return 0
@@ -69,56 +72,81 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             return cell
             
+        case chefCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChefCollectionViewCell.identifire, for: indexPath) as! ChefCollectionViewCell
+            cell.setupUI(with: dishs[indexPath.row])
+            
+            return cell
+            
         default:
             return UICollectionViewCell()
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case categoryCollectionView:
+            return
+        case popularCollectionView:
+            let detailsController =  DishesDetailsViewController.instantiate(storyBoardName: "DishesDetails")
+            detailsController.dish = self.dishs[indexPath.row]
+            
+            navigationController?.pushViewController(detailsController, animated: true)
+            
+        case chefCollectionView:
+            let detailsController =  DishesDetailsViewController.instantiate(storyBoardName: "DishesDetails")
+            detailsController.dish = self.dishs[indexPath.row]
+            
+            navigationController?.pushViewController(detailsController, animated: true)
+            
+        default: break
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        
         let index = indexPath.row
         let dish = dishs[index]
         
         let identifier = "\(index)" as NSString
-
+        
         return UIContextMenuConfiguration(
-        identifier: identifier, previewProvider: nil) { _ in
-          // 3
-          let mapAction = UIAction(title: "View map",
-                                   image: UIImage(systemName: "map")) { _ in
-//                                    self.showMap(vacationSpot: dish)
-          }
-          
-          // 4
-          let shareAction = UIAction(
-            title: "Share",
-            image: UIImage(systemName: "square.and.arrow.up")) { _ in
-//              VacationSharer.share(vacationSpot: vacationSpot, in: self)
-          }
-          
-          // 5
-          return UIMenu(title: "", image: nil,
-                        children: [mapAction, shareAction])
-        }
+            identifier: identifier, previewProvider: nil) { _ in
+                
+                let mapAction = UIAction(title: "View map",
+                                         image: UIImage(systemName: "map")) { _ in
+                    //                                    self.showMap(vacationSpot: dish)
+                }
+                
+                let shareAction = UIAction(
+                    title: "Share",
+                    image: UIImage(systemName: "square.and.arrow.up")) { _ in
+                        //              VacationSharer.share(vacationSpot: vacationSpot, in: self)
+                    }
+                
+                return UIMenu(title: "", image: nil,
+                              children: [mapAction, shareAction])
+            }
     }
     
     func collectionView(_ collectionView: UICollectionView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
         switch collectionView {
         case categoryCollectionView:
             guard let identifier = configuration.identifier as? String,
-              let index = Int(identifier),
-              let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0))
-                as? CategoryCollectionViewCell
-              else {
+                  let index = Int(identifier),
+                  let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0))
+                    as? CategoryCollectionViewCell
+            else {
                 return nil
             }
             return UITargetedPreview(view: cell)
             
         case popularCollectionView:
             guard let identifier = configuration.identifier as? String,
-              let index = Int(identifier),
-              let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0))
-                as? PopularCollectionViewCell
-              else {
+                  let index = Int(identifier),
+                  let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0))
+                    as? PopularCollectionViewCell
+            else {
                 return nil
             }
             return UITargetedPreview(view: cell.dishIamge)
@@ -129,9 +157,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating) {
         guard
-          let identifier = configuration.identifier as? String,
-          let index = Int(identifier)
-          else {
+            let identifier = configuration.identifier as? String,
+            let index = Int(identifier)
+        else {
             return
         }
         
@@ -140,8 +168,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         // 3
         animator.addCompletion {
-          self.performSegue(withIdentifier: "showSpotInfoViewController",
-                            sender: cell)
+            self.performSegue(withIdentifier: "showSpotInfoViewController",
+                              sender: cell)
         }
     }
 }

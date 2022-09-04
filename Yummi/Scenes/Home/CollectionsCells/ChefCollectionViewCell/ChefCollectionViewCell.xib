@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChefCollectionViewCell" id="gTV-IL-0wX" customClass="ChefCollectionViewCell" customModule="Yummi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMH-nl-mFE" customClass="CardView" customModule="Yummi" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDP-pU-AFA">
+                                <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="UkV-zb-mXG"/>
+                                    <constraint firstAttribute="height" constant="64" id="ckO-ee-GmC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ngM-XB-Fah">
+                                <rect key="frame" x="80" y="16" width="242" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlP-Co-qe4">
+                                        <rect key="frame" x="0.0" y="0.0" width="242" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McU-vl-vJO">
+                                        <rect key="frame" x="0.0" y="16.5" width="242" height="15"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vns-bh-66d">
+                                        <rect key="frame" x="0.0" y="33.5" width="242" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" name="AppColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Cells"/>
+                        <constraints>
+                            <constraint firstItem="uDP-pU-AFA" firstAttribute="top" secondItem="RMH-nl-mFE" secondAttribute="top" constant="8" id="6DY-oo-n66"/>
+                            <constraint firstItem="ngM-XB-Fah" firstAttribute="leading" secondItem="uDP-pU-AFA" secondAttribute="trailing" constant="8" symbolic="YES" id="NUE-MZ-1pQ"/>
+                            <constraint firstAttribute="bottom" secondItem="uDP-pU-AFA" secondAttribute="bottom" constant="8" id="Rue-yF-Y5v"/>
+                            <constraint firstItem="ngM-XB-Fah" firstAttribute="top" secondItem="RMH-nl-mFE" secondAttribute="top" constant="16" id="at8-JD-2Zx"/>
+                            <constraint firstAttribute="width" constant="330" id="byt-Zc-YpI"/>
+                            <constraint firstItem="uDP-pU-AFA" firstAttribute="leading" secondItem="RMH-nl-mFE" secondAttribute="leading" constant="8" id="ipI-0H-doc"/>
+                            <constraint firstAttribute="trailing" secondItem="ngM-XB-Fah" secondAttribute="trailing" constant="8" id="jox-sM-2R1"/>
+                            <constraint firstAttribute="bottom" secondItem="ngM-XB-Fah" secondAttribute="bottom" constant="16" id="q5s-SH-A9l"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="RMH-nl-mFE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1eN-J1-TQG"/>
+                <constraint firstAttribute="trailing" secondItem="RMH-nl-mFE" secondAttribute="trailing" id="MaG-J8-E50"/>
+                <constraint firstAttribute="bottom" secondItem="RMH-nl-mFE" secondAttribute="bottom" id="opY-W0-RfL"/>
+                <constraint firstItem="RMH-nl-mFE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tkR-lA-ses"/>
+            </constraints>
+            <size key="customSize" width="330" height="88"/>
+            <connections>
+                <outlet property="caloriesLabel" destination="vns-bh-66d" id="O9F-yI-lTn"/>
+                <outlet property="descriptionLabel" destination="McU-vl-vJO" id="im6-TY-5a7"/>
+                <outlet property="imageView" destination="uDP-pU-AFA" id="fum-Y7-OGm"/>
+                <outlet property="titleLabel" destination="ZlP-Co-qe4" id="eT0-Ej-6aQ"/>
+            </connections>
+            <point key="canvasLocation" x="28.985507246376812" y="99.776785714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppColor">
+            <color red="0.62699997425079346" green="0.0" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Cells">
+            <color red="0.94900000095367432" green="0.94999998807907104" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
