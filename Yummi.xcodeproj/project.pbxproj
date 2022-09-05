@@ -12,6 +12,11 @@
 		4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C98229228C5448900C4D4F5 /* Cart.storyboard */; };
 		4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229528C5450D00C4D4F5 /* CartViewController.swift */; };
 		4C98229828C55EC800C4D4F5 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229728C55EC800C4D4F5 /* NotificationsTableViewController.swift */; };
+		4C98229A28C635E400C4D4F5 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C98229928C635E400C4D4F5 /* Auth.storyboard */; };
+		4C98229D28C6362C00C4D4F5 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229C28C6362C00C4D4F5 /* AuthViewController.swift */; };
+		4C98229F28C63A5700C4D4F5 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229E28C63A5700C4D4F5 /* KeychainPasswordItem.swift */; };
+		4C9822A128C63CEE00C4D4F5 /* TouchIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822A028C63CEE00C4D4F5 /* TouchIDAuthentication.swift */; };
+		4C9822A428C6425400C4D4F5 /* Auth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822A228C6425400C4D4F5 /* Auth.xcdatamodeld */; };
 		4C9EA40B28C3A83B0053FE38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA40A28C3A83B0053FE38 /* AppDelegate.swift */; };
 		4C9EA40D28C3A83B0053FE38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA40C28C3A83B0053FE38 /* SceneDelegate.swift */; };
 		4C9EA40F28C3A83B0053FE38 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA40E28C3A83B0053FE38 /* HomeViewController.swift */; };
@@ -83,6 +88,11 @@
 		4C98229228C5448900C4D4F5 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		4C98229528C5450D00C4D4F5 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		4C98229728C55EC800C4D4F5 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
+		4C98229928C635E400C4D4F5 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		4C98229C28C6362C00C4D4F5 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		4C98229E28C63A5700C4D4F5 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
+		4C9822A028C63CEE00C4D4F5 /* TouchIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDAuthentication.swift; sourceTree = "<group>"; };
+		4C9822A328C6425400C4D4F5 /* Auth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Auth.xcdatamodel; sourceTree = "<group>"; };
 		4C9EA40728C3A83B0053FE38 /* Yummi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9EA40A28C3A83B0053FE38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C9EA40C28C3A83B0053FE38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +192,16 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		4C98229B28C6361500C4D4F5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				4C98229C28C6362C00C4D4F5 /* AuthViewController.swift */,
+				4C98229E28C63A5700C4D4F5 /* KeychainPasswordItem.swift */,
+				4C9822A028C63CEE00C4D4F5 /* TouchIDAuthentication.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		4C9EA3FE28C3A83B0053FE38 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +238,7 @@
 				4C9EA45E28C3ABA90053FE38 /* StoryBoards */,
 				4C9EA41328C3A83F0053FE38 /* Assets.xcassets */,
 				4C9EA41828C3A83F0053FE38 /* Info.plist */,
+				4C9822A228C6425400C4D4F5 /* Auth.xcdatamodeld */,
 			);
 			path = Yummi;
 			sourceTree = "<group>";
@@ -251,6 +272,7 @@
 		4C9EA43B28C3A8820053FE38 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4C98229B28C6361500C4D4F5 /* Auth */,
 				4C98229428C544F900C4D4F5 /* Cart */,
 				4C98228D28C4D37200C4D4F5 /* DishesDetails */,
 				4C9EA46428C3B23F0053FE38 /* OnBoarding */,
@@ -347,6 +369,7 @@
 				4C9EA46228C3AF600053FE38 /* OnBoarding.storyboard */,
 				4C9EA49328C4D0350053FE38 /* DishesDetails.storyboard */,
 				4C98229228C5448900C4D4F5 /* Cart.storyboard */,
+				4C98229928C635E400C4D4F5 /* Auth.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -601,6 +624,7 @@
 			files = (
 				4C9EA41728C3A83F0053FE38 /* LaunchScreen.storyboard in Resources */,
 				4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */,
+				4C98229A28C635E400C4D4F5 /* Auth.storyboard in Resources */,
 				4C9EA48128C403610053FE38 /* CategoryCollectionViewCell.xib in Resources */,
 				4C9EA41428C3A83F0053FE38 /* Assets.xcassets in Resources */,
 				4C9EA49228C4C8830053FE38 /* ChefCollectionViewCell.xib in Resources */,
@@ -742,11 +766,13 @@
 				4C9EA44D28C3A9E00053FE38 /* HTTPMethods.swift in Sources */,
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,
 				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
+				4C98229F28C63A5700C4D4F5 /* KeychainPasswordItem.swift in Sources */,
 				4C9EA44928C3A9B10053FE38 /* Results.swift in Sources */,
 				4C9EA45528C3AAAE0053FE38 /* AppManager.swift in Sources */,
 				4C9EA45328C3AA0B0053FE38 /* APiErrors.swift in Sources */,
 				4C9EA40F28C3A83B0053FE38 /* HomeViewController.swift in Sources */,
 				4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */,
+				4C9822A128C63CEE00C4D4F5 /* TouchIDAuthentication.swift in Sources */,
 				4C9EA47628C3D48F0053FE38 /* Configuration.swift in Sources */,
 				4C9EA48528C404E60053FE38 /* CategoryPresenter.swift in Sources */,
 				4C9EA40B28C3A83B0053FE38 /* AppDelegate.swift in Sources */,
@@ -756,7 +782,9 @@
 				4C98229128C5372C00C4D4F5 /* ViewControllerNavigators.swift in Sources */,
 				4C9EA46C28C3B66A0053FE38 /* StaticDataModel.swift in Sources */,
 				4C9EA49128C4C8830053FE38 /* ChefCollectionViewCell.swift in Sources */,
+				4C9822A428C6425400C4D4F5 /* Auth.xcdatamodeld in Sources */,
 				4C9EA45128C3A9FE0053FE38 /* EndPoints.swift in Sources */,
+				4C98229D28C6362C00C4D4F5 /* AuthViewController.swift in Sources */,
 				4C9EA40D28C3A83B0053FE38 /* SceneDelegate.swift in Sources */,
 				4C9EA48028C403610053FE38 /* CategoryCollectionViewCell.swift in Sources */,
 				4C9EA45B28C3AB490053FE38 /* Vibration.swift in Sources */,
@@ -1256,6 +1284,19 @@
 			defaultConfigurationName = Staging;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C9822A228C6425400C4D4F5 /* Auth.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C9822A328C6425400C4D4F5 /* Auth.xcdatamodel */,
+			);
+			currentVersion = 4C9822A328C6425400C4D4F5 /* Auth.xcdatamodel */;
+			path = Auth.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4C9EA3FF28C3A83B0053FE38 /* Project object */;
 }
