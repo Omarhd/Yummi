@@ -86,7 +86,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="DDD-Eo-CLu">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="DDD-Eo-CLu">
                                                 <rect key="frame" x="50" y="1" width="94" height="32"/>
                                                 <color key="tintColor" name="AccentColor"/>
                                                 <connections>
@@ -197,7 +197,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cVZ-RB-phv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mGt-dK-Nhu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

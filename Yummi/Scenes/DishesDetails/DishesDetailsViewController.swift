@@ -30,12 +30,12 @@ class DishesDetailsViewController: UIViewController {
         setupUI(with: self.dish)
         setupCartUI()
     }
-    @IBAction func stepper(_ sender: Any) {
-        itemCount += 1
-        self.dishCountLabel.text = "\(self.itemCount)"
+    @IBAction func stepper(_ sender: UIStepper) {
+        self.dishCountLabel.text = Int(sender.value).description
+        itemPrice = self.itemPrice * Int(sender.value)
         
-        itemPrice += itemPrice
-        self.dishPriceLabel.text = "\(self.itemPrice)"
+        self.dishPriceLabel.text = "\(itemPrice)"
+        itemPrice = 2000
     }
     
     @IBAction func addItemToCart(_ sender: Any) {
