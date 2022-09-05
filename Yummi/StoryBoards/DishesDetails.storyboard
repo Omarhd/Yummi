@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -124,7 +123,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                                                     <constraint firstAttribute="width" constant="40" id="LxF-Fs-GvD"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                                <color key="textColor" systemColor="systemGreenColor"/>
+                                                <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -144,8 +143,8 @@ I have an array of objects and I want to filter them by two conditions, either i
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
-                            <constraint firstItem="1mo-vP-3zx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="A77-ri-0Ud"/>
-                            <constraint firstItem="1mo-vP-3zx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="FYK-90-nUa"/>
+                            <constraint firstItem="1mo-vP-3zx" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="A77-ri-0Ud"/>
+                            <constraint firstItem="1mo-vP-3zx" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="FYK-90-nUa"/>
                             <constraint firstItem="KOh-2A-XBq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="HYZ-Uc-DJX"/>
                             <constraint firstItem="vfs-pL-qAN" firstAttribute="top" secondItem="1mo-vP-3zx" secondAttribute="bottom" constant="16" id="UIK-CG-Rq5"/>
                             <constraint firstItem="vfs-pL-qAN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="W9R-dx-x4h"/>
@@ -164,7 +163,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qwn-lZ-ym1">
                                 <rect key="frame" x="266" y="0.0" width="128" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="linkColor"/>
+                                <color key="tintColor" name="AccentColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="bag.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" scale="large" weight="regular"/>
@@ -197,7 +196,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cVZ-RB-phv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mGt-dK-Nhu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -224,11 +223,5 @@ I have an array of objects and I want to filter them by two conditions, either i
         <namedColor name="Cells">
             <color red="0.94900000095367432" green="0.94999998807907104" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

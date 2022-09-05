@@ -60,7 +60,7 @@ class DishesDetailsViewController: UIViewController {
     
     private func setupCartUI() {
         if cart.count == 0 {
-            cartButton.setImage(UIImage(systemName: "bag.fill"), for: .normal)
+            cartButton.setImage(UIImage(systemName: "bag.circle.fill"), for: .normal)
         } else {
             cartButton.setImage(UIImage(systemName: "bag.badge.minus"), for: .normal)
         }
