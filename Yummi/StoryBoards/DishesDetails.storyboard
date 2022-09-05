@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -190,13 +191,47 @@ I have an array of objects and I want to filter them by two conditions, either i
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="99.776785714285708"/>
         </scene>
+        <!--Category Details View Controller-->
+        <scene sceneID="We6-W7-oQF">
+            <objects>
+                <viewController storyboardIdentifier="CategoryDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sra-vT-SPL" customClass="CategoryDetailsViewController" customModule="Yummi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hG6-Ut-Drm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nB7-UN-JGE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sra-vT-SPL" id="00P-3p-a3h"/>
+                                    <outlet property="delegate" destination="sra-vT-SPL" id="7qj-Vm-hKO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SYR-gD-UL0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nB7-UN-JGE" secondAttribute="bottom" id="0xb-GY-b7H"/>
+                            <constraint firstItem="nB7-UN-JGE" firstAttribute="trailing" secondItem="SYR-gD-UL0" secondAttribute="trailing" id="UrQ-qH-pS0"/>
+                            <constraint firstItem="nB7-UN-JGE" firstAttribute="leading" secondItem="SYR-gD-UL0" secondAttribute="leading" id="Vnb-cr-C0l"/>
+                            <constraint firstItem="nB7-UN-JGE" firstAttribute="top" secondItem="hG6-Ut-Drm" secondAttribute="top" id="sAf-LJ-3S7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="nB7-UN-JGE" id="ZM5-p5-6Gz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dya-IA-u8p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1931.8840579710147" y="94.419642857142847"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ccv-Sm-gh0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cVZ-RB-phv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mGt-dK-Nhu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -223,5 +258,8 @@ I have an array of objects and I want to filter them by two conditions, either i
         <namedColor name="Cells">
             <color red="0.94900000095367432" green="0.94999998807907104" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

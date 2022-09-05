@@ -19,8 +19,13 @@ struct Dish: Codable {
     let image: String
     let calories: Double?
     let description: String
+    let price: Double?
     
     var formattedCalories: String {
         return String(format: "%.2f", calories ?? 0)
+    }
+    
+    var formattedPrice: String {
+        return String(format: "%.2f", price ?? 0)
     }
 }

@@ -17,6 +17,12 @@
 		4C98229F28C63A5700C4D4F5 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229E28C63A5700C4D4F5 /* KeychainPasswordItem.swift */; };
 		4C9822A128C63CEE00C4D4F5 /* TouchIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822A028C63CEE00C4D4F5 /* TouchIDAuthentication.swift */; };
 		4C9822A428C6425400C4D4F5 /* Auth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822A228C6425400C4D4F5 /* Auth.xcdatamodeld */; };
+		4C9822A628C6800400C4D4F5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822A528C6800400C4D4F5 /* Config.swift */; };
+		4C9822AA28C682BE00C4D4F5 /* CartItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822A828C682BE00C4D4F5 /* CartItemsTableViewCell.swift */; };
+		4C9822AB28C682BE00C4D4F5 /* CartItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9822A928C682BE00C4D4F5 /* CartItemsTableViewCell.xib */; };
+		4C9822AD28C6842E00C4D4F5 /* CategoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822AC28C6842E00C4D4F5 /* CategoryDetailsViewController.swift */; };
+		4C9822B128C6846600C4D4F5 /* CategoryDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822AF28C6846600C4D4F5 /* CategoryDetailsTableViewCell.swift */; };
+		4C9822B228C6846600C4D4F5 /* CategoryDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9822B028C6846600C4D4F5 /* CategoryDetailsTableViewCell.xib */; };
 		4C9EA40B28C3A83B0053FE38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA40A28C3A83B0053FE38 /* AppDelegate.swift */; };
 		4C9EA40D28C3A83B0053FE38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA40C28C3A83B0053FE38 /* SceneDelegate.swift */; };
 		4C9EA40F28C3A83B0053FE38 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA40E28C3A83B0053FE38 /* HomeViewController.swift */; };
@@ -93,6 +99,12 @@
 		4C98229E28C63A5700C4D4F5 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		4C9822A028C63CEE00C4D4F5 /* TouchIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDAuthentication.swift; sourceTree = "<group>"; };
 		4C9822A328C6425400C4D4F5 /* Auth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Auth.xcdatamodel; sourceTree = "<group>"; };
+		4C9822A528C6800400C4D4F5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		4C9822A828C682BE00C4D4F5 /* CartItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsTableViewCell.swift; sourceTree = "<group>"; };
+		4C9822A928C682BE00C4D4F5 /* CartItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemsTableViewCell.xib; sourceTree = "<group>"; };
+		4C9822AC28C6842E00C4D4F5 /* CategoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsViewController.swift; sourceTree = "<group>"; };
+		4C9822AF28C6846600C4D4F5 /* CategoryDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		4C9822B028C6846600C4D4F5 /* CategoryDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		4C9EA40728C3A83B0053FE38 /* Yummi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9EA40A28C3A83B0053FE38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C9EA40C28C3A83B0053FE38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,7 +191,9 @@
 		4C98228D28C4D37200C4D4F5 /* DishesDetails */ = {
 			isa = PBXGroup;
 			children = (
+				4C9822AE28C6843800C4D4F5 /* CategoryCells */,
 				4C98228E28C4D39600C4D4F5 /* DishesDetailsViewController.swift */,
+				4C9822AC28C6842E00C4D4F5 /* CategoryDetailsViewController.swift */,
 			);
 			path = DishesDetails;
 			sourceTree = "<group>";
@@ -187,6 +201,7 @@
 		4C98229428C544F900C4D4F5 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				4C9822A728C682A100C4D4F5 /* CartCells */,
 				4C98229528C5450D00C4D4F5 /* CartViewController.swift */,
 			);
 			path = Cart;
@@ -198,8 +213,27 @@
 				4C98229C28C6362C00C4D4F5 /* AuthViewController.swift */,
 				4C98229E28C63A5700C4D4F5 /* KeychainPasswordItem.swift */,
 				4C9822A028C63CEE00C4D4F5 /* TouchIDAuthentication.swift */,
+				4C9822A528C6800400C4D4F5 /* Config.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		4C9822A728C682A100C4D4F5 /* CartCells */ = {
+			isa = PBXGroup;
+			children = (
+				4C9822A828C682BE00C4D4F5 /* CartItemsTableViewCell.swift */,
+				4C9822A928C682BE00C4D4F5 /* CartItemsTableViewCell.xib */,
+			);
+			path = CartCells;
+			sourceTree = "<group>";
+		};
+		4C9822AE28C6843800C4D4F5 /* CategoryCells */ = {
+			isa = PBXGroup;
+			children = (
+				4C9822AF28C6846600C4D4F5 /* CategoryDetailsTableViewCell.swift */,
+				4C9822B028C6846600C4D4F5 /* CategoryDetailsTableViewCell.xib */,
+			);
+			path = CategoryCells;
 			sourceTree = "<group>";
 		};
 		4C9EA3FE28C3A83B0053FE38 = {
@@ -622,9 +656,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9822AB28C682BE00C4D4F5 /* CartItemsTableViewCell.xib in Resources */,
 				4C9EA41728C3A83F0053FE38 /* LaunchScreen.storyboard in Resources */,
 				4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */,
 				4C98229A28C635E400C4D4F5 /* Auth.storyboard in Resources */,
+				4C9822B228C6846600C4D4F5 /* CategoryDetailsTableViewCell.xib in Resources */,
 				4C9EA48128C403610053FE38 /* CategoryCollectionViewCell.xib in Resources */,
 				4C9EA41428C3A83F0053FE38 /* Assets.xcassets in Resources */,
 				4C9EA49228C4C8830053FE38 /* ChefCollectionViewCell.xib in Resources */,
@@ -763,6 +799,7 @@
 				4C9EA46F28C3B8990053FE38 /* SlideCollectionViewCell.swift in Sources */,
 				4C98229828C55EC800C4D4F5 /* NotificationsTableViewController.swift in Sources */,
 				4C9EA45928C3AB390053FE38 /* Bundle.swift in Sources */,
+				4C9822AD28C6842E00C4D4F5 /* CategoryDetailsViewController.swift in Sources */,
 				4C9EA44D28C3A9E00053FE38 /* HTTPMethods.swift in Sources */,
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,
 				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
@@ -770,6 +807,7 @@
 				4C9EA44928C3A9B10053FE38 /* Results.swift in Sources */,
 				4C9EA45528C3AAAE0053FE38 /* AppManager.swift in Sources */,
 				4C9EA45328C3AA0B0053FE38 /* APiErrors.swift in Sources */,
+				4C9822B128C6846600C4D4F5 /* CategoryDetailsTableViewCell.swift in Sources */,
 				4C9EA40F28C3A83B0053FE38 /* HomeViewController.swift in Sources */,
 				4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */,
 				4C9822A128C63CEE00C4D4F5 /* TouchIDAuthentication.swift in Sources */,
@@ -788,8 +826,10 @@
 				4C9EA40D28C3A83B0053FE38 /* SceneDelegate.swift in Sources */,
 				4C9EA48028C403610053FE38 /* CategoryCollectionViewCell.swift in Sources */,
 				4C9EA45B28C3AB490053FE38 /* Vibration.swift in Sources */,
+				4C9822A628C6800400C4D4F5 /* Config.swift in Sources */,
 				4C9EA44428C3A97E0053FE38 /* AuthFeeds.swift in Sources */,
 				4C9EA46828C3B29B0053FE38 /* OnBoardingViewController.swift in Sources */,
+				4C9822AA28C682BE00C4D4F5 /* CartItemsTableViewCell.swift in Sources */,
 				4C9EA48728C406AD0053FE38 /* StringURLs.swift in Sources */,
 				4C9EA44B28C3A9CB0053FE38 /* APiClient.swift in Sources */,
 				4C9EA48C28C40D860053FE38 /* PopularCollectionViewCell.swift in Sources */,

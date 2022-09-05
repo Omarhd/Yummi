@@ -9,13 +9,6 @@ import UIKit
 import LocalAuthentication
 import CoreData
 
-
-// Keychain Configuration
-struct KeychainConfiguration {
-  static let serviceName = "TouchMeIn"
-  static let accessGroup: String? = nil
-}
-
 class AuthViewController: UIViewController {
 
     // MARK: - Properties
@@ -121,21 +114,25 @@ class AuthViewController: UIViewController {
       }
     }
     
-    @IBAction func touchIDLoginAction() {
-      touchMe.authenticateUser() { [weak self] message in
-        if let message = message {
-          // if the completion is not nil show an alert
-          let alertView = UIAlertController(title: "Error",
-                                            message: message,
-                                            preferredStyle: .alert)
-          let okAction = UIAlertAction(title: "Darn!", style: .default)
-          alertView.addAction(okAction)
-          self?.present(alertView, animated: true)
-          
-        } else {
-          self?.performSegue(withIdentifier: "dismissLogin", sender: self)
+    fileprivate func doAuth() {
+        touchMe.authenticateUser() { [weak self] message in
+            if let message = message {
+                // if the completion is not nil show an alert
+                let alertView = UIAlertController(title: "Error",
+                                                  message: message,
+                                                  preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Darn!", style: .default)
+                alertView.addAction(okAction)
+                self?.present(alertView, animated: true)
+                
+            } else {
+                self?.performSegue(withIdentifier: "dismissLogin", sender: self)
+            }
         }
-      }
+    }
+    
+    @IBAction func touchIDLoginAction() {
+        doAuth()
     }
 
     func checkLogin(username: String, password: String) -> Bool {
