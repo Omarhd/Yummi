@@ -23,6 +23,10 @@ class DishesDetailsViewController: UIViewController {
     var itemPrice: Double!
     var cart: [Dish] = []
     
+    var formattedPrice: String! {
+        return String(format: "%.2f", String(itemPrice))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +37,10 @@ class DishesDetailsViewController: UIViewController {
         self.dishCountLabel.text = Int(sender.value).description
         itemPrice = self.itemPrice * Double(sender.value)
         
-        self.dishPriceLabel.text = "\(itemPrice)"
+        if let finalPrice = itemPrice {
+            self.dishPriceLabel.text = "\(finalPrice)"
+        }
+      
         itemPrice = dish.price
     }
     

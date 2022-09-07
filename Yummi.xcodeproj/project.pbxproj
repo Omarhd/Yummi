@@ -62,6 +62,7 @@
 		4C9EA49128C4C8830053FE38 /* ChefCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA48F28C4C8830053FE38 /* ChefCollectionViewCell.swift */; };
 		4C9EA49228C4C8830053FE38 /* ChefCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9EA49028C4C8830053FE38 /* ChefCollectionViewCell.xib */; };
 		4C9EA49428C4D0350053FE38 /* DishesDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9EA49328C4D0350053FE38 /* DishesDetails.storyboard */; };
+		4CD7A4A628C940DF00D20CA1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7A4A528C940DF00D20CA1 /* SearchViewController.swift */; };
 		4FBA3B61AAD2B5A8608944DA /* Pods_Yummi_YummiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACB9D16EF9AF2F8F97C62F9 /* Pods_Yummi_YummiUITests.framework */; };
 		9626D971F651B7752FF723D6 /* Pods_YummiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D860374EDC83585C38ADF18 /* Pods_YummiTests.framework */; };
 		E579E1F4CD215DB7F322627B /* Pods_Yummi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC27F8FC6C7920E785B6E386 /* Pods_Yummi.framework */; };
@@ -150,6 +151,7 @@
 		4C9EA48F28C4C8830053FE38 /* ChefCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C9EA49028C4C8830053FE38 /* ChefCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChefCollectionViewCell.xib; sourceTree = "<group>"; };
 		4C9EA49328C4D0350053FE38 /* DishesDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DishesDetails.storyboard; sourceTree = "<group>"; };
+		4CD7A4A528C940DF00D20CA1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		66FA20142403EEEE036EE7C1 /* Pods-YummiTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YummiTests.staging.xcconfig"; path = "Target Support Files/Pods-YummiTests/Pods-YummiTests.staging.xcconfig"; sourceTree = "<group>"; };
 		6D6F76B6FEA54C97915022D7 /* Pods-Yummi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi.release.xcconfig"; path = "Target Support Files/Pods-Yummi/Pods-Yummi.release.xcconfig"; sourceTree = "<group>"; };
 		7175FDAA31D35EF866E97CD2 /* Pods-Yummi.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi.staging.xcconfig"; path = "Target Support Files/Pods-Yummi/Pods-Yummi.staging.xcconfig"; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 		4C9EA43B28C3A8820053FE38 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4CD7A4A428C940C900D20CA1 /* Search */,
 				4C98229B28C6361500C4D4F5 /* Auth */,
 				4C98229428C544F900C4D4F5 /* Cart */,
 				4C98228D28C4D37200C4D4F5 /* DishesDetails */,
@@ -519,6 +522,14 @@
 				4C9EA49028C4C8830053FE38 /* ChefCollectionViewCell.xib */,
 			);
 			path = ChefCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		4CD7A4A428C940C900D20CA1 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4CD7A4A528C940DF00D20CA1 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		BB492CCDDD9870BA264476AC /* Pods */ = {
@@ -824,6 +835,7 @@
 				4C9EA45128C3A9FE0053FE38 /* EndPoints.swift in Sources */,
 				4C98229D28C6362C00C4D4F5 /* AuthViewController.swift in Sources */,
 				4C9EA40D28C3A83B0053FE38 /* SceneDelegate.swift in Sources */,
+				4CD7A4A628C940DF00D20CA1 /* SearchViewController.swift in Sources */,
 				4C9EA48028C403610053FE38 /* CategoryCollectionViewCell.swift in Sources */,
 				4C9EA45B28C3AB490053FE38 /* Vibration.swift in Sources */,
 				4C9822A628C6800400C4D4F5 /* Config.swift in Sources */,
