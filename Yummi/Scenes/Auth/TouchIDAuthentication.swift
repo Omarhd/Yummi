@@ -19,7 +19,7 @@ class BiometricIDAuth {
   var loginReason = "Logging in with Touch ID"
 
   func biometricType() -> BiometricType {
-    let _ = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+    let _ = context.canEvaluatePolicy(.deviceOwnerAuthentication, error: nil)
     switch context.biometryType {
     case .none:
       return .none
@@ -31,7 +31,7 @@ class BiometricIDAuth {
   }
 
   func canEvaluatePolicy() -> Bool {
-    return context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+    return context.canEvaluatePolicy(.deviceOwnerAuthentication, error: nil)
   }
 
   func authenticateUser(completion: @escaping (String?) -> Void) {
@@ -40,7 +40,7 @@ class BiometricIDAuth {
       return
     }
     
-    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: loginReason) { (success, evaluateError) in
+    context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: loginReason) { (success, evaluateError) in
       if success {
         DispatchQueue.main.async {
           // User authenticated successfully, take appropriate action
