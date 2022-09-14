@@ -15,6 +15,7 @@ class PopularCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dishIamge: UIImageView!
     @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     
     func setupUI(with dish: Dish) {
@@ -22,5 +23,6 @@ class PopularCollectionViewCell: UICollectionViewCell {
         dishIamge.kf.setImage(with: dish.image.asURL)
         caloriesLabel.text = dish.formattedCalories
         descriptionLabel.text = dish.description
+        priceLabel.text = dish.formattedPrice
     }
 }

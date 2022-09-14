@@ -63,6 +63,9 @@
 		4C9EA49228C4C8830053FE38 /* ChefCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9EA49028C4C8830053FE38 /* ChefCollectionViewCell.xib */; };
 		4C9EA49428C4D0350053FE38 /* DishesDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9EA49328C4D0350053FE38 /* DishesDetails.storyboard */; };
 		4CD7A4A628C940DF00D20CA1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7A4A528C940DF00D20CA1 /* SearchViewController.swift */; };
+		4CFDC50028CA84A400E5B753 /* SearchBarNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFDC4FF28CA84A400E5B753 /* SearchBarNavigationController.swift */; };
+		4CFDC50B28CE974200E5B753 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFDC50A28CE974200E5B753 /* SettingsTableViewController.swift */; };
+		4CFDC50D28CE995600E5B753 /* SceneMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFDC50C28CE995600E5B753 /* SceneMode.swift */; };
 		4FBA3B61AAD2B5A8608944DA /* Pods_Yummi_YummiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACB9D16EF9AF2F8F97C62F9 /* Pods_Yummi_YummiUITests.framework */; };
 		9626D971F651B7752FF723D6 /* Pods_YummiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D860374EDC83585C38ADF18 /* Pods_YummiTests.framework */; };
 		E579E1F4CD215DB7F322627B /* Pods_Yummi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC27F8FC6C7920E785B6E386 /* Pods_Yummi.framework */; };
@@ -84,6 +87,19 @@
 			remoteInfo = Yummi;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4CC548B028CFCAD1008FCE8C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0ED66E059C69D942324DDD2E /* Pods-Yummi-YummiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi-YummiUITests.release.xcconfig"; path = "Target Support Files/Pods-Yummi-YummiUITests/Pods-Yummi-YummiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,7 +167,12 @@
 		4C9EA48F28C4C8830053FE38 /* ChefCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C9EA49028C4C8830053FE38 /* ChefCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChefCollectionViewCell.xib; sourceTree = "<group>"; };
 		4C9EA49328C4D0350053FE38 /* DishesDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DishesDetails.storyboard; sourceTree = "<group>"; };
+		4CC5489C28CFCACE008FCE8C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4CC5489E28CFCACE008FCE8C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4CD7A4A528C940DF00D20CA1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4CFDC4FF28CA84A400E5B753 /* SearchBarNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarNavigationController.swift; sourceTree = "<group>"; };
+		4CFDC50A28CE974200E5B753 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		4CFDC50C28CE995600E5B753 /* SceneMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneMode.swift; sourceTree = "<group>"; };
 		66FA20142403EEEE036EE7C1 /* Pods-YummiTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YummiTests.staging.xcconfig"; path = "Target Support Files/Pods-YummiTests/Pods-YummiTests.staging.xcconfig"; sourceTree = "<group>"; };
 		6D6F76B6FEA54C97915022D7 /* Pods-Yummi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi.release.xcconfig"; path = "Target Support Files/Pods-Yummi/Pods-Yummi.release.xcconfig"; sourceTree = "<group>"; };
 		7175FDAA31D35EF866E97CD2 /* Pods-Yummi.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi.staging.xcconfig"; path = "Target Support Files/Pods-Yummi/Pods-Yummi.staging.xcconfig"; sourceTree = "<group>"; };
@@ -329,6 +350,7 @@
 				4C9EA46928C3B54D0053FE38 /* UIViews.swift */,
 				4C9EA48628C406AD0053FE38 /* StringURLs.swift */,
 				4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */,
+				4CFDC50C28CE995600E5B753 /* SceneMode.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -483,6 +505,7 @@
 		4C9EA47B28C3D6AB0053FE38 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				4CFDC50A28CE974200E5B753 /* SettingsTableViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -528,6 +551,7 @@
 			isa = PBXGroup;
 			children = (
 				4CD7A4A528C940DF00D20CA1 /* SearchViewController.swift */,
+				4CFDC4FF28CA84A400E5B753 /* SearchBarNavigationController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -554,6 +578,8 @@
 				BC27F8FC6C7920E785B6E386 /* Pods_Yummi.framework */,
 				8ACB9D16EF9AF2F8F97C62F9 /* Pods_Yummi_YummiUITests.framework */,
 				2D860374EDC83585C38ADF18 /* Pods_YummiTests.framework */,
+				4CC5489C28CFCACE008FCE8C /* WidgetKit.framework */,
+				4CC5489E28CFCACE008FCE8C /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -570,6 +596,7 @@
 				4C9EA40428C3A83B0053FE38 /* Frameworks */,
 				4C9EA40528C3A83B0053FE38 /* Resources */,
 				0AB3393662A3FAF1D5FEAD13 /* [CP] Embed Pods Frameworks */,
+				4CC548B028CFCAD1008FCE8C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -627,7 +654,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					4C9EA40628C3A83B0053FE38 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -815,6 +842,7 @@
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,
 				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
 				4C98229F28C63A5700C4D4F5 /* KeychainPasswordItem.swift in Sources */,
+				4CFDC50D28CE995600E5B753 /* SceneMode.swift in Sources */,
 				4C9EA44928C3A9B10053FE38 /* Results.swift in Sources */,
 				4C9EA45528C3AAAE0053FE38 /* AppManager.swift in Sources */,
 				4C9EA45328C3AA0B0053FE38 /* APiErrors.swift in Sources */,
@@ -839,6 +867,8 @@
 				4C9EA48028C403610053FE38 /* CategoryCollectionViewCell.swift in Sources */,
 				4C9EA45B28C3AB490053FE38 /* Vibration.swift in Sources */,
 				4C9822A628C6800400C4D4F5 /* Config.swift in Sources */,
+				4CFDC50028CA84A400E5B753 /* SearchBarNavigationController.swift in Sources */,
+				4CFDC50B28CE974200E5B753 /* SettingsTableViewController.swift in Sources */,
 				4C9EA44428C3A97E0053FE38 /* AuthFeeds.swift in Sources */,
 				4C9EA46828C3B29B0053FE38 /* OnBoardingViewController.swift in Sources */,
 				4C9822AA28C682BE00C4D4F5 /* CartItemsTableViewCell.swift in Sources */,
@@ -953,7 +983,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1008,7 +1038,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1045,7 +1075,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1076,7 +1106,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1211,7 +1241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1248,7 +1278,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Staging;
 		};

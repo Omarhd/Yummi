@@ -117,14 +117,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return UIContextMenuConfiguration(
             identifier: identifier, previewProvider: nil) { _ in
                 
-                let mapAction = UIAction(title: "View map",
-                                         image: UIImage(systemName: "map")) { _ in
+                let mapAction = UIAction(title: "Share",
+                                         image: UIImage(systemName: "square.and.arrow.up")) { _ in
                     //                                    self.showMap(vacationSpot: dish)
                 }
                 
                 let shareAction = UIAction(
-                    title: "Share",
-                    image: UIImage(systemName: "square.and.arrow.up")) { _ in
+                    title: "Add to Cart",
+                    image: UIImage(systemName: "bag.fill.badge.plus")) { _ in
                         //              VacationSharer.share(vacationSpot: vacationSpot, in: self)
                     }
                 

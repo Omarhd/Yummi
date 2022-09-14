@@ -26,12 +26,34 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="MMD-7y-fGx"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-x6-Ax0">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart.badge.plus.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JZM-70-aw2">
+                                        <rect key="frame" x="87" y="258" width="241" height="240"/>
+                                        <color key="tintColor" name="AppColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="Mm0-sR-QoB"/>
+                                            <constraint firstAttribute="width" constant="240" id="kj9-ny-9Pk"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="JZM-70-aw2" firstAttribute="centerY" secondItem="gLJ-x6-Ax0" secondAttribute="centerY" id="T2P-Ue-My9"/>
+                                    <constraint firstItem="JZM-70-aw2" firstAttribute="centerX" secondItem="gLJ-x6-Ax0" secondAttribute="centerX" id="b8s-iN-M82"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Vf0-CV-lkx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1sA-fi-GNs"/>
+                            <constraint firstItem="gLJ-x6-Ax0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="3ji-pn-ZIw"/>
+                            <constraint firstItem="gLJ-x6-Ax0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7RU-2M-XON"/>
                             <constraint firstItem="Vf0-CV-lkx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="FNz-Ri-P5G"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gLJ-x6-Ax0" secondAttribute="trailing" id="O1S-ZL-xdM"/>
+                            <constraint firstAttribute="bottom" secondItem="gLJ-x6-Ax0" secondAttribute="bottom" id="UMH-iY-WZV"/>
                             <constraint firstItem="Vf0-CV-lkx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="bXA-B2-FwR"/>
                             <constraint firstAttribute="bottom" secondItem="Vf0-CV-lkx" secondAttribute="bottom" id="yv1-mz-wDG"/>
                         </constraints>
@@ -52,6 +74,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emptyCartView" destination="gLJ-x6-Ax0" id="wLH-2C-0ks"/>
                         <outlet property="tableView" destination="Vf0-CV-lkx" id="YJs-Pl-Zwm"/>
                     </connections>
                 </viewController>
@@ -65,7 +88,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3o5-oR-beP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="pUt-aR-M0N">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -79,8 +102,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cart.badge.plus.fill" catalog="system" width="128" height="106"/>
         <namedColor name="AccentColor">
             <color red="0.12156862745098039" green="0.32549019607843138" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppColor">
+            <color red="0.62699997425079346" green="0.0" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

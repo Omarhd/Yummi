@@ -11,13 +11,19 @@ import LocalAuthentication
 class CartViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-   
+    @IBOutlet weak var emptyCartView: UIView!
+    
     var cartItem: [Dish] = []
     let touchMe = BiometricIDAuth()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if cartItem.count == 0 {
+            emptyCartView.isHidden = false
+        } else {
+            emptyCartView.isHidden = true
+        }
         registerNibs()
     }
     
