@@ -52,7 +52,7 @@ class OnBoardingViewController: UIViewController {
             let controller = storyBoard.instantiateViewController(identifier: "MainTabBarController") as! UITabBarController
             controller.modalPresentationStyle = .fullScreen
             controller.modalTransitionStyle = .crossDissolve
-//            UserDefaults.standard.hasOnboarded = true
+            UserDefaults.standard.hasOnBoarded = true
             present(controller, animated: true, completion: nil)
         } else {
             currentPage += 1

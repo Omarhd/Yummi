@@ -146,34 +146,48 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UITargetedPreview(view: cell)
             
         case popularCollectionView:
-            guard let identifier = configuration.identifier as? String,
-                  let index = Int(identifier),
-                  let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0))
-                    as? PopularCollectionViewCell
-            else {
-                return nil
-            }
-            return UITargetedPreview(view: cell.dishIamge)
-            
+//            guard let identifier = configuration.identifier as? String,
+//                  let index = Int(identifier),
+//                  let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0))
+//                    as? PopularCollectionViewCell
+//            else {
+//                return nil
+//            }
+//            return UITargetedPreview(view: cell.dishIamge)
+            return nil
         default: return nil
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating) {
-        guard
-            let identifier = configuration.identifier as? String,
-            let index = Int(identifier)
-        else {
+        
+        switch collectionView {
+        case categoryCollectionView:
+            return
+        case popularCollectionView:
+            guard let identifier = configuration.identifier as? String,
+                let index = Int(identifier)
+            else {
+                return
+            }
+
+            animator.addCompletion {
+                let detailsController =  DishesDetailsViewController.instantiate(storyBoardName: "DishesDetails")
+                detailsController.dish = self.dishs[index]
+                
+                self.navigationController?.pushViewController(detailsController, animated: true)
+            }
+        case chefCollectionView:
+            return
+       
+        default:
             return
         }
-        
-        // 2
-        let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0))
-        
-        // 3
-        animator.addCompletion {
-            self.performSegue(withIdentifier: "showSpotInfoViewController",
-                              sender: cell)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willCommitMenuWithAnimator animator: UIContextMenuInteractionCommitAnimating) {
+        animator.addAnimations {
+            self.show(DishesDetailsViewController(), sender: self)
         }
     }
 }
