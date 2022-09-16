@@ -78,7 +78,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="BG"/>
                                         <constraints>
                                             <constraint firstItem="Het-VG-1qS" firstAttribute="leading" secondItem="fKm-Pf-2PO" secondAttribute="leading" id="3ix-HO-L0e"/>
                                             <constraint firstAttribute="trailing" secondItem="Het-VG-1qS" secondAttribute="trailing" id="4L8-Ii-ngi"/>
@@ -89,6 +89,11 @@
                                             <constraint firstItem="Het-VG-1qS" firstAttribute="top" secondItem="fKm-Pf-2PO" secondAttribute="top" id="aae-hh-nSe"/>
                                             <constraint firstItem="7HE-c1-75w" firstAttribute="top" secondItem="fKm-Pf-2PO" secondAttribute="top" constant="8" id="mI9-kL-85l"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd8-t9-NNu">
                                         <rect key="frame" x="0.0" y="245.5" width="164" height="16"/>
@@ -120,6 +125,11 @@
                             <constraint firstItem="DcR-8T-VTT" firstAttribute="top" secondItem="ygb-f3-5Il" secondAttribute="top" constant="8" id="f0t-AI-3hh"/>
                             <constraint firstAttribute="bottom" secondItem="DcR-8T-VTT" secondAttribute="bottom" constant="8" id="rar-Pc-F8L"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
