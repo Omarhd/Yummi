@@ -12,4 +12,4 @@ FIREBASE_GOOGLE_SERVICE_INFO_PLIST_FILENAME = Google-Info/Release/GoogleService-
 
 SLASH = /
 
-BASE_URL = https:/yummie.glitch.me/
+BASE_URL = https:$(SLASH)/yummie.glitch.me/

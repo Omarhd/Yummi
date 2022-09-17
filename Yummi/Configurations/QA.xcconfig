@@ -8,7 +8,7 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-FIREBASE_GOOGLE_SERVICE_INFO_PLIST_FILENAME = Google-Info/Release/GoogleService-Info
+FIREBASE_GOOGLE_SERVICE_INFO_PLIST_FILENAME = Google-Info/QA/GoogleService-Info
 
 SLASH = /
 
