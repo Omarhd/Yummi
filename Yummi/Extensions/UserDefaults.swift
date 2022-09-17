@@ -10,6 +10,7 @@ extension UserDefaults {
     
     private enum UserDefaultsKeys: String {
         case hasOnBoarded
+        case defaultAppearnce
     }
     
     var hasOnBoarded: Bool {

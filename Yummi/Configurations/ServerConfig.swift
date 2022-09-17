@@ -9,10 +9,16 @@ import Foundation
 
 enum BaseURl: String {
     
-    case RELEASE = "release"
-    case DEBUG = "debug"
-    case STAGING = "staging"
-    case QA = "qa"
+    case RELEASE
+    case DEBUG
+    case STAGING
+    case QA
+    
+    var value: String {
+        get {
+            return Bundle.main.infoDictionary![self.rawValue] as! String
+        }
+    }
 }
 
 class ServerConfig {
@@ -22,14 +28,14 @@ class ServerConfig {
     var baseURL: String?
     
     func setupBaseUrls() {
-        #if RELEASE
-        self.baseURL = BaseURl.RELEASE.rawValue
-        #elseif DEBUG
-        self.baseURL = BaseURl.DEBUG.rawValue
-        #elseif STAGING
-        self.baseURL = BaseURl.STAGING.rawValue
-        #elseif QA
-        self.baseURL = BaseURl.QA.rawValue
-        #endif
+#if RELEASE
+        self.baseURL = BaseURl.RELEASE.value
+#elseif DEBUG
+        self.baseURL = BaseURl.DEBUG.value
+#elseif STAGING
+        self.baseURL = BaseURl.STAGING.value
+#elseif QA
+        self.baseURL = BaseURl.QA.value
+#endif
     }
 }

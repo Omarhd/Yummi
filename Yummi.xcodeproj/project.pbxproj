@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C475D5528D4A0CE0074D3D0 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */; };
+		4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */ = {isa = PBXBuildFile; fileRef = 4C475D6928D5B4FB0074D3D0 /* Google-Info */; };
 		4C98228F28C4D39600C4D4F5 /* DishesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98228E28C4D39600C4D4F5 /* DishesDetailsViewController.swift */; };
 		4C98229128C5372C00C4D4F5 /* ViewControllerNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */; };
 		4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C98229228C5448900C4D4F5 /* Cart.storyboard */; };
@@ -111,6 +112,9 @@
 		306EEA5EED86042119358BC9 /* Pods-YummiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YummiTests.release.xcconfig"; path = "Target Support Files/Pods-YummiTests/Pods-YummiTests.release.xcconfig"; sourceTree = "<group>"; };
 		32BB729745FDC68D7AEB1F75 /* Pods-Yummi-YummiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi-YummiUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yummi-YummiUITests/Pods-Yummi-YummiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
+		4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		4C475D5B28D4A8F70074D3D0 /* QA.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QA.xcconfig; sourceTree = "<group>"; };
+		4C475D6928D5B4FB0074D3D0 /* Google-Info */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Google-Info"; sourceTree = "<group>"; };
 		4C98228E28C4D39600C4D4F5 /* DishesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesDetailsViewController.swift; sourceTree = "<group>"; };
 		4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNavigators.swift; sourceTree = "<group>"; };
 		4C98229228C5448900C4D4F5 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 		4C9EA40928C3A83B0053FE38 /* Yummi */ = {
 			isa = PBXGroup;
 			children = (
+				4C475D6928D5B4FB0074D3D0 /* Google-Info */,
 				4C9EA45F28C3ABCB0053FE38 /* Common */,
 				4C9EA44028C3A9430053FE38 /* Localizations */,
 				4C9EA43F28C3A9270053FE38 /* Utilit */,
@@ -380,8 +385,10 @@
 			children = (
 				4C9EA47528C3D48F0053FE38 /* Configuration.swift */,
 				4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */,
-				4C9EA47728C3D4E40053FE38 /* Staging.xcconfig */,
 				4C9EA47828C3D4F80053FE38 /* Release.xcconfig */,
+				4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */,
+				4C9EA47728C3D4E40053FE38 /* Staging.xcconfig */,
+				4C475D5B28D4A8F70074D3D0 /* QA.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -713,6 +720,7 @@
 				4C9EA41728C3A83F0053FE38 /* LaunchScreen.storyboard in Resources */,
 				4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */,
 				4C98229A28C635E400C4D4F5 /* Auth.storyboard in Resources */,
+				4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */,
 				4C9822B228C6846600C4D4F5 /* CategoryDetailsTableViewCell.xib in Resources */,
 				4C9EA48128C403610053FE38 /* CategoryCollectionViewCell.xib in Resources */,
 				4C9EA41428C3A83F0053FE38 /* Assets.xcassets in Resources */,
@@ -1015,6 +1023,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF81E92B1AD5694786F73EA0 /* Pods-Yummi.qa.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "QA-Icon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -1023,6 +1032,7 @@
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
@@ -1203,6 +1213,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF1C5A2ED25E56423410A300 /* Pods-Yummi.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "Debug-Icon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -1211,6 +1222,7 @@
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
@@ -1234,6 +1246,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D6F76B6FEA54C97915022D7 /* Pods-Yummi.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -1242,6 +1255,7 @@
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
@@ -1407,6 +1421,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7175FDAA31D35EF866E97CD2 /* Pods-Yummi.staging.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "Staging-Icon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -1415,6 +1430,7 @@
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
