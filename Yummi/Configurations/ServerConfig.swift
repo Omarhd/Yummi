@@ -7,16 +7,18 @@
 
 import Foundation
 
-enum BaseURl: String {
+enum BuildSettingsKey: String {
     
     case RELEASE
     case DEBUG
     case STAGING
     case QA
     
+    case scheme
+    
     var value: String {
         get {
-            return Bundle.main.infoDictionary![self.rawValue] as! String
+            return ""
         }
     }
 }
@@ -29,13 +31,35 @@ class ServerConfig {
     
     func setupBaseUrls() {
 #if RELEASE
-        self.baseURL = BaseURl.RELEASE.value
+        self.baseURL = BuildSettingsKey.RELEASE.value
 #elseif DEBUG
-        self.baseURL = BaseURl.DEBUG.value
+        self.baseURL = BuildSettingsKey.DEBUG.value
 #elseif STAGING
-        self.baseURL = BaseURl.STAGING.value
+        self.baseURL = BuildSettingsKey.STAGING.value
 #elseif QA
-        self.baseURL = BaseURl.QA.value
+        self.baseURL = BuildSettingsKey.QA.value
+#else
+        self.baseURL = BuildSettingsKey.RELEASE.value
 #endif
+        
+    }
+    
+    func setupGoogleInfo() -> String {
+       
+        var filePath: String!
+        
+#if RELEASE
+        filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist", inDirectory: "Google-Info/Release")
+#elseif DEBUG
+        filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist", inDirectory: "Google-Info/Debug")
+#elseif STAGING
+        filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist", inDirectory: "Google-Info/Staging")
+#elseif QA
+        filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist", inDirectory: "Google-Info/AQ")
+#else
+        filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist", inDirectory: "Google-Info/Release")
+#endif
+  
+        return "filePath"
     }
 }

@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum BuildSettingsKey: String {
-    case BaseURL
-    case googleAPIKey
-    case appStoreUrl
-    case AuthBaseUrl
-    case storeType
-    var value: String {
-        get {
-            return Bundle.main.infoDictionary![self.rawValue] as! String
-        }
-    }
-}
+//enum BuildSettingsKey: String {
+//    case BaseURL
+//    case googleAPIKey
+//    case appStoreUrl
+//    case AuthBaseUrl
+//    case storeType
+//    var value: String {
+//        get {
+//            return Bundle.main.infoDictionary![self.rawValue] as! String
+//        }
+//    }
+//}

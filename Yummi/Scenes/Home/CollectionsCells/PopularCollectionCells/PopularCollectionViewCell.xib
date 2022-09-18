@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="180" height="300"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygb-f3-5Il" customClass="CardView" customModule="Yummi" customModuleProvider="target">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygb-f3-5Il" customClass="CardView" customModule="Yummi" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="300"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DcR-8T-VTT">

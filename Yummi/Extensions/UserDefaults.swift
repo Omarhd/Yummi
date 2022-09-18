@@ -10,7 +10,7 @@ extension UserDefaults {
     
     private enum UserDefaultsKeys: String {
         case hasOnBoarded
-        case defaultAppearnce
+        case defaultDarkAppearnce
     }
     
     var hasOnBoarded: Bool {
@@ -20,6 +20,16 @@ extension UserDefaults {
         
         set {
             set(newValue, forKey: UserDefaultsKeys.hasOnBoarded.rawValue)
+        }
+    }
+    
+    var defaultDarkAppearnce: Bool {
+        get {
+            bool(forKey: UserDefaultsKeys.defaultDarkAppearnce.rawValue)
+        }
+        
+        set {
+            set(newValue, forKey: UserDefaultsKeys.defaultDarkAppearnce.rawValue)
         }
     }
 }

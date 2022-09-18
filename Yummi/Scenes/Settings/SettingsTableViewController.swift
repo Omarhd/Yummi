@@ -14,11 +14,7 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setupSwitcherStatus()
     }
     @IBAction func modeSwitcherAction(_ sender: Any) {
         if modeSwitcher.isOn {
@@ -26,13 +22,23 @@ class SettingsTableViewController: UITableViewController {
                 UIView.transition (with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
                     window.overrideUserInterfaceStyle = .dark //.light or .unspecified
                 }, completion: nil)
+                UserDefaults.standard.defaultDarkAppearnce = true
             }
         } else {
             if let window = UIApplication.shared.keyWindow {
                 UIView.transition (with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
                     window.overrideUserInterfaceStyle = .light //.light or .unspecified
                 }, completion: nil)
+                UserDefaults.standard.defaultDarkAppearnce = false
             }
+        }
+    }
+    
+    fileprivate func setupSwitcherStatus() {
+        if UserDefaults.standard.defaultDarkAppearnce {
+            self.modeSwitcher.isOn = true
+        } else {
+            self.modeSwitcher.isOn = false
         }
     }
     
