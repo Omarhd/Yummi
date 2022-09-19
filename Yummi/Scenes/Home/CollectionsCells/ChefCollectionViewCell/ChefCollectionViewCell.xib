@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,6 +21,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMH-nl-mFE" customClass="CardView" customModule="Yummi" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="330" height="80"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fpJ-bQ-RXt">
+                                <rect key="frame" x="30" y="30" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="2Ki-9b-ccN"/>
+                                    <constraint firstAttribute="width" constant="20" id="IDO-XY-wPK"/>
+                                </constraints>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDP-pU-AFA">
                                 <rect key="frame" x="8" y="8" width="64" height="64"/>
                                 <constraints>
@@ -60,12 +68,14 @@
                         <color key="backgroundColor" name="Cells"/>
                         <constraints>
                             <constraint firstItem="uDP-pU-AFA" firstAttribute="top" secondItem="RMH-nl-mFE" secondAttribute="top" constant="8" id="6DY-oo-n66"/>
+                            <constraint firstItem="fpJ-bQ-RXt" firstAttribute="centerX" secondItem="uDP-pU-AFA" secondAttribute="centerX" id="8EC-Yp-Gzf"/>
                             <constraint firstItem="ngM-XB-Fah" firstAttribute="leading" secondItem="uDP-pU-AFA" secondAttribute="trailing" constant="8" symbolic="YES" id="NUE-MZ-1pQ"/>
                             <constraint firstAttribute="bottom" secondItem="uDP-pU-AFA" secondAttribute="bottom" constant="8" id="Rue-yF-Y5v"/>
                             <constraint firstItem="ngM-XB-Fah" firstAttribute="top" secondItem="RMH-nl-mFE" secondAttribute="top" constant="16" id="at8-JD-2Zx"/>
                             <constraint firstAttribute="width" constant="330" id="byt-Zc-YpI"/>
                             <constraint firstItem="uDP-pU-AFA" firstAttribute="leading" secondItem="RMH-nl-mFE" secondAttribute="leading" constant="8" id="ipI-0H-doc"/>
                             <constraint firstAttribute="trailing" secondItem="ngM-XB-Fah" secondAttribute="trailing" constant="8" id="jox-sM-2R1"/>
+                            <constraint firstItem="fpJ-bQ-RXt" firstAttribute="centerY" secondItem="uDP-pU-AFA" secondAttribute="centerY" id="mIA-WW-kzn"/>
                             <constraint firstAttribute="bottom" secondItem="ngM-XB-Fah" secondAttribute="bottom" constant="16" id="q5s-SH-A9l"/>
                         </constraints>
                     </view>
@@ -80,6 +90,7 @@
             </constraints>
             <size key="customSize" width="330" height="88"/>
             <connections>
+                <outlet property="activityIndicator" destination="fpJ-bQ-RXt" id="NFO-16-r2m"/>
                 <outlet property="caloriesLabel" destination="vns-bh-66d" id="O9F-yI-lTn"/>
                 <outlet property="descriptionLabel" destination="McU-vl-vJO" id="im6-TY-5a7"/>
                 <outlet property="imageView" destination="uDP-pU-AFA" id="fum-Y7-OGm"/>
@@ -89,6 +100,9 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.12156862745098039" green="0.32549019607843138" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="AppColor">
             <color red="0.62699997425079346" green="0.0" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

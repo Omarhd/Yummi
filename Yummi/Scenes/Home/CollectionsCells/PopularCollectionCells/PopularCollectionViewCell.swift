@@ -17,12 +17,17 @@ class PopularCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     func setupUI(with dish: Dish) {
         titleLabel.text = dish.title
-        dishIamge.kf.setImage(with: dish.image.asURL)
         caloriesLabel.text = dish.formattedCalories
         descriptionLabel.text = dish.description
         priceLabel.text = dish.formattedPrice
+        
+        activityIndicator.startAnimating()
+        dishIamge.kf.setImage(with: dish.image.asURL)
+        activityIndicator.startAnimating()
+
     }
 }

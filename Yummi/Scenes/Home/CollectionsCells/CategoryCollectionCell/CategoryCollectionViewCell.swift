@@ -15,8 +15,14 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryTitle: UILabel!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     func setupUI(with category: DishCategory) {
         categoryTitle.text = category.name
+        
+        activityIndicator.startAnimating()
         categoryImage.kf.setImage(with: category.image.asURL)
+        activityIndicator.startAnimating()
+
     }
 }
