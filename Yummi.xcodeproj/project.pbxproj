@@ -11,6 +11,9 @@
 		4C21936D28D737E80018E8E8 /* Balance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C21936C28D737E80018E8E8 /* Balance.storyboard */; };
 		4C475D5528D4A0CE0074D3D0 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */; };
 		4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */ = {isa = PBXBuildFile; fileRef = 4C475D6928D5B4FB0074D3D0 /* Google-Info */; };
+		4C81A4AA28D87CCC00958762 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4A928D87CCC00958762 /* Notifications.storyboard */; };
+		4C81A4AC28D87D6600958762 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4AB28D87D6600958762 /* Settings.storyboard */; };
+		4C81A4AE28D87DCB00958762 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4AD28D87DCB00958762 /* Search.storyboard */; };
 		4C98228F28C4D39600C4D4F5 /* DishesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98228E28C4D39600C4D4F5 /* DishesDetailsViewController.swift */; };
 		4C98229128C5372C00C4D4F5 /* ViewControllerNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */; };
 		4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C98229228C5448900C4D4F5 /* Cart.storyboard */; };
@@ -119,6 +122,9 @@
 		4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		4C475D5B28D4A8F70074D3D0 /* QA.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QA.xcconfig; sourceTree = "<group>"; };
 		4C475D6928D5B4FB0074D3D0 /* Google-Info */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Google-Info"; sourceTree = "<group>"; };
+		4C81A4A928D87CCC00958762 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
+		4C81A4AB28D87D6600958762 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		4C81A4AD28D87DCB00958762 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4C98228E28C4D39600C4D4F5 /* DishesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesDetailsViewController.swift; sourceTree = "<group>"; };
 		4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNavigators.swift; sourceTree = "<group>"; };
 		4C98229228C5448900C4D4F5 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
@@ -462,6 +468,9 @@
 				4C98229228C5448900C4D4F5 /* Cart.storyboard */,
 				4C98229928C635E400C4D4F5 /* Auth.storyboard */,
 				4C21936C28D737E80018E8E8 /* Balance.storyboard */,
+				4C81A4A928D87CCC00958762 /* Notifications.storyboard */,
+				4C81A4AB28D87D6600958762 /* Settings.storyboard */,
+				4C81A4AD28D87DCB00958762 /* Search.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -736,13 +745,16 @@
 				4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */,
 				4C98229A28C635E400C4D4F5 /* Auth.storyboard in Resources */,
 				4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */,
+				4C81A4AA28D87CCC00958762 /* Notifications.storyboard in Resources */,
 				4C9822B228C6846600C4D4F5 /* CategoryDetailsTableViewCell.xib in Resources */,
 				4C9EA48128C403610053FE38 /* CategoryCollectionViewCell.xib in Resources */,
 				4C9EA41428C3A83F0053FE38 /* Assets.xcassets in Resources */,
 				4C9EA49228C4C8830053FE38 /* ChefCollectionViewCell.xib in Resources */,
+				4C81A4AC28D87D6600958762 /* Settings.storyboard in Resources */,
 				4C9EA41228C3A83B0053FE38 /* Main.storyboard in Resources */,
 				4C9EA49428C4D0350053FE38 /* DishesDetails.storyboard in Resources */,
 				4C9EA48D28C40D870053FE38 /* PopularCollectionViewCell.xib in Resources */,
+				4C81A4AE28D87DCB00958762 /* Search.storyboard in Resources */,
 				4C9EA46328C3AF600053FE38 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
