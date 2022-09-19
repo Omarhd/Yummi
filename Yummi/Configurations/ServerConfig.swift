@@ -9,16 +9,11 @@ import Foundation
 
 enum BuildSettingsKey: String {
     
-    case RELEASE
-    case DEBUG
-    case STAGING
-    case QA
-    
-    case scheme
+    case BaseURL
     
     var value: String {
         get {
-            return ""
+            return Bundle.main.infoDictionary![self.rawValue] as! String
         }
     }
 }
@@ -31,15 +26,15 @@ class ServerConfig {
     
     func setupBaseUrls() {
 #if RELEASE
-        self.baseURL = BuildSettingsKey.RELEASE.value
+        self.baseURL = BuildSettingsKey.BaseURL.value
 #elseif DEBUG
-        self.baseURL = BuildSettingsKey.DEBUG.value
+        self.baseURL = BuildSettingsKey.BaseURL.value
 #elseif STAGING
-        self.baseURL = BuildSettingsKey.STAGING.value
+        self.baseURL = BuildSettingsKey.BaseURL.value
 #elseif QA
-        self.baseURL = BuildSettingsKey.QA.value
+        self.baseURL = BuildSettingsKey.BaseURL.value
 #else
-        self.baseURL = BuildSettingsKey.RELEASE.value
+        self.baseURL = BuildSettingsKey.BaseURL.value
 #endif
         
     }

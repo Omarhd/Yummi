@@ -843,6 +843,9 @@
                                             </subviews>
                                             <color key="backgroundColor" name="Cells"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qub-Z5-PNK" kind="presentation" id="BKU-no-4RR"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vKP-fe-nBE" imageView="cf5-8i-zlg" rowHeight="50" style="IBUITableViewCellStyleDefault" id="yUD-sg-Vp8">
                                         <rect key="frame" x="20" y="334" width="374" height="50"/>
@@ -913,6 +916,14 @@
             </objects>
             <point key="canvasLocation" x="2579.7101449275365" y="434.59821428571428"/>
         </scene>
+        <!--BalaceViewController-->
+        <scene sceneID="ipb-pI-bxc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Balance" referencedIdentifier="BalaceViewController" id="qub-Z5-PNK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSJ-xg-dVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3247" y="366"/>
+        </scene>
         <!--Filter-->
         <scene sceneID="haU-2T-7p9">
             <objects>
@@ -975,7 +986,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="slider.horizontal.3" catalog="system" id="IGe-NL-uYJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Sy4-kb-F3J">
-                        <rect key="frame" x="0.0" y="48" width="414" height="98.5"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
@@ -1001,7 +1012,7 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="lVZ-89-bTT" customClass="SearchBarNavigationController" customModule="Yummi" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="48" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1033,7 +1044,7 @@
             <color red="0.62699997425079346" green="0.0" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BG">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Cells">
             <color red="0.94900000095367432" green="0.94999998807907104" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
