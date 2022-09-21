@@ -20,9 +20,9 @@ class DishesDetailsViewController: UIViewController {
     @IBOutlet weak var dishPriceLabel: UILabel!
     @IBOutlet weak var cartButton: UIButton!
     
-    var dish: Dish!
+    var dish: Popular!
     var itemPrice: Double!
-    var cart: [Dish] = []
+    var cart: [Popular] = []
     
     var formattedPrice: String! {
         return String(format: "%.2f", String(itemPrice))
@@ -42,7 +42,7 @@ class DishesDetailsViewController: UIViewController {
             self.dishPriceLabel.text = "\(finalPrice)"
         }
       
-        itemPrice = dish.price
+        itemPrice = dish.calories as? Double
     }
     
     @IBAction func addItemToCart(_ sender: Any) {
@@ -52,20 +52,20 @@ class DishesDetailsViewController: UIViewController {
     
     @IBAction func cartAction(_ sender: Any) {
         let detailsController =  CartViewController.instantiate(storyBoardName: "Cart")
-        detailsController.cartItem = [dish]
+//        detailsController.cartItem = [Popular]
         
         navigationController?.pushViewController(detailsController, animated: true)
 
     }
     
-    private func setupUI(with dish: Dish) {
+    private func setupUI(with dish: Popular) {
         dishImageView.kf.setImage(with: dish.image.asURL)
-        dishTitleLabel.text = dish.title
-        dishDescriptionLabel.text = dish.description
-        dishCaloriesLabel.text = dish.formattedCalories
-        dishPriceLabel.text = dish.formattedPrice
+        dishTitleLabel.text = dish.name
+        dishDescriptionLabel.text = dish.popularDescription
+        dishCaloriesLabel.text = "\(dish.calories)"
+        dishPriceLabel.text = "\(dish.calories)"
         
-        self.itemPrice = dish.price
+        self.itemPrice = dish.calories as? Double
     }
     
     private func setupCartUI() {

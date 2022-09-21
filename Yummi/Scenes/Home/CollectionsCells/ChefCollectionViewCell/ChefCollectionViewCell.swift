@@ -19,13 +19,13 @@ class ChefCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    func setupUI(with dish: Dish) {
-        titleLabel.text = dish.title
-        descriptionLabel.text = dish.description
-        caloriesLabel.text = dish.formattedCalories
+    func setupUI(with dish: Popular) {
+        titleLabel.text = dish.name
+        descriptionLabel.text = dish.popularDescription
+        caloriesLabel.text = "\(dish.calories)"
         
         activityIndicator.startAnimating()
         imageView.kf.setImage(with: dish.image.asURL)
-        activityIndicator.startAnimating()
+        activityIndicator.stopAnimating()
     }
 }

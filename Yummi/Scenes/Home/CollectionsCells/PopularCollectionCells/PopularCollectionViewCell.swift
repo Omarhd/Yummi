@@ -19,15 +19,15 @@ class PopularCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    func setupUI(with dish: Dish) {
-        titleLabel.text = dish.title
-        caloriesLabel.text = dish.formattedCalories
-        descriptionLabel.text = dish.description
-        priceLabel.text = dish.formattedPrice
+    func setupUI(with dish: Popular) {
+        titleLabel.text = dish.name
+        caloriesLabel.text = "\(dish.calories)"
+        descriptionLabel.text = dish.popularDescription
+        priceLabel.text = "\(dish.calories)"
         
         activityIndicator.startAnimating()
         dishIamge.kf.setImage(with: dish.image.asURL)
-        activityIndicator.startAnimating()
+        activityIndicator.stopAnimating()
 
     }
 }

@@ -15,10 +15,15 @@ class CategoryDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
-    func setupUI(with category: DishCategory) {
+    @IBOutlet weak var activitIndecator: UIActivityIndicatorView!
+ 
+    func setupUI(with category: Category) {
+        titleLabel.text = category.title
+        descriptionLabel.text = category.title
+        
+        activitIndecator.startAnimating()
         categoryImageView.kf.setImage(with: category.image.asURL)
-        titleLabel.text = category.name
-        descriptionLabel.text = "Mock text for testing"
+        activitIndecator.stopAnimating()
+
     }
 }

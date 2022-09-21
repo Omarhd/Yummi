@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -159,7 +158,6 @@ I have an array of objects and I want to filter them by two conditions, either i
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yen-Xc-vTM">
-                        <barButtonItem key="backBarButtonItem" title=" " id="g1v-rX-VXr"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="8fm-FL-ey8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qwn-lZ-ym1">
                                 <rect key="frame" x="266" y="0.0" width="128" height="44"/>
@@ -203,8 +201,9 @@ I have an array of objects and I want to filter them by two conditions, either i
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nB7-UN-JGE">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="848"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="sra-vT-SPL" id="00P-3p-a3h"/>
                                     <outlet property="delegate" destination="sra-vT-SPL" id="7qj-Vm-hKO"/>
@@ -212,12 +211,12 @@ I have an array of objects and I want to filter them by two conditions, either i
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SYR-gD-UL0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BG"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="nB7-UN-JGE" secondAttribute="bottom" id="0xb-GY-b7H"/>
-                            <constraint firstItem="nB7-UN-JGE" firstAttribute="trailing" secondItem="SYR-gD-UL0" secondAttribute="trailing" id="UrQ-qH-pS0"/>
-                            <constraint firstItem="nB7-UN-JGE" firstAttribute="leading" secondItem="SYR-gD-UL0" secondAttribute="leading" id="Vnb-cr-C0l"/>
-                            <constraint firstItem="nB7-UN-JGE" firstAttribute="top" secondItem="hG6-Ut-Drm" secondAttribute="top" id="sAf-LJ-3S7"/>
+                            <constraint firstItem="nB7-UN-JGE" firstAttribute="leading" secondItem="SYR-gD-UL0" secondAttribute="leading" id="R30-NG-8wM"/>
+                            <constraint firstAttribute="bottom" secondItem="nB7-UN-JGE" secondAttribute="bottom" id="gzx-kI-R57"/>
+                            <constraint firstItem="nB7-UN-JGE" firstAttribute="top" secondItem="SYR-gD-UL0" secondAttribute="top" id="t8X-gr-z8Q"/>
+                            <constraint firstItem="nB7-UN-JGE" firstAttribute="trailing" secondItem="SYR-gD-UL0" secondAttribute="trailing" id="xmN-Cd-gwB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -264,8 +263,5 @@ I have an array of objects and I want to filter them by two conditions, either i
         <namedColor name="Cells">
             <color red="0.94900000095367432" green="0.94999998807907104" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

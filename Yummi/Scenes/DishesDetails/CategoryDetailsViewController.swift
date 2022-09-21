@@ -11,7 +11,7 @@ class CategoryDetailsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var categories: [DishCategory] = []
+    var categories: [Category] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

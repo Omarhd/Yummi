@@ -13,7 +13,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyCartView: UIView!
     
-    var cartItem: [Dish] = []
+    var cartItem: [Popular] = []
     let touchMe = BiometricIDAuth()
 
     override func viewDidLoad() {

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4C21936B28D737AD0018E8E8 /* BalaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21936A28D737AD0018E8E8 /* BalaceViewController.swift */; };
 		4C21936D28D737E80018E8E8 /* Balance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C21936C28D737E80018E8E8 /* Balance.storyboard */; };
+		4C3AD10D28DB8E1C0000BB90 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD10C28DB8E1C0000BB90 /* HomePresenter.swift */; };
+		4C3AD11028DB8E930000BB90 /* ServicesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD10F28DB8E930000BB90 /* ServicesFeed.swift */; };
+		4C3AD11228DB8F5E0000BB90 /* ServicesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD11128DB8F5E0000BB90 /* ServicesClient.swift */; };
+		4C3AD11428DB90C00000BB90 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD11328DB90C00000BB90 /* HomeModel.swift */; };
 		4C475D5528D4A0CE0074D3D0 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */; };
 		4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */ = {isa = PBXBuildFile; fileRef = 4C475D6928D5B4FB0074D3D0 /* Google-Info */; };
 		4C81A4AA28D87CCC00958762 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4A928D87CCC00958762 /* Notifications.storyboard */; };
@@ -58,7 +62,6 @@
 		4C9EA46A28C3B54D0053FE38 /* UIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA46928C3B54D0053FE38 /* UIViews.swift */; };
 		4C9EA46C28C3B66A0053FE38 /* StaticDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA46B28C3B66A0053FE38 /* StaticDataModel.swift */; };
 		4C9EA46F28C3B8990053FE38 /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA46E28C3B8990053FE38 /* SlideCollectionViewCell.swift */; };
-		4C9EA47628C3D48F0053FE38 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA47528C3D48F0053FE38 /* Configuration.swift */; };
 		4C9EA48028C403610053FE38 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA47E28C403610053FE38 /* CategoryCollectionViewCell.swift */; };
 		4C9EA48128C403610053FE38 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9EA47F28C403610053FE38 /* CategoryCollectionViewCell.xib */; };
 		4C9EA48328C404CD0053FE38 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA48228C404CD0053FE38 /* CategoryModel.swift */; };
@@ -118,6 +121,10 @@
 		32BB729745FDC68D7AEB1F75 /* Pods-Yummi-YummiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi-YummiUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yummi-YummiUITests/Pods-Yummi-YummiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C21936A28D737AD0018E8E8 /* BalaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalaceViewController.swift; sourceTree = "<group>"; };
 		4C21936C28D737E80018E8E8 /* Balance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Balance.storyboard; sourceTree = "<group>"; };
+		4C3AD10C28DB8E1C0000BB90 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		4C3AD10F28DB8E930000BB90 /* ServicesFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesFeed.swift; sourceTree = "<group>"; };
+		4C3AD11128DB8F5E0000BB90 /* ServicesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesClient.swift; sourceTree = "<group>"; };
+		4C3AD11328DB90C00000BB90 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 		4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		4C475D5B28D4A8F70074D3D0 /* QA.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QA.xcconfig; sourceTree = "<group>"; };
@@ -173,7 +180,6 @@
 		4C9EA46928C3B54D0053FE38 /* UIViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViews.swift; sourceTree = "<group>"; };
 		4C9EA46B28C3B66A0053FE38 /* StaticDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDataModel.swift; sourceTree = "<group>"; };
 		4C9EA46E28C3B8990053FE38 /* SlideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionViewCell.swift; sourceTree = "<group>"; };
-		4C9EA47528C3D48F0053FE38 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		4C9EA47728C3D4E40053FE38 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		4C9EA47828C3D4F80053FE38 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		4C9EA47E28C403610053FE38 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -240,6 +246,25 @@
 				4C21936A28D737AD0018E8E8 /* BalaceViewController.swift */,
 			);
 			path = Balance;
+			sourceTree = "<group>";
+		};
+		4C3AD10B28DB8E080000BB90 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA40E28C3A83B0053FE38 /* HomeViewController.swift */,
+				4C3AD10C28DB8E1C0000BB90 /* HomePresenter.swift */,
+				4C3AD11328DB90C00000BB90 /* HomeModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4C3AD10E28DB8E640000BB90 /* ServicesFeed */ = {
+			isa = PBXGroup;
+			children = (
+				4C3AD10F28DB8E930000BB90 /* ServicesFeed.swift */,
+				4C3AD11128DB8F5E0000BB90 /* ServicesClient.swift */,
+			);
+			path = ServicesFeed;
 			sourceTree = "<group>";
 		};
 		4C98228D28C4D37200C4D4F5 /* DishesDetails */ = {
@@ -402,7 +427,6 @@
 		4C9EA43E28C3A90B0053FE38 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				4C9EA47528C3D48F0053FE38 /* Configuration.swift */,
 				4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */,
 				4C9EA47828C3D4F80053FE38 /* Release.xcconfig */,
 				4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */,
@@ -445,6 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				4C9EA44728C3A9980053FE38 /* Auth */,
+				4C3AD10E28DB8E640000BB90 /* ServicesFeed */,
 			);
 			path = APis;
 			sourceTree = "<group>";
@@ -529,7 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				4C9EA47C28C403180053FE38 /* CollectionsCells */,
-				4C9EA40E28C3A83B0053FE38 /* HomeViewController.swift */,
+				4C3AD10B28DB8E080000BB90 /* Home */,
 				4C9EA48428C404E60053FE38 /* CategoryPresenter.swift */,
 				4C9EA48228C404CD0053FE38 /* CategoryModel.swift */,
 			);
@@ -890,6 +915,7 @@
 				4C9822AD28C6842E00C4D4F5 /* CategoryDetailsViewController.swift in Sources */,
 				4C9EA44D28C3A9E00053FE38 /* HTTPMethods.swift in Sources */,
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,
+				4C3AD11028DB8E930000BB90 /* ServicesFeed.swift in Sources */,
 				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
 				4C98229F28C63A5700C4D4F5 /* KeychainPasswordItem.swift in Sources */,
 				4CFDC50D28CE995600E5B753 /* SceneMode.swift in Sources */,
@@ -897,11 +923,11 @@
 				4C9EA45528C3AAAE0053FE38 /* AppManager.swift in Sources */,
 				4C9EA45328C3AA0B0053FE38 /* APiErrors.swift in Sources */,
 				4C9822B128C6846600C4D4F5 /* CategoryDetailsTableViewCell.swift in Sources */,
+				4C3AD11228DB8F5E0000BB90 /* ServicesClient.swift in Sources */,
 				4CE8490528D2509C00282725 /* UserDefaults.swift in Sources */,
 				4C9EA40F28C3A83B0053FE38 /* HomeViewController.swift in Sources */,
 				4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */,
 				4C9822A128C63CEE00C4D4F5 /* TouchIDAuthentication.swift in Sources */,
-				4C9EA47628C3D48F0053FE38 /* Configuration.swift in Sources */,
 				4C9EA48528C404E60053FE38 /* CategoryPresenter.swift in Sources */,
 				4C9EA40B28C3A83B0053FE38 /* AppDelegate.swift in Sources */,
 				4C98228F28C4D39600C4D4F5 /* DishesDetailsViewController.swift in Sources */,
@@ -925,9 +951,11 @@
 				4C9EA44428C3A97E0053FE38 /* AuthFeeds.swift in Sources */,
 				4CE8490328D24F7700282725 /* Messages.swift in Sources */,
 				4C9EA46828C3B29B0053FE38 /* OnBoardingViewController.swift in Sources */,
+				4C3AD10D28DB8E1C0000BB90 /* HomePresenter.swift in Sources */,
 				4C9822AA28C682BE00C4D4F5 /* CartItemsTableViewCell.swift in Sources */,
 				4C9EA48728C406AD0053FE38 /* StringURLs.swift in Sources */,
 				4C9EA44B28C3A9CB0053FE38 /* APiClient.swift in Sources */,
+				4C3AD11428DB90C00000BB90 /* HomeModel.swift in Sources */,
 				4C9EA48C28C40D860053FE38 /* PopularCollectionViewCell.swift in Sources */,
 				4C9EA46A28C3B54D0053FE38 /* UIViews.swift in Sources */,
 				4C9EA46128C3ABDD0053FE38 /* Global.swift in Sources */,
@@ -1056,7 +1084,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = "HELLO AQ";
+				BASE_URL = "https://yummie.glitch.me/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
@@ -1250,7 +1278,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = "HELLO Debug";
+				BASE_URL = "https://yummie.glitch.me/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
@@ -1287,7 +1315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = "HELLO Release";
+				BASE_URL = "https://yummie.glitch.me/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
@@ -1466,7 +1494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = "HELLO Staging";
+				BASE_URL = "https://yummie.glitch.me/";
 				CODE_SIGN_ENTITLEMENTS = Yummi/YummiStaging.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

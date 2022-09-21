@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class HomeViewController: UIViewController {
     
@@ -13,24 +14,22 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var popularCollectionView: UICollectionView!
     @IBOutlet weak var chefCollectionView: UICollectionView!
     
-    var categories: [DishCategory] = [
-        .init(id: "1", name: "Hello", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"),
-        .init(id: "1", name: "Hello", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"),
-        .init(id: "1", name: "Hello", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"),
-        .init(id: "1", name: "Hello", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60")]
+    fileprivate let homePresenter = HomePresenter(apiServices: APIServices())
+    fileprivate var allCategories: BaseCategoriesResponse?
     
-    var dishs: [Dish] = [
-        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", price: 20.50),
-        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", price: 18.3),
-        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", price: 12.2),
-        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "any type of food", price: 8.80),
-        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "any type of food", price: 26.6),
-        .init(id: "1", title: "Hi there", image: "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60", calories: 32.22122, description: "any type of food", price: 80.252)]
+    private let refreshControl = UIRefreshControl()
+    var isLoadingStarted = true
+
+    
+    var categories: [Category] = []
+    var dishs: [Popular] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        homePresenter.attachView(self)
+        self.homePresenter.getAllCategories()
         
         registerNibs()
     }
@@ -190,5 +189,34 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         animator.addAnimations {
             self.show(DishesDetailsViewController(), sender: self)
         }
+    }
+}
+
+extension HomeViewController: CategoriesViewDelegate {
+    func startLoading() {
+        ProgressHUD.animationType = .lineScaling
+    }
+    
+    func stopLoading() {
+        ProgressHUD.dismiss()
+    }
+    
+    func showErrorMessage(_ message: String) {
+        ProgressHUD.showError(message)
+    }
+    
+    func didRecivedDishes(_ categories: BaseCategoriesResponse) {
+        self.allCategories = categories
+        self.categories = categories.data.categories
+        self.dishs = categories.data.populars
+
+        reloadCollectionsData()
+        print(categories)
+    }
+    
+    fileprivate func reloadCollectionsData() {
+        self.categoryCollectionView.reloadData()
+        self.popularCollectionView.reloadData()
+        self.chefCollectionView.reloadData()
     }
 }
