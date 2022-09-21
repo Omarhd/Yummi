@@ -49,6 +49,10 @@
                                                             <inset key="sectionInset" minX="10" minY="0.0" maxX="20" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="AJL-C5-78X"/>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="TJF-SR-fXC"/>
@@ -191,6 +195,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="categoryCollectionView" destination="RLs-Cj-tqw" id="bFk-Uh-V9H"/>
                         <outlet property="chefCollectionView" destination="T7P-tp-Pbn" id="eN9-Ll-L32"/>
@@ -232,7 +239,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhj-7o-rCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="-163"/>
+            <point key="canvasLocation" x="-39" y="-881"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="Bc8-EM-Fm8">

@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import Hero
 
 class DishesDetailsViewController: UIViewController {
 
