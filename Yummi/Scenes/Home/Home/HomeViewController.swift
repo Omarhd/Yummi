@@ -194,7 +194,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension HomeViewController: CategoriesViewDelegate {
     func startLoading() {
-        ProgressHUD.animationType = .lineScaling
+        ProgressHUD.animationType = .circleRotateChase
+        ProgressHUD.show()
     }
     
     func stopLoading() {
