@@ -24,6 +24,10 @@ class CategoryDetailsTableViewCell: UITableViewCell {
         activitIndecator.startAnimating()
         categoryImageView.kf.setImage(with: category.image.asURL)
         activitIndecator.stopAnimating()
+        
+        self.accessoryView?.largeContentImage = UIImage(systemName: "checkmark.square")
+        self.accessoryView?.backgroundColor = .blue
+
 
     }
 }

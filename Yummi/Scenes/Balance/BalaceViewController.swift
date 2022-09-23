@@ -16,6 +16,9 @@ class BalaceViewController: UIViewController {
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         mainView.addGestureRecognizer(tap)
+        
+//        self.isModalInPresentation = true
+
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {

@@ -20,7 +20,7 @@ class DishesDetailsViewController: UIViewController {
     @IBOutlet weak var cartButton: UIButton!
     
     var dish: Popular!
-    var itemPrice: Double!
+    var itemPrice: Int!
     var cart: [Popular] = []
     
     var formattedPrice: String! {
@@ -35,13 +35,13 @@ class DishesDetailsViewController: UIViewController {
     }
     @IBAction func stepper(_ sender: UIStepper) {
         self.dishCountLabel.text = Int(sender.value).description
-        itemPrice = self.itemPrice * Double(sender.value)
+        itemPrice = self.dish.calories * Int(sender.value)
         
         if let finalPrice = itemPrice {
             self.dishPriceLabel.text = "\(finalPrice)"
         }
       
-        itemPrice = dish.calories as? Double
+        itemPrice = dish.calories
     }
     
     @IBAction func addItemToCart(_ sender: Any) {
@@ -64,7 +64,7 @@ class DishesDetailsViewController: UIViewController {
         dishCaloriesLabel.text = "\(dish.calories)"
         dishPriceLabel.text = "\(dish.calories)"
         
-        self.itemPrice = dish.calories as? Double
+        self.itemPrice = dish.calories
     }
     
     private func setupCartUI() {
