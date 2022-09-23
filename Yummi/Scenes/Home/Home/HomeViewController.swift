@@ -88,7 +88,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let detailsController =  CategoryDetailsViewController.instantiate(storyBoardName: "DishesDetails")
             detailsController.categories = self.categories
             
-            navigationController?.hero.replaceViewController(with: detailsController)
             navigationController?.pushViewController(detailsController, animated: true)
 
         case popularCollectionView:

@@ -9,8 +9,16 @@ import UIKit
 
 class BalaceViewController: UIViewController {
 
+    @IBOutlet var mainView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        mainView.addGestureRecognizer(tap)
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+       dismiss(animated: true)
     }
 }

@@ -16,10 +16,63 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74J-sa-KHV">
+                                <rect key="frame" x="0.0" y="604" width="390" height="280"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fn3-6V-8aO">
+                                        <rect key="frame" x="150" y="16" width="90" height="4"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="MvJ-mD-4AP"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2400 SDG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8S-3B-6Lq">
+                                        <rect key="frame" x="145" y="120" width="100" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ito-Zw-Bkc"/>
+                                            <constraint firstAttribute="width" constant="100" id="SKg-6v-mah"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BG"/>
+                                <constraints>
+                                    <constraint firstItem="l8S-3B-6Lq" firstAttribute="centerY" secondItem="74J-sa-KHV" secondAttribute="centerY" id="39o-BW-zLS"/>
+                                    <constraint firstAttribute="height" constant="280" id="4Yf-BS-E4z"/>
+                                    <constraint firstItem="Fn3-6V-8aO" firstAttribute="top" secondItem="74J-sa-KHV" secondAttribute="top" constant="16" id="9iS-4k-emB"/>
+                                    <constraint firstItem="Fn3-6V-8aO" firstAttribute="centerX" secondItem="74J-sa-KHV" secondAttribute="centerX" id="Ege-j2-OYh"/>
+                                    <constraint firstItem="Fn3-6V-8aO" firstAttribute="leading" secondItem="74J-sa-KHV" secondAttribute="leading" constant="150" id="Wu5-Oj-4TN"/>
+                                    <constraint firstItem="l8S-3B-6Lq" firstAttribute="centerX" secondItem="74J-sa-KHV" secondAttribute="centerX" id="ajg-Gd-les"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fn3-6V-8aO" secondAttribute="trailing" constant="150" id="jVM-RS-edk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" name="BG"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="74J-sa-KHV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="OJZ-c4-Et7"/>
+                            <constraint firstAttribute="bottom" secondItem="74J-sa-KHV" secondAttribute="bottom" constant="-40" id="SA9-67-ZHA"/>
+                            <constraint firstItem="74J-sa-KHV" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="jhI-IO-fH0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Balance" id="8s1-sE-aem"/>
+                    <connections>
+                        <outlet property="mainView" destination="5EZ-qb-Rvc" id="xGp-Tw-2Oc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,7 +100,7 @@
     </scenes>
     <resources>
         <namedColor name="BG">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
