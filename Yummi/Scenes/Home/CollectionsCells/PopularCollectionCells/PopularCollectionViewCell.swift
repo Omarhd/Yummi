@@ -17,6 +17,7 @@ class PopularCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     func setupUI(with dish: Popular) {

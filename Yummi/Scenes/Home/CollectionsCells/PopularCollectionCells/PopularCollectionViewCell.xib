@@ -153,6 +153,7 @@
             <size key="customSize" width="180" height="300"/>
             <connections>
                 <outlet property="activityIndicator" destination="Cuv-Wa-SzN" id="lht-kj-AvQ"/>
+                <outlet property="addToCartButton" destination="7HE-c1-75w" id="6eP-KI-xMz"/>
                 <outlet property="caloriesLabel" destination="zd8-t9-NNu" id="Sqp-ll-zdV"/>
                 <outlet property="descriptionLabel" destination="lZH-pX-Pjq" id="4fe-tZ-Jaw"/>
                 <outlet property="dishIamge" destination="Het-VG-1qS" id="sVs-mr-J1Q"/>

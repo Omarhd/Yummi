@@ -20,7 +20,9 @@ class HomeViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     var isLoadingStarted = true
 
-    
+    // MARK:- refrence to manage object context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     var categories: [Category] = []
     var dishs: [Popular] = []
     
@@ -68,6 +70,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case popularCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.identifire, for: indexPath) as! PopularCollectionViewCell
             cell.setupUI(with: dishs[indexPath.row])
+            
+            cell.addToCartButton.tag = indexPath.row
+            cell.addToCartButton.addTarget(self, action: #selector(addToCartFromCell), for: .touchUpInside)
             
             return cell
             
@@ -124,7 +129,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 let shareAction = UIAction(
                     title: "Add to Cart",
                     image: UIImage(systemName: "bag.fill.badge.plus")) { _ in
-                       
+                        self.addToCart(dish: dish)
                     }
                 
                 return UIMenu(title: "", image: nil,
@@ -218,5 +223,37 @@ extension HomeViewController: CategoriesViewDelegate {
         self.categoryCollectionView.reloadData()
         self.popularCollectionView.reloadData()
         self.chefCollectionView.reloadData()
+    }
+    
+    fileprivate func addToCart(dish: Popular) {
+        let item = Products(context: self.context)
+        
+        item.name = dish.name
+        item.details = dish.popularDescription
+        item.price = Double(dish.calories)
+        item.img = dish.image
+        
+        do {
+            try self.context.save()
+            showSuccessMessage(title: "Added", body: "Success added item to Cart")
+        } catch {
+            Yummi.showErrorMessage(title: "Error", body: "can't added item to Cart")
+        }
+    }
+    
+    @objc fileprivate func addToCartFromCell(sender: UIButton) {
+        let item = Products(context: self.context)
+        
+        item.name = self.dishs[sender.tag].name
+        item.details = self.dishs[sender.tag].popularDescription
+        item.price = Double(self.dishs[sender.tag].calories)
+        item.img = self.dishs[sender.tag].image
+        
+        do {
+            try self.context.save()
+            showSuccessMessage(title: "Added", body: "Success added item to Cart")
+        } catch {
+            Yummi.showErrorMessage(title: "Error", body: "can't added item to Cart")
+        }
     }
 }

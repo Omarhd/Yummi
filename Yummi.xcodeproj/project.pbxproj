@@ -1396,7 +1396,7 @@
 				BASE_URL = "https://yummie.glitch.me/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2C4XF58Z9A;
+				DEVELOPMENT_TEAM = FD7KN86W7E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;

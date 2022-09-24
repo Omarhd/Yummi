@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 import LocalAuthentication
 
 class CartViewController: UIViewController {
@@ -57,6 +58,38 @@ class CartViewController: UIViewController {
     
     @IBAction func trashAction(_ sender: Any) {
         
+        let alertController = UIAlertController (
+            title: "Are You Sure!",
+            message: "You can login later any time",
+            preferredStyle: UIAlertController.Style.alert
+        )
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        }
+        let standard = UserDefaults.standard
+        let okayAction = UIAlertAction(title: "Yes", style: .destructive) { (action) in
+            ProgressHUD.animationType = .circleRotateChase
+            ProgressHUD.show()
+
+            for object in self.cartItem {
+                self.context.delete(object)
+            }
+            
+            do {
+                try self.context.save()
+                showSuccessMessage(title: "Done", body: "Cart is Clear.")
+                ProgressHUD.dismiss()
+
+            } catch {
+                showErrorMessage(title: "Error", body: "Can't Remove items for now.")
+            }
+            
+            self.fetchProducts()
+        }
+        
+        alertController.addAction(okayAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true)
     }
     
     fileprivate func setupCartDetails() {
