@@ -12,22 +12,24 @@ class CartViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyCartView: UIView!
+    @IBOutlet weak var detailsView: CardView!
+    
+    @IBOutlet weak var itemsCountLabel: UILabel!
+    @IBOutlet weak var deliveryChargeLabel: UILabel!
+    @IBOutlet weak var totalPriceLabel: UILabel!
     
     // MARK:- refrence to manage object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
    
     var cartItem: [Products] = []
+    var totalPrice: String?
+    
     let touchMe = BiometricIDAuth()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         fetchProducts()
-        if cartItem.count == 0 {
-            emptyCartView.isHidden = false
-        } else {
-            emptyCartView.isHidden = true
-        }
         registerNibs()
     }
     
@@ -40,6 +42,9 @@ class CartViewController: UIViewController {
         } catch {
             
         }
+        
+        setupEmptyViewTableView()
+        setupCartDetails()
     }
     
     private func registerNibs() {
@@ -54,6 +59,20 @@ class CartViewController: UIViewController {
         
     }
     
+    fileprivate func setupCartDetails() {
+        self.itemsCountLabel.text = "\(self.cartItem.count)"
+        self.deliveryChargeLabel.text = "\(1800)"
+        self.totalPriceLabel.text = self.totalPrice
+    }
+    
+    fileprivate func setupEmptyViewTableView() {
+        if cartItem.count == 0 {
+            emptyCartView.isHidden = false
+        } else {
+            emptyCartView.isHidden = true
+        }
+    }
+    
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
@@ -65,6 +84,9 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CartItemsTableViewCell.identifire, for: indexPath) as! CartItemsTableViewCell
         
         cell.setupUI(with: cartItem[indexPath.row])
+        
+        let total = Double(self.cartItem.count) * cartItem[indexPath.row].price
+        self.totalPrice = "\(total)"
         
         return cell
     }
