@@ -13,18 +13,33 @@ class CartViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyCartView: UIView!
     
-    var cartItem: [Popular] = []
+    // MARK:- refrence to manage object context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+   
+    var cartItem: [Products] = []
     let touchMe = BiometricIDAuth()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        fetchProducts()
         if cartItem.count == 0 {
             emptyCartView.isHidden = false
         } else {
             emptyCartView.isHidden = true
         }
         registerNibs()
+    }
+    
+    func fetchProducts() {
+        do {
+            self.cartItem = try context.fetch(Products.fetchRequest())
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        } catch {
+            
+        }
     }
     
     private func registerNibs() {

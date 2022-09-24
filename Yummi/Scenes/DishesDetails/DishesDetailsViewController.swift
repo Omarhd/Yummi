@@ -19,6 +19,9 @@ class DishesDetailsViewController: UIViewController {
     @IBOutlet weak var dishPriceLabel: UILabel!
     @IBOutlet weak var cartButton: UIButton!
     
+    // MARK:- refrence to manage object context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     var dish: Popular!
     var itemPrice: Int!
     var cart: [Popular] = []
@@ -45,7 +48,21 @@ class DishesDetailsViewController: UIViewController {
     }
     
     @IBAction func addItemToCart(_ sender: Any) {
-        self.cart.append(dish)
+        
+        let item = Products(context: self.context)
+        
+        item.name = self.dish.name
+        item.details = self.dish.popularDescription
+        item.price = Double(self.dish.calories)
+        item.img = self.dish.image
+        item.qt = 1
+        
+        do {
+            try self.context.save()
+        } catch {
+            
+        }
+
         cartButton.setImage(UIImage(systemName: "bag.fill"), for: .normal)
     }
     

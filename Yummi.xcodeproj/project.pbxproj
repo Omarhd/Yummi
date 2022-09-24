@@ -27,7 +27,6 @@
 		4C98229D28C6362C00C4D4F5 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229C28C6362C00C4D4F5 /* AuthViewController.swift */; };
 		4C98229F28C63A5700C4D4F5 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229E28C63A5700C4D4F5 /* KeychainPasswordItem.swift */; };
 		4C9822A128C63CEE00C4D4F5 /* TouchIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822A028C63CEE00C4D4F5 /* TouchIDAuthentication.swift */; };
-		4C9822A428C6425400C4D4F5 /* Auth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822A228C6425400C4D4F5 /* Auth.xcdatamodeld */; };
 		4C9822A628C6800400C4D4F5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822A528C6800400C4D4F5 /* Config.swift */; };
 		4C9822AA28C682BE00C4D4F5 /* CartItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9822A828C682BE00C4D4F5 /* CartItemsTableViewCell.swift */; };
 		4C9822AB28C682BE00C4D4F5 /* CartItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9822A928C682BE00C4D4F5 /* CartItemsTableViewCell.xib */; };
@@ -80,7 +79,9 @@
 		4CDD10C528DE1B9E00BD760C /* Latest.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD10C128DE1B9C00BD760C /* Latest.intentdefinition */; };
 		4CDD10C628DE1B9E00BD760C /* Latest.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD10C128DE1B9C00BD760C /* Latest.intentdefinition */; };
 		4CDD10C928DE1B9E00BD760C /* LatestExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4CDD10BB28DE1B9C00BD760C /* LatestExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4CDD10D028DE20A600BD760C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD10CF28DE20A600BD760C /* Model.swift */; };
+		4CE1D44728DF7632005E5ADF /* Products.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1D44428DF7632005E5ADF /* Products.xcdatamodeld */; };
+		4CE1D4C628DF7C5B005E5ADF /* Products+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1D44828DF769D005E5ADF /* Products+CoreDataClass.swift */; };
+		4CE1D4C728DF7C5F005E5ADF /* Products+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1D44928DF769D005E5ADF /* Products+CoreDataProperties.swift */; };
 		4CE8490328D24F7700282725 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8490228D24F7700282725 /* Messages.swift */; };
 		4CE8490528D2509C00282725 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8490428D2509C00282725 /* UserDefaults.swift */; };
 		4CFDC50028CA84A400E5B753 /* SearchBarNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFDC4FF28CA84A400E5B753 /* SearchBarNavigationController.swift */; };
@@ -157,7 +158,6 @@
 		4C98229C28C6362C00C4D4F5 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		4C98229E28C63A5700C4D4F5 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		4C9822A028C63CEE00C4D4F5 /* TouchIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDAuthentication.swift; sourceTree = "<group>"; };
-		4C9822A328C6425400C4D4F5 /* Auth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Auth.xcdatamodel; sourceTree = "<group>"; };
 		4C9822A528C6800400C4D4F5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4C9822A828C682BE00C4D4F5 /* CartItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsTableViewCell.swift; sourceTree = "<group>"; };
 		4C9822A928C682BE00C4D4F5 /* CartItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemsTableViewCell.xib; sourceTree = "<group>"; };
@@ -216,7 +216,10 @@
 		4CDD10C128DE1B9C00BD760C /* Latest.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Latest.intentdefinition; sourceTree = "<group>"; };
 		4CDD10C228DE1B9E00BD760C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CDD10C428DE1B9E00BD760C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CDD10CF28DE20A600BD760C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4CE1D44528DF7632005E5ADF /* Products.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Products.xcdatamodel; sourceTree = "<group>"; };
+		4CE1D44628DF7632005E5ADF /* Auth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Auth.xcdatamodel; sourceTree = "<group>"; };
+		4CE1D44828DF769D005E5ADF /* Products+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Products+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4CE1D44928DF769D005E5ADF /* Products+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Products+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4CE8490228D24F7700282725 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		4CE8490428D2509C00282725 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		4CFDC4FF28CA84A400E5B753 /* SearchBarNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarNavigationController.swift; sourceTree = "<group>"; };
@@ -374,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				4C475D6928D5B4FB0074D3D0 /* Google-Info */,
+				4CE1D44A28DF769D005E5ADF /* CoreData */,
 				4C9EA45F28C3ABCB0053FE38 /* Common */,
 				4C9EA44028C3A9430053FE38 /* Localizations */,
 				4C9EA43F28C3A9270053FE38 /* Utilit */,
@@ -385,7 +389,7 @@
 				4C9EA45E28C3ABA90053FE38 /* StoryBoards */,
 				4C9EA41328C3A83F0053FE38 /* Assets.xcassets */,
 				4C9EA41828C3A83F0053FE38 /* Info.plist */,
-				4C9822A228C6425400C4D4F5 /* Auth.xcdatamodeld */,
+				4CE1D44428DF7632005E5ADF /* Products.xcdatamodeld */,
 			);
 			path = Yummi;
 			sourceTree = "<group>";
@@ -660,12 +664,29 @@
 			isa = PBXGroup;
 			children = (
 				4CDD10BF28DE1B9C00BD760C /* Latest.swift */,
-				4CDD10CF28DE20A600BD760C /* Model.swift */,
 				4CDD10C128DE1B9C00BD760C /* Latest.intentdefinition */,
 				4CDD10C228DE1B9E00BD760C /* Assets.xcassets */,
 				4CDD10C428DE1B9E00BD760C /* Info.plist */,
 			);
 			path = Latest;
+			sourceTree = "<group>";
+		};
+		4CE1D44A28DF769D005E5ADF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4CE1D44B28DF76A8005E5ADF /* Model */,
+			);
+			name = CoreData;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4CE1D44B28DF76A8005E5ADF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CE1D44828DF769D005E5ADF /* Products+CoreDataClass.swift */,
+				4CE1D44928DF769D005E5ADF /* Products+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BB492CCDDD9870BA264476AC /* Pods */ = {
@@ -989,6 +1010,7 @@
 				4C9EA45928C3AB390053FE38 /* Bundle.swift in Sources */,
 				4C9822AD28C6842E00C4D4F5 /* CategoryDetailsViewController.swift in Sources */,
 				4C9EA44D28C3A9E00053FE38 /* HTTPMethods.swift in Sources */,
+				4CE1D4C628DF7C5B005E5ADF /* Products+CoreDataClass.swift in Sources */,
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,
 				4C3AD11028DB8E930000BB90 /* ServicesFeed.swift in Sources */,
 				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
@@ -1012,20 +1034,20 @@
 				4C98229128C5372C00C4D4F5 /* ViewControllerNavigators.swift in Sources */,
 				4C9EA46C28C3B66A0053FE38 /* StaticDataModel.swift in Sources */,
 				4C9EA49128C4C8830053FE38 /* ChefCollectionViewCell.swift in Sources */,
-				4C9822A428C6425400C4D4F5 /* Auth.xcdatamodeld in Sources */,
 				4C21936B28D737AD0018E8E8 /* BalaceViewController.swift in Sources */,
 				4C9EA45128C3A9FE0053FE38 /* EndPoints.swift in Sources */,
 				4C98229D28C6362C00C4D4F5 /* AuthViewController.swift in Sources */,
 				4C475D5528D4A0CE0074D3D0 /* ServerConfig.swift in Sources */,
 				4C9EA40D28C3A83B0053FE38 /* SceneDelegate.swift in Sources */,
 				4CD7A4A628C940DF00D20CA1 /* SearchViewController.swift in Sources */,
+				4CE1D44728DF7632005E5ADF /* Products.xcdatamodeld in Sources */,
 				4C9EA48028C403610053FE38 /* CategoryCollectionViewCell.swift in Sources */,
 				4C9EA45B28C3AB490053FE38 /* Vibration.swift in Sources */,
 				4C9822A628C6800400C4D4F5 /* Config.swift in Sources */,
 				4CFDC50028CA84A400E5B753 /* SearchBarNavigationController.swift in Sources */,
 				4CFDC50B28CE974200E5B753 /* SettingsTableViewController.swift in Sources */,
-				4CDD10D028DE20A600BD760C /* Model.swift in Sources */,
 				4C9EA44428C3A97E0053FE38 /* AuthFeeds.swift in Sources */,
+				4CE1D4C728DF7C5F005E5ADF /* Products+CoreDataProperties.swift in Sources */,
 				4CE8490328D24F7700282725 /* Messages.swift in Sources */,
 				4C9EA46828C3B29B0053FE38 /* OnBoardingViewController.swift in Sources */,
 				4C3AD10D28DB8E1C0000BB90 /* HomePresenter.swift in Sources */,
@@ -1840,13 +1862,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4C9822A228C6425400C4D4F5 /* Auth.xcdatamodeld */ = {
+		4CE1D44428DF7632005E5ADF /* Products.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4C9822A328C6425400C4D4F5 /* Auth.xcdatamodel */,
+				4CE1D44528DF7632005E5ADF /* Products.xcdatamodel */,
+				4CE1D44628DF7632005E5ADF /* Auth.xcdatamodel */,
 			);
-			currentVersion = 4C9822A328C6425400C4D4F5 /* Auth.xcdatamodel */;
-			path = Auth.xcdatamodeld;
+			currentVersion = 4CE1D44528DF7632005E5ADF /* Products.xcdatamodel */;
+			path = Products.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

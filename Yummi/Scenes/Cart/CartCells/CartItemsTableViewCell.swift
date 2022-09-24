@@ -17,10 +17,10 @@ class CartItemsTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     
     
-    func setupUI(with item: Popular) {
-        itemImageView.kf.setImage(with: item.image.asURL)
+    func setupUI(with item: Products) {
+        itemImageView.kf.setImage(with: item.img?.asURL)
         titleLabel.text = item.name
-        descriptionLabel.text = item.popularDescription
-        priceLabel.text = "\(item.calories)"
+        descriptionLabel.text = item.details
+        priceLabel.text = "\(item.price)"
     }
 }
