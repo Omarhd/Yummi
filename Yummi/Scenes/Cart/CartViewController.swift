@@ -50,6 +50,10 @@ class CartViewController: UIViewController {
         doAuth()
     }
     
+    @IBAction func trashAction(_ sender: Any) {
+        
+    }
+    
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
@@ -65,7 +69,25 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Remove") { action, view, complection in
+            let item = self.cartItem[indexPath.row]
+            
+            self.context.delete(item)
+            
+            do {
+                try self.context.save()
+                showSuccessMessage(title: "Done", body: "Removed item.")
+
+            } catch {
+                showErrorMessage(title: "Error", body: "Can't Remove items for now.")
+            }
+            
+            self.fetchProducts()
+        }
+        
+        return UISwipeActionsConfiguration(actions: [action])
+    }
 }
 
 extension CartViewController {

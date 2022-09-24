@@ -58,18 +58,17 @@ class DishesDetailsViewController: UIViewController {
         
         do {
             try self.context.save()
-            showTopNotificaionForGoodNetwork(title: "Added", body: "Success added item to Cart")
+            showSuccessMessage(title: "Added", body: "Success added item to Cart")
         } catch {
-            
+            showErrorMessage(title: "Error", body: "can't added item to Cart")
         }
 
         cartButton.setImage(UIImage(systemName: "bag.fill"), for: .normal)
     }
     
     @IBAction func cartAction(_ sender: Any) {
-        let detailsController =  CartViewController.instantiate(storyBoardName: "Cart")
-//        detailsController.cartItem = [Popular]
         
+        let detailsController =  CartViewController.instantiate(storyBoardName: "Cart")
         navigationController?.pushViewController(detailsController, animated: true)
 
     }
@@ -83,12 +82,4 @@ class DishesDetailsViewController: UIViewController {
         
         self.itemPrice = dish.calories
     }
-    
-//    private func setupCartUI() {
-//        if cart.count == 0 {
-//            cartButton.setImage(UIImage(systemName: "bag.circle.fill"), for: .normal)
-//        } else {
-//            cartButton.setImage(UIImage(systemName: "bag.badge.minus"), for: .normal)
-//        }
-//    }
 }
