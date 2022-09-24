@@ -24,20 +24,19 @@ class DishesDetailsViewController: UIViewController {
 
     var dish: Popular!
     var itemPrice: Int!
-    var cart: [Popular] = []
-    
-    var formattedPrice: String! {
-        return String(format: "%.2f", String(itemPrice))
-    }
+    var itemsCount: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI(with: self.dish)
-        setupCartUI()
+
     }
+   
     @IBAction func stepper(_ sender: UIStepper) {
         self.dishCountLabel.text = Int(sender.value).description
+        self.itemsCount = Int(sender.value)
+        
         itemPrice = self.dish.calories * Int(sender.value)
         
         if let finalPrice = itemPrice {
@@ -55,10 +54,11 @@ class DishesDetailsViewController: UIViewController {
         item.details = self.dish.popularDescription
         item.price = Double(self.dish.calories)
         item.img = self.dish.image
-        item.qt = 1
+        item.qt = Int64(self.self.itemsCount)
         
         do {
             try self.context.save()
+            showTopNotificaionForGoodNetwork(title: "Added", body: "Success added item to Cart")
         } catch {
             
         }
@@ -84,11 +84,11 @@ class DishesDetailsViewController: UIViewController {
         self.itemPrice = dish.calories
     }
     
-    private func setupCartUI() {
-        if cart.count == 0 {
-            cartButton.setImage(UIImage(systemName: "bag.circle.fill"), for: .normal)
-        } else {
-            cartButton.setImage(UIImage(systemName: "bag.badge.minus"), for: .normal)
-        }
-    }
+//    private func setupCartUI() {
+//        if cart.count == 0 {
+//            cartButton.setImage(UIImage(systemName: "bag.circle.fill"), for: .normal)
+//        } else {
+//            cartButton.setImage(UIImage(systemName: "bag.badge.minus"), for: .normal)
+//        }
+//    }
 }
