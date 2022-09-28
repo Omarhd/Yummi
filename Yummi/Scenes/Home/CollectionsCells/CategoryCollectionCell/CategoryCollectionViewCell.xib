@@ -39,13 +39,17 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9J-5g-v0k">
-                                <rect key="frame" x="56" y="19" width="86" height="18.5"/>
+                                <rect key="frame" x="56" y="18.5" width="86" height="19"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" name="Cells"/>
@@ -61,6 +65,9 @@
                             <constraint firstAttribute="trailing" secondItem="P9J-5g-v0k" secondAttribute="trailing" constant="8" id="hNY-Kv-R1I"/>
                             <constraint firstItem="k8a-EE-bS3" firstAttribute="centerY" secondItem="33Q-Na-SOJ" secondAttribute="centerY" id="qhO-hB-LV0"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -72,6 +79,9 @@
                 <constraint firstItem="6Nm-Ws-OMF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kiZ-f7-AxP"/>
             </constraints>
             <size key="customSize" width="150" height="56"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="activityIndicator" destination="k8a-EE-bS3" id="0ir-sz-6by"/>
                 <outlet property="categoryImage" destination="33Q-Na-SOJ" id="pyY-Ci-n5c"/>

@@ -7,6 +7,7 @@
 
 import UIKit
 import ProgressHUD
+import SkeletonView
 
 class HomeViewController: UIViewController {
     
@@ -42,9 +43,47 @@ class HomeViewController: UIViewController {
         chefCollectionView.register(UINib(nibName: ChefCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: ChefCollectionViewCell.identifire)
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        categoryCollectionView.isSkeletonable = true
+        categoryCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
+                                                            animation: nil,
+                                                            transition: .crossDissolve(0.25))
+        
+        popularCollectionView.isSkeletonable = true
+        popularCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
+                                                            animation: nil,
+                                                            transition: .crossDissolve(0.25))
+        
+        chefCollectionView.isSkeletonable = true
+        chefCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
+                                                            animation: nil,
+                                                            transition: .crossDissolve(0.25))
+
+    }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, SkeletonCollectionViewDataSource {
+  
+    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> SkeletonView.ReusableCellIdentifier {
+       
+        var identifire: String = ""
+        
+        switch skeletonView {
+        case categoryCollectionView:
+            identifire = CategoryCollectionViewCell.identifire
+        case popularCollectionView:
+            identifire = PopularCollectionViewCell.identifire
+        case chefCollectionView:
+            identifire = ChefCollectionViewCell.identifire
+        default :
+            break
+        }
+        return identifire
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
@@ -215,11 +254,21 @@ extension HomeViewController: CategoriesViewDelegate {
         self.categories = categories.data.categories
         self.dishs = categories.data.populars
 
-        reloadCollectionsData()
-        print(categories)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            self.reloadCollectionsData()
+        }
+        
     }
     
     fileprivate func reloadCollectionsData() {
+        
+        
+        self.categoryCollectionView.stopSkeletonAnimation()
+        self.popularCollectionView.stopSkeletonAnimation()
+        self.chefCollectionView.stopSkeletonAnimation()
+
+        self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
+        
         self.categoryCollectionView.reloadData()
         self.popularCollectionView.reloadData()
         self.chefCollectionView.reloadData()
