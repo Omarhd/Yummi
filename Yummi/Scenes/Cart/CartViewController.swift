@@ -19,6 +19,8 @@ class CartViewController: UIViewController {
     @IBOutlet weak var deliveryChargeLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
     
+    var haLoggedIn: Bool = false
+    
     // MARK:- refrence to manage object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
    
@@ -53,7 +55,14 @@ class CartViewController: UIViewController {
     }
     
     @IBAction func doneAction(_ sender: Any) {
-        doAuth()
+        if haLoggedIn {
+            doAuth()
+        } else {
+            let auth = AuthViewController.instantiate(storyBoardName: "Auth")
+            auth.modalPresentationStyle = .formSheet
+
+            self.present(auth, animated: true, completion: nil)
+        }
     }
     
     @IBAction func trashAction(_ sender: Any) {
