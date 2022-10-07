@@ -23,23 +23,30 @@ class SettingsTableViewController: UITableViewController {
                     window.overrideUserInterfaceStyle = .dark //.light or .unspecified
                 }, completion: nil)
                 UserDefaults.standard.defaultDarkAppearnce = true
+                UserDefaults.standard.setDefaultAppearance = 2
             }
         } else {
             if let window = UIApplication.shared.keyWindow {
                 UIView.transition (with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
                     window.overrideUserInterfaceStyle = .light //.light or .unspecified
                 }, completion: nil)
-                UserDefaults.standard.defaultDarkAppearnce = false
+                UserDefaults.standard.setDefaultAppearance = 1
             }
         }
     }
     
     fileprivate func setupSwitcherStatus() {
-        if UserDefaults.standard.defaultDarkAppearnce {
+        if UserDefaults.standard.setDefaultAppearance == 2 {
             self.modeSwitcher.isOn = true
         } else {
             self.modeSwitcher.isOn = false
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setupSwitcherStatus()
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

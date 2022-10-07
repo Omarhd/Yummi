@@ -26,15 +26,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             controller = OnBoardingViewController.instantiate(storyBoardName: "OnBoarding")
         }
         
-        if UserDefaults.standard.defaultDarkAppearnce {
-            window?.overrideUserInterfaceStyle = .dark
-        } else {
-            window?.overrideUserInterfaceStyle = .light
+        if UserDefaults.standard.setDefaultAppearance != nil {
+            switch UserDefaults.standard.setDefaultAppearance {
+            case 0:
+                self.setAppearance(.light)
+            case 1:
+                self.setAppearance(.dark)
+            case 2:
+                self.setAppearance(.unspecified)
+            default:
+                break
+            }
         }
+        
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
     }
     
+    fileprivate func setAppearance(_ style: UIUserInterfaceStyle) {
+        if let window = UIApplication.shared.keyWindow {
+            UIView.transition (with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                    window.overrideUserInterfaceStyle = style
+            }, completion: nil)
+        }
+    }
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

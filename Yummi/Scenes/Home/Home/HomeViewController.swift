@@ -62,6 +62,9 @@ class HomeViewController: UIViewController {
                                                             animation: nil,
                                                             transition: .crossDissolve(0.25))
 
+        DispatchQueue.main.async {
+            self.reloadCollectionsData()
+        }
     }
 }
 
@@ -243,6 +246,9 @@ extension HomeViewController: CategoriesViewDelegate {
     
     func stopLoading() {
         ProgressHUD.dismiss()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            self.reloadCollectionsData()
+        }
     }
     
     func showErrorMessage(_ message: String) {
@@ -266,8 +272,6 @@ extension HomeViewController: CategoriesViewDelegate {
         self.categoryCollectionView.stopSkeletonAnimation()
         self.popularCollectionView.stopSkeletonAnimation()
         self.chefCollectionView.stopSkeletonAnimation()
-
-        self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
         
         self.categoryCollectionView.reloadData()
         self.popularCollectionView.reloadData()
