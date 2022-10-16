@@ -20,7 +20,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vf0-CV-lkx">
                                 <rect key="frame" x="0.0" y="92" width="414" height="602"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="BG"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="VX7-c5-V1j"/>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="MMD-7y-fGx"/>
