@@ -276,6 +276,8 @@ extension HomeViewController: CategoriesViewDelegate {
         self.categoryCollectionView.reloadData()
         self.popularCollectionView.reloadData()
         self.chefCollectionView.reloadData()
+        
+        
     }
     
     fileprivate func addToCart(dish: Popular) {

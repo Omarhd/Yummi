@@ -12,26 +12,11 @@ class AppearanceTableViewController: UITableViewController {
     @IBOutlet weak var lightCell: UITableViewCell!
     @IBOutlet weak var darkCell: UITableViewCell!
     @IBOutlet weak var systemCell: UITableViewCell!
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if UserDefaults.standard.setDefaultAppearance == 1 {
-            lightCell.accessoryType = .checkmark
-            darkCell.accessoryType = .none
-            systemCell.accessoryType = .none
-            
-        } else if UserDefaults.standard.setDefaultAppearance == 2 {
-            lightCell.accessoryType = .none
-            darkCell.accessoryType = .checkmark
-            systemCell.accessoryType = .none
-            
-        } else if UserDefaults.standard.setDefaultAppearance == 0 {
-            lightCell.accessoryType = .none
-            darkCell.accessoryType = .none
-            systemCell.accessoryType = .checkmark
-            
-        }
+        setupCheckMarks()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -74,6 +59,25 @@ class AppearanceTableViewController: UITableViewController {
                     // Fallback on earlier versions
                 } //.light or .unspecified
             }, completion: nil)
+        }
+    }
+    
+    fileprivate func setupCheckMarks() {
+        if UserDefaults.standard.setDefaultAppearance == 1 {
+            lightCell.accessoryType = .checkmark
+            darkCell.accessoryType = .none
+            systemCell.accessoryType = .none
+            
+        } else if UserDefaults.standard.setDefaultAppearance == 2 {
+            lightCell.accessoryType = .none
+            darkCell.accessoryType = .checkmark
+            systemCell.accessoryType = .none
+            
+        } else if UserDefaults.standard.setDefaultAppearance == 0 {
+            lightCell.accessoryType = .none
+            darkCell.accessoryType = .none
+            systemCell.accessoryType = .checkmark
+            
         }
     }
 }

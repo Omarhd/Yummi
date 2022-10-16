@@ -1,0 +1,30 @@
+PODS:
+  - Kingfisher (7.2.2)
+  - ProgressHUD (13.6)
+  - SkeletonView (1.29.2)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
+
+DEPENDENCIES:
+  - Kingfisher
+  - ProgressHUD
+  - SkeletonView
+  - SwiftMessages
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - ProgressHUD
+    - SkeletonView
+    - SwiftMessages
+
+SPEC CHECKSUMS:
+  Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
+  ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
+  SkeletonView: 915a80ecc2b6421ab7ac0f0212321c0cc1406472
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+
+PODFILE CHECKSUM: 4ffb6056f2a67e65ec7f107ccf4a07915ef78e2c
+
+COCOAPODS: 1.11.3
