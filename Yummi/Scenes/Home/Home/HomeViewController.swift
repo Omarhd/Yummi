@@ -44,9 +44,7 @@ class HomeViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    fileprivate func showSkeletonAnimationView() {
         categoryCollectionView.isSkeletonable = true
         categoryCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
                                                             animation: nil,
@@ -54,17 +52,24 @@ class HomeViewController: UIViewController {
         
         popularCollectionView.isSkeletonable = true
         popularCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
-                                                            animation: nil,
-                                                            transition: .crossDissolve(0.25))
+                                                           animation: nil,
+                                                           transition: .crossDissolve(0.25))
         
         chefCollectionView.isSkeletonable = true
         chefCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
-                                                            animation: nil,
-                                                            transition: .crossDissolve(0.25))
+                                                        animation: nil,
+                                                        transition: .crossDissolve(0.25))
+    }
+    
+    fileprivate func stopSkeletonAnimationView() {
+        self.categoryCollectionView.stopSkeletonAnimation()
+        self.categoryCollectionView.hideSkeleton()
+        
+        self.popularCollectionView.stopSkeletonAnimation()
+        self.popularCollectionView.hideSkeleton()
 
-        DispatchQueue.main.async {
-            self.reloadCollectionsData()
-        }
+        self.chefCollectionView.stopSkeletonAnimation()
+        self.chefCollectionView.hideSkeleton()
     }
 }
 
@@ -240,15 +245,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension HomeViewController: CategoriesViewDelegate {
     func startLoading() {
-        ProgressHUD.animationType = .circleRotateChase
-        ProgressHUD.show()
+        showSkeletonAnimationView()
     }
-    
+        
     func stopLoading() {
-        ProgressHUD.dismiss()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-            self.reloadCollectionsData()
-        }
+        stopSkeletonAnimationView()
+
     }
     
     func showErrorMessage(_ message: String) {
@@ -268,15 +270,9 @@ extension HomeViewController: CategoriesViewDelegate {
     
     fileprivate func reloadCollectionsData() {
         
-        
-        self.categoryCollectionView.stopSkeletonAnimation()
-        self.popularCollectionView.stopSkeletonAnimation()
-        self.chefCollectionView.stopSkeletonAnimation()
-        
         self.categoryCollectionView.reloadData()
         self.popularCollectionView.reloadData()
         self.chefCollectionView.reloadData()
-        
         
     }
     
