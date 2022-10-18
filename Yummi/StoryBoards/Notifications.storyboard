@@ -19,7 +19,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="l5i-33-XKe">
-                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <rect key="frame" x="0.0" y="47" width="390" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="22"/>

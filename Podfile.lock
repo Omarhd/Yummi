@@ -1,4 +1,5 @@
 PODS:
+  - FloatingPanel (2.5.3)
   - Kingfisher (7.2.2)
   - ProgressHUD (13.6)
   - SkeletonView (1.29.2)
@@ -7,6 +8,7 @@ PODS:
   - SwiftMessages/App (9.0.6)
 
 DEPENDENCIES:
+  - FloatingPanel
   - Kingfisher
   - ProgressHUD
   - SkeletonView
@@ -14,17 +16,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - FloatingPanel
     - Kingfisher
     - ProgressHUD
     - SkeletonView
     - SwiftMessages
 
 SPEC CHECKSUMS:
+  FloatingPanel: 3cee815e9ded75b632543fa73ab655a1ef941452
   Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   SkeletonView: 915a80ecc2b6421ab7ac0f0212321c0cc1406472
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
 
-PODFILE CHECKSUM: 4ffb6056f2a67e65ec7f107ccf4a07915ef78e2c
+PODFILE CHECKSUM: fe426a8154903c3458d84578f2bfb2dc6a85e905
 
 COCOAPODS: 1.11.3

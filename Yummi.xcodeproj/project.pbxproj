@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C1C280428FEA07B0043886B /* TrackingMaps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1C280328FEA07B0043886B /* TrackingMaps.storyboard */; };
+		4C1C280728FEA0E50043886B /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C280628FEA0E50043886B /* TrackingViewController.swift */; };
+		4C1C280B28FEACCA0043886B /* Sudan Location Simulator.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4C1C280928FEACCA0043886B /* Sudan Location Simulator.gpx */; };
+		4C1C280C28FEACCA0043886B /* Riyadh Location Simulator.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4C1C280A28FEACCA0043886B /* Riyadh Location Simulator.gpx */; };
+		4C1C280F28FEB0990043886B /* PlacesPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C280E28FEB0990043886B /* PlacesPanelViewController.swift */; };
+		4C1C281228FEB1580043886B /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C281128FEB1580043886B /* PlacesTableViewCell.swift */; };
+		4C1C281428FEB97C0043886B /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C281328FEB97C0043886B /* LocationModel.swift */; };
 		4C21936B28D737AD0018E8E8 /* BalaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21936A28D737AD0018E8E8 /* BalaceViewController.swift */; };
 		4C21936D28D737E80018E8E8 /* Balance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C21936C28D737E80018E8E8 /* Balance.storyboard */; };
 		4C3AD10D28DB8E1C0000BB90 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD10C28DB8E1C0000BB90 /* HomePresenter.swift */; };
@@ -135,6 +142,13 @@
 		2D860374EDC83585C38ADF18 /* Pods_YummiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YummiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		306EEA5EED86042119358BC9 /* Pods-YummiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YummiTests.release.xcconfig"; path = "Target Support Files/Pods-YummiTests/Pods-YummiTests.release.xcconfig"; sourceTree = "<group>"; };
 		32BB729745FDC68D7AEB1F75 /* Pods-Yummi-YummiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi-YummiUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yummi-YummiUITests/Pods-Yummi-YummiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C1C280328FEA07B0043886B /* TrackingMaps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrackingMaps.storyboard; sourceTree = "<group>"; };
+		4C1C280628FEA0E50043886B /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
+		4C1C280928FEACCA0043886B /* Sudan Location Simulator.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Sudan Location Simulator.gpx"; sourceTree = "<group>"; };
+		4C1C280A28FEACCA0043886B /* Riyadh Location Simulator.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Riyadh Location Simulator.gpx"; sourceTree = "<group>"; };
+		4C1C280E28FEB0990043886B /* PlacesPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPanelViewController.swift; sourceTree = "<group>"; };
+		4C1C281128FEB1580043886B /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		4C1C281328FEB97C0043886B /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		4C21936A28D737AD0018E8E8 /* BalaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalaceViewController.swift; sourceTree = "<group>"; };
 		4C21936C28D737E80018E8E8 /* Balance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Balance.storyboard; sourceTree = "<group>"; };
 		4C3AD10C28DB8E1C0000BB90 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -272,6 +286,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C1C280528FEA0D00043886B /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				4C1C280628FEA0E50043886B /* TrackingViewController.swift */,
+				4C1C281028FEB1330043886B /* Places Panel */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		4C1C280828FEAC900043886B /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				4C1C280A28FEACCA0043886B /* Riyadh Location Simulator.gpx */,
+				4C1C280928FEACCA0043886B /* Sudan Location Simulator.gpx */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		4C1C280D28FEADCE0043886B /* Lunch */ = {
+			isa = PBXGroup;
+			children = (
+				4C9EA46228C3AF600053FE38 /* OnBoarding.storyboard */,
+				4C9EA41528C3A83F0053FE38 /* LaunchScreen.storyboard */,
+			);
+			path = Lunch;
+			sourceTree = "<group>";
+		};
+		4C1C281028FEB1330043886B /* Places Panel */ = {
+			isa = PBXGroup;
+			children = (
+				4C1C280E28FEB0990043886B /* PlacesPanelViewController.swift */,
+				4C1C281128FEB1580043886B /* PlacesTableViewCell.swift */,
+				4C1C281328FEB97C0043886B /* LocationModel.swift */,
+			);
+			path = "Places Panel";
+			sourceTree = "<group>";
+		};
 		4C21936928D7375E0018E8E8 /* Balance */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				4C475D6928D5B4FB0074D3D0 /* Google-Info */,
+				4C1C280828FEAC900043886B /* Locations */,
 				4CE1D44A28DF769D005E5ADF /* CoreData */,
 				4C9EA45F28C3ABCB0053FE38 /* Common */,
 				4C9EA44028C3A9430053FE38 /* Localizations */,
@@ -421,6 +473,7 @@
 		4C9EA43B28C3A8820053FE38 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4C1C280528FEA0D00043886B /* Maps */,
 				4C21936928D7375E0018E8E8 /* Balance */,
 				4CD7A4A428C940C900D20CA1 /* Search */,
 				4C98229B28C6361500C4D4F5 /* Auth */,
@@ -521,9 +574,8 @@
 		4C9EA45E28C3ABA90053FE38 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				4C9EA41528C3A83F0053FE38 /* LaunchScreen.storyboard */,
+				4C1C280D28FEADCE0043886B /* Lunch */,
 				4C9EA41028C3A83B0053FE38 /* Main.storyboard */,
-				4C9EA46228C3AF600053FE38 /* OnBoarding.storyboard */,
 				4C9EA49328C4D0350053FE38 /* DishesDetails.storyboard */,
 				4C98229228C5448900C4D4F5 /* Cart.storyboard */,
 				4C98229928C635E400C4D4F5 /* Auth.storyboard */,
@@ -531,6 +583,7 @@
 				4C81A4A928D87CCC00958762 /* Notifications.storyboard */,
 				4C81A4AB28D87D6600958762 /* Settings.storyboard */,
 				4C81A4AD28D87DCB00958762 /* Search.storyboard */,
+				4C1C280328FEA07B0043886B /* TrackingMaps.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -852,6 +905,8 @@
 				4C9822AB28C682BE00C4D4F5 /* CartItemsTableViewCell.xib in Resources */,
 				4C21936D28D737E80018E8E8 /* Balance.storyboard in Resources */,
 				4C9EA41728C3A83F0053FE38 /* LaunchScreen.storyboard in Resources */,
+				4C1C280B28FEACCA0043886B /* Sudan Location Simulator.gpx in Resources */,
+				4C1C280C28FEACCA0043886B /* Riyadh Location Simulator.gpx in Resources */,
 				4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */,
 				4C98229A28C635E400C4D4F5 /* Auth.storyboard in Resources */,
 				4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */,
@@ -863,6 +918,7 @@
 				4C81A4AC28D87D6600958762 /* Settings.storyboard in Resources */,
 				4C9EA41228C3A83B0053FE38 /* Main.storyboard in Resources */,
 				4C9EA49428C4D0350053FE38 /* DishesDetails.storyboard in Resources */,
+				4C1C280428FEA07B0043886B /* TrackingMaps.storyboard in Resources */,
 				4C9EA48D28C40D870053FE38 /* PopularCollectionViewCell.xib in Resources */,
 				4C81A4AE28D87DCB00958762 /* Search.storyboard in Resources */,
 				4C9EA46328C3AF600053FE38 /* OnBoarding.storyboard in Resources */,
@@ -1007,9 +1063,11 @@
 				4C9EA45928C3AB390053FE38 /* Bundle.swift in Sources */,
 				4C9822AD28C6842E00C4D4F5 /* CategoryDetailsViewController.swift in Sources */,
 				4C9EA44D28C3A9E00053FE38 /* HTTPMethods.swift in Sources */,
+				4C1C280F28FEB0990043886B /* PlacesPanelViewController.swift in Sources */,
 				4CE1D4C628DF7C5B005E5ADF /* Products+CoreDataClass.swift in Sources */,
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,
 				4C3AD11028DB8E930000BB90 /* ServicesFeed.swift in Sources */,
+				4C1C281428FEB97C0043886B /* LocationModel.swift in Sources */,
 				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
 				4C98229F28C63A5700C4D4F5 /* KeychainPasswordItem.swift in Sources */,
 				4CFDC50D28CE995600E5B753 /* SceneMode.swift in Sources */,
@@ -1023,11 +1081,13 @@
 				4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */,
 				4C9822A128C63CEE00C4D4F5 /* TouchIDAuthentication.swift in Sources */,
 				4CDD10C628DE1B9E00BD760C /* Latest.intentdefinition in Sources */,
+				4C1C281228FEB1580043886B /* PlacesTableViewCell.swift in Sources */,
 				4C9EA40B28C3A83B0053FE38 /* AppDelegate.swift in Sources */,
 				4C98228F28C4D39600C4D4F5 /* DishesDetailsViewController.swift in Sources */,
 				4C9EA45728C3AABB0053FE38 /* Utitlites.swift in Sources */,
 				4C98229128C5372C00C4D4F5 /* ViewControllerNavigators.swift in Sources */,
 				4C9EA46C28C3B66A0053FE38 /* StaticDataModel.swift in Sources */,
+				4C1C280728FEA0E50043886B /* TrackingViewController.swift in Sources */,
 				4C9EA49128C4C8830053FE38 /* ChefCollectionViewCell.swift in Sources */,
 				4C21936B28D737AD0018E8E8 /* BalaceViewController.swift in Sources */,
 				4C9EA45128C3A9FE0053FE38 /* EndPoints.swift in Sources */,

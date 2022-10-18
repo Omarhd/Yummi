@@ -11,6 +11,7 @@ target 'Yummi' do
     pod 'SwiftMessages'
     pod 'ProgressHUD'
     pod 'SkeletonView'
+    pod 'FloatingPanel'
 
   target 'YummiTests' do
     inherit! :search_paths

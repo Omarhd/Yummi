@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M1I-Gc-VgM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Osa-YZ-Js0">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,88 +9,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Filter-->
-        <scene sceneID="GCA-pO-2za">
-            <objects>
-                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jj3-Lt-TZu" customClass="SearchViewController" customModule="Yummi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pPM-TE-Jp5">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mRU-WY-v4c">
-                                <color key="backgroundColor" name="BG"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" textLabel="dyN-vf-rqv" detailTextLabel="bhC-vU-ONF" rowHeight="78" style="IBUITableViewCellStyleValue1" id="4bh-aG-zFH">
-                                        <rect key="frame" x="-32" y="55.333332061767578" width="32" height="78"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4bh-aG-zFH" id="CBj-To-TrR">
-                                            <rect key="frame" x="0.0" y="0.0" width="32" height="78"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dyN-vf-rqv">
-                                                    <rect key="frame" x="8" y="31.999999999999996" width="16" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bhC-vU-ONF">
-                                                    <rect key="frame" x="24" y="31.999999999999996" width="0.0" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" name="Cells"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="QYP-aW-RvU"/>
-                        <color key="backgroundColor" name="BG"/>
-                        <constraints>
-                            <constraint firstItem="mRU-WY-v4c" firstAttribute="top" secondItem="pPM-TE-Jp5" secondAttribute="top" id="DSE-AD-bNr"/>
-                            <constraint firstAttribute="bottom" secondItem="mRU-WY-v4c" secondAttribute="bottom" id="dam-QA-cU7"/>
-                            <constraint firstAttribute="trailing" secondItem="mRU-WY-v4c" secondAttribute="trailing" id="g0F-ft-2j3"/>
-                            <constraint firstItem="mRU-WY-v4c" firstAttribute="leading" secondItem="pPM-TE-Jp5" secondAttribute="leading" id="shs-tS-iY2"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Filter" id="qrJ-Wb-EGE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mEZ-7X-5Ug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1002.8985507246377" y="513.61607142857144"/>
-        </scene>
         <!--Search-->
-        <scene sceneID="6tX-ag-AAe">
+        <scene sceneID="eUc-7N-wQU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M1I-Gc-VgM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass.circle.fill" catalog="system" id="QVx-Jb-ALm"/>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="atd-ym-yce" customClass="SearchViewController" customModule="Yummi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="avm-Be-Yk6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="O57-qQ-tUM"/>
+                        <color key="backgroundColor" name="BG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Alerts" image="magnifyingglass.circle.fill" catalog="system" id="y8v-h3-A1D"/>
+                    <navigationItem key="navigationItem" title="Search" id="Rgk-df-lU3"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBr-Yo-gqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855.2" y="65.763546798029566"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NCW-FG-fJX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Osa-YZ-Js0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="0.0" height="0.0"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="v2r-YH-uYB" customClass="SearchBarNavigationController" customModule="Yummi" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="47" width="0.0" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B99-vp-SEp">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="jj3-Lt-TZu" kind="relationship" relationship="rootViewController" id="Bq8-kj-QkI"/>
+                        <segue destination="atd-ym-yce" kind="relationship" relationship="rootViewController" id="46W-ot-VQi"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sdB-kM-fEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEH-pv-AZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="513.61607142857144"/>
+            <point key="canvasLocation" x="912.79999999999995" y="65.763546798029566"/>
         </scene>
     </scenes>
     <resources>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="BG">
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Cells">
-            <color red="0.94900000095367432" green="0.94999998807907104" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
