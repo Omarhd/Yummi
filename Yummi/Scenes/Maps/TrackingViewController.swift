@@ -26,6 +26,11 @@ class TrackingViewController: UIViewController {
     
     var selectedLocationDelegate: locationSelectionDelegate?
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController?.tabBar.backgroundColor = UIColor(named: "BG")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
