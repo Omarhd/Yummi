@@ -34,7 +34,8 @@ class TrackingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        checkhLocationServices()
+        checkLocationAuthorization()
+
         fpc.delegate = self
         
         // content
@@ -49,11 +50,12 @@ class TrackingViewController: UIViewController {
         
     }
     
-    fileprivate func checkhLocationServices() {
+    fileprivate func checkhLocationServices() -> Bool {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
-            checkLocationAuthorization()
+            return true
         } else {
+            return false
         }
     }
     
@@ -65,20 +67,24 @@ class TrackingViewController: UIViewController {
     }
     
     fileprivate func checkLocationAuthorization() {
-        switch CLLocationManager.authorizationStatus() {
-        case .authorizedWhenInUse:
-            startTrackingLocation()
-        case .authorizedAlways:
-            break
-        case .denied:
-            break
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-            break
-        case .restricted:
-            break
-        @unknown default:
-            fatalError()
+        if checkhLocationServices() {
+            switch CLLocationManager.authorizationStatus() {
+            case .authorizedWhenInUse:
+                startTrackingLocation()
+            case .authorizedAlways:
+                break
+            case .denied:
+                break
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+                break
+            case .restricted:
+                break
+            @unknown default:
+                fatalError()
+            }
+        } else {
+            checkLocationAuthorization()
         }
     }
     

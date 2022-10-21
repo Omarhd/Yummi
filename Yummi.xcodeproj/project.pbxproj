@@ -14,6 +14,8 @@
 		4C1C280F28FEB0990043886B /* PlacesPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C280E28FEB0990043886B /* PlacesPanelViewController.swift */; };
 		4C1C281228FEB1580043886B /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C281128FEB1580043886B /* PlacesTableViewCell.swift */; };
 		4C1C281428FEB97C0043886B /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C281328FEB97C0043886B /* LocationModel.swift */; };
+		4C1C281629030DCD0043886B /* NetworkTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C281529030DCD0043886B /* NetworkTester.swift */; };
+		4C1C2818290311F20043886B /* SwiftMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C2817290311F20043886B /* SwiftMessages.swift */; };
 		4C21936B28D737AD0018E8E8 /* BalaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21936A28D737AD0018E8E8 /* BalaceViewController.swift */; };
 		4C21936D28D737E80018E8E8 /* Balance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C21936C28D737E80018E8E8 /* Balance.storyboard */; };
 		4C3AD10D28DB8E1C0000BB90 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD10C28DB8E1C0000BB90 /* HomePresenter.swift */; };
@@ -149,6 +151,8 @@
 		4C1C280E28FEB0990043886B /* PlacesPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPanelViewController.swift; sourceTree = "<group>"; };
 		4C1C281128FEB1580043886B /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		4C1C281328FEB97C0043886B /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		4C1C281529030DCD0043886B /* NetworkTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTester.swift; sourceTree = "<group>"; };
+		4C1C2817290311F20043886B /* SwiftMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessages.swift; sourceTree = "<group>"; };
 		4C21936A28D737AD0018E8E8 /* BalaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalaceViewController.swift; sourceTree = "<group>"; };
 		4C21936C28D737E80018E8E8 /* Balance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Balance.storyboard; sourceTree = "<group>"; };
 		4C3AD10C28DB8E1C0000BB90 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -499,6 +503,8 @@
 				4CFDC50C28CE995600E5B753 /* SceneMode.swift */,
 				4CE8490228D24F7700282725 /* Messages.swift */,
 				4CE8490428D2509C00282725 /* UserDefaults.swift */,
+				4C1C281529030DCD0043886B /* NetworkTester.swift */,
+				4C1C2817290311F20043886B /* SwiftMessages.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1101,6 +1107,7 @@
 				4C9822A628C6800400C4D4F5 /* Config.swift in Sources */,
 				4CFDC50028CA84A400E5B753 /* SearchBarNavigationController.swift in Sources */,
 				4CFDC50B28CE974200E5B753 /* SettingsTableViewController.swift in Sources */,
+				4C1C2818290311F20043886B /* SwiftMessages.swift in Sources */,
 				4C4322FA28F042A400CE5729 /* AppearanceTableViewController.swift in Sources */,
 				4C9EA44428C3A97E0053FE38 /* AuthFeeds.swift in Sources */,
 				4CE1D4C728DF7C5F005E5ADF /* Products+CoreDataProperties.swift in Sources */,
@@ -1110,6 +1117,7 @@
 				4C9822AA28C682BE00C4D4F5 /* CartItemsTableViewCell.swift in Sources */,
 				4C9EA48728C406AD0053FE38 /* StringURLs.swift in Sources */,
 				4C9EA44B28C3A9CB0053FE38 /* APiClient.swift in Sources */,
+				4C1C281629030DCD0043886B /* NetworkTester.swift in Sources */,
 				4C3AD11428DB90C00000BB90 /* HomeModel.swift in Sources */,
 				4C9EA48C28C40D860053FE38 /* PopularCollectionViewCell.swift in Sources */,
 				4C9EA46A28C3B54D0053FE38 /* UIViews.swift in Sources */,
