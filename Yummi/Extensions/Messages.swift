@@ -8,13 +8,13 @@
 import UIKit
 import SwiftMessages
 
-func showTopNotificaionForGoodNetwork(title : String, body : String) {
+func showTopNotificaionForGoodNetwork() {
     
-    let view = MessageView.viewFromNib(layout: .tabView)
+    let view = MessageView.viewFromNib(layout: .messageView)
     view.configureTheme(.success)
     view.configureDropShadow()
     view.contentMode = .scaleAspectFill
-    view.configureContent(title: title, body: body)
+    view.configureContent(title: "Connection Restored", body: "Network now works fine.")
     view.configureTheme(.success, iconStyle: .default)
     view.layoutMarginAdditions = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     view.button?.isHidden = true
@@ -22,6 +22,7 @@ func showTopNotificaionForGoodNetwork(title : String, body : String) {
     
     SwiftMessages.show(view: view)
 }
+
 
 func showTopNotificaionForPoorNetwork() {
     

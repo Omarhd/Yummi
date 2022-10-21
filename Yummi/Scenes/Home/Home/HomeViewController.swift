@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     fileprivate let homePresenter = HomePresenter(apiServices: APIServices())
     fileprivate var allCategories: BaseCategoriesResponse?
     
-    private let refreshControl = UIRefreshControl()
     var isLoadingStarted = true
 
     // MARK:- refrence to manage object context
@@ -26,17 +25,27 @@ class HomeViewController: UIViewController {
 
     var categories: [Category] = []
     var dishs: [Popular] = []
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateUserInterface()
         homePresenter.attachView(self)
         self.homePresenter.getAllCategories()
         
         registerNibs()
+    
+        let gesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+        gesture.direction = .down
+        view.addGestureRecognizer(gesture)
+
     }
     
+    @objc func handleSwipe() {
+        self.homePresenter.getAllCategories()
+    }
+
     private func registerNibs() {
         categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifire)
         popularCollectionView.register(UINib(nibName: PopularCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: PopularCollectionViewCell.identifire)

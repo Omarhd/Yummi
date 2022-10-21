@@ -14,7 +14,6 @@ class BalaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        updateUserInterface()
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         mainView.addGestureRecognizer(tap)
         

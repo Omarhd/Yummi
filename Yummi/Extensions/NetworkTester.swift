@@ -162,24 +162,18 @@ struct Network {
     }
 }
 
-public func updateUserInterface() -> Bool {
-    var satisified: Bool = false
-    
+public func updateUserInterface() {
     switch Network.reachability.status {
     case .unreachable:
         showTopNotificaionForPoorNetwork()
-        satisified = false
     case .wan:
-        satisified = true
+        showTopNotificaionForGoodNetwork()
     case .wifi:
-        satisified = true
+        showTopNotificaionForGoodNetwork()
     }
-    
     print("Reachability Summary")
     print("Status:", Network.reachability.status)
     print("HostName:", Network.reachability.hostname ?? "nil")
     print("Reachable:", Network.reachability.isReachable)
     print("Wifi:", Network.reachability.isReachableViaWiFi)
-    
-    return satisified
 }
