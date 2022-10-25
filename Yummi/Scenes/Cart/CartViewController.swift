@@ -65,8 +65,7 @@ class CartViewController: UIViewController {
         }
     }
     
-    @IBAction func trashAction(_ sender: Any) {
-        
+    fileprivate func presentDeleteAlert() {
         let alertController = UIAlertController (
             title: "Are You Sure!",
             message: "You can login later any time",
@@ -78,7 +77,7 @@ class CartViewController: UIViewController {
         let okayAction = UIAlertAction(title: "Yes", style: .destructive) { (action) in
             ProgressHUD.animationType = .circleRotateChase
             ProgressHUD.show()
-
+            
             for object in self.cartItem {
                 self.context.delete(object)
             }
@@ -87,7 +86,7 @@ class CartViewController: UIViewController {
                 try self.context.save()
                 showSuccessMessage(title: "Done", body: "Cart is Clear.")
                 ProgressHUD.dismiss()
-
+                
             } catch {
                 showErrorMessage(title: "Error", body: "Can't Remove items for now.")
             }
@@ -99,6 +98,15 @@ class CartViewController: UIViewController {
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true)
+    }
+    
+    @IBAction func trashAction(_ sender: Any) {
+        
+        if cartItem.isEmpty {
+            showErrorMessage(title: "Empty", body: "Cart Already Empty need to add items")
+        } else {
+            presentDeleteAlert()
+        }
     }
     
     fileprivate func setupCartDetails() {

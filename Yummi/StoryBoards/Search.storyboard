@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +17,50 @@
                     <view key="view" contentMode="scaleToFill" id="avm-Be-Yk6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mgx-qQ-Fsl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="X4S-At-USN" rowHeight="68" style="IBUITableViewCellStyleDefault" id="ZT6-Td-PQY">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZT6-Td-PQY" id="GPy-tk-4It">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X4S-At-USN">
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="68"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="atd-ym-yce" id="LcM-Fr-dTW"/>
+                                    <outlet property="delegate" destination="atd-ym-yce" id="EgO-DA-HKx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="O57-qQ-tUM"/>
                         <color key="backgroundColor" name="BG"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Mgx-qQ-Fsl" secondAttribute="bottom" id="0dC-Wb-SNi"/>
+                            <constraint firstAttribute="trailing" secondItem="Mgx-qQ-Fsl" secondAttribute="trailing" id="7xa-RN-ey0"/>
+                            <constraint firstItem="Mgx-qQ-Fsl" firstAttribute="top" secondItem="avm-Be-Yk6" secondAttribute="top" id="8Dl-Hl-zoj"/>
+                            <constraint firstItem="Mgx-qQ-Fsl" firstAttribute="leading" secondItem="avm-Be-Yk6" secondAttribute="leading" id="AE2-yF-Swa"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alerts" image="magnifyingglass.circle.fill" catalog="system" id="y8v-h3-A1D"/>
                     <navigationItem key="navigationItem" title="Search" id="Rgk-df-lU3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mgx-qQ-Fsl" id="KaE-3C-PJg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBr-Yo-gqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,5 +90,8 @@
         <namedColor name="BG">
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

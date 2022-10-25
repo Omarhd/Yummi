@@ -14,7 +14,12 @@ class TrackingViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
 
-    let fpc = FloatingPanelController()
+    @IBOutlet weak var centerMarker: UIImageView!
+    @IBOutlet weak var startPointLabel: UILabel!
+    
+    @IBOutlet weak var endPointLabel: UILabel!
+    
+    var fpc = FloatingPanelController()
     
     let locationManager = CLLocationManager()
     let geoCoder = CLGeocoder()
@@ -34,28 +39,37 @@ class TrackingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        checkLocationAuthorization()
+        checkhLocationServices()
 
         fpc.delegate = self
-        
+        fpc = FloatingPanelController(delegate: self)
+        fpc.layout = MyFloatingPanelLayout()
+
         // content
         guard let placesPanelViewController = storyboard?.instantiateViewController(withIdentifier: "PlacesPanelViewController") as? PlacesPanelViewController else { return }
         fpc.set(contentViewController: placesPanelViewController)
         fpc.title = "Select Location"
+        fpc.surfaceView.backgroundColor = .clear
+        fpc.contentMode = .static
         fpc.addPanel(toParent: self)
     }
     
-    fileprivate func setupLocationManager() {
+    @IBAction func myLocationAction(_ sender: Any) {
+        centerViewInUserLocation()
+    }
+    
+    
+    func setupLocationManager() {
+        locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
     }
     
-    fileprivate func checkhLocationServices() -> Bool {
+    func checkhLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
-            return true
+            checkLocationAuthorization()
         } else {
-            return false
         }
     }
     
@@ -66,35 +80,29 @@ class TrackingViewController: UIViewController {
         previousLocation = getCenterLocation(for: mapView)
     }
     
-    fileprivate func checkLocationAuthorization() {
-        if checkhLocationServices() {
-            switch CLLocationManager.authorizationStatus() {
-            case .authorizedWhenInUse:
-                startTrackingLocation()
-            case .authorizedAlways:
-                break
-            case .denied:
-                break
-            case .notDetermined:
-                locationManager.requestWhenInUseAuthorization()
-                break
-            case .restricted:
-                break
-            @unknown default:
-                fatalError()
-            }
-        } else {
-            checkLocationAuthorization()
+    func checkLocationAuthorization() {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse:
+            startTrackingLocation()
+        case .authorizedAlways:
+            break
+        case .denied:
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+            break
+        case .restricted:
+            break
         }
     }
     
-    fileprivate func showmyLiveLocation() {
+    func showmyLiveLocation() {
         mapView.showsUserLocation = true
     }
     
-    fileprivate func centerViewInUserLocation() {
+    func centerViewInUserLocation() {
         if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: 10000, longitudinalMeters: 10000)
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: 1000, longitudinalMeters: 1000)
             mapView.setRegion(region, animated: true)
         }
     }
@@ -133,6 +141,7 @@ class TrackingViewController: UIViewController {
 
 
 extension TrackingViewController: MKMapViewDelegate {
+    
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let center = getCenterLocation(for: mapView)
         
@@ -153,14 +162,23 @@ extension TrackingViewController: MKMapViewDelegate {
                 return
             }
             
-            let city = placemark.locality ?? ""
+            _ = placemark.locality ?? ""
             let region = placemark.country ?? ""
             let street = placemark.subThoroughfare ?? "oops"
             
             DispatchQueue.main.async {
                 print(mapView.centerCoordinate)
+                self?.startPointLabel.text = region
+                self?.endPointLabel.text = street
             }
         }
+    }
+}
+
+extension TrackingViewController: CLLocationManagerDelegate {
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLocationAuthorization()
     }
 }
 

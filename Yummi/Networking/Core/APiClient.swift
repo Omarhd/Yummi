@@ -218,3 +218,16 @@ func navigateToMain(StoryboardName: String ,IdentifierName : String) {
         UIView.transition(with: window, duration: 0.2, options: .transitionCrossDissolve, animations: nil, completion: nil)
     }
 }
+
+extension UIViewController {
+    @objc public func navigateTo() {
+        let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController")
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window {
+            window.rootViewController = main
+            
+            UIView.transition(with: window, duration: 0.2, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
+    }
+}

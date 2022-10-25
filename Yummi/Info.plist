@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string></string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We use your location when you share location with user in chat</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We use your location when you share location with user in chat</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We use your location when you share location.</string>
 	<key>BaseURL</key>
 	<string>$(BASE_URL)</string>
 	<key>APP_DISPLAY_NAME</key>

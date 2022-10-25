@@ -25,6 +25,7 @@
 		4C4322FA28F042A400CE5729 /* AppearanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4322F928F042A400CE5729 /* AppearanceTableViewController.swift */; };
 		4C475D5528D4A0CE0074D3D0 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */; };
 		4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */ = {isa = PBXBuildFile; fileRef = 4C475D6928D5B4FB0074D3D0 /* Google-Info */; };
+		4C6B78EE2905BFAB00DF5038 /* MyFloatingPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B78ED2905BFAB00DF5038 /* MyFloatingPanelLayout.swift */; };
 		4C81A4AA28D87CCC00958762 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4A928D87CCC00958762 /* Notifications.storyboard */; };
 		4C81A4AC28D87D6600958762 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4AB28D87D6600958762 /* Settings.storyboard */; };
 		4C81A4AE28D87DCB00958762 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4AD28D87DCB00958762 /* Search.storyboard */; };
@@ -164,6 +165,7 @@
 		4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		4C475D5B28D4A8F70074D3D0 /* QA.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QA.xcconfig; sourceTree = "<group>"; };
 		4C475D6928D5B4FB0074D3D0 /* Google-Info */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Google-Info"; sourceTree = "<group>"; };
+		4C6B78ED2905BFAB00DF5038 /* MyFloatingPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFloatingPanelLayout.swift; sourceTree = "<group>"; };
 		4C81A4A928D87CCC00958762 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		4C81A4AB28D87D6600958762 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		4C81A4AD28D87DCB00958762 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				4C1C280E28FEB0990043886B /* PlacesPanelViewController.swift */,
 				4C1C281128FEB1580043886B /* PlacesTableViewCell.swift */,
 				4C1C281328FEB97C0043886B /* LocationModel.swift */,
+				4C6B78ED2905BFAB00DF5038 /* MyFloatingPanelLayout.swift */,
 			);
 			path = "Places Panel";
 			sourceTree = "<group>";
@@ -1069,6 +1072,7 @@
 				4C9EA45928C3AB390053FE38 /* Bundle.swift in Sources */,
 				4C9822AD28C6842E00C4D4F5 /* CategoryDetailsViewController.swift in Sources */,
 				4C9EA44D28C3A9E00053FE38 /* HTTPMethods.swift in Sources */,
+				4C6B78EE2905BFAB00DF5038 /* MyFloatingPanelLayout.swift in Sources */,
 				4C1C280F28FEB0990043886B /* PlacesPanelViewController.swift in Sources */,
 				4CE1D4C628DF7C5B005E5ADF /* Products+CoreDataClass.swift in Sources */,
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,

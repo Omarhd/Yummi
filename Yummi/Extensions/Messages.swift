@@ -74,14 +74,19 @@ func showSuccessMessage(title : String, body : String) {
 func showErrorMessage(title : String, body : String) {
     
     let view = MessageView.viewFromNib(layout: .cardView)
+    
     view.configureTheme(.error)
     view.configureDropShadow()
     view.contentMode = .scaleAspectFill
     view.configureContent(title: title, body: body)
-    view.configureTheme(.success, iconStyle: .default)
+    view.configureTheme(.error, iconStyle: .default)
     view.layoutMarginAdditions = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    view.button?.isHidden = true
+    view.button?.isHidden = false
+    view.button?.setTitle("Add Items", for: .normal)
     (view.backgroundView as? CornerRoundingView)?.layer.cornerRadius = 10
     
-    SwiftMessages.show(view: view)
+    var config = SwiftMessages.defaultConfig
+    config.duration = SwiftMessages.Duration.seconds(seconds: 10) // show in 5 seconds for example
+    SwiftMessages.show(config: config, view: view)
 }
+
