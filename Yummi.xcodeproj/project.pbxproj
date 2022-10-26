@@ -29,6 +29,8 @@
 		4C81A4AA28D87CCC00958762 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4A928D87CCC00958762 /* Notifications.storyboard */; };
 		4C81A4AC28D87D6600958762 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4AB28D87D6600958762 /* Settings.storyboard */; };
 		4C81A4AE28D87DCB00958762 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4AD28D87DCB00958762 /* Search.storyboard */; };
+		4C9741042907F0B10066A41A /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9741032907F0B10066A41A /* LunchViewController.swift */; };
+		4C9741912908578F0066A41A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9741902908578F0066A41A /* ProfileViewController.swift */; };
 		4C98228F28C4D39600C4D4F5 /* DishesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98228E28C4D39600C4D4F5 /* DishesDetailsViewController.swift */; };
 		4C98229128C5372C00C4D4F5 /* ViewControllerNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */; };
 		4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C98229228C5448900C4D4F5 /* Cart.storyboard */; };
@@ -169,6 +171,8 @@
 		4C81A4A928D87CCC00958762 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		4C81A4AB28D87D6600958762 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		4C81A4AD28D87DCB00958762 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		4C9741032907F0B10066A41A /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
+		4C9741902908578F0066A41A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4C98228E28C4D39600C4D4F5 /* DishesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesDetailsViewController.swift; sourceTree = "<group>"; };
 		4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNavigators.swift; sourceTree = "<group>"; };
 		4C98229228C5448900C4D4F5 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
@@ -357,6 +361,14 @@
 			path = ServicesFeed;
 			sourceTree = "<group>";
 		};
+		4C9741052907F0BA0066A41A /* Lunch */ = {
+			isa = PBXGroup;
+			children = (
+				4C9741032907F0B10066A41A /* LunchViewController.swift */,
+			);
+			path = Lunch;
+			sourceTree = "<group>";
+		};
 		4C98228D28C4D37200C4D4F5 /* DishesDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +502,7 @@
 				4C9EA47928C3D6950053FE38 /* Home */,
 				4C9EA47B28C3D6AB0053FE38 /* Settings */,
 				4C9EA47A28C3D6A00053FE38 /* Notifications */,
+				4C9741052907F0BA0066A41A /* Lunch */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -669,6 +682,7 @@
 			children = (
 				4CFDC50A28CE974200E5B753 /* SettingsTableViewController.swift */,
 				4C4322F928F042A400CE5729 /* AppearanceTableViewController.swift */,
+				4C9741902908578F0066A41A /* ProfileViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1078,6 +1092,7 @@
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,
 				4C3AD11028DB8E930000BB90 /* ServicesFeed.swift in Sources */,
 				4C1C281428FEB97C0043886B /* LocationModel.swift in Sources */,
+				4C9741912908578F0066A41A /* ProfileViewController.swift in Sources */,
 				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
 				4C98229F28C63A5700C4D4F5 /* KeychainPasswordItem.swift in Sources */,
 				4CFDC50D28CE995600E5B753 /* SceneMode.swift in Sources */,
@@ -1086,6 +1101,7 @@
 				4C9EA45328C3AA0B0053FE38 /* APiErrors.swift in Sources */,
 				4C9822B128C6846600C4D4F5 /* CategoryDetailsTableViewCell.swift in Sources */,
 				4C3AD11228DB8F5E0000BB90 /* ServicesClient.swift in Sources */,
+				4C9741042907F0B10066A41A /* LunchViewController.swift in Sources */,
 				4CE8490528D2509C00282725 /* UserDefaults.swift in Sources */,
 				4C9EA40F28C3A83B0053FE38 /* HomeViewController.swift in Sources */,
 				4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */,
@@ -1272,14 +1288,18 @@
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use your location when you share location with user in chat";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location when you share location.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1467,14 +1487,18 @@
 				DEVELOPMENT_TEAM = FD7KN86W7E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use your location when you share location with user in chat";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location when you share location.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1505,14 +1529,18 @@
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use your location when you share location with user in chat";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location when you share location.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1686,14 +1714,18 @@
 				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use your location when you share location with user in chat";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location when you share location.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

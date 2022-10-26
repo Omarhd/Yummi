@@ -56,7 +56,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alerts" image="magnifyingglass.circle.fill" catalog="system" id="y8v-h3-A1D"/>
-                    <navigationItem key="navigationItem" title="Search" id="Rgk-df-lU3"/>
+                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="Rgk-df-lU3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Mgx-qQ-Fsl" id="KaE-3C-PJg"/>
@@ -71,8 +71,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Osa-YZ-Js0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B99-vp-SEp">
-                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="B99-vp-SEp">
+                        <rect key="frame" x="0.0" y="47" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

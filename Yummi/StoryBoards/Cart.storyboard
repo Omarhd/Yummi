@@ -141,9 +141,10 @@
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5pT-ug-lxA">
                                     <rect key="frame" x="302" y="5" width="92" height="34.5"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" red="0.17833182219999999" green="0.46382504699999999" blue="0.27014327049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="Done">
-                                        <color key="baseForegroundColor" name="AccentColor"/>
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </buttonConfiguration>
                                     <connections>
                                         <action selector="doneAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nlU-Xk-mHL"/>
@@ -192,9 +193,6 @@
     </scenes>
     <resources>
         <image name="cart.badge.plus.fill" catalog="system" width="128" height="105"/>
-        <namedColor name="AccentColor">
-            <color red="0.12156862745098039" green="0.32549019607843138" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="AppColor">
             <color red="0.62699997425079346" green="0.0" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

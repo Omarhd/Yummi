@@ -56,3 +56,15 @@ class SettingsTableViewController: UITableViewController {
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
     }
 }
+
+extension SettingsTableViewController {
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.all
+    }
+  
+    override var shouldAutorotate: Bool {
+        return false
+    }
+
+}
