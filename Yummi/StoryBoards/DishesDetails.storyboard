@@ -9,6 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Cart-->
+        <scene sceneID="kl1-IC-7MI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cart" id="jsW-2I-2gX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uGc-UR-LUW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TkT-qz-s96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1289" y="-334"/>
+        </scene>
         <!--Dishes Details View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -164,11 +174,11 @@ I have an array of objects and I want to filter them by two conditions, either i
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="bag.circle" catalog="system">
+                                <state key="normal" image="bag.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" scale="large" weight="regular"/>
                                 </state>
                                 <connections>
-                                    <action selector="cartAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ypZ-9a-Qxg"/>
+                                    <segue destination="jsW-2I-2gX" kind="show" id="hdu-g7-MK6"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -179,20 +189,20 @@ I have an array of objects and I want to filter them by two conditions, either i
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="addButton" destination="S2l-dj-lJz" id="kaS-Fk-z1d"/>
-                        <outlet property="cartButton" destination="qwn-lZ-ym1" id="9Xj-ew-wg0"/>
                         <outlet property="dishCaloriesLabel" destination="2R1-re-bms" id="ReU-2a-EWT"/>
                         <outlet property="dishCountLabel" destination="SOD-0X-3Ba" id="qeJ-ja-hFh"/>
                         <outlet property="dishDescriptionLabel" destination="WUI-oQ-CTw" id="MEY-Pu-889"/>
                         <outlet property="dishImageView" destination="1mo-vP-3zx" id="aVx-Gk-Sce"/>
                         <outlet property="dishPriceLabel" destination="xe9-HS-9lV" id="H7g-1T-S81"/>
                         <outlet property="dishTitleLabel" destination="MlB-1S-ulv" id="8b1-AG-7Oz"/>
+                        <segue destination="sra-vT-SPL" kind="show" id="FKr-zL-hv4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="99.776785714285708"/>
         </scene>
-        <!--Category Details View Controller-->
+        <!--Details-->
         <scene sceneID="We6-W7-oQF">
             <objects>
                 <viewController storyboardIdentifier="CategoryDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sra-vT-SPL" customClass="CategoryDetailsViewController" customModule="Yummi" customModuleProvider="target" sceneMemberID="viewController">
@@ -201,7 +211,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nB7-UN-JGE">
-                                <rect key="frame" x="0.0" y="48" width="414" height="848"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -219,6 +229,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                             <constraint firstItem="nB7-UN-JGE" firstAttribute="trailing" secondItem="SYR-gD-UL0" secondAttribute="trailing" id="xmN-Cd-gwB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="pEn-hL-HBV"/>
                     <connections>
                         <outlet property="tableView" destination="nB7-UN-JGE" id="ZM5-p5-6Gz"/>
                     </connections>
@@ -250,7 +261,7 @@ I have an array of objects and I want to filter them by two conditions, either i
         </scene>
     </scenes>
     <resources>
-        <image name="bag.circle" catalog="system" width="128" height="123"/>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.12156862745098039" green="0.32549019607843138" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

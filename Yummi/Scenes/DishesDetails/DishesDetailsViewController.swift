@@ -17,7 +17,6 @@ class DishesDetailsViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var dishCountLabel: UILabel!
     @IBOutlet weak var dishPriceLabel: UILabel!
-    @IBOutlet weak var cartButton: UIButton!
     
     // MARK:- refrence to manage object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -62,15 +61,6 @@ class DishesDetailsViewController: UIViewController {
         } catch {
             showErrorMessage(title: "Error", body: "can't added item to Cart")
         }
-
-        cartButton.setImage(UIImage(systemName: "bag.fill"), for: .normal)
-    }
-    
-    @IBAction func cartAction(_ sender: Any) {
-        
-        let detailsController =  CartViewController.instantiate(storyBoardName: "Cart")
-        navigationController?.pushViewController(detailsController, animated: true)
-
     }
     
     private func setupUI(with dish: Popular) {

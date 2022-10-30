@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3o5-oR-beP">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vf0-CV-lkx">
-                                <rect key="frame" x="0.0" y="92" width="414" height="602"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="553"/>
                                 <color key="backgroundColor" name="BG"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="VX7-c5-V1j"/>
@@ -27,7 +27,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EX-Hr-AeA" customClass="CardView" customModule="Yummi" customModuleProvider="target">
-                                <rect key="frame" x="20" y="702" width="374" height="140"/>
+                                <rect key="frame" x="20" y="653" width="374" height="140"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J96-0V-J6r">
                                         <rect key="frame" x="8" y="8" width="358" height="124"/>
@@ -138,7 +138,7 @@
                     <navigationItem key="navigationItem" title="My Cart" id="7i7-He-jsk">
                         <rightBarButtonItems>
                             <barButtonItem style="done" id="NyC-Cj-kqI">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5pT-ug-lxA">
+                                <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5pT-ug-lxA">
                                     <rect key="frame" x="302" y="5" width="92" height="34.5"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" red="0.17833182219999999" green="0.46382504699999999" blue="0.27014327049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -146,6 +146,11 @@
                                     <buttonConfiguration key="configuration" style="tinted" title="Done">
                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="doneAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nlU-Xk-mHL"/>
                                     </connections>
@@ -159,6 +164,7 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="deliveryChargeLabel" destination="qMt-3J-iVt" id="0Ov-86-bKe"/>
                         <outlet property="detailsView" destination="2EX-Hr-AeA" id="Ttd-QQ-cxq"/>

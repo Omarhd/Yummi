@@ -360,7 +360,7 @@
         <scene sceneID="sN2-jS-twb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hbH-AP-K9u" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="slider.horizontal.3" catalog="system" id="BPt-XN-m94"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear.circle.fill" catalog="system" id="BPt-XN-m94"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="sbl-gW-Hvs">
                         <rect key="frame" x="0.0" y="47.000000000000007" width="390" height="98.666666666666686"/>
@@ -385,10 +385,10 @@
     <resources>
         <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="123"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="moon.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <namedColor name="AccentColor">
             <color red="0.12156862745098039" green="0.32549019607843138" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

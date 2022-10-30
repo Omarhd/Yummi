@@ -82,6 +82,10 @@
 		4C9EA49128C4C8830053FE38 /* ChefCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA48F28C4C8830053FE38 /* ChefCollectionViewCell.swift */; };
 		4C9EA49228C4C8830053FE38 /* ChefCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9EA49028C4C8830053FE38 /* ChefCollectionViewCell.xib */; };
 		4C9EA49428C4D0350053FE38 /* DishesDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9EA49328C4D0350053FE38 /* DishesDetails.storyboard */; };
+		4CB46C49290D8ECD00BEEE06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */; };
+		4CB46C75290E72BA00BEEE06 /* NotificationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */; };
+		4CB46C77290E734600BEEE06 /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C76290E734600BEEE06 /* NotificationsModel.swift */; };
+		4CC396B2290E7E03009C6149 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC396B1290E7E03009C6149 /* NotificationsTableViewCell.swift */; };
 		4CD7A4A628C940DF00D20CA1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7A4A528C940DF00D20CA1 /* SearchViewController.swift */; };
 		4CDD10BC28DE1B9C00BD760C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC5489C28CFCACE008FCE8C /* WidgetKit.framework */; };
 		4CDD10BD28DE1B9C00BD760C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC5489E28CFCACE008FCE8C /* SwiftUI.framework */; };
@@ -144,6 +148,7 @@
 /* Begin PBXFileReference section */
 		0C8867B7613C9E8ED368A695 /* Pods-Yummi-YummiUITests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi-YummiUITests.qa.xcconfig"; path = "Target Support Files/Pods-Yummi-YummiUITests/Pods-Yummi-YummiUITests.qa.xcconfig"; sourceTree = "<group>"; };
 		0ED66E059C69D942324DDD2E /* Pods-Yummi-YummiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi-YummiUITests.release.xcconfig"; path = "Target Support Files/Pods-Yummi-YummiUITests/Pods-Yummi-YummiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		14FD1FF6D172E2CD89392C68 /* Pods-Yummi-YummiUITests.local.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi-YummiUITests.local.xcconfig"; path = "Target Support Files/Pods-Yummi-YummiUITests/Pods-Yummi-YummiUITests.local.xcconfig"; sourceTree = "<group>"; };
 		2D860374EDC83585C38ADF18 /* Pods_YummiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YummiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		306EEA5EED86042119358BC9 /* Pods-YummiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YummiTests.release.xcconfig"; path = "Target Support Files/Pods-YummiTests/Pods-YummiTests.release.xcconfig"; sourceTree = "<group>"; };
 		32BB729745FDC68D7AEB1F75 /* Pods-Yummi-YummiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi-YummiUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yummi-YummiUITests/Pods-Yummi-YummiUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,7 +170,7 @@
 		4C4322F928F042A400CE5729 /* AppearanceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceTableViewController.swift; sourceTree = "<group>"; };
 		4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 		4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		4C475D5B28D4A8F70074D3D0 /* QA.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QA.xcconfig; sourceTree = "<group>"; };
+		4C475D5B28D4A8F70074D3D0 /* Local.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Local.xcconfig; sourceTree = "<group>"; };
 		4C475D6928D5B4FB0074D3D0 /* Google-Info */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Google-Info"; sourceTree = "<group>"; };
 		4C6B78ED2905BFAB00DF5038 /* MyFloatingPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFloatingPanelLayout.swift; sourceTree = "<group>"; };
 		4C81A4A928D87CCC00958762 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
@@ -230,6 +235,10 @@
 		4C9EA48F28C4C8830053FE38 /* ChefCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C9EA49028C4C8830053FE38 /* ChefCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChefCollectionViewCell.xib; sourceTree = "<group>"; };
 		4C9EA49328C4D0350053FE38 /* DishesDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DishesDetails.storyboard; sourceTree = "<group>"; };
+		4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailsViewController.swift; sourceTree = "<group>"; };
+		4CB46C76290E734600BEEE06 /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
+		4CC396B1290E7E03009C6149 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		4CC5489C28CFCACE008FCE8C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4CC5489E28CFCACE008FCE8C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4CD7A4A528C940DF00D20CA1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +260,8 @@
 		6D6F76B6FEA54C97915022D7 /* Pods-Yummi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi.release.xcconfig"; path = "Target Support Files/Pods-Yummi/Pods-Yummi.release.xcconfig"; sourceTree = "<group>"; };
 		7175FDAA31D35EF866E97CD2 /* Pods-Yummi.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi.staging.xcconfig"; path = "Target Support Files/Pods-Yummi/Pods-Yummi.staging.xcconfig"; sourceTree = "<group>"; };
 		8ACB9D16EF9AF2F8F97C62F9 /* Pods_Yummi_YummiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummi_YummiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92FA3EFC2F5055342BA44191 /* Pods-YummiTests.local.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YummiTests.local.xcconfig"; path = "Target Support Files/Pods-YummiTests/Pods-YummiTests.local.xcconfig"; sourceTree = "<group>"; };
+		9AB5CE70E496848DB5BBC509 /* Pods-Yummi.local.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi.local.xcconfig"; path = "Target Support Files/Pods-Yummi/Pods-Yummi.local.xcconfig"; sourceTree = "<group>"; };
 		A278A0995F1599A848395415 /* Pods-Yummi-YummiUITests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi-YummiUITests.staging.xcconfig"; path = "Target Support Files/Pods-Yummi-YummiUITests/Pods-Yummi-YummiUITests.staging.xcconfig"; sourceTree = "<group>"; };
 		BC27F8FC6C7920E785B6E386 /* Pods_Yummi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1C5A2ED25E56423410A300 /* Pods-Yummi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi.debug.xcconfig"; path = "Target Support Files/Pods-Yummi/Pods-Yummi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -492,6 +503,7 @@
 		4C9EA43B28C3A8820053FE38 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4CB46C47290D8E9D00BEEE06 /* TabBar */,
 				4C1C280528FEA0D00043886B /* Maps */,
 				4C21936928D7375E0018E8E8 /* Balance */,
 				4CD7A4A428C940C900D20CA1 /* Search */,
@@ -541,7 +553,7 @@
 				4C9EA47828C3D4F80053FE38 /* Release.xcconfig */,
 				4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */,
 				4C9EA47728C3D4E40053FE38 /* Staging.xcconfig */,
-				4C475D5B28D4A8F70074D3D0 /* QA.xcconfig */,
+				4C475D5B28D4A8F70074D3D0 /* Local.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -672,7 +684,10 @@
 		4C9EA47A28C3D6A00053FE38 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				4CC396B0290E7DE4009C6149 /* Cells */,
 				4C98229728C55EC800C4D4F5 /* NotificationsTableViewController.swift */,
+				4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */,
+				4CB46C76290E734600BEEE06 /* NotificationsModel.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -722,6 +737,22 @@
 				4C9EA49028C4C8830053FE38 /* ChefCollectionViewCell.xib */,
 			);
 			path = ChefCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		4CB46C47290D8E9D00BEEE06 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		4CC396B0290E7DE4009C6149 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4CC396B1290E7E03009C6149 /* NotificationsTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4CD7A4A428C940C900D20CA1 /* Search */ = {
@@ -777,6 +808,9 @@
 				DF81E92B1AD5694786F73EA0 /* Pods-Yummi.qa.xcconfig */,
 				0C8867B7613C9E8ED368A695 /* Pods-Yummi-YummiUITests.qa.xcconfig */,
 				FA5375B1359E473CDABB826E /* Pods-YummiTests.qa.xcconfig */,
+				9AB5CE70E496848DB5BBC509 /* Pods-Yummi.local.xcconfig */,
+				14FD1FF6D172E2CD89392C68 /* Pods-Yummi-YummiUITests.local.xcconfig */,
+				92FA3EFC2F5055342BA44191 /* Pods-YummiTests.local.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1112,12 +1146,14 @@
 				4C98228F28C4D39600C4D4F5 /* DishesDetailsViewController.swift in Sources */,
 				4C9EA45728C3AABB0053FE38 /* Utitlites.swift in Sources */,
 				4C98229128C5372C00C4D4F5 /* ViewControllerNavigators.swift in Sources */,
+				4CB46C77290E734600BEEE06 /* NotificationsModel.swift in Sources */,
 				4C9EA46C28C3B66A0053FE38 /* StaticDataModel.swift in Sources */,
 				4C1C280728FEA0E50043886B /* TrackingViewController.swift in Sources */,
 				4C9EA49128C4C8830053FE38 /* ChefCollectionViewCell.swift in Sources */,
 				4C21936B28D737AD0018E8E8 /* BalaceViewController.swift in Sources */,
 				4C9EA45128C3A9FE0053FE38 /* EndPoints.swift in Sources */,
 				4C98229D28C6362C00C4D4F5 /* AuthViewController.swift in Sources */,
+				4CB46C49290D8ECD00BEEE06 /* MainTabBarController.swift in Sources */,
 				4C475D5528D4A0CE0074D3D0 /* ServerConfig.swift in Sources */,
 				4C9EA40D28C3A83B0053FE38 /* SceneDelegate.swift in Sources */,
 				4CD7A4A628C940DF00D20CA1 /* SearchViewController.swift in Sources */,
@@ -1125,6 +1161,8 @@
 				4C9EA48028C403610053FE38 /* CategoryCollectionViewCell.swift in Sources */,
 				4C9EA45B28C3AB490053FE38 /* Vibration.swift in Sources */,
 				4C9822A628C6800400C4D4F5 /* Config.swift in Sources */,
+				4CB46C75290E72BA00BEEE06 /* NotificationDetailsViewController.swift in Sources */,
+				4CC396B2290E7E03009C6149 /* NotificationsTableViewCell.swift in Sources */,
 				4CFDC50028CA84A400E5B753 /* SearchBarNavigationController.swift in Sources */,
 				4CFDC50B28CE974200E5B753 /* SettingsTableViewController.swift in Sources */,
 				4C1C2818290311F20043886B /* SwiftMessages.swift in Sources */,
@@ -1211,7 +1249,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4C475D5628D4A38C0074D3D0 /* QA */ = {
+		4C475D5628D4A38C0074D3D0 /* Local */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1270,14 +1308,14 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = QA;
+			name = Local;
 		};
-		4C475D5728D4A38C0074D3D0 /* QA */ = {
+		4C475D5728D4A38C0074D3D0 /* Local */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF81E92B1AD5694786F73EA0 /* Pods-Yummi.qa.xcconfig */;
+			baseConfigurationReference = 9AB5CE70E496848DB5BBC509 /* Pods-Yummi.local.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APP_DISPLAY_NAME = "Yummie - QA";
+				APP_DISPLAY_NAME = "Yummie - Local";
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "QA-Icon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1285,10 +1323,11 @@
 				BASE_URL = "https://yummie.glitch.me/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2C4XF58Z9A;
+				DEVELOPMENT_TEAM = FD7KN86W7E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
+				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
@@ -1308,16 +1347,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.qa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SLASH = /;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = QA;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = QA;
+			name = Local;
 		};
-		4C475D5828D4A38C0074D3D0 /* QA */ = {
+		4C475D5828D4A38C0074D3D0 /* Local */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA5375B1359E473CDABB826E /* Pods-YummiTests.qa.xcconfig */;
+			baseConfigurationReference = 92FA3EFC2F5055342BA44191 /* Pods-YummiTests.local.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1334,11 +1376,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yummi.app/Yummi";
 			};
-			name = QA;
+			name = Local;
 		};
-		4C475D5928D4A38C0074D3D0 /* QA */ = {
+		4C475D5928D4A38C0074D3D0 /* Local */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C8867B7613C9E8ED368A695 /* Pods-Yummi-YummiUITests.qa.xcconfig */;
+			baseConfigurationReference = 14FD1FF6D172E2CD89392C68 /* Pods-Yummi-YummiUITests.local.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1353,7 +1395,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Yummi;
 			};
-			name = QA;
+			name = Local;
 		};
 		4C9EA42F28C3A83F0053FE38 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1487,7 +1529,8 @@
 				DEVELOPMENT_TEAM = FD7KN86W7E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
+				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
@@ -1507,9 +1550,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SLASH = /;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1526,10 +1572,11 @@
 				BASE_URL = "https://yummie.glitch.me/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2C4XF58Z9A;
+				DEVELOPMENT_TEAM = FD7KN86W7E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
+				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
@@ -1549,10 +1596,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SLASH = /;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRODUCTION;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1711,10 +1761,11 @@
 				CODE_SIGN_ENTITLEMENTS = Yummi/YummiStaging.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2C4XF58Z9A;
+				DEVELOPMENT_TEAM = FD7KN86W7E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
+				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
@@ -1734,10 +1785,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.staging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SLASH = /;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGING;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Staging;
 		};
@@ -1841,7 +1895,7 @@
 			};
 			name = Staging;
 		};
-		4CDD10CC28DE1B9E00BD760C /* QA */ = {
+		4CDD10CC28DE1B9E00BD760C /* Local */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APP_BUNDLE_IDENTIFIRE = yummi.app.qa.Latest;
@@ -1869,7 +1923,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = QA;
+			name = Local;
 		};
 		4CDD10CD28DE1B9E00BD760C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1909,55 +1963,55 @@
 			buildConfigurations = (
 				4C9EA42F28C3A83F0053FE38 /* Debug */,
 				4C9EA47128C3D3EC0053FE38 /* Staging */,
-				4C475D5628D4A38C0074D3D0 /* QA */,
+				4C475D5628D4A38C0074D3D0 /* Local */,
 				4C9EA43028C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Staging;
+			defaultConfigurationName = Local;
 		};
 		4C9EA43128C3A83F0053FE38 /* Build configuration list for PBXNativeTarget "Yummi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C9EA43228C3A83F0053FE38 /* Debug */,
 				4C9EA47228C3D3EC0053FE38 /* Staging */,
-				4C475D5728D4A38C0074D3D0 /* QA */,
+				4C475D5728D4A38C0074D3D0 /* Local */,
 				4C9EA43328C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Staging;
+			defaultConfigurationName = Local;
 		};
 		4C9EA43428C3A83F0053FE38 /* Build configuration list for PBXNativeTarget "YummiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C9EA43528C3A83F0053FE38 /* Debug */,
 				4C9EA47328C3D3EC0053FE38 /* Staging */,
-				4C475D5828D4A38C0074D3D0 /* QA */,
+				4C475D5828D4A38C0074D3D0 /* Local */,
 				4C9EA43628C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Staging;
+			defaultConfigurationName = Local;
 		};
 		4C9EA43728C3A83F0053FE38 /* Build configuration list for PBXNativeTarget "YummiUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C9EA43828C3A83F0053FE38 /* Debug */,
 				4C9EA47428C3D3EC0053FE38 /* Staging */,
-				4C475D5928D4A38C0074D3D0 /* QA */,
+				4C475D5928D4A38C0074D3D0 /* Local */,
 				4C9EA43928C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Staging;
+			defaultConfigurationName = Local;
 		};
 		4CDD10CE28DE1B9E00BD760C /* Build configuration list for PBXNativeTarget "LatestExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CDD10CA28DE1B9E00BD760C /* Debug */,
 				4CDD10CB28DE1B9E00BD760C /* Staging */,
-				4CDD10CC28DE1B9E00BD760C /* QA */,
+				4CDD10CC28DE1B9E00BD760C /* Local */,
 				4CDD10CD28DE1B9E00BD760C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Staging;
+			defaultConfigurationName = Local;
 		};
 /* End XCConfigurationList section */
 

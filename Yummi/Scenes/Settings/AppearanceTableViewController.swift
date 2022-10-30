@@ -28,6 +28,7 @@ class AppearanceTableViewController: UITableViewController {
             systemCell.accessoryType = .none
             self.setAppearance(.light)
             UserDefaults.standard.setDefaultAppearance = 1
+            self.dismiss(animated: true)
 
         case 1:
             print("2")
@@ -36,6 +37,7 @@ class AppearanceTableViewController: UITableViewController {
             systemCell.accessoryType = .none
             self.setAppearance(.dark)
             UserDefaults.standard.setDefaultAppearance = 2
+            self.dismiss(animated: true)
 
         case 2:
             print("3")
@@ -44,7 +46,8 @@ class AppearanceTableViewController: UITableViewController {
             systemCell.accessoryType = .checkmark
             self.setAppearance(.unspecified)
             UserDefaults.standard.setDefaultAppearance = 0
-            
+            self.dismiss(animated: true)
+
         default:
             break
         }

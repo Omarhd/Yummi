@@ -10,7 +10,8 @@ import UIKit
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var emptyResultView: UIImageView!
+  
     let searchController = UISearchController()
     
     let tableData = ["Mac", "iPhone", "iPod", "iOS", "MacOS", "WatchOS", "Macss", "iPhoness", "iPodss", "iOSss", "MacOSss", "WatchOSss", "Macww", "iPhoneww", "iPodww", "iOSww", "MacOSww", "WatchOSww"]
@@ -26,14 +27,20 @@ class SearchViewController: UIViewController {
 
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
-        searchController.searchBar.scopeButtonTitles = ["Phones", "Macs", "Others"]
-        searchController.searchBar.setScopeBarButtonTitleTextAttributes(segAttributes as? [NSAttributedString.Key : Any], for: UIControl.State.normal)
+        searchController.searchBar.scopeButtonTitles = ["All", "Macs", "iPhones"]
         searchController.searchBar.showsScopeBar = true
         UISegmentedControl.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor(named: "Cells")
         UISegmentedControl.appearance(whenContainedInInstancesOf: [UISearchBar.self]).selectedSegmentTintColor = UIColor(named: "AppColor")
 
         searchController.searchBar.setScopeBarButtonTitleTextAttributes(segAttributes as? [NSAttributedString.Key : Any], for: UIControl.State.selected)
         self.filteredData = self.tableData
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        searchController.isActive = true
+        navigationItem.hidesSearchBarWhenScrolling = true
     }
 }
 
@@ -46,19 +53,17 @@ extension SearchViewController: UISearchResultsUpdating {
             filteredData = self.tableData.map({ $0 }).filter ({
                 $0.lowercased().contains(text.lowercased())})
             
+            
+            if filteredData.isEmpty {
+                self.emptyResultView.isHidden = false
+            } else {
+                self.emptyResultView.isHidden = true
+            }
             self.tableView.reloadData()
+
         } else {
             filteredData = self.tableData
             self.tableView.reloadData()
-        }
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        
-        if selectedScope == 0 {
-            print("helloo 00")
-        } else {
-            print("hello 11")
         }
     }
 }

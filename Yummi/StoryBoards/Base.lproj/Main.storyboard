@@ -187,11 +187,11 @@
                                 <color key="tintColor" name="AccentColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="">
-                                    <imageReference key="image" image="bag.circle" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" weight="regular"/>
+                                    <imageReference key="image" image="bag" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" weight="regular"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CbA-lo-z0E" kind="show" id="Fc5-Rv-2kU"/>
+                                    <segue destination="CbA-lo-z0E" kind="show" id="l36-hW-gKH"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -213,16 +213,17 @@
         <scene sceneID="fb1-RZ-4hG">
             <objects>
                 <viewControllerPlaceholder storyboardName="Cart" id="CbA-lo-z0E" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cart" image="bag.circle.fill" catalog="system" id="WY3-bY-07T"/>
                     <navigationItem key="navigationItem" id="OfP-ey-MO9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylQ-Nk-e6L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2448" y="-1125"/>
+            <point key="canvasLocation" x="2372" y="-1086"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="kn8-Io-YiN">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KBP-hx-iTf" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KBP-hx-iTf" customClass="MainTabBarController" customModule="Yummi" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gw2-bx-Prg">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -234,9 +235,9 @@
                     <connections>
                         <segue destination="9HB-qR-yxX" kind="relationship" relationship="viewControllers" id="YRX-iK-pNv"/>
                         <segue destination="ZY7-CX-Omq" kind="relationship" relationship="viewControllers" id="KQk-pp-wXC"/>
-                        <segue destination="6gV-93-SpY" kind="relationship" relationship="viewControllers" id="kVP-za-ZWI"/>
                         <segue destination="t4m-9a-WCv" kind="relationship" relationship="viewControllers" id="Zfv-rz-kiu"/>
-                        <segue destination="6KQ-Fi-tae" kind="relationship" relationship="viewControllers" id="NHZ-2M-rT9"/>
+                        <segue destination="6gV-93-SpY" kind="relationship" relationship="viewControllers" id="DH4-S8-St2"/>
+                        <segue destination="6KQ-Fi-tae" kind="relationship" relationship="viewControllers" id="TbF-W9-C3k"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhj-7o-rCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -248,16 +249,17 @@
             <objects>
                 <viewControllerPlaceholder storyboardName="Notifications" id="6gV-93-SpY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notifications" image="bell.circle.fill" catalog="system" id="Wft-LK-reM"/>
+                    <navigationItem key="navigationItem" id="qP0-56-cup"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dck-CD-xNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-145" y="-461"/>
+            <point key="canvasLocation" x="-120" y="-461"/>
         </scene>
         <!--Settings-->
         <scene sceneID="5MJ-1h-zPa">
             <objects>
                 <viewControllerPlaceholder storyboardName="Settings" id="6KQ-Fi-tae" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="slider.horizontal.3" catalog="system" id="hTi-eb-7yS"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="hTi-eb-7yS"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJI-zB-Rpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,12 +324,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bag.circle" catalog="system" width="128" height="123"/>
+        <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="bag.circle.fill" catalog="system" width="128" height="123"/>
         <image name="bell.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="house.circle.fill" catalog="system" width="128" height="123"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
         <image name="map.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <namedColor name="AccentColor">
             <color red="0.12156862745098039" green="0.32549019607843138" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
