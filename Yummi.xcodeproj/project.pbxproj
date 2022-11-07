@@ -266,7 +266,6 @@
 		BC27F8FC6C7920E785B6E386 /* Pods_Yummi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1C5A2ED25E56423410A300 /* Pods-Yummi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi.debug.xcconfig"; path = "Target Support Files/Pods-Yummi/Pods-Yummi.debug.xcconfig"; sourceTree = "<group>"; };
 		D8C3A770FFF41223B32F8E1B /* Pods-YummiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YummiTests.debug.xcconfig"; path = "Target Support Files/Pods-YummiTests/Pods-YummiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DF81E92B1AD5694786F73EA0 /* Pods-Yummi.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi.qa.xcconfig"; path = "Target Support Files/Pods-Yummi/Pods-Yummi.qa.xcconfig"; sourceTree = "<group>"; };
 		FA5375B1359E473CDABB826E /* Pods-YummiTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YummiTests.qa.xcconfig"; path = "Target Support Files/Pods-YummiTests/Pods-YummiTests.qa.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -805,7 +804,6 @@
 				D8C3A770FFF41223B32F8E1B /* Pods-YummiTests.debug.xcconfig */,
 				66FA20142403EEEE036EE7C1 /* Pods-YummiTests.staging.xcconfig */,
 				306EEA5EED86042119358BC9 /* Pods-YummiTests.release.xcconfig */,
-				DF81E92B1AD5694786F73EA0 /* Pods-Yummi.qa.xcconfig */,
 				0C8867B7613C9E8ED368A695 /* Pods-Yummi-YummiUITests.qa.xcconfig */,
 				FA5375B1359E473CDABB826E /* Pods-YummiTests.qa.xcconfig */,
 				9AB5CE70E496848DB5BBC509 /* Pods-Yummi.local.xcconfig */,
