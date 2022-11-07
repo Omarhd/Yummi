@@ -1320,7 +1320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = "https://yummie.glitch.me/";
+				BASE_URL = BASE_URL;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FD7KN86W7E;
@@ -1344,7 +1344,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.qa;
+				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.Local;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SLASH = /;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1523,7 +1523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = "https://yummie.glitch.me/";
+				BASE_URL = BASE_URL;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FD7KN86W7E;
@@ -1547,7 +1547,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.Debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SLASH = /;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1569,7 +1569,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = "https://yummie.glitch.me/";
+				BASE_URL = BASE_URL;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FD7KN86W7E;
@@ -1593,7 +1593,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.release;
+				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.Release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SLASH = /;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1757,7 +1757,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = "https://yummie.glitch.me/";
+				BASE_URL = BASE_URL;
 				CODE_SIGN_ENTITLEMENTS = Yummi/YummiStaging.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1782,7 +1782,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.Staging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SLASH = /;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
