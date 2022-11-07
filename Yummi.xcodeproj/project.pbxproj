@@ -85,6 +85,8 @@
 		4CB46C49290D8ECD00BEEE06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */; };
 		4CB46C75290E72BA00BEEE06 /* NotificationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */; };
 		4CB46C77290E734600BEEE06 /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C76290E734600BEEE06 /* NotificationsModel.swift */; };
+		4CC2116D291960CE00B2EA1E /* Arabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2116C291960CE00B2EA1E /* Arabic.strings */; };
+		4CC2116F291960E100B2EA1E /* English.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2116E291960E100B2EA1E /* English.strings */; };
 		4CC396B2290E7E03009C6149 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC396B1290E7E03009C6149 /* NotificationsTableViewCell.swift */; };
 		4CD7A4A628C940DF00D20CA1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7A4A528C940DF00D20CA1 /* SearchViewController.swift */; };
 		4CDD10BC28DE1B9C00BD760C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC5489C28CFCACE008FCE8C /* WidgetKit.framework */; };
@@ -238,6 +240,8 @@
 		4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailsViewController.swift; sourceTree = "<group>"; };
 		4CB46C76290E734600BEEE06 /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
+		4CC2116C291960CE00B2EA1E /* Arabic.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Arabic.strings; sourceTree = "<group>"; };
+		4CC2116E291960E100B2EA1E /* English.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = English.strings; sourceTree = "<group>"; };
 		4CC396B1290E7E03009C6149 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		4CC5489C28CFCACE008FCE8C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4CC5489E28CFCACE008FCE8C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -569,6 +573,8 @@
 		4C9EA44028C3A9430053FE38 /* Localizations */ = {
 			isa = PBXGroup;
 			children = (
+				4CC2116C291960CE00B2EA1E /* Arabic.strings */,
+				4CC2116E291960E100B2EA1E /* English.strings */,
 			);
 			path = Localizations;
 			sourceTree = "<group>";
@@ -964,10 +970,12 @@
 				4C1C280C28FEACCA0043886B /* Riyadh Location Simulator.gpx in Resources */,
 				4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */,
 				4C98229A28C635E400C4D4F5 /* Auth.storyboard in Resources */,
+				4CC2116F291960E100B2EA1E /* English.strings in Resources */,
 				4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */,
 				4C81A4AA28D87CCC00958762 /* Notifications.storyboard in Resources */,
 				4C9822B228C6846600C4D4F5 /* CategoryDetailsTableViewCell.xib in Resources */,
 				4C9EA48128C403610053FE38 /* CategoryCollectionViewCell.xib in Resources */,
+				4CC2116D291960CE00B2EA1E /* Arabic.strings in Resources */,
 				4C9EA41428C3A83F0053FE38 /* Assets.xcassets in Resources */,
 				4C9EA49228C4C8830053FE38 /* ChefCollectionViewCell.xib in Resources */,
 				4C81A4AC28D87D6600958762 /* Settings.storyboard in Resources */,
