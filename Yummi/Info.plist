@@ -10,6 +10,8 @@
 	<string>${APP_DISPLAY_NAME}</string>
 	<key>SLASH</key>
 	<string>$(SLASH)</string>
+	<key>BASE_URL</key>
+	<string>$(BASE_URL)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
