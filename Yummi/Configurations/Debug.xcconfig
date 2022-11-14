@@ -12,4 +12,6 @@ FIREBASE_GOOGLE_SERVICE_INFO_PLIST_FILENAME = Google-Info/Debug/GoogleService-In
 
 SLASH = /
 
-BaseURL = https:$(SLASH)/yummie.glitch.me/api
+BASE_URL = https:$(SLASH)/yummie.glitch.me/
+
+APP_DISPLAY_NAME = Yummie - Debug

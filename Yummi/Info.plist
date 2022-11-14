@@ -2,10 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string></string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string></string>
 	<key>APP_DISPLAY_NAME</key>
 	<string>${APP_DISPLAY_NAME}</string>
-	<key>BaseURL</key>
-	<string>$(BASE_URL)</string>
+	<key>SLASH</key>
+	<string>$(SLASH)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

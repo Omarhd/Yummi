@@ -13,7 +13,7 @@ enum APIServicesFeed {
 
 extension APIServicesFeed: Endpoint {
     var base: String {
-        return BuildSettingsKey.BaseURL.value
+        return BuildSettingsKey.BASE_URL.value
     }
     
     var path: String {

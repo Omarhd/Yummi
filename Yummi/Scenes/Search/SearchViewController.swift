@@ -48,11 +48,12 @@ extension SearchViewController: UISearchResultsUpdating {
    
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
-        
+     
+        self.emptyResultView.isHidden = true
+
         if text != "" {
             filteredData = self.tableData.map({ $0 }).filter ({
                 $0.lowercased().contains(text.lowercased())})
-            
             
             if filteredData.isEmpty {
                 self.emptyResultView.isHidden = false

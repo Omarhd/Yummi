@@ -36,12 +36,14 @@
 		4C4940792922684F001FB1CC /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C49406E2922684F001FB1CC /* Cairo-Black.ttf */; };
 		4C49407A2922684F001FB1CC /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C49406F2922684F001FB1CC /* Cairo-Bold.ttf */; };
 		4C49407B2922684F001FB1CC /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C4940702922684F001FB1CC /* OFL.txt */; };
+		4C49407D29227BE6001FB1CC /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49407C29227BE6001FB1CC /* UserDataModel.swift */; };
+		4C49407F29227DFF001FB1CC /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49407E29227DFF001FB1CC /* Buttons.swift */; };
 		4C6B78EE2905BFAB00DF5038 /* MyFloatingPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B78ED2905BFAB00DF5038 /* MyFloatingPanelLayout.swift */; };
 		4C81A4AA28D87CCC00958762 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4A928D87CCC00958762 /* Notifications.storyboard */; };
 		4C81A4AC28D87D6600958762 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4AB28D87D6600958762 /* Settings.storyboard */; };
 		4C81A4AE28D87DCB00958762 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4AD28D87DCB00958762 /* Search.storyboard */; };
 		4C9741042907F0B10066A41A /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9741032907F0B10066A41A /* LunchViewController.swift */; };
-		4C9741912908578F0066A41A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9741902908578F0066A41A /* ProfileViewController.swift */; };
+		4C9741912908578F0066A41A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9741902908578F0066A41A /* ProfileTableViewController.swift */; };
 		4C98228F28C4D39600C4D4F5 /* DishesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98228E28C4D39600C4D4F5 /* DishesDetailsViewController.swift */; };
 		4C98229128C5372C00C4D4F5 /* ViewControllerNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */; };
 		4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C98229228C5448900C4D4F5 /* Cart.storyboard */; };
@@ -87,7 +89,6 @@
 		4C9EA46F28C3B8990053FE38 /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA46E28C3B8990053FE38 /* SlideCollectionViewCell.swift */; };
 		4C9EA48028C403610053FE38 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA47E28C403610053FE38 /* CategoryCollectionViewCell.swift */; };
 		4C9EA48128C403610053FE38 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9EA47F28C403610053FE38 /* CategoryCollectionViewCell.xib */; };
-		4C9EA48728C406AD0053FE38 /* StringURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA48628C406AD0053FE38 /* StringURLs.swift */; };
 		4C9EA48C28C40D860053FE38 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA48A28C40D860053FE38 /* PopularCollectionViewCell.swift */; };
 		4C9EA48D28C40D870053FE38 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9EA48B28C40D860053FE38 /* PopularCollectionViewCell.xib */; };
 		4C9EA49128C4C8830053FE38 /* ChefCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EA48F28C4C8830053FE38 /* ChefCollectionViewCell.swift */; };
@@ -196,12 +197,14 @@
 		4C49406E2922684F001FB1CC /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
 		4C49406F2922684F001FB1CC /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
 		4C4940702922684F001FB1CC /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		4C49407C29227BE6001FB1CC /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		4C49407E29227DFF001FB1CC /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		4C6B78ED2905BFAB00DF5038 /* MyFloatingPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFloatingPanelLayout.swift; sourceTree = "<group>"; };
 		4C81A4A928D87CCC00958762 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		4C81A4AB28D87D6600958762 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		4C81A4AD28D87DCB00958762 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4C9741032907F0B10066A41A /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
-		4C9741902908578F0066A41A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4C9741902908578F0066A41A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		4C98228E28C4D39600C4D4F5 /* DishesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesDetailsViewController.swift; sourceTree = "<group>"; };
 		4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNavigators.swift; sourceTree = "<group>"; };
 		4C98229228C5448900C4D4F5 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
@@ -253,7 +256,6 @@
 		4C9EA47828C3D4F80053FE38 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		4C9EA47E28C403610053FE38 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C9EA47F28C403610053FE38 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
-		4C9EA48628C406AD0053FE38 /* StringURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringURLs.swift; sourceTree = "<group>"; };
 		4C9EA48A28C40D860053FE38 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C9EA48B28C40D860053FE38 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
 		4C9EA48F28C4C8830053FE38 /* ChefCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -423,6 +425,15 @@
 			path = static;
 			sourceTree = "<group>";
 		};
+		4C494087292284BE001FB1CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CE1D44828DF769D005E5ADF /* Products+CoreDataClass.swift */,
+				4CE1D44928DF769D005E5ADF /* Products+CoreDataProperties.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
 		4C9741052907F0BA0066A41A /* Lunch */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +502,7 @@
 				E0196824B9620556DCDBCEC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		4C9EA40828C3A83B0053FE38 /* Products */ = {
 			isa = PBXGroup;
@@ -578,13 +590,13 @@
 				4C9EA45A28C3AB490053FE38 /* Vibration.swift */,
 				4C9EA45C28C3AB600053FE38 /* StringLocalization.swift */,
 				4C9EA46928C3B54D0053FE38 /* UIViews.swift */,
-				4C9EA48628C406AD0053FE38 /* StringURLs.swift */,
 				4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */,
 				4CFDC50C28CE995600E5B753 /* SceneMode.swift */,
 				4CE8490228D24F7700282725 /* Messages.swift */,
 				4CE8490428D2509C00282725 /* UserDefaults.swift */,
 				4C1C281529030DCD0043886B /* NetworkTester.swift */,
 				4C1C2817290311F20043886B /* SwiftMessages.swift */,
+				4C49407E29227DFF001FB1CC /* Buttons.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -751,7 +763,8 @@
 			children = (
 				4CFDC50A28CE974200E5B753 /* SettingsTableViewController.swift */,
 				4C4322F928F042A400CE5729 /* AppearanceTableViewController.swift */,
-				4C9741902908578F0066A41A /* ProfileViewController.swift */,
+				4C9741902908578F0066A41A /* ProfileTableViewController.swift */,
+				4C49407C29227BE6001FB1CC /* UserDataModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -841,8 +854,7 @@
 		4CE1D44B28DF76A8005E5ADF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4CE1D44828DF769D005E5ADF /* Products+CoreDataClass.swift */,
-				4CE1D44928DF769D005E5ADF /* Products+CoreDataProperties.swift */,
+				4C494087292284BE001FB1CC /* Products */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1192,7 +1204,7 @@
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,
 				4C3AD11028DB8E930000BB90 /* ServicesFeed.swift in Sources */,
 				4C1C281428FEB97C0043886B /* LocationModel.swift in Sources */,
-				4C9741912908578F0066A41A /* ProfileViewController.swift in Sources */,
+				4C9741912908578F0066A41A /* ProfileTableViewController.swift in Sources */,
 				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
 				4C98229F28C63A5700C4D4F5 /* KeychainPasswordItem.swift in Sources */,
 				4CFDC50D28CE995600E5B753 /* SceneMode.swift in Sources */,
@@ -1203,6 +1215,7 @@
 				4C3AD11228DB8F5E0000BB90 /* ServicesClient.swift in Sources */,
 				4C9741042907F0B10066A41A /* LunchViewController.swift in Sources */,
 				4CE8490528D2509C00282725 /* UserDefaults.swift in Sources */,
+				4C49407D29227BE6001FB1CC /* UserDataModel.swift in Sources */,
 				4C9EA40F28C3A83B0053FE38 /* HomeViewController.swift in Sources */,
 				4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */,
 				4C9822A128C63CEE00C4D4F5 /* TouchIDAuthentication.swift in Sources */,
@@ -1215,6 +1228,7 @@
 				4CB46C77290E734600BEEE06 /* NotificationsModel.swift in Sources */,
 				4C9EA46C28C3B66A0053FE38 /* StaticDataModel.swift in Sources */,
 				4C1C280728FEA0E50043886B /* TrackingViewController.swift in Sources */,
+				4C49407F29227DFF001FB1CC /* Buttons.swift in Sources */,
 				4C9EA49128C4C8830053FE38 /* ChefCollectionViewCell.swift in Sources */,
 				4C21936B28D737AD0018E8E8 /* BalaceViewController.swift in Sources */,
 				4C9EA45128C3A9FE0053FE38 /* EndPoints.swift in Sources */,
@@ -1239,7 +1253,6 @@
 				4C9EA46828C3B29B0053FE38 /* OnBoardingViewController.swift in Sources */,
 				4C3AD10D28DB8E1C0000BB90 /* HomePresenter.swift in Sources */,
 				4C9822AA28C682BE00C4D4F5 /* CartItemsTableViewCell.swift in Sources */,
-				4C9EA48728C406AD0053FE38 /* StringURLs.swift in Sources */,
 				4C9EA44B28C3A9CB0053FE38 /* APiClient.swift in Sources */,
 				4C1C281629030DCD0043886B /* NetworkTester.swift in Sources */,
 				4C3AD11428DB90C00000BB90 /* HomeModel.swift in Sources */,
@@ -1317,6 +1330,7 @@
 /* Begin XCBuildConfiguration section */
 		4C475D5628D4A38C0074D3D0 /* Local */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C475D5B28D4A8F70074D3D0 /* Local.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1381,12 +1395,12 @@
 			baseConfigurationReference = 9AB5CE70E496848DB5BBC509 /* Pods-Yummi.local.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APP_DISPLAY_NAME = "Yummie - Local";
+				APP_DISPLAY_NAME = "${APP_DISPLAY_NAME}";
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "QA-Icon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = BASE_URL;
+				BASE_URL = "$(BASE_URL)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FD7KN86W7E;
@@ -1412,7 +1426,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.Local;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SLASH = /;
+				SLASH = "$(SLASH)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -1465,6 +1479,7 @@
 		};
 		4C9EA42F28C3A83F0053FE38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1526,6 +1541,7 @@
 		};
 		4C9EA43028C3A83F0053FE38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9EA47828C3D4F80053FE38 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1584,12 +1600,12 @@
 			baseConfigurationReference = BF1C5A2ED25E56423410A300 /* Pods-Yummi.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APP_DISPLAY_NAME = "Yummie - Debug";
+				APP_DISPLAY_NAME = "${APP_DISPLAY_NAME}";
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "Debug-Icon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = BASE_URL;
+				BASE_URL = "$(BASE_URL)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FD7KN86W7E;
@@ -1615,7 +1631,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.Debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SLASH = /;
+				SLASH = "$(SLASH)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -1630,12 +1646,12 @@
 			baseConfigurationReference = 6D6F76B6FEA54C97915022D7 /* Pods-Yummi.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APP_DISPLAY_NAME = "Yummie - Release";
+				APP_DISPLAY_NAME = "${APP_DISPLAY_NAME}";
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = BASE_URL;
+				BASE_URL = "$(BASE_URL)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FD7KN86W7E;
@@ -1661,7 +1677,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.Release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SLASH = /;
+				SLASH = "$(SLASH)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -1754,6 +1770,7 @@
 		};
 		4C9EA47128C3D3EC0053FE38 /* Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9EA47728C3D4E40053FE38 /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1818,12 +1835,12 @@
 			baseConfigurationReference = 7175FDAA31D35EF866E97CD2 /* Pods-Yummi.staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APP_DISPLAY_NAME = "Yummie - Staging";
+				APP_DISPLAY_NAME = "${APP_DISPLAY_NAME}";
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "Staging-Icon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				BASE_URL = BASE_URL;
+				BASE_URL = "$(BASE_URL)";
 				CODE_SIGN_ENTITLEMENTS = Yummi/YummiStaging.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1850,7 +1867,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yummi.app.Staging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SLASH = /;
+				SLASH = "$(SLASH)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;

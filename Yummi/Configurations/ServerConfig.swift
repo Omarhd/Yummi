@@ -9,7 +9,7 @@ import Foundation
 
 enum BuildSettingsKey: String {
     
-    case BaseURL
+    case BASE_URL
     
     var value: String {
         get {
@@ -26,15 +26,15 @@ class ServerConfig {
     
     func setupBaseUrls() {
 #if RELEASE
-        self.baseURL = BuildSettingsKey.BaseURL.value
+        self.baseURL = BuildSettingsKey.BASE_URL.value
 #elseif DEBUG
-        self.baseURL = BuildSettingsKey.BaseURL.value
+        self.baseURL = BuildSettingsKey.BASE_URL.value
 #elseif STAGING
-        self.baseURL = BuildSettingsKey.BaseURL.value
+        self.baseURL = BuildSettingsKey.BASE_URL.value
 #elseif QA
-        self.baseURL = BuildSettingsKey.BaseURL.value
+        self.baseURL = BuildSettingsKey.BASE_URL.value
 #else
-        self.baseURL = BuildSettingsKey.BaseURL.value
+        self.baseURL = BuildSettingsKey.BASE_URL.value
 #endif
         
     }

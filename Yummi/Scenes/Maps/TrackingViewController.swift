@@ -29,8 +29,6 @@ class TrackingViewController: UIViewController {
     var latitude: Double?
     var longitude: Double?
     
-    var selectedLocationDelegate: locationSelectionDelegate?
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.tabBarController?.tabBar.backgroundColor = UIColor(named: "BG")
@@ -109,7 +107,7 @@ class TrackingViewController: UIViewController {
     
     func addAnnotation(location: CLLocationCoordinate2D){
         pin.coordinate = location
-        pin.title = "موقع المزرعة"
+        pin.title = ""
         pin.subtitle = ""
         self.mapView.addAnnotation(pin)
     }
@@ -192,5 +190,11 @@ extension TrackingViewController: FloatingPanelControllerDelegate {
         } else {
             showTabBar()
         }
+    }
+}
+
+extension TrackingViewController: locationSelectionDelegate {
+    func didSelectLocation(lat: Double, long: Double) {
+        print(lat, long)
     }
 }

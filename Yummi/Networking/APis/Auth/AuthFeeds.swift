@@ -15,15 +15,15 @@ enum AuthenticationFeed {
 extension AuthenticationFeed: Endpoint {
     var base: String {
 #if RELEASE
-        return BuildSettingsKey.BaseURL.value
+        return BuildSettingsKey.BASE_URL.value
 #elseif DEBUG
-        return BuildSettingsKey.BaseURL.value
+        return BuildSettingsKey.BASE_URL.value
 #elseif STAGING
-        return BuildSettingsKey.BaseURL.value
+        return BuildSettingsKey.BASE_URL.value
 #elseif QA
-        return BuildSettingsKey.BaseURL.value
+        return BuildSettingsKey.BASE_URL.value
 #else
-        return BuildSettingsKey.BaseURL.value
+        return BuildSettingsKey.BASE_URL.value
 #endif
     }
     

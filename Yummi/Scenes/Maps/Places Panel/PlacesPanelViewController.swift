@@ -16,7 +16,7 @@ class PlacesPanelViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let data = mocData
-    fileprivate var locationsView: locationSelectionDelegate?
+    var locationsView: locationSelectionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()

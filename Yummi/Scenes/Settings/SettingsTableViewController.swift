@@ -9,6 +9,9 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var userPhoneLabel: UILabel!
     @IBOutlet weak var modeSwitcher: UISwitch!
     
     override func viewDidLoad() {
@@ -16,6 +19,7 @@ class SettingsTableViewController: UITableViewController {
 
         setupSwitcherStatus()
     }
+    
     @IBAction func modeSwitcherAction(_ sender: Any) {
         if modeSwitcher.isOn {
             if let window = UIApplication.shared.keyWindow {
