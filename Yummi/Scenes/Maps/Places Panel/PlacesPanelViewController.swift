@@ -8,7 +8,7 @@
 import UIKit
 
 protocol locationSelectionDelegate {
-    func didSelectLocation(lat: Double, long: Double)
+    func didSelectLocation(lat: Double, long: Double, name: String)
 }
 
 class PlacesPanelViewController: UIViewController {
@@ -16,7 +16,7 @@ class PlacesPanelViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let data = mocData
-    var locationsView: locationSelectionDelegate?
+    var selectLocationsDelegate: locationSelectionDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,8 @@ extension PlacesPanelViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selected = self.data[indexPath.row]
-        self.locationsView?.didSelectLocation(lat: selected.latitude, long: selected.longitude)
+        self.selectLocationsDelegate.didSelectLocation(lat: selected.latitude,
+                                                       long: selected.longitude,
+                                                       name: selected.placeName)
     }
 }

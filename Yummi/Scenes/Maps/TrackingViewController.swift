@@ -45,6 +45,7 @@ class TrackingViewController: UIViewController {
 
         // content
         guard let placesPanelViewController = storyboard?.instantiateViewController(withIdentifier: "PlacesPanelViewController") as? PlacesPanelViewController else { return }
+        placesPanelViewController.selectLocationsDelegate = self
         fpc.set(contentViewController: placesPanelViewController)
         fpc.title = "Select Location"
         fpc.surfaceView.backgroundColor = .clear
@@ -105,9 +106,9 @@ class TrackingViewController: UIViewController {
         }
     }
     
-    func addAnnotation(location: CLLocationCoordinate2D){
+    func addAnnotation(location: CLLocationCoordinate2D, placeName: String){
         pin.coordinate = location
-        pin.title = ""
+        pin.title = placeName
         pin.subtitle = ""
         self.mapView.addAnnotation(pin)
     }
@@ -194,7 +195,10 @@ extension TrackingViewController: FloatingPanelControllerDelegate {
 }
 
 extension TrackingViewController: locationSelectionDelegate {
-    func didSelectLocation(lat: Double, long: Double) {
-        print(lat, long)
+    func didSelectLocation(lat: Double, long: Double, name: String) {
+        addAnnotation(location: CLLocationCoordinate2D(latitude: lat,
+                                                       longitude: long),
+                                                       placeName: name)
+        
     }
 }
