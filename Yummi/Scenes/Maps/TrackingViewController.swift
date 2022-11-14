@@ -106,6 +106,11 @@ class TrackingViewController: UIViewController {
         }
     }
     
+    func centerCordinates(with location: CLLocationCoordinate2D) {
+        let region = MKCoordinateRegion.init(center: location, latitudinalMeters: 600, longitudinalMeters: 600)
+        mapView.setRegion(region, animated: true)
+    }
+    
     func addAnnotation(location: CLLocationCoordinate2D, placeName: String){
         pin.coordinate = location
         pin.title = placeName
@@ -200,5 +205,6 @@ extension TrackingViewController: locationSelectionDelegate {
                                                        longitude: long),
                                                        placeName: name)
         
+        self.centerCordinates(with: CLLocationCoordinate2D(latitude: lat, longitude: long))
     }
 }
