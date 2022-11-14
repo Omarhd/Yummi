@@ -25,6 +25,17 @@
 		4C4322FA28F042A400CE5729 /* AppearanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4322F928F042A400CE5729 /* AppearanceTableViewController.swift */; };
 		4C475D5528D4A0CE0074D3D0 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */; };
 		4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */ = {isa = PBXBuildFile; fileRef = 4C475D6928D5B4FB0074D3D0 /* Google-Info */; };
+		4C4940712922684F001FB1CC /* Cairo-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C4940652922684F001FB1CC /* Cairo-VariableFont_slnt,wght.ttf */; };
+		4C4940722922684F001FB1CC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C4940662922684F001FB1CC /* README.txt */; };
+		4C4940732922684F001FB1CC /* Cairo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C4940682922684F001FB1CC /* Cairo-ExtraBold.ttf */; };
+		4C4940742922684F001FB1CC /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C4940692922684F001FB1CC /* Cairo-ExtraLight.ttf */; };
+		4C4940752922684F001FB1CC /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C49406A2922684F001FB1CC /* Cairo-SemiBold.ttf */; };
+		4C4940762922684F001FB1CC /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C49406B2922684F001FB1CC /* Cairo-Medium.ttf */; };
+		4C4940772922684F001FB1CC /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C49406C2922684F001FB1CC /* Cairo-Regular.ttf */; };
+		4C4940782922684F001FB1CC /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C49406D2922684F001FB1CC /* Cairo-Light.ttf */; };
+		4C4940792922684F001FB1CC /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C49406E2922684F001FB1CC /* Cairo-Black.ttf */; };
+		4C49407A2922684F001FB1CC /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C49406F2922684F001FB1CC /* Cairo-Bold.ttf */; };
+		4C49407B2922684F001FB1CC /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C4940702922684F001FB1CC /* OFL.txt */; };
 		4C6B78EE2905BFAB00DF5038 /* MyFloatingPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B78ED2905BFAB00DF5038 /* MyFloatingPanelLayout.swift */; };
 		4C81A4AA28D87CCC00958762 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4A928D87CCC00958762 /* Notifications.storyboard */; };
 		4C81A4AC28D87D6600958762 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4AB28D87D6600958762 /* Settings.storyboard */; };
@@ -136,14 +147,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		4CC548B028CFCAD1008FCE8C /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
 				4CDD10C928DE1B9E00BD760C /* LatestExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -174,6 +185,17 @@
 		4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		4C475D5B28D4A8F70074D3D0 /* Local.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Local.xcconfig; sourceTree = "<group>"; };
 		4C475D6928D5B4FB0074D3D0 /* Google-Info */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Google-Info"; sourceTree = "<group>"; };
+		4C4940652922684F001FB1CC /* Cairo-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		4C4940662922684F001FB1CC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		4C4940682922684F001FB1CC /* Cairo-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4C4940692922684F001FB1CC /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4C49406A2922684F001FB1CC /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		4C49406B2922684F001FB1CC /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
+		4C49406C2922684F001FB1CC /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
+		4C49406D2922684F001FB1CC /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
+		4C49406E2922684F001FB1CC /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		4C49406F2922684F001FB1CC /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		4C4940702922684F001FB1CC /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		4C6B78ED2905BFAB00DF5038 /* MyFloatingPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFloatingPanelLayout.swift; sourceTree = "<group>"; };
 		4C81A4A928D87CCC00958762 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		4C81A4AB28D87D6600958762 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -375,6 +397,32 @@
 			path = ServicesFeed;
 			sourceTree = "<group>";
 		};
+		4C49406429226837001FB1CC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4C4940652922684F001FB1CC /* Cairo-VariableFont_slnt,wght.ttf */,
+				4C4940702922684F001FB1CC /* OFL.txt */,
+				4C4940662922684F001FB1CC /* README.txt */,
+				4C4940672922684F001FB1CC /* static */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4C4940672922684F001FB1CC /* static */ = {
+			isa = PBXGroup;
+			children = (
+				4C4940682922684F001FB1CC /* Cairo-ExtraBold.ttf */,
+				4C4940692922684F001FB1CC /* Cairo-ExtraLight.ttf */,
+				4C49406A2922684F001FB1CC /* Cairo-SemiBold.ttf */,
+				4C49406B2922684F001FB1CC /* Cairo-Medium.ttf */,
+				4C49406C2922684F001FB1CC /* Cairo-Regular.ttf */,
+				4C49406D2922684F001FB1CC /* Cairo-Light.ttf */,
+				4C49406E2922684F001FB1CC /* Cairo-Black.ttf */,
+				4C49406F2922684F001FB1CC /* Cairo-Bold.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
 		4C9741052907F0BA0066A41A /* Lunch */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +512,7 @@
 				4C9EA45F28C3ABCB0053FE38 /* Common */,
 				4C9EA44028C3A9430053FE38 /* Localizations */,
 				4C9EA43F28C3A9270053FE38 /* Utilit */,
+				4C49406429226837001FB1CC /* Fonts */,
 				4C9EA43E28C3A90B0053FE38 /* Configurations */,
 				4C9EA43D28C3A8B70053FE38 /* Networking */,
 				4C9EA43C28C3A8A30053FE38 /* Extensions */,
@@ -967,23 +1016,34 @@
 				4C21936D28D737E80018E8E8 /* Balance.storyboard in Resources */,
 				4C9EA41728C3A83F0053FE38 /* LaunchScreen.storyboard in Resources */,
 				4C1C280B28FEACCA0043886B /* Sudan Location Simulator.gpx in Resources */,
+				4C4940772922684F001FB1CC /* Cairo-Regular.ttf in Resources */,
 				4C1C280C28FEACCA0043886B /* Riyadh Location Simulator.gpx in Resources */,
+				4C49407A2922684F001FB1CC /* Cairo-Bold.ttf in Resources */,
 				4C98229328C5448900C4D4F5 /* Cart.storyboard in Resources */,
 				4C98229A28C635E400C4D4F5 /* Auth.storyboard in Resources */,
 				4CC2116F291960E100B2EA1E /* English.strings in Resources */,
 				4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */,
+				4C4940782922684F001FB1CC /* Cairo-Light.ttf in Resources */,
+				4C49407B2922684F001FB1CC /* OFL.txt in Resources */,
 				4C81A4AA28D87CCC00958762 /* Notifications.storyboard in Resources */,
 				4C9822B228C6846600C4D4F5 /* CategoryDetailsTableViewCell.xib in Resources */,
+				4C4940752922684F001FB1CC /* Cairo-SemiBold.ttf in Resources */,
+				4C4940742922684F001FB1CC /* Cairo-ExtraLight.ttf in Resources */,
 				4C9EA48128C403610053FE38 /* CategoryCollectionViewCell.xib in Resources */,
 				4CC2116D291960CE00B2EA1E /* Arabic.strings in Resources */,
+				4C4940712922684F001FB1CC /* Cairo-VariableFont_slnt,wght.ttf in Resources */,
 				4C9EA41428C3A83F0053FE38 /* Assets.xcassets in Resources */,
 				4C9EA49228C4C8830053FE38 /* ChefCollectionViewCell.xib in Resources */,
 				4C81A4AC28D87D6600958762 /* Settings.storyboard in Resources */,
 				4C9EA41228C3A83B0053FE38 /* Main.storyboard in Resources */,
 				4C9EA49428C4D0350053FE38 /* DishesDetails.storyboard in Resources */,
+				4C4940792922684F001FB1CC /* Cairo-Black.ttf in Resources */,
 				4C1C280428FEA07B0043886B /* TrackingMaps.storyboard in Resources */,
 				4C9EA48D28C40D870053FE38 /* PopularCollectionViewCell.xib in Resources */,
+				4C4940732922684F001FB1CC /* Cairo-ExtraBold.ttf in Resources */,
+				4C4940762922684F001FB1CC /* Cairo-Medium.ttf in Resources */,
 				4C81A4AE28D87DCB00958762 /* Search.storyboard in Resources */,
+				4C4940722922684F001FB1CC /* README.txt in Resources */,
 				4C9EA46328C3AF600053FE38 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1015,7 +1075,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		0AB3393662A3FAF1D5FEAD13 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -1306,7 +1366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1454,7 +1514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1509,7 +1569,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1743,7 +1803,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1973,7 +2033,7 @@
 				4C9EA43028C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Local;
+			defaultConfigurationName = Debug;
 		};
 		4C9EA43128C3A83F0053FE38 /* Build configuration list for PBXNativeTarget "Yummi" */ = {
 			isa = XCConfigurationList;
@@ -1984,7 +2044,7 @@
 				4C9EA43328C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Local;
+			defaultConfigurationName = Debug;
 		};
 		4C9EA43428C3A83F0053FE38 /* Build configuration list for PBXNativeTarget "YummiTests" */ = {
 			isa = XCConfigurationList;
@@ -1995,7 +2055,7 @@
 				4C9EA43628C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Local;
+			defaultConfigurationName = Debug;
 		};
 		4C9EA43728C3A83F0053FE38 /* Build configuration list for PBXNativeTarget "YummiUITests" */ = {
 			isa = XCConfigurationList;
@@ -2006,7 +2066,7 @@
 				4C9EA43928C3A83F0053FE38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Local;
+			defaultConfigurationName = Debug;
 		};
 		4CDD10CE28DE1B9E00BD760C /* Build configuration list for PBXNativeTarget "LatestExtension" */ = {
 			isa = XCConfigurationList;
@@ -2017,7 +2077,7 @@
 				4CDD10CD28DE1B9E00BD760C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Local;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

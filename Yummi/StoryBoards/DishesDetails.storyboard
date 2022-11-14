@@ -8,6 +8,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
+        </array>
+        <array key="Cairo-Medium.ttf">
+            <string>Cairo-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Cart-->
         <scene sceneID="kl1-IC-7MI">
@@ -17,7 +25,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TkT-qz-s96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289" y="-334"/>
+            <point key="canvasLocation" x="1560" y="-327"/>
         </scene>
         <!--Dishes Details View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -28,46 +36,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1mo-vP-3zx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="503.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="425.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vfs-pL-qAN">
-                                <rect key="frame" x="16" y="519.5" width="382" height="277.5"/>
+                                <rect key="frame" x="16" y="441.5" width="382" height="355.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="jXn-QP-smE">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlB-1S-ulv">
-                                                <rect key="frame" x="0.0" y="0.0" width="46.5" height="21"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="34"/>
+                                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2R1-re-bms">
-                                                <rect key="frame" x="347" y="0.0" width="35" height="21"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
+                                                <rect key="frame" x="344.5" y="0.0" width="37.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
                                                 <color key="textColor" name="AppColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUI-oQ-CTw">
-                                        <rect key="frame" x="0.0" y="41" width="382" height="171.5"/>
+                                        <rect key="frame" x="0.0" y="54" width="382" height="236.5"/>
                                         <string key="text">
 I have an array of objects and I want to filter them by two conditions, either if object is in an certain group or if it has an certain name but I can not figure out why it is not working.
 I have an array of objects and I want to filter them by two conditions, either if object is in an certain group or if it has an certain name but I can not figure out why it is not working.
 
 </string>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2l-dj-lJz">
-                                        <rect key="frame" x="0.0" y="232.5" width="382" height="45"/>
+                                        <rect key="frame" x="0.0" y="310.5" width="382" height="45"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="d40-s2-NS0"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Add">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,7 +92,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOh-2A-XBq" customClass="CardView" customModule="Yummi" customModuleProvider="target">
-                                <rect key="frame" x="16" y="437.5" width="160" height="50"/>
+                                <rect key="frame" x="16" y="359.5" width="160" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="XYX-Vs-yCk">
                                         <rect key="frame" x="8" y="8" width="144" height="34"/>
@@ -116,7 +124,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mjz-1p-Bnx" customClass="CardView" customModule="Yummi" customModuleProvider="target">
-                                <rect key="frame" x="278" y="437.5" width="120" height="50"/>
+                                <rect key="frame" x="278" y="359.5" width="120" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MgR-bW-IRL">
                                         <rect key="frame" x="8" y="8" width="104" height="34"/>
@@ -133,7 +141,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                                                     <constraint firstAttribute="width" constant="40" id="LxF-Fs-GvD"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                                <color key="textColor" name="AccentColor"/>
+                                                <color key="textColor" name="CartTintColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -168,13 +176,14 @@ I have an array of objects and I want to filter them by two conditions, either i
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yen-Xc-vTM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="7UF-LW-LIj"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="8fm-FL-ey8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qwn-lZ-ym1">
                                 <rect key="frame" x="266" y="0.0" width="128" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" name="AccentColor"/>
+                                <color key="tintColor" name="CartTintColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="bag.fill" catalog="system">
+                                <state key="normal" image="bag" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" scale="large" weight="regular"/>
                                 </state>
                                 <connections>
@@ -229,7 +238,9 @@ I have an array of objects and I want to filter them by two conditions, either i
                             <constraint firstItem="nB7-UN-JGE" firstAttribute="trailing" secondItem="SYR-gD-UL0" secondAttribute="trailing" id="xmN-Cd-gwB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Details" id="pEn-hL-HBV"/>
+                    <navigationItem key="navigationItem" title="Details" id="pEn-hL-HBV">
+                        <barButtonItem key="backBarButtonItem" title=" " id="wMy-qW-cNA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nB7-UN-JGE" id="ZM5-p5-6Gz"/>
                     </connections>
@@ -246,6 +257,9 @@ I have an array of objects and I want to filter them by two conditions, either i
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mGt-dK-Nhu">
                         <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <userDefinedRuntimeAttributes>
@@ -261,7 +275,7 @@ I have an array of objects and I want to filter them by two conditions, either i
         </scene>
     </scenes>
     <resources>
-        <image name="bag.fill" catalog="system" width="128" height="128"/>
+        <image name="bag" catalog="system" width="128" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.12156862745098039" green="0.32549019607843138" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -270,6 +284,9 @@ I have an array of objects and I want to filter them by two conditions, either i
         </namedColor>
         <namedColor name="BG">
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CartTintColor">
+            <color red="0.12156862745098039" green="0.32549019607843138" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Cells">
             <color red="0.94900000095367432" green="0.94999998807907104" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
