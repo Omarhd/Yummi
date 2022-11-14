@@ -65,10 +65,12 @@ class TrackingViewController: UIViewController {
     }
     
     func checkhLocationServices() {
-        if CLLocationManager.locationServicesEnabled() {
-            setupLocationManager()
-            checkLocationAuthorization()
-        } else {
+        DispatchQueue.main.async {
+            if CLLocationManager.locationServicesEnabled() {
+                self.setupLocationManager()
+                self.checkLocationAuthorization()
+            } else {
+            }
         }
     }
     
@@ -92,6 +94,8 @@ class TrackingViewController: UIViewController {
             break
         case .restricted:
             break
+        @unknown default:
+            fatalError()
         }
     }
     
