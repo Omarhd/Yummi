@@ -36,7 +36,7 @@ class AppManager: NSObject {
         userDefaults.setValue(token, forKey: kDeviceToken)
         userDefaults.synchronize()
     }
-
+    
     func getNewOrderID() -> String? {
         return userDefaults.string(forKey: kNewOrderID)
     }
@@ -47,5 +47,18 @@ class AppManager: NSObject {
     
     func getRestaurantID() -> String? {
         return userDefaults.string(forKey: kRetaurantID)
+    }
+    
+    // MARK: App      Tutorial=============================================================================================================
+    static func setUserSeenAppInstruction() {
+        UserDefaults.standard.set(true, forKey: "userSeenShowCase")
+    }
+    
+    static func getUserSeenAppInstruction() -> Bool {
+        let userSeenShowCaseObject = UserDefaults.standard.object(forKey: "userSeenShowCase")
+        if let userSeenShowCase = userSeenShowCaseObject as? Bool {
+            return userSeenShowCase
+        }
+        return false
     }
 }

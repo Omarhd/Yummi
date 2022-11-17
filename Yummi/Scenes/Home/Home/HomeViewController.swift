@@ -8,6 +8,7 @@
 import UIKit
 import ProgressHUD
 import SkeletonView
+import Instructions
 
 class HomeViewController: UIViewController {
     
@@ -18,6 +19,8 @@ class HomeViewController: UIViewController {
     fileprivate let homePresenter = HomePresenter(apiServices: APIServices())
     fileprivate var allCategories: BaseCategoriesResponse?
     
+    let coachMarksController = CoachMarksController()
+
     var isLoadingStarted = true
 
     // MARK:- refrence to manage object context
@@ -34,12 +37,32 @@ class HomeViewController: UIViewController {
         homePresenter.attachView(self)
         self.homePresenter.getAllCategories()
         
+        self.coachMarksController.dataSource = self
+        self.coachMarksController.delegate = self
+        
+        let skipView = CoachMarkSkipDefaultView()
+        skipView.setTitle("Skip", for: .normal)
+        self.coachMarksController.skipView = skipView
+        
         registerNibs()
     
         let gesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
         gesture.direction = .down
         view.addGestureRecognizer(gesture)
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !AppManager.getUserSeenAppInstruction() {
+            self.coachMarksController.start(in: .viewController(self))
+           }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.coachMarksController.stop(immediately: true)
     }
     
     @objc func handleSwipe() {
