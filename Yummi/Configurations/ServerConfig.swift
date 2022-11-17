@@ -10,6 +10,7 @@ import Foundation
 enum BuildSettingsKey: String {
     
     case BASE_URL
+    case AUTH_URL
     
     var value: String {
         get {
@@ -23,18 +24,24 @@ class ServerConfig {
     static let shared = ServerConfig()
     
     var baseURL: String?
+    var authURL: String?
     
     func setupBaseUrls() {
 #if RELEASE
         self.baseURL = BuildSettingsKey.BASE_URL.value
+        self.authURL = BuildSettingsKey.AUTH_URL.value
 #elseif DEBUG
         self.baseURL = BuildSettingsKey.BASE_URL.value
+        self.authURL = BuildSettingsKey.AUTH_URL.value
 #elseif STAGING
         self.baseURL = BuildSettingsKey.BASE_URL.value
-#elseif QA
+        self.authURL = BuildSettingsKey.AUTH_URL.value
+#elseif LOCAL
         self.baseURL = BuildSettingsKey.BASE_URL.value
+        self.authURL = BuildSettingsKey.AUTH_URL.value
 #else
         self.baseURL = BuildSettingsKey.BASE_URL.value
+        self.authURL = BuildSettingsKey.AUTH_URL.value
 #endif
         
     }

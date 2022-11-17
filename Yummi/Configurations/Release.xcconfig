@@ -13,5 +13,6 @@ FIREBASE_GOOGLE_SERVICE_INFO_PLIST_FILENAME = Google-Info/Release/GoogleService-
 SLASH = /
 
 BASE_URL = https:$(SLASH)/yummie.glitch.me/
+AUTH_URL = http:$(SLASH)/127.0.0.4:3000/
 
 APP_DISPLAY_NAME = Yummie - Release

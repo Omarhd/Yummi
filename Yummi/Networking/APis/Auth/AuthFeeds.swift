@@ -8,31 +8,28 @@
 import Foundation
 
 enum AuthenticationFeed {
-    case loginOTP
-    case mobileLogin
+    case auth
 }
 
 extension AuthenticationFeed: Endpoint {
     var base: String {
 #if RELEASE
-        return BuildSettingsKey.BASE_URL.value
+        return BuildSettingsKey.AUTH_URL.value
 #elseif DEBUG
-        return BuildSettingsKey.BASE_URL.value
+        return BuildSettingsKey.AUTH_URL.value
 #elseif STAGING
-        return BuildSettingsKey.BASE_URL.value
-#elseif QA
-        return BuildSettingsKey.BASE_URL.value
+        return BuildSettingsKey.AUTH_URL.value
+#elseif LOCAL
+        return BuildSettingsKey.AUTH_URL.value
 #else
-        return BuildSettingsKey.BASE_URL.value
+        return BuildSettingsKey.AUTH_URL.value
 #endif
     }
     
     var path: String {
         switch self {
-        case .loginOTP:
-            return "/v1/auth/otp"
-        case .mobileLogin:
-            return "/v1/auth/mobile_login"
+        case .auth:
+            return "users/add"
         }
     }
 }

@@ -15,10 +15,6 @@ protocol CategoriesViewDelegate: NSObjectProtocol {
     func didRecivedDishes(_ categories: BaseCategoriesResponse)
 }
 
-extension CategoriesViewDelegate {
-    
-}
-
 class HomePresenter {
     
     fileprivate let apiServices: APIServices

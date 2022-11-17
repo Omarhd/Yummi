@@ -18,9 +18,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var itemsCountLabel: UILabel!
     @IBOutlet weak var deliveryChargeLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
-    
-    var haLoggedIn: Bool = false
-    
+        
     // MARK:- refrence to manage object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
    
@@ -55,13 +53,18 @@ class CartViewController: UIViewController {
     }
     
     @IBAction func doneAction(_ sender: Any) {
-        if haLoggedIn {
+        if UserDefaults.standard.hasLoggedIn {
             doAuth()
         } else {
-            let auth = AuthViewController.instantiate(storyBoardName: "Auth")
+            
+            let auth = UserAuthViewController.instantiate(storyBoardName: "Auth")
             auth.modalPresentationStyle = .formSheet
-
             self.present(auth, animated: true, completion: nil)
+            
+//            let auth = AuthViewController.instantiate(storyBoardName: "Auth")
+//            auth.modalPresentationStyle = .formSheet
+//
+//            self.present(auth, animated: true, completion: nil)
         }
     }
     
@@ -84,11 +87,11 @@ class CartViewController: UIViewController {
             
             do {
                 try self.context.save()
-                showSuccessMessage(title: "Done", body: "Cart is Clear.")
+                Messages().showSuccessMessage(title: "Done", body: "Cart is Clear.")
                 ProgressHUD.dismiss()
                 
             } catch {
-                showErrorMessage(title: "Error", body: "Can't Remove items for now.")
+                Messages().showErrorMessage(title: "Error", body: "Can't Remove items for now.")
             }
             
             self.fetchProducts()
@@ -103,7 +106,7 @@ class CartViewController: UIViewController {
     @IBAction func trashAction(_ sender: Any) {
         
         if cartItem.isEmpty {
-            showErrorMessage(title: "Empty", body: "Cart Already Empty need to add items")
+            Messages().showErrorMessage(title: "Empty", body: "Cart Already Empty need to add items")
         } else {
             presentDeleteAlert()
         }
@@ -149,10 +152,10 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
             
             do {
                 try self.context.save()
-                showSuccessMessage(title: "Done", body: "Removed item.")
+                Messages().showSuccessMessage(title: "Done", body: "Removed item.")
 
             } catch {
-                showErrorMessage(title: "Error", body: "Can't Remove items for now.")
+                Messages().showErrorMessage(title: "Error", body: "Can't Remove items for now.")
             }
             
             self.fetchProducts()
@@ -167,7 +170,6 @@ extension CartViewController {
     fileprivate func doAuth() {
         touchMe.authenticateUser() { [weak self] message in
             if let message = message {
-                // if the completion is not nil show an alert
                 let alertView = UIAlertController(title: "Error",
                                                   message: message,
                                                   preferredStyle: .alert)

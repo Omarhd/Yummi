@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -128,12 +128,159 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="70.982142857142847"/>
         </scene>
+        <!--User Auth View Controller-->
+        <scene sceneID="vq2-Yk-5Gj">
+            <objects>
+                <viewController storyboardIdentifier="UserAuthViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="o0c-se-T1I" customClass="UserAuthViewController" customModule="Yummi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cBn-TD-FlM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="kzO-Fk-mnp">
+                                <rect key="frame" x="107" y="68" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0UC-FQ-dUj"/>
+                                    <constraint firstAttribute="width" constant="200" id="LFj-4U-xyS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RfI-RQ-fsv">
+                                <rect key="frame" x="20" y="308" width="374" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-G6-Pxm">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="52"/>
+                                        <color key="backgroundColor" name="BG"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rgn-Bf-euC">
+                                        <rect key="frame" x="0.0" y="68" width="374" height="52"/>
+                                        <color key="backgroundColor" name="BG"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="8CG-lj-mum"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVj-z7-ggE">
+                                <rect key="frame" x="20" y="444" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lpt-0r-Yv2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Go !"/>
+                                <connections>
+                                    <action selector="goAction:" destination="o0c-se-T1I" eventType="touchUpInside" id="uK3-si-K8s"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2vw-o8-8fd">
+                                <rect key="frame" x="20" y="509" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxo-eX-HeH">
+                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="tintColor" name="AppColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Email" image="envelope.circle.fill" catalog="system">
+                                            <color key="titleColor" name="AppColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.10000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j17-i7-jPS">
+                                        <rect key="frame" x="124.5" y="0.0" width="125" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Apple" image="apple.logo" catalog="system">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.10000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P86-Zx-IFv">
+                                        <rect key="frame" x="249.5" y="0.0" width="124.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="tintColor" name="AppColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Devices" image="laptopcomputer.and.iphone" catalog="system">
+                                            <color key="titleColor" name="AppColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.10000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="45F-8D-1rY"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iJD-8s-sBX"/>
+                        <color key="backgroundColor" name="BG"/>
+                        <constraints>
+                            <constraint firstItem="RfI-RQ-fsv" firstAttribute="top" secondItem="kzO-Fk-mnp" secondAttribute="bottom" constant="40" id="0Kl-H1-HaS"/>
+                            <constraint firstItem="RfI-RQ-fsv" firstAttribute="leading" secondItem="iJD-8s-sBX" secondAttribute="leading" constant="20" id="Ro5-hs-ejB"/>
+                            <constraint firstItem="2vw-o8-8fd" firstAttribute="top" secondItem="pVj-z7-ggE" secondAttribute="bottom" constant="20" id="XG6-sW-da6"/>
+                            <constraint firstItem="pVj-z7-ggE" firstAttribute="leading" secondItem="iJD-8s-sBX" secondAttribute="leading" constant="20" id="Xfh-8F-9du"/>
+                            <constraint firstItem="iJD-8s-sBX" firstAttribute="trailing" secondItem="pVj-z7-ggE" secondAttribute="trailing" constant="20" id="YLC-Dv-9iq"/>
+                            <constraint firstItem="iJD-8s-sBX" firstAttribute="trailing" secondItem="RfI-RQ-fsv" secondAttribute="trailing" constant="20" id="bNb-CN-ZTL"/>
+                            <constraint firstItem="pVj-z7-ggE" firstAttribute="top" secondItem="RfI-RQ-fsv" secondAttribute="bottom" constant="16" id="hnv-KY-vmT"/>
+                            <constraint firstItem="kzO-Fk-mnp" firstAttribute="centerX" secondItem="cBn-TD-FlM" secondAttribute="centerX" id="l1m-9P-T1v"/>
+                            <constraint firstItem="kzO-Fk-mnp" firstAttribute="top" secondItem="iJD-8s-sBX" secondAttribute="top" constant="20" id="nf0-Z3-WWK"/>
+                            <constraint firstItem="iJD-8s-sBX" firstAttribute="trailing" secondItem="2vw-o8-8fd" secondAttribute="trailing" constant="20" id="nwX-ly-34Y"/>
+                            <constraint firstItem="2vw-o8-8fd" firstAttribute="leading" secondItem="iJD-8s-sBX" secondAttribute="leading" constant="20" id="rtD-jY-yuE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="rgn-Bf-euC" id="Q1e-hl-w1N"/>
+                        <outlet property="phoneTextField" destination="fjM-G6-Pxm" id="gcJ-1k-JjR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNT-gy-qgw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="65.625"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="apple.logo" catalog="system" width="105" height="128"/>
+        <image name="envelope.circle.fill" catalog="system" width="128" height="123"/>
         <image name="faceid" catalog="system" width="128" height="115"/>
+        <image name="laptopcomputer.and.iphone" catalog="system" width="128" height="73"/>
+        <image name="launch" width="512" height="512"/>
         <namedColor name="AccentColor">
             <color red="0.12156862745098039" green="0.32549019607843138" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="AppColor">
+            <color red="0.62699997425079346" green="0.0" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BG">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

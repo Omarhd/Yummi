@@ -38,6 +38,8 @@
 		4C49407B2922684F001FB1CC /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C4940702922684F001FB1CC /* OFL.txt */; };
 		4C49407D29227BE6001FB1CC /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49407C29227BE6001FB1CC /* UserDataModel.swift */; };
 		4C49407F29227DFF001FB1CC /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49407E29227DFF001FB1CC /* Buttons.swift */; };
+		4C68445729267F40009C6B62 /* UserAuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68445629267F40009C6B62 /* UserAuthPresenter.swift */; };
+		4C68445929267F4B009C6B62 /* UserAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68445829267F4B009C6B62 /* UserAuthModel.swift */; };
 		4C6B78EE2905BFAB00DF5038 /* MyFloatingPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B78ED2905BFAB00DF5038 /* MyFloatingPanelLayout.swift */; };
 		4C81A4AA28D87CCC00958762 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4A928D87CCC00958762 /* Notifications.storyboard */; };
 		4C81A4AC28D87D6600958762 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A4AB28D87D6600958762 /* Settings.storyboard */; };
@@ -97,6 +99,7 @@
 		4CB46C49290D8ECD00BEEE06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */; };
 		4CB46C75290E72BA00BEEE06 /* NotificationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */; };
 		4CB46C77290E734600BEEE06 /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C76290E734600BEEE06 /* NotificationsModel.swift */; };
+		4CB772C62923063300BE42AF /* UserAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB772C52923063300BE42AF /* UserAuthViewController.swift */; };
 		4CC2116D291960CE00B2EA1E /* Arabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2116C291960CE00B2EA1E /* Arabic.strings */; };
 		4CC2116F291960E100B2EA1E /* English.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2116E291960E100B2EA1E /* English.strings */; };
 		4CC396B2290E7E03009C6149 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC396B1290E7E03009C6149 /* NotificationsTableViewCell.swift */; };
@@ -199,6 +202,8 @@
 		4C4940702922684F001FB1CC /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		4C49407C29227BE6001FB1CC /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		4C49407E29227DFF001FB1CC /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		4C68445629267F40009C6B62 /* UserAuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthPresenter.swift; sourceTree = "<group>"; };
+		4C68445829267F4B009C6B62 /* UserAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthModel.swift; sourceTree = "<group>"; };
 		4C6B78ED2905BFAB00DF5038 /* MyFloatingPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFloatingPanelLayout.swift; sourceTree = "<group>"; };
 		4C81A4A928D87CCC00958762 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		4C81A4AB28D87D6600958762 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -264,6 +269,7 @@
 		4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailsViewController.swift; sourceTree = "<group>"; };
 		4CB46C76290E734600BEEE06 /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
+		4CB772C52923063300BE42AF /* UserAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthViewController.swift; sourceTree = "<group>"; };
 		4CC2116C291960CE00B2EA1E /* Arabic.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Arabic.strings; sourceTree = "<group>"; };
 		4CC2116E291960E100B2EA1E /* English.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = English.strings; sourceTree = "<group>"; };
 		4CC396B1290E7E03009C6149 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
@@ -464,6 +470,7 @@
 		4C98229B28C6361500C4D4F5 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				4CB772C42923061700BE42AF /* Local */,
 				4C98229C28C6362C00C4D4F5 /* AuthViewController.swift */,
 				4C98229E28C63A5700C4D4F5 /* KeychainPasswordItem.swift */,
 				4C9822A028C63CEE00C4D4F5 /* TouchIDAuthentication.swift */,
@@ -812,6 +819,16 @@
 				4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		4CB772C42923061700BE42AF /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				4CB772C52923063300BE42AF /* UserAuthViewController.swift */,
+				4C68445629267F40009C6B62 /* UserAuthPresenter.swift */,
+				4C68445829267F4B009C6B62 /* UserAuthModel.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 		4CC396B0290E7DE4009C6149 /* Cells */ = {
@@ -1201,6 +1218,7 @@
 				4C6B78EE2905BFAB00DF5038 /* MyFloatingPanelLayout.swift in Sources */,
 				4C1C280F28FEB0990043886B /* PlacesPanelViewController.swift in Sources */,
 				4CE1D4C628DF7C5B005E5ADF /* Products+CoreDataClass.swift in Sources */,
+				4C68445929267F4B009C6B62 /* UserAuthModel.swift in Sources */,
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,
 				4C3AD11028DB8E930000BB90 /* ServicesFeed.swift in Sources */,
 				4C1C281428FEB97C0043886B /* LocationModel.swift in Sources */,
@@ -1216,6 +1234,7 @@
 				4C9741042907F0B10066A41A /* LunchViewController.swift in Sources */,
 				4CE8490528D2509C00282725 /* UserDefaults.swift in Sources */,
 				4C49407D29227BE6001FB1CC /* UserDataModel.swift in Sources */,
+				4CB772C62923063300BE42AF /* UserAuthViewController.swift in Sources */,
 				4C9EA40F28C3A83B0053FE38 /* HomeViewController.swift in Sources */,
 				4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */,
 				4C9822A128C63CEE00C4D4F5 /* TouchIDAuthentication.swift in Sources */,
@@ -1228,6 +1247,7 @@
 				4CB46C77290E734600BEEE06 /* NotificationsModel.swift in Sources */,
 				4C9EA46C28C3B66A0053FE38 /* StaticDataModel.swift in Sources */,
 				4C1C280728FEA0E50043886B /* TrackingViewController.swift in Sources */,
+				4C68445729267F40009C6B62 /* UserAuthPresenter.swift in Sources */,
 				4C49407F29227DFF001FB1CC /* Buttons.swift in Sources */,
 				4C9EA49128C4C8830053FE38 /* ChefCollectionViewCell.swift in Sources */,
 				4C21936B28D737AD0018E8E8 /* BalaceViewController.swift in Sources */,

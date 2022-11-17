@@ -12,6 +12,7 @@ extension UserDefaults {
         case hasOnBoarded
         case defaultDarkAppearnce
         case setDefaultAppearance
+        case hasLoggedIn
     }
     
     var hasOnBoarded: Bool {
@@ -21,6 +22,16 @@ extension UserDefaults {
         
         set {
             set(newValue, forKey: UserDefaultsKeys.hasOnBoarded.rawValue)
+        }
+    }
+    
+    var hasLoggedIn: Bool {
+        get {
+            bool(forKey: UserDefaultsKeys.hasLoggedIn.rawValue)
+        }
+        
+        set {
+            set(newValue, forKey: UserDefaultsKeys.hasLoggedIn.rawValue)
         }
     }
     

@@ -295,9 +295,9 @@ extension HomeViewController: CategoriesViewDelegate {
         
         do {
             try self.context.save()
-            showSuccessMessage(title: "Added", body: "Success added item to Cart")
+            Messages().showSuccessMessage(title: "Added", body: "Success added item to Cart")
         } catch {
-            Yummi.showErrorMessage(title: "Error", body: "can't added item to Cart")
+            Messages().showErrorMessage(title: "Error", body: "can't added item to Cart")
         }
     }
     
@@ -311,9 +311,9 @@ extension HomeViewController: CategoriesViewDelegate {
         
         do {
             try self.context.save()
-            showSuccessMessage(title: "Added", body: "Success added item to Cart")
+            Messages().showSuccessMessage(title: "Added", body: "Success added item to Cart")
         } catch {
-            Yummi.showErrorMessage(title: "Error", body: "can't added item to Cart")
+            Messages().showErrorMessage(title: "Error", body: "can't added item to Cart")
         }
     }
 }

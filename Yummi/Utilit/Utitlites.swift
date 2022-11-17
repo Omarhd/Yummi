@@ -13,7 +13,7 @@ enum Language : String{
 }
 
 class Utility {
-    func currentApplicationLanguage() -> Language{
+    func currentApplicationLanguage() -> Language {
         let currentAppLanguage = UserDefaults.standard.object(forKey: "AppleLanguages") as? [String]
         let languageCode = currentAppLanguage?.first
 
@@ -27,7 +27,7 @@ class Utility {
         return Language.english
     }
     
-    func currentApplicationLanguageCode() -> String{
+    func currentApplicationLanguageCode() -> String {
         let currentAppLanguage = UserDefaults.standard.object(forKey: "AppleLanguages") as? [String]
         let languageCode = currentAppLanguage?.first
         return languageCode ?? ""
@@ -35,7 +35,7 @@ class Utility {
 
     
     // MARK: Application Language Change
-    func changeApplicationLanguage(){
+    func changeApplicationLanguage() {
         let currentAppLanguageCode = self.currentApplicationLanguageCode()
         if(currentAppLanguageCode.hasPrefix("en")) { // == "en"){
             UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")

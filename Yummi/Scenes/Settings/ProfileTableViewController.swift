@@ -18,7 +18,7 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.isModalInPresentation = true
+        self.isModalInPresentation = false
         
         userData = UserDefaults.standard.value(forKey: "User") as? UserModel
         
@@ -42,7 +42,7 @@ class ProfileTableViewController: UITableViewController {
         if user.setUserData(user: user) {
             dismiss(animated: true)
         } else {
-            showMessage(title: "Error", body: "Failed to Save Object")
+            Messages().showMessage(title: "Error", body: "Failed to Save Object")
         }
     }
 }

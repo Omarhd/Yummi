@@ -12,6 +12,8 @@
 	<string>$(SLASH)</string>
 	<key>BASE_URL</key>
 	<string>$(BASE_URL)</string>
+	<key>AUTH_URL</key>
+	<string>$(AUTH_URL)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
