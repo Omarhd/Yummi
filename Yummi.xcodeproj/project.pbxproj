@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C19B9852926E65400FF4AF5 /* HomeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19B9842926E65400FF4AF5 /* HomeExtensions.swift */; };
+		4C19B98729278EC200FF4AF5 /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19B98629278EC200FF4AF5 /* CartPresenter.swift */; };
 		4C1C280428FEA07B0043886B /* TrackingMaps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1C280328FEA07B0043886B /* TrackingMaps.storyboard */; };
 		4C1C280728FEA0E50043886B /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C280628FEA0E50043886B /* TrackingViewController.swift */; };
 		4C1C280B28FEACCA0043886B /* Sudan Location Simulator.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4C1C280928FEACCA0043886B /* Sudan Location Simulator.gpx */; };
@@ -171,6 +172,7 @@
 		306EEA5EED86042119358BC9 /* Pods-YummiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YummiTests.release.xcconfig"; path = "Target Support Files/Pods-YummiTests/Pods-YummiTests.release.xcconfig"; sourceTree = "<group>"; };
 		32BB729745FDC68D7AEB1F75 /* Pods-Yummi-YummiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummi-YummiUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yummi-YummiUITests/Pods-Yummi-YummiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C19B9842926E65400FF4AF5 /* HomeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExtensions.swift; sourceTree = "<group>"; };
+		4C19B98629278EC200FF4AF5 /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
 		4C1C280328FEA07B0043886B /* TrackingMaps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrackingMaps.storyboard; sourceTree = "<group>"; };
 		4C1C280628FEA0E50043886B /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
 		4C1C280928FEACCA0043886B /* Sudan Location Simulator.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Sudan Location Simulator.gpx"; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 			children = (
 				4C9822A728C682A100C4D4F5 /* CartCells */,
 				4C98229528C5450D00C4D4F5 /* CartViewController.swift */,
+				4C19B98629278EC200FF4AF5 /* CartPresenter.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -1268,6 +1271,7 @@
 				4CC396B2290E7E03009C6149 /* NotificationsTableViewCell.swift in Sources */,
 				4CFDC50028CA84A400E5B753 /* SearchBarNavigationController.swift in Sources */,
 				4CFDC50B28CE974200E5B753 /* SettingsTableViewController.swift in Sources */,
+				4C19B98729278EC200FF4AF5 /* CartPresenter.swift in Sources */,
 				4C1C2818290311F20043886B /* SwiftMessages.swift in Sources */,
 				4C4322FA28F042A400CE5729 /* AppearanceTableViewController.swift in Sources */,
 				4C9EA44428C3A97E0053FE38 /* AuthFeeds.swift in Sources */,

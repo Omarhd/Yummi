@@ -11,6 +11,8 @@ import Intents
 
 struct LatestEntryView : View {
     
+    let date = Date()
+    
     var body: some View {
         Text("")
     }

@@ -60,11 +60,6 @@ class CartViewController: UIViewController {
             let auth = UserAuthViewController.instantiate(storyBoardName: "Auth")
             auth.modalPresentationStyle = .formSheet
             self.present(auth, animated: true, completion: nil)
-            
-//            let auth = AuthViewController.instantiate(storyBoardName: "Auth")
-//            auth.modalPresentationStyle = .formSheet
-//
-//            self.present(auth, animated: true, completion: nil)
         }
     }
     

@@ -16,13 +16,13 @@ extension HomeViewController: CoachMarksControllerDataSource, CoachMarksControll
         
         switch index {
         case 0:
-            coachViews.bodyView.hintLabel.text = "Hello! this is a segmented control you can toggle dark and light mode here!"
+            coachViews.bodyView.hintLabel.text = "Hello! this is Our Dishes Category where u can find all our meals!"
             coachViews.bodyView.nextLabel.text = "OK!!"
         case 1:
-            coachViews.bodyView.hintLabel.text = "This is a search text field you can search for your favourite texts here."
+            coachViews.bodyView.hintLabel.text = "This is Our Popular Dishes, best we made for our clients."
             coachViews.bodyView.nextLabel.text = "Ok!"
         case 2:
-            coachViews.bodyView.hintLabel.text = "Yor search texxt will appear here when you hit enter"
+            coachViews.bodyView.hintLabel.text = "This is Our Chef's Recommendations"
             coachViews.bodyView.nextLabel.text = "OK!"
         default: break
         }
@@ -40,7 +40,7 @@ extension HomeViewController: CoachMarksControllerDataSource, CoachMarksControll
     }
     
     func numberOfCoachMarks(for coachMarksController: Instructions.CoachMarksController) -> Int {
-        return 4
+        return 3
     }
     
     func coachMarksController(_ coachMarksController: CoachMarksController, didEndShowingBySkipping skipped: Bool) {
