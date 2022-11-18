@@ -13,7 +13,7 @@
         <array key="Cairo-Bold.ttf">
             <string>Cairo-Bold</string>
         </array>
-        <array key="Cairo-Regular.ttf">
+        <array key="Cairo-VariableFont_slnt,wght.ttf">
             <string>Cairo-Regular</string>
         </array>
     </customFonts>
@@ -146,8 +146,8 @@
                     <navigationItem key="navigationItem" title="My Cart" id="7i7-He-jsk">
                         <rightBarButtonItems>
                             <barButtonItem style="done" id="NyC-Cj-kqI">
-                                <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5pT-ug-lxA">
-                                    <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5pT-ug-lxA">
+                                    <rect key="frame" x="302" y="0.0" width="92" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" red="0.17833182219999999" green="0.46382504699999999" blue="0.27014327049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" title="Button"/>

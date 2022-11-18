@@ -19,10 +19,9 @@ class CartViewController: UIViewController {
     @IBOutlet weak var deliveryChargeLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
         
-    // MARK:- refrence to manage object context
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-   
-    var cartItem: [Products] = []
+    fileprivate let cartPresenter = CartPresenter()
+
+    var cartItems: [Products] = []
     var totalPrice: String?
     
     let touchMe = BiometricIDAuth()
@@ -30,22 +29,10 @@ class CartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fetchProducts()
+        self.cartPresenter.attachView(self)
+       
+        cartPresenter.fetchProducts()
         registerNibs()
-    }
-    
-    func fetchProducts() {
-        do {
-            self.cartItem = try context.fetch(Products.fetchRequest())
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        } catch {
-            
-        }
-        
-        setupEmptyViewTableView()
-        setupCartDetails()
     }
     
     private func registerNibs() {
@@ -71,25 +58,8 @@ class CartViewController: UIViewController {
         )
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
         }
-        let standard = UserDefaults.standard
         let okayAction = UIAlertAction(title: "Yes", style: .destructive) { (action) in
-            ProgressHUD.animationType = .circleRotateChase
-            ProgressHUD.show()
-            
-            for object in self.cartItem {
-                self.context.delete(object)
-            }
-            
-            do {
-                try self.context.save()
-                Messages().showSuccessMessage(title: "Done", body: "Cart is Clear.")
-                ProgressHUD.dismiss()
-                
-            } catch {
-                Messages().showErrorMessage(title: "Error", body: "Can't Remove items for now.")
-            }
-            
-            self.fetchProducts()
+            self.cartPresenter.emptyAllCart()
         }
         
         alertController.addAction(okayAction)
@@ -100,7 +70,7 @@ class CartViewController: UIViewController {
     
     @IBAction func trashAction(_ sender: Any) {
         
-        if cartItem.isEmpty {
+        if self.cartItems.isEmpty {
             Messages().showErrorMessage(title: "Empty", body: "Cart Already Empty need to add items")
         } else {
             presentDeleteAlert()
@@ -108,32 +78,27 @@ class CartViewController: UIViewController {
     }
     
     fileprivate func setupCartDetails() {
-        self.itemsCountLabel.text = "\(self.cartItem.count)"
+        self.itemsCountLabel.text = "\(self.cartItems.count)"
         self.deliveryChargeLabel.text = "\(1800)"
         self.totalPriceLabel.text = self.totalPrice
     }
     
     fileprivate func setupEmptyViewTableView() {
-        if cartItem.count == 0 {
             emptyCartView.isHidden = false
-        } else {
-            emptyCartView.isHidden = true
-        }
     }
-    
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cartItem.count
+        return self.cartItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CartItemsTableViewCell.identifire, for: indexPath) as! CartItemsTableViewCell
         
-        cell.setupUI(with: cartItem[indexPath.row])
+        cell.setupUI(with: cartItems[indexPath.row])
         
-        let total = Double(self.cartItem.count) * cartItem[indexPath.row].price
+        let total = Double(self.cartItems.count) * cartItems[indexPath.row].price
         self.totalPrice = "\(total)"
         
         return cell
@@ -141,19 +106,8 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Remove") { action, view, complection in
-            let item = self.cartItem[indexPath.row]
-            
-            self.context.delete(item)
-            
-            do {
-                try self.context.save()
-                Messages().showSuccessMessage(title: "Done", body: "Removed item.")
-
-            } catch {
-                Messages().showErrorMessage(title: "Error", body: "Can't Remove items for now.")
-            }
-            
-            self.fetchProducts()
+            let item = self.cartItems[indexPath.row]
+            self.cartPresenter.deleteItem(item: item)
         }
         
         return UISwipeActionsConfiguration(actions: [action])
@@ -203,5 +157,32 @@ extension CartViewController {
       let okAction = UIAlertAction(title: "Foiled Again!", style: .default)
       alertView.addAction(okAction)
       present(alertView, animated: true)
+    }
+}
+
+extension CartViewController: CartViewDelegate {
+    func startLoading() {
+        ProgressHUD.animationType = .circleRotateChase
+        ProgressHUD.show()
+    }
+    
+    func stopLoading() {
+        ProgressHUD.dismiss()
+
+    }
+    
+    func showErrorMessage(_ message: String) {
+        ProgressHUD.show(message)
+    }
+    
+    func didRecivedCartItems(_ cartItems: [Products]) {
+        if cartItems.count == 0 {
+            self.setupEmptyViewTableView()
+        } else {
+            self.cartItems.removeAll()
+            self.cartItems = cartItems
+            self.setupCartDetails()
+            self.tableView.reloadData()
+        }
     }
 }
