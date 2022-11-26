@@ -204,6 +204,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                         <outlet property="dishImageView" destination="1mo-vP-3zx" id="aVx-Gk-Sce"/>
                         <outlet property="dishPriceLabel" destination="xe9-HS-9lV" id="H7g-1T-S81"/>
                         <outlet property="dishTitleLabel" destination="MlB-1S-ulv" id="8b1-AG-7Oz"/>
+                        <outlet property="stepper" destination="DDD-Eo-CLu" id="h9f-td-oyT"/>
                         <segue destination="sra-vT-SPL" kind="show" id="FKr-zL-hv4"/>
                     </connections>
                 </viewController>
@@ -286,7 +287,7 @@ I have an array of objects and I want to filter them by two conditions, either i
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CartTintColor">
-            <color red="0.12156862745098039" green="0.32549019607843138" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12200000137090683" green="0.32499998807907104" blue="0.019999999552965164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Cells">
             <color red="0.94900000095367432" green="0.94999998807907104" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -50,12 +50,24 @@ class AppManager: NSObject {
     }
     
     // MARK: App      Tutorial=============================================================================================================
-    static func setUserSeenAppInstruction() {
-        UserDefaults.standard.set(true, forKey: "userSeenShowCase")
+    static func setUserSeenAppInstructionForHome() {
+        UserDefaults.standard.set(true, forKey: "userSeenShowCaseForHome")
     }
     
-    static func getUserSeenAppInstruction() -> Bool {
-        let userSeenShowCaseObject = UserDefaults.standard.object(forKey: "userSeenShowCase")
+    static func setUserSeenAppInstructionForDishDetails() {
+        UserDefaults.standard.set(true, forKey: "userSeenShowCaseForDishDetails")
+    }
+    
+    static func getUserSeenAppInstructionForHome() -> Bool {
+        let userSeenShowCaseObject = UserDefaults.standard.object(forKey: "userSeenShowCaseForHome")
+        if let userSeenShowCase = userSeenShowCaseObject as? Bool {
+            return userSeenShowCase
+        }
+        return false
+    }
+    
+    static func getUserSeenAppInstructionForDishDetails() -> Bool {
+        let userSeenShowCaseObject = UserDefaults.standard.object(forKey: "userSeenShowCaseForDishDetails")
         if let userSeenShowCase = userSeenShowCaseObject as? Bool {
             return userSeenShowCase
         }

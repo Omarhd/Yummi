@@ -20,31 +20,44 @@ class ProfileTableViewController: UITableViewController {
 
         self.isModalInPresentation = false
         
-        userData = UserDefaults.standard.value(forKey: "User") as? UserModel
-        
+        let data = UserDefaults.standard.value(forKey: "User")
+        print(data)
+        do {
+//            let user = try de.decode(userData.self, from: data as! Data)
+        }
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(imgTapped))
         tap.numberOfTouchesRequired = 1
         profileImageView.isUserInteractionEnabled = true
         profileImageView.addGestureRecognizer(tap)
+    }
+    
+    @IBAction func doneAction(_ sender: UIButton) {
         
         guard let name = profileNameLabel.text, name.isNotEmpty,
-              let phone = profilePhoneNumberLabel.text, phone.isNotEmpty,
-              let image = profileImageView.image, !image.isSymbolImage
+              let phone = profilePhoneNumberLabel.text, phone.isNotEmpty
               
         else {
             Vibration.heavy.vibrate()
             return
         }
         
-        let user = UserModel(name: name, phone: phone, image: image)
+        let user = UserModel(name: name, phone: phone, image: "person.fill.circle")
         
-        if user.setUserData(user: user) {
-            dismiss(animated: true)
-        } else {
-            Messages().showMessage(title: "Error", body: "Failed to Save Object")
+        do {
+            let data = try! JSONEncoder().encode(user)
+            UserDefaults.standard.set(data, forKey: "User")
+            
+            print("data \(data)")
+        } catch {
+            
         }
     }
+    
+    @IBAction func addImage(_ sender: UIBarButtonItem) {
+        imgTapped()
+    }
+
 }
 
 extension ProfileTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

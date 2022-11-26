@@ -1,14 +1,14 @@
 //
-//  HomeExtensions.swift
+//  DishDetailsExtensions.swift
 //  Yummi
 //
-//  Created by Omar Abdulrahman on 17/11/2022.
+//  Created by Omar Abdulrahman on 26/11/2022.
 //
 
 import UIKit
 import Instructions
 
-extension HomeViewController: CoachMarksControllerDataSource, CoachMarksControllerDelegate {
+extension DishesDetailsViewController: CoachMarksControllerDataSource, CoachMarksControllerDelegate {
     
     
     func coachMarksController(_ coachMarksController: Instructions.CoachMarksController, coachMarkViewsAt index: Int, madeFrom coachMark: Instructions.CoachMark) -> (bodyView: (UIView & Instructions.CoachMarkBodyView), arrowView: (UIView & Instructions.CoachMarkArrowView)?) {
@@ -16,13 +16,13 @@ extension HomeViewController: CoachMarksControllerDataSource, CoachMarksControll
         
         switch index {
         case 0:
-            coachViews.bodyView.hintLabel.text = "Hello! this is Our Dishes Category where u can find all our meals!"
+            coachViews.bodyView.hintLabel.text = "you can controll your order count for item."
             coachViews.bodyView.nextLabel.text = "OK!!"
         case 1:
-            coachViews.bodyView.hintLabel.text = "This is Our Popular Dishes, best we made for our clients."
+            coachViews.bodyView.hintLabel.text = "navigate to check ur cart whenever u wanted."
             coachViews.bodyView.nextLabel.text = "Ok!"
         case 2:
-            coachViews.bodyView.hintLabel.text = "This is Our Chef's Recommendations"
+            coachViews.bodyView.hintLabel.text = "and finlly add the item to your cart."
             coachViews.bodyView.nextLabel.text = "OK!"
         default: break
         }
@@ -32,9 +32,9 @@ extension HomeViewController: CoachMarksControllerDataSource, CoachMarksControll
     
     func coachMarksController(_ coachMarksController: Instructions.CoachMarksController, coachMarkAt index: Int) -> Instructions.CoachMark {
         switch index {
-        case 0: return coachMarksController.helper.makeCoachMark(for: categoryCollectionView)
-        case 1: return coachMarksController.helper.makeCoachMark(for: popularCollectionView)
-        case 2: return coachMarksController.helper.makeCoachMark(for: chefCollectionView)
+        case 0: return coachMarksController.helper.makeCoachMark(for: stepper)
+        case 1: return coachMarksController.helper.makeCoachMark(for: self.navigationItem.rightBarButtonItem?.customView)
+        case 2: return coachMarksController.helper.makeCoachMark(for: addButton)
         default: return coachMarksController.helper.makeCoachMark()
         }
     }
@@ -44,7 +44,7 @@ extension HomeViewController: CoachMarksControllerDataSource, CoachMarksControll
     }
     
     func coachMarksController(_ coachMarksController: CoachMarksController, didEndShowingBySkipping skipped: Bool) {
-        AppManager.setUserSeenAppInstructionForHome()
+        AppManager.setUserSeenAppInstructionForDishDetails()
     }
 }
 

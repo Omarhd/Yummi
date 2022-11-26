@@ -55,7 +55,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if !AppManager.getUserSeenAppInstruction() {
+        if !AppManager.getUserSeenAppInstructionForHome() {
             self.coachMarksController.start(in: .viewController(self))
            }
     }

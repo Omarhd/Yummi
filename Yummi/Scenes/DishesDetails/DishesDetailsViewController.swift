@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import Instructions
 
 class DishesDetailsViewController: UIViewController {
 
@@ -17,9 +18,12 @@ class DishesDetailsViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var dishCountLabel: UILabel!
     @IBOutlet weak var dishPriceLabel: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
     
     // MARK:- refrence to manage object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    let coachMarksController = CoachMarksController()
 
     var dish: Popular!
     var itemPrice: Int!
@@ -30,6 +34,26 @@ class DishesDetailsViewController: UIViewController {
 
         setupUI(with: self.dish)
 
+        self.coachMarksController.dataSource = self
+        self.coachMarksController.delegate = self
+        
+        let skipView = CoachMarkSkipDefaultView()
+        skipView.setTitle("Skip", for: .normal)
+        self.coachMarksController.skipView = skipView
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !AppManager.getUserSeenAppInstructionForDishDetails() {
+            self.coachMarksController.start(in: .viewController(self))
+           }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.coachMarksController.stop(immediately: true)
     }
    
     @IBAction func stepper(_ sender: UIStepper) {
