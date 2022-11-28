@@ -32,7 +32,7 @@ class ChatDetailsViewController: MessagesViewController {
         
         if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout{
             layout.setMessageIncomingAvatarSize(.zero)
-            //            layout.setMessageOutgoingAvatarSize(.zero)
+//            layout.setMessageOutgoingAvatarSize(.zero)
             layout.setMessageOutgoingMessageBottomLabelAlignment(.init(textAlignment: .right, textInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)))
             layout.setMessageIncomingMessageBottomLabelAlignment(.init(textAlignment: .left, textInsets: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)))
             layout.setMessageOutgoingCellBottomLabelAlignment(.init(textAlignment: .right, textInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)))
@@ -62,49 +62,7 @@ class ChatDetailsViewController: MessagesViewController {
         messagesCollectionView.messagesDisplayDelegate = self
     }
     
-    fileprivate func configureMessageInputBar() {
-        
-        messageInputBar.delegate = self
-        messageInputBar.inputTextView.isUserInteractionEnabled = true
-        messageInputBar.inputTextView.resignFirstResponder()
-
-        let button = InputBarButtonItem()
-        button.image = UIImage(systemName: "plus.bubble")
-        button.setSize(CGSize(width: 40, height: 40), animated: true)
-        button.cornerRadius = 8
-        
-        button.onKeyboardSwipeGesture { item, gesture in
-            if (gesture.direction == .left)     { item.inputBarAccessoryView?.setLeftStackViewWidthConstant(to: 20, animated: true)        }
-            if (gesture.direction == .right) { item.inputBarAccessoryView?.setLeftStackViewWidthConstant(to: 20, animated: true)    }
-        }
-        
-        button.onTouchUpInside { item in
-            self.actionAttachMessage()
-        }
-        
-        messageInputBar.setStackViewItems([button], forStack: .left, animated: false)
-        
-        messageInputBar.sendButton.title = nil
-        messageInputBar.sendButton.image = UIImage(systemName: "paperplane.fill")
-        messageInputBar.sendButton.setSize(CGSize(width: 40, height: 40), animated: true)
-        
-        messageInputBar.setLeftStackViewWidthConstant(to: 40, animated: true)
-        messageInputBar.setRightStackViewWidthConstant(to: 20, animated: true)
-        
-        messageInputBar.inputTextView.isImagePasteEnabled = true
-        messageInputBar.inputTextView.placeholder = nil
-        
-        messageInputBar.inputTextView.delegate = self
-        
-        messageInputBar.backgroundView.backgroundColor = .clear
-        messageInputBar.backgroundView.borderWidth = 1.0
-        messageInputBar.backgroundView.borderColor = .clear
-        messageInputBar.inputTextView.backgroundColor = UIColor(named: "Cells")
-        
-        messageInputBar.leftStackView.backgroundColor = .clear
-        messageInputBar.middleContentView?.cornerRadius = 8
-
-    }
+    
     
     func actionAttachMessage() {
         
@@ -163,7 +121,7 @@ extension ChatDetailsViewController: UIDocumentInteractionControllerDelegate {
     
 }
 
-extension ChatDetailsViewController: MessagesDataSource, MessagesDisplayDelegate, MessagesLayoutDelegate, MessageCellDelegate, InputBarAccessoryViewDelegate {
+extension ChatDetailsViewController: MessagesDataSource, MessagesLayoutDelegate {
     
     func currentSender() -> MessageKit.SenderType {
         return self.currentUser
@@ -175,12 +133,6 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesDisplayDelegate
     
     func numberOfSections(in messagesCollectionView: MessageKit.MessagesCollectionView) -> Int {
         return self.messages.count
-    }
-    
-    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
-        let image = UIImage(systemName: "headphones.circle.fill")
-        let avatar = Avatar(image: image, initials: "")
-        avatarView.set(avatar: avatar)
     }
     
     func messageBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
@@ -203,88 +155,8 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesDisplayDelegate
         guard indexPath.section + 1 < messages.count else { return false }
         return messages[indexPath.section].sentDate == messages[indexPath.section + 1].sentDate
     }
-    
-    func inputBar(_ inputBar: InputBarAccessoryView, textViewTextDidChangeTo text: String) {
-        print(text)
-    }
-    
-    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         
-        
-        for component in inputBar.inputTextView.components {
-            if let text = component as? String {
-                print(text)
-                messages.append(Message(sender: otherUser, messageId: "3", sentDate: Date().addingTimeInterval(-0), kind: .text(text)))
-                
-                self.messagesCollectionView.scrollToLastItem(at: .bottom, animated: false)
-                self.messagesCollectionView.reloadData()
-
-            }
-        }
-    }
     
-    func didTapBackground(in cell: MessageKit.MessageCollectionViewCell) {
-        print("didTapBackground")
-    }
-    
-    func didTapMessage(in cell: MessageKit.MessageCollectionViewCell) {
-        print("didTapMessage")
-        
-    }
-    
-    func didTapAvatar(in cell: MessageKit.MessageCollectionViewCell) {
-        print("didTapAvatar")
-    }
-    
-    func didTapCellTopLabel(in cell: MessageKit.MessageCollectionViewCell) {
-        print("didTapCellTopLabel")
-        
-    }
-    
-    func didTapCellBottomLabel(in cell: MessageKit.MessageCollectionViewCell) {
-        print("didTapCellBottomLabel")
-        
-    }
-    
-    func didTapMessageTopLabel(in cell: MessageKit.MessageCollectionViewCell) {
-        print("didTapMessageTopLabel")
-        
-    }
-    
-    func didTapMessageBottomLabel(in cell: MessageKit.MessageCollectionViewCell) {
-        print("didTapMessageBottomLabel")
-        
-    }
-    
-    func didTapAccessoryView(in cell: MessageKit.MessageCollectionViewCell) {
-        print("didTapAccessoryView")
-        
-    }
-    
-    func didTapImage(in cell: MessageKit.MessageCollectionViewCell) {
-        print("didTapImage")
-        
-    }
-    
-    func didTapPlayButton(in cell: MessageKit.AudioMessageCell) {
-        print("didTapPlayButton")
-        
-    }
-    
-    func didStartAudio(in cell: MessageKit.AudioMessageCell) {
-        print("didStartAudio")
-        
-    }
-    
-    func didPauseAudio(in cell: MessageKit.AudioMessageCell) {
-        print("didPauseAudio")
-        
-    }
-    
-    func didStopAudio(in cell: MessageKit.AudioMessageCell) {
-        print("didStopAudio")
-        
-    }
 }
 
 extension ChatDetailsViewController: UITextViewDelegate {
