@@ -52,6 +52,7 @@ class NotificationsTableViewController: UITableViewController {
         if
             let detailViewController = delegate as? NotificationDetailsViewController,
             let detailNavigationController = detailViewController.navigationController {
+            detailViewController.descriptionLabel.text = selectedMonster.description
             splitViewController?.showDetailViewController(detailNavigationController, sender: nil)
         }
     }

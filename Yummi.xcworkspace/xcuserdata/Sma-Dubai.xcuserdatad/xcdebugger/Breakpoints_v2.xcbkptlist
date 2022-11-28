@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0107F00E-4F24-4B92-B923-A40BEE5E6CF7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Yummi/Scenes/Auth/Local/UserAuthPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "login(user:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "D0A93324-B33B-4B50-97F8-620D372A2C4E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -68,11 +52,11 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AF818226-F7AD-4C19-8E1C-0CF169FC90E3 - 695bfea91aea2cd1"
+                  uuid = "AF818226-F7AD-4C19-8E1C-0CF169FC90E3 - b46736ced69cf6be"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[0] = Dead&gt; of Yummi.ProfileTableViewController.doneAction(__C.UIButton) -&gt; ()"
+                  symbolName = "Yummi.ProfileTableViewController.doneAction(__C.UIButton) -&gt; ()"
                   moduleName = "Yummi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omar/Documents/My/Yummi/Yummi/Scenes/Settings/Profile/ProfileTableViewController.swift"
@@ -80,14 +64,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "37"
                   endingLineNumber = "37"
-                  offsetFromSymbolStart = "44">
+                  offsetFromSymbolStart = "136">
                </Location>
                <Location
-                  uuid = "AF818226-F7AD-4C19-8E1C-0CF169FC90E3 - 695bfea91aea2cd1"
+                  uuid = "AF818226-F7AD-4C19-8E1C-0CF169FC90E3 - b46736ced69cf6be"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[0] = Dead&gt; of Yummi.ProfileTableViewController.doneAction(__C.UIButton) -&gt; ()"
+                  symbolName = "Yummi.ProfileTableViewController.doneAction(__C.UIButton) -&gt; ()"
                   moduleName = "Yummi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omar/Documents/My/Yummi/Yummi/Scenes/Settings/Profile/ProfileTableViewController.swift"
@@ -95,7 +79,22 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "37"
                   endingLineNumber = "37"
-                  offsetFromSymbolStart = "80">
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "AF818226-F7AD-4C19-8E1C-0CF169FC90E3 - b46736ced69cf6be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummi.ProfileTableViewController.doneAction(__C.UIButton) -&gt; ()"
+                  moduleName = "Yummi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omar/Documents/My/Yummi/Yummi/Scenes/Settings/Profile/ProfileTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1712">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -145,6 +144,182 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "doneAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F98853F-C62C-47B6-AE59-B5792DAE9E19"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Yummi/Scenes/Notifications/NotificationDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "monsterSelected(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFB7062A-A14B-4A8B-9605-5DBF4C8A3779"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Yummi/Scenes/Auth/Local/UserAuthPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "login(user:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FFB7062A-A14B-4A8B-9605-5DBF4C8A3779 - 9541968d6a1378bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummi.AuthPrsenter.login(user: Yummi.UserRequest) -&gt; ()"
+                  moduleName = "Yummi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omar/Documents/My/Yummi/Yummi/Scenes/Auth/Local/UserAuthPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "FFB7062A-A14B-4A8B-9605-5DBF4C8A3779 - c0526502b99d3a3a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Yummi.Result&lt;Yummi.UserResponse, Yummi.DataLayerError&lt;Yummi.ErrorModel&gt;&gt;) -&gt; () in Yummi.AuthPrsenter.login(user: Yummi.UserRequest) -&gt; ()"
+                  moduleName = "Yummi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omar/Documents/My/Yummi/Yummi/Scenes/Auth/Local/UserAuthPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A102119-9F3D-4BD8-93E4-E95A46A862AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Yummi/Networking/APis/Auth/AuthClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "login(prameters:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9A102119-9F3D-4BD8-93E4-E95A46A862AC - 1c613e0eeb452764"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummi.AuthAPIServices.login(prameters: Yummi.UserRequest, completion: (Yummi.Result&lt;Yummi.UserResponse, Yummi.DataLayerError&lt;Yummi.ErrorModel&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Yummi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omar/Documents/My/Yummi/Yummi/Networking/APis/Auth/AuthClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "9A102119-9F3D-4BD8-93E4-E95A46A862AC - 1c613e0eeb452764"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummi.AuthAPIServices.login(prameters: Yummi.UserRequest, completion: (Yummi.Result&lt;Yummi.UserResponse, Yummi.DataLayerError&lt;Yummi.ErrorModel&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Yummi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omar/Documents/My/Yummi/Yummi/Networking/APis/Auth/AuthClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "724">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8DA7F7D-BB44-4071-97B5-83601CCD00A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Yummi/Networking/APis/Auth/AuthClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "login(prameters:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F8DA7F7D-BB44-4071-97B5-83601CCD00A4 - 1c613e0eeb452722"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummi.AuthAPIServices.login(prameters: Yummi.UserRequest, completion: (Yummi.Result&lt;Yummi.UserResponse, Yummi.DataLayerError&lt;Yummi.ErrorModel&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Yummi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omar/Documents/My/Yummi/Yummi/Networking/APis/Auth/AuthClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "460">
+               </Location>
+               <Location
+                  uuid = "F8DA7F7D-BB44-4071-97B5-83601CCD00A4 - 1c8fc760178c7362"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Decodable) -&gt; Swift.Optional&lt;Yummi.UserResponse&gt; in Yummi.AuthAPIServices.login(prameters: Yummi.UserRequest, completion: (Yummi.Result&lt;Yummi.UserResponse, Yummi.DataLayerError&lt;Yummi.ErrorModel&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Yummi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omar/Documents/My/Yummi/Yummi/Networking/APis/Auth/AuthClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D330AD63-C4EE-4777-90AE-0CC82A840462"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Yummi/Networking/APis/Auth/AuthClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "login(prameters:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

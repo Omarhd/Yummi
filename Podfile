@@ -13,6 +13,8 @@ target 'Yummi' do
     pod 'SkeletonView'
     pod 'FloatingPanel'
     pod 'Instructions'
+    pod 'MessageKit'
+    pod 'IQKeyboardManagerSwift'
 
   target 'YummiTests' do
     inherit! :search_paths

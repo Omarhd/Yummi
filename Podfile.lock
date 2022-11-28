@@ -1,7 +1,13 @@
 PODS:
   - FloatingPanel (2.5.3)
+  - InputBarAccessoryView (5.5.0):
+    - InputBarAccessoryView/Core (= 5.5.0)
+  - InputBarAccessoryView/Core (5.5.0)
   - Instructions (2.2.0)
+  - IQKeyboardManagerSwift (6.5.10)
   - Kingfisher (7.2.2)
+  - MessageKit (3.8.0):
+    - InputBarAccessoryView (~> 5.5.0)
   - ProgressHUD (13.6)
   - SkeletonView (1.29.2)
   - SwiftMessages (9.0.6):
@@ -11,7 +17,9 @@ PODS:
 DEPENDENCIES:
   - FloatingPanel
   - Instructions
+  - IQKeyboardManagerSwift
   - Kingfisher
+  - MessageKit
   - ProgressHUD
   - SkeletonView
   - SwiftMessages
@@ -19,20 +27,26 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - FloatingPanel
+    - InputBarAccessoryView
     - Instructions
+    - IQKeyboardManagerSwift
     - Kingfisher
+    - MessageKit
     - ProgressHUD
     - SkeletonView
     - SwiftMessages
 
 SPEC CHECKSUMS:
   FloatingPanel: 3cee815e9ded75b632543fa73ab655a1ef941452
+  InputBarAccessoryView: 1d7b0a672b36e370f01f264b3907ef39d03328e3
   Instructions: 07052901a398b42eb1d83de9755b8a0bac3e2f7d
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
+  MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   SkeletonView: 915a80ecc2b6421ab7ac0f0212321c0cc1406472
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
 
-PODFILE CHECKSUM: 94c6abe53a777f47d3443e3c4dbd090670a6a619
+PODFILE CHECKSUM: 919d5ce15d52c3defec10efa6c66eeae64f4ea49
 
 COCOAPODS: 1.11.3

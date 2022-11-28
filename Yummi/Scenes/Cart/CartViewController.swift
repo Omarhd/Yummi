@@ -40,14 +40,14 @@ class CartViewController: UIViewController {
     }
     
     @IBAction func doneAction(_ sender: Any) {
-        if UserDefaults.standard.hasLoggedIn {
+//        if UserDefaults.standard.hasLoggedIn {
             doAuth()
-        } else {
+//        } else {
             
-            let auth = UserAuthViewController.instantiate(storyBoardName: "Auth")
-            auth.modalPresentationStyle = .formSheet
-            self.present(auth, animated: true, completion: nil)
-        }
+//            let auth = UserAuthViewController.instantiate(storyBoardName: "Auth")
+//            auth.modalPresentationStyle = .formSheet
+//            self.present(auth, animated: true, completion: nil)
+//        }
     }
     
     fileprivate func presentDeleteAlert() {
