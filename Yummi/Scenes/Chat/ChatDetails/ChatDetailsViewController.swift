@@ -68,14 +68,16 @@ class ChatDetailsViewController: MessagesViewController {
         
         messageInputBar.inputTextView.resignFirstResponder()
         
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let alertCamera = UIAlertAction(title: "الكاميرا", style: .default, handler: { action in
-            
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+        let alertCamera = UIAlertAction(title: "Image", style: .default, handler: { action in
+            self.showAlert()
         })
-        let alertPhoto = UIAlertAction(title: "معرض الصور", style: .default, handler: { action in
-            
-        })
+        
+        let image = UIImage(systemName: "camera.fill")
+        alertCamera.setValue(image, forKey: "image")
+        
         let alertVideo = UIAlertAction(title: "الفيديو", style: .default, handler: { action in
             
         })
@@ -91,7 +93,6 @@ class ChatDetailsViewController: MessagesViewController {
         })
         
         alert.addAction(alertCamera)
-        alert.addAction(alertPhoto)
         alert.addAction(alertVideo)
         alert.addAction(alertAudio)
         alert.addAction(alertFile)
@@ -134,14 +135,30 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesLayoutDelegate 
     func numberOfSections(in messagesCollectionView: MessageKit.MessagesCollectionView) -> Int {
         return self.messages.count
     }
-    
+        
     func messageBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
-        if isNextMessageSameSender(at: indexPath) && isFromCurrentSender(message: message) {
-                return NSAttributedString(string: "Delivered", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
+        if !isNextMessageSameSender(at: indexPath) && !isFromCurrentSender(message: message) {
+            return NSAttributedString(string: "read", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .footnote)])
             }
-            return nil
+        return NSAttributedString(string: "deliverd", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
     }
     
+    func cellTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        return 0
+    }
+        
+    func cellBottomLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        return 30.0
+    }
+        
+    func messageTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        return 0
+    }
+
+    func messageBottomLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        return 10.0
+    }
+        
     func isTimeLabelVisible(at indexPath: IndexPath) -> Bool {
         return true
     }
@@ -156,7 +173,6 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesLayoutDelegate 
         return messages[indexPath.section].sentDate == messages[indexPath.section + 1].sentDate
     }
         
-    
 }
 
 extension ChatDetailsViewController: UITextViewDelegate {

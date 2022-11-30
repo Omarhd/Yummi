@@ -14,13 +14,14 @@ import IQKeyboardManagerSwift
 extension ChatDetailsViewController: InputBarAccessoryViewDelegate {
     
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
- 
         for component in inputBar.inputTextView.components {
             if let text = component as? String {
                 print(text)
-                messages.append(Message(sender: otherUser, messageId: "3", sentDate: Date().addingTimeInterval(-0), kind: .text(text)))
+                messages.append(Message(sender: otherUser, messageId: "3", sentDate: Date().addingTimeInterval(+20454), kind: .text(text)))
+                DispatchQueue.main.async {
+                    self.messagesCollectionView.scrollToItem(at: IndexPath(row: 0, section: self.messages.count - 1), at: .top, animated: false)
+                   }
                 inputBar.inputTextView.text = ""
-                self.messagesCollectionView.scrollToLastItem(at: .bottom, animated: true)
                 self.messagesCollectionView.reloadData()
 
             }
@@ -43,12 +44,12 @@ extension ChatDetailsViewController: InputBarAccessoryViewDelegate {
         messageInputBar.sendButton.image = UIImage(systemName: "paperplane.fill")
         messageInputBar.sendButton.contentMode = .scaleAspectFill
         messageInputBar.sendButton.tintColor = .link
-        messageInputBar.sendButton.setSize(CGSize(width: 36, height: 36), animated: true)
+        messageInputBar.sendButton.setSize(CGSize(width: 36, height: 40), animated: true)
         
         let button = InputBarButtonItem()
-        button.image = UIImage(systemName: "plus.app")
+        button.image = UIImage(systemName: "plus")
         button.tintColor = .link
-        button.setSize(CGSize(width: 36, height: 36), animated: true)
+        button.setSize(CGSize(width: 36, height: 40), animated: true)
         
         button.onKeyboardSwipeGesture { item, gesture in
             if (gesture.direction == .left)     { item.inputBarAccessoryView?.setLeftStackViewWidthConstant(to: 20, animated: true)        }

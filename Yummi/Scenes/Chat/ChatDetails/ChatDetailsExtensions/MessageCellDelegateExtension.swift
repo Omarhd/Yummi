@@ -15,6 +15,7 @@ extension ChatDetailsViewController: MessageCellDelegate {
     
     func didTapBackground(in cell: MessageKit.MessageCollectionViewCell) {
         print("didTapBackground")
+        self.view.endEditing(true)
     }
     
     func didTapMessage(in cell: MessageKit.MessageCollectionViewCell) {
