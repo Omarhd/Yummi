@@ -14,6 +14,7 @@ target 'Yummi' do
     pod 'FloatingPanel'
     pod 'Instructions'
     pod 'MessageKit'
+    pod 'SnapKit'
     pod 'IQKeyboardManagerSwift'
 
   target 'YummiTests' do

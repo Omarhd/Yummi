@@ -21,7 +21,7 @@ extension ChatDetailsViewController: MessagesDisplayDelegate {
 
     func detectorAttributes(for detector: DetectorType, and message: MessageType, at indexPath: IndexPath) -> [NSAttributedString.Key: Any] {
         switch detector {
-        case .hashtag, .mention, .phoneNumber, .url:
+        case .hashtag, .mention, .phoneNumber, .date, .url, .transitInformation:
             if isFromCurrentSender(message: message) {
                 return [.foregroundColor: UIColor.white]
             } else {
@@ -50,38 +50,38 @@ extension ChatDetailsViewController: MessagesDisplayDelegate {
         return isFromCurrentSender(message: message) ? .link : UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
     }
 
-//    func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
-//
-//        var corners: UIRectCorner = []
-//
-//        if isFromCurrentSender(message: message) {
-//            corners.formUnion(.topLeft)
-//            corners.formUnion(.bottomLeft)
-//            if !isPreviousMessageSameSender(at: indexPath) {
-//                corners.formUnion(.topRight)
-//            }
-//            if !isNextMessageSameSender(at: indexPath) {
-//                corners.formUnion(.bottomRight)
-//            }
-//        } else {
-//            corners.formUnion(.topRight)
-//            corners.formUnion(.bottomRight)
-//            if !isPreviousMessageSameSender(at: indexPath) {
-//                corners.formUnion(.topLeft)
-//            }
-//            if !isNextMessageSameSender(at: indexPath) {
-//                corners.formUnion(.bottomLeft)
-//            }
-//        }
-//
-//        return .custom { view in
-//            let radius: CGFloat = 16
-//            let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-//            let mask = CAShapeLayer()
-//            mask.path = path.cgPath
-//            view.layer.mask = mask
-//        }
-//    }
+    func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
+
+        var corners: UIRectCorner = []
+
+        if isFromCurrentSender(message: message) {
+            corners.formUnion(.topLeft)
+            corners.formUnion(.bottomLeft)
+            if !isPreviousMessageSameSender(at: indexPath) {
+                corners.formUnion(.topRight)
+            }
+            if !isNextMessageSameSender(at: indexPath) {
+                corners.formUnion(.bottomRight)
+            }
+        } else {
+            corners.formUnion(.topRight)
+            corners.formUnion(.bottomRight)
+            if !isPreviousMessageSameSender(at: indexPath) {
+                corners.formUnion(.topLeft)
+            }
+            if !isNextMessageSameSender(at: indexPath) {
+                corners.formUnion(.bottomLeft)
+            }
+        }
+
+        return .custom { view in
+            let radius: CGFloat = 16
+            let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            view.layer.mask = mask
+        }
+    }
     
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
         let image = UIImage(systemName: "headphones.circle.fill")
@@ -90,23 +90,23 @@ extension ChatDetailsViewController: MessagesDisplayDelegate {
     }
     
     
-//    func configureAccessoryView(_ accessoryView: UIView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
-//        // Cells are reused, so only add a button here once. For real use you would need to
-//        // ensure any subviews are removed if not needed
-//        accessoryView.subviews.forEach { $0.removeFromSuperview() }
-//        accessoryView.backgroundColor = .clear
-//
-//        let shouldShow = Int.random(in: 0...10) == 0
-//        guard shouldShow else { return }
-//
-//        let button = UIButton(type: .infoLight)
-//        button.tintColor = .link
-//        accessoryView.addSubview(button)
-//        button.frame = accessoryView.bounds
-//        button.isUserInteractionEnabled = false // respond to accessoryView tap through `MessageCellDelegate`
-//        accessoryView.layer.cornerRadius = accessoryView.frame.height / 2
-//        accessoryView.backgroundColor = UIColor.link.withAlphaComponent(0.3)
-//    }
+    func configureAccessoryView(_ accessoryView: UIView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        // Cells are reused, so only add a button here once. For real use you would need to
+        // ensure any subviews are removed if not needed
+        accessoryView.subviews.forEach { $0.removeFromSuperview() }
+        accessoryView.backgroundColor = .clear
+
+        let shouldShow = Int.random(in: 0...10) == 0
+        guard shouldShow else { return }
+
+        let button = UIButton(type: .infoLight)
+        button.tintColor = .link
+        accessoryView.addSubview(button)
+        button.frame = accessoryView.bounds
+        button.isUserInteractionEnabled = false // respond to accessoryView tap through `MessageCellDelegate`
+        accessoryView.layer.cornerRadius = accessoryView.frame.height / 2
+        accessoryView.backgroundColor = UIColor.link.withAlphaComponent(0.3)
+    }
     
     // MARK: - Location Messages
     

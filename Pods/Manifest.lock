@@ -10,6 +10,7 @@ PODS:
     - InputBarAccessoryView (~> 5.5.0)
   - ProgressHUD (13.6)
   - SkeletonView (1.29.2)
+  - SnapKit (5.6.0)
   - SwiftMessages (9.0.6):
     - SwiftMessages/App (= 9.0.6)
   - SwiftMessages/App (9.0.6)
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - MessageKit
   - ProgressHUD
   - SkeletonView
+  - SnapKit
   - SwiftMessages
 
 SPEC REPOS:
@@ -34,6 +36,7 @@ SPEC REPOS:
     - MessageKit
     - ProgressHUD
     - SkeletonView
+    - SnapKit
     - SwiftMessages
 
 SPEC CHECKSUMS:
@@ -45,8 +48,9 @@ SPEC CHECKSUMS:
   MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   SkeletonView: 915a80ecc2b6421ab7ac0f0212321c0cc1406472
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
 
-PODFILE CHECKSUM: 919d5ce15d52c3defec10efa6c66eeae64f4ea49
+PODFILE CHECKSUM: 3613a3460928acb6a91fe739521ca0f517b127aa
 
 COCOAPODS: 1.11.3

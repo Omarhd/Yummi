@@ -22,7 +22,11 @@ class ChatDetailsViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.messagesCollectionView.backgroundColor = UIColor(named: "BG")
         setupProtocols()
+
+        messagesCollectionView.register(MessageDateReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
+        
         documentInteractionController.delegate = self
         
         scrollsToLastItemOnKeyboardBeginsEditing = false // default false
@@ -172,6 +176,35 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesLayoutDelegate 
         guard indexPath.section + 1 < messages.count else { return false }
         return messages[indexPath.section].sentDate == messages[indexPath.section + 1].sentDate
     }
+    
+    
+    func headerViewSize(for section: Int, in messagesCollectionView: MessagesCollectionView) -> CGSize {
+        let size = CGSize(width: messagesCollectionView.frame.width, height: 50)
+        if section == 0 {
+          return size
+        }
+
+        let currentIndexPath = IndexPath(row: 0, section: section)
+        let lastIndexPath = IndexPath(row: 0, section: section - 1)
+        let lastMessage = messageForItem(at: lastIndexPath, in: messagesCollectionView)
+        let currentMessage = messageForItem(at: currentIndexPath, in: messagesCollectionView)
+
+        if currentMessage.sentDate.isInSameDayOf(date: lastMessage.sentDate) {
+          return .zero
+        }
+
+        return size
+      }
+
+    // MARK: Header
+
+      func messageHeaderView(for indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageReusableView {
+        let messsage = messageForItem(at: indexPath, in: messagesCollectionView)
+        let header = messagesCollectionView.dequeueReusableHeaderView(MessageDateReusableView.self, for: indexPath)
+        header.label.text = MessageKitDateFormatter.shared.string(from: messsage.sentDate)
+        return header
+      }
+
         
 }
 

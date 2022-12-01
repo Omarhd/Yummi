@@ -49,6 +49,7 @@ extension ChatDetailsViewController: UIImagePickerControllerDelegate, UINavigati
             guard let image = info[.originalImage] as? UIImage else  { return }
             self!.messages.append(Message(sender: self!.currentUser, messageId: "20", sentDate: Date().addingTimeInterval(-12500), kind: .photo(Media(placeholderImage: image, size: CGSize(width: 250, height: 100)))))
             self?.messagesCollectionView.reloadData()
+            self?.scrollToLastMessage()
             
         }
     }
