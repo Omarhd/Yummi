@@ -17,7 +17,7 @@ extension ChatDetailsViewController: InputBarAccessoryViewDelegate {
         for component in inputBar.inputTextView.components {
             if let text = component as? String {
                 print(text)
-                messages.append(Message(sender: otherUser, messageId: "3", sentDate: Date().addingTimeInterval(+20454), kind: .text(text)))
+                messages.append(Message(sender: currentSender(), messageId: "3", sentDate: Date(), kind: .text(text)))
                 scrollToLastMessage()
                 inputBar.inputTextView.text = ""
                 self.messagesCollectionView.reloadData()
@@ -80,6 +80,7 @@ extension ChatDetailsViewController: InputBarAccessoryViewDelegate {
         
         messageInputBar.leftStackView.backgroundColor = .clear
         messageInputBar.middleContentView?.cornerRadius = 8
+
 
     }
 }

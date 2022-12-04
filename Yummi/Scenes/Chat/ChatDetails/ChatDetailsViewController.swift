@@ -36,7 +36,7 @@ class ChatDetailsViewController: MessagesViewController {
         
         if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout{
             layout.setMessageIncomingAvatarSize(.zero)
-//            layout.setMessageOutgoingAvatarSize(.zero)
+            layout.setMessageOutgoingAvatarSize(.zero)
             layout.setMessageOutgoingMessageBottomLabelAlignment(.init(textAlignment: .right, textInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)))
             layout.setMessageIncomingMessageBottomLabelAlignment(.init(textAlignment: .left, textInsets: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)))
             layout.setMessageOutgoingCellBottomLabelAlignment(.init(textAlignment: .right, textInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)))
@@ -46,8 +46,8 @@ class ChatDetailsViewController: MessagesViewController {
         configureMessageInputBar()
         
         messages.append(Message(sender: currentUser, messageId: "1", sentDate: Date().addingTimeInterval(-86500), kind: .text("Hello")))
-        messages.append(Message(sender: currentUser, messageId: "2", sentDate: Date().addingTimeInterval(-76500), kind: .text("HI, am omar from ur channel ")))
-        messages.append(Message(sender: otherUser, messageId: "3", sentDate: Date().addingTimeInterval(-66500), kind: .text("Hello, we are glade to talk to u")))
+        messages.append(Message(sender: currentUser, messageId: "2", sentDate: Date().addingTimeInterval(-86500), kind: .text("HI, am omar from ur channel ")))
+        messages.append(Message(sender: otherUser, messageId: "3", sentDate: Date().addingTimeInterval(-76500), kind: .text("Hello, we are glade to talk to u")))
         messages.append(Message(sender: otherUser, messageId: "4", sentDate: Date().addingTimeInterval(-56500), kind: .text("Hello")))
         messages.append(Message(sender: currentUser, messageId: "5", sentDate: Date().addingTimeInterval(-46500), kind: .text("Hello")))
         messages.append(Message(sender: otherUser, messageId: "6", sentDate: Date().addingTimeInterval(-36500), kind: .text("Hello")))
@@ -89,7 +89,6 @@ class ChatDetailsViewController: MessagesViewController {
             
         })
         let alertFile =  UIAlertAction(title: "الملف", style: .default, handler: { (action) in
-            self.actionFiles()
             
         })
         let alertLocation = UIAlertAction(title: "الموقع", style: .default, handler: { action in
@@ -105,17 +104,6 @@ class ChatDetailsViewController: MessagesViewController {
         
         present(alert, animated: true)
     }
-    
-    func actionFiles() {
-        
-        //MARK: - FILE PICKER
-        //        let documentPicker = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF)], in: .import)
-        //        documentPicker.delegate = self
-        //        documentPicker.modalPresentationStyle = .formSheet
-        //        self.present(documentPicker, animated: true, completion: nil)
-        
-    }
-    
 }
 
 extension ChatDetailsViewController: UIDocumentInteractionControllerDelegate {
@@ -141,7 +129,7 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesLayoutDelegate 
     }
         
     func messageBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
-        if !isNextMessageSameSender(at: indexPath) && !isFromCurrentSender(message: message) {
+        if !isNextMessageSameSender(at: indexPath) {
             return NSAttributedString(string: "read", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .footnote)])
             }
         return NSAttributedString(string: "deliverd", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
@@ -164,7 +152,7 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesLayoutDelegate 
     }
         
     func isTimeLabelVisible(at indexPath: IndexPath) -> Bool {
-        return true
+        return indexPath.section % 3 == 0 && !isPreviousMessageSameSender(at: indexPath)
     }
     
     func isPreviousMessageSameSender(at indexPath: IndexPath) -> Bool {
@@ -176,7 +164,6 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesLayoutDelegate 
         guard indexPath.section + 1 < messages.count else { return false }
         return messages[indexPath.section].sentDate == messages[indexPath.section + 1].sentDate
     }
-    
     
     func headerViewSize(for section: Int, in messagesCollectionView: MessagesCollectionView) -> CGSize {
         let size = CGSize(width: messagesCollectionView.frame.width, height: 50)
@@ -204,7 +191,6 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesLayoutDelegate 
         header.label.text = MessageKitDateFormatter.shared.string(from: messsage.sentDate)
         return header
       }
-
         
 }
 

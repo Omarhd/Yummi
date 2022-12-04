@@ -441,7 +441,7 @@
 		EE85FD6FFB4282619B02F5AE40279FBD /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477626ED309671CC7A69B34FDC2931FD /* MemoryStorage.swift */; };
 		EF83EFA253FC08DF1EBEF32ECDEDBD8A /* MessageKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77583DC725DD0DB78AB8A49F1E4FD7 /* MessageKitError.swift */; };
 		F02D3F9C319B953E945EBB2AA07B8DA2 /* LabelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B46D57C3170FCC3CFEBB6DD0A356A /* LabelAlignment.swift */; };
-		F08A430AC6B0444CFF001FB0C367E040 /* SwiftMessages-SwiftMessages in Resources */ = {isa = PBXBuildFile; fileRef = 753DD909979478A0C1B33E0524504EF1 /* SwiftMessages-SwiftMessages */; };
+		F08A430AC6B0444CFF001FB0C367E040 /* SwiftMessages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 753DD909979478A0C1B33E0524504EF1 /* SwiftMessages.bundle */; };
 		F0CF0522E57BB20A87B88D012FFCD455 /* HorizontalEdgePadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F2D8529A7CB020046F2AFC4673502 /* HorizontalEdgePadding.swift */; };
 		F2533B0866ECE186AE52D77D282D3279 /* UIApplication+WindowScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11B6F08E54FBB2665FB87BC9C29BE5 /* UIApplication+WindowScene.swift */; };
 		F29A0CAE3DB3FD63554114BBB22E0EAC /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA8EEF22F266D6ABEA0ADD0F1456C3 /* String+MD5.swift */; };
@@ -892,7 +892,7 @@
 		747FDBE33F225648472EE241B0E5664D /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/Views/AnimatedImageView.swift; sourceTree = "<group>"; };
 		750D248FF556B45B3D16EA1F17931F07 /* AvatarPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AvatarPosition.swift; path = Sources/Models/AvatarPosition.swift; sourceTree = "<group>"; };
 		752E4CF5575CD5E8B67376D1C511BF3F /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
-		753DD909979478A0C1B33E0524504EF1 /* SwiftMessages-SwiftMessages */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "SwiftMessages-SwiftMessages"; path = SwiftMessages.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		753DD909979478A0C1B33E0524504EF1 /* SwiftMessages.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMessages.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B67CE0EE1048FEFEEB806B004DB172 /* infoIconLight.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = infoIconLight.png; path = SwiftMessages/Resources/infoIconLight.png; sourceTree = "<group>"; };
 		75BD6C4C69DC5E7CEB978A03F82D74F9 /* InputBarAccessoryView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InputBarAccessoryView-dummy.m"; sourceTree = "<group>"; };
 		75C677E18E7F1DC1078E95320A601E22 /* NSTextAttachment+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextAttachment+Kingfisher.swift"; path = "Sources/Extensions/NSTextAttachment+Kingfisher.swift"; sourceTree = "<group>"; };
@@ -977,7 +977,7 @@
 		9AB7B06422375910AD0844FB01AF1492 /* TypingBubble.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypingBubble.swift; path = Sources/Views/TypingBubble.swift; sourceTree = "<group>"; };
 		9BB8A0C64AD1C38826254C4C41531A99 /* BubbleCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleCircle.swift; path = Sources/Views/BubbleCircle.swift; sourceTree = "<group>"; };
 		9C5B8DB5A75ACC2B308BBD8F4208F786 /* Pods-Yummi-YummiUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Yummi-YummiUITests-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E9EAD7EE01706B18C61ED4B5E8F3DE9 /* SeparatorLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SeparatorLine.swift; path = Sources/Views/SeparatorLine.swift; sourceTree = "<group>"; };
 		9EF7BF17B5929BB4F50B155207148F2A /* LayoutAnchoring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutAnchoring.swift; path = Sources/LayoutAnchoring.swift; sourceTree = "<group>"; };
 		9F62B1CE2D9797E9A81B8C6FB80E2028 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Sources/ConstraintDSL.swift; sourceTree = "<group>"; };
@@ -1373,7 +1373,6 @@
 				4E4AFA643E2DA834F3BF65CEE3D7A3CF /* IQUIViewController+Additions.swift */,
 				713F282401DBD5C1FC1BC03A8199A3D4 /* Support Files */,
 			);
-			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -1427,7 +1426,7 @@
 				CDC8C1E54D1F3A8B5CAC89FFFF6A3F80 /* SkeletonView */,
 				979486118B3E90C08386079D57962701 /* SnapKit */,
 				4824F23D80FF9070A5F8A452DB11EB9A /* SwiftMessages */,
-				753DD909979478A0C1B33E0524504EF1 /* SwiftMessages-SwiftMessages */,
+				753DD909979478A0C1B33E0524504EF1 /* SwiftMessages.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1530,7 +1529,6 @@
 				5A4B89784B54040CB1387C6154C1A0D7 /* UIView+Transitions.swift */,
 				322D064830BF6F20693C0EE73C79F7B4 /* Support Files */,
 			);
-			name = SkeletonView;
 			path = SkeletonView;
 			sourceTree = "<group>";
 		};
@@ -1588,7 +1586,6 @@
 				17BCA5177E5E47033ECC4ACC2DEEA3FE /* ViewControllerConfiguration.swift */,
 				E1EA042E17E99C4D8532DAB2740E02AE /* Support Files */,
 			);
-			name = Instructions;
 			path = Instructions;
 			sourceTree = "<group>";
 		};
@@ -1598,7 +1595,6 @@
 				FEBC3D040B12E24DCBA4848529ED95C8 /* Core */,
 				FF2C8CA24F50A8DDFC0A873AF5B18828 /* Support Files */,
 			);
-			name = InputBarAccessoryView;
 			path = InputBarAccessoryView;
 			sourceTree = "<group>";
 		};
@@ -1668,7 +1664,6 @@
 				D8C937CC84F94723D7FDCC96900B596F /* WKInterfaceImage+Kingfisher.swift */,
 				0D895AC7EB5A9A1673D73E787ED7B4DB /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -1799,7 +1794,6 @@
 				59576E80B9D09C688CA2A3B2147AC611 /* Resources */,
 				F891D4DF689EC2844C476A09B3108BF9 /* Support Files */,
 			);
-			name = MessageKit;
 			path = MessageKit;
 			sourceTree = "<group>";
 		};
@@ -1905,7 +1899,6 @@
 				670CC889D7793EBC704A239D1D664551 /* Transitioning.swift */,
 				D4762866F5F2D7B28F344A032E35EA37 /* Support Files */,
 			);
-			name = FloatingPanel;
 			path = FloatingPanel;
 			sourceTree = "<group>";
 		};
@@ -1915,7 +1908,6 @@
 				D031122997D319D7BF7C313844A97FE4 /* App */,
 				09E5AC5665A04A9BD50DC9D8596DEE2D /* Support Files */,
 			);
-			name = SwiftMessages;
 			path = SwiftMessages;
 			sourceTree = "<group>";
 		};
@@ -2067,7 +2059,6 @@
 				C399AD4E4A4151C37F5441202C3CFEC5 /* UILayoutSupport+Extensions.swift */,
 				730CAD003366A877BD016F61CA77303B /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -2077,7 +2068,6 @@
 				563AB8EF1F26B6F71D1DB9275D7E5F74 /* ProgressHUD.swift */,
 				9E2A5DFDEE159711C727D04AA852E8DC /* Support Files */,
 			);
-			name = ProgressHUD;
 			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -2442,7 +2432,7 @@
 			);
 			name = "SwiftMessages-SwiftMessages";
 			productName = SwiftMessages;
-			productReference = 753DD909979478A0C1B33E0524504EF1 /* SwiftMessages-SwiftMessages */;
+			productReference = 753DD909979478A0C1B33E0524504EF1 /* SwiftMessages.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		97482FB5B78AAF68DDD9AC7CD1C3A456 /* Instructions */ = {
@@ -2714,7 +2704,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F08A430AC6B0444CFF001FB0C367E040 /* SwiftMessages-SwiftMessages in Resources */,
+				F08A430AC6B0444CFF001FB0C367E040 /* SwiftMessages.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5120,6 +5110,7 @@
 			baseConfigurationReference = 437BBA36633CFA44D50AF51725BF77D9 /* SwiftMessages.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwiftMessages";
+				DEVELOPMENT_TEAM = FD7KN86W7E;
 				IBSC_MODULE = SwiftMessages;
 				INFOPLIST_FILE = "Target Support Files/SwiftMessages/ResourceBundle-SwiftMessages-SwiftMessages-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -5175,6 +5166,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwiftMessages";
+				DEVELOPMENT_TEAM = FD7KN86W7E;
 				IBSC_MODULE = SwiftMessages;
 				INFOPLIST_FILE = "Target Support Files/SwiftMessages/ResourceBundle-SwiftMessages-SwiftMessages-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -5299,6 +5291,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwiftMessages";
+				DEVELOPMENT_TEAM = FD7KN86W7E;
 				IBSC_MODULE = SwiftMessages;
 				INFOPLIST_FILE = "Target Support Files/SwiftMessages/ResourceBundle-SwiftMessages-SwiftMessages-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -5351,6 +5344,7 @@
 			baseConfigurationReference = 8717A7B11F13199D8BABAF7E8F42FCA1 /* SwiftMessages.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwiftMessages";
+				DEVELOPMENT_TEAM = FD7KN86W7E;
 				IBSC_MODULE = SwiftMessages;
 				INFOPLIST_FILE = "Target Support Files/SwiftMessages/ResourceBundle-SwiftMessages-SwiftMessages-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
