@@ -92,7 +92,10 @@ class ChatDetailsViewController: MessagesViewController {
             
         })
         let alertLocation = UIAlertAction(title: "الموقع", style: .default, handler: { action in
-            
+            guard let placesPanelViewController = self.storyboard?.instantiateViewController(withIdentifier: "PlacesPanelViewController") as? PlacesPanelViewController else { return }
+            placesPanelViewController.selectLocationsDelegate = self
+            self.present(placesPanelViewController, animated: true)
+
         })
         
         alert.addAction(alertCamera)
@@ -129,10 +132,10 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesLayoutDelegate 
     }
         
     func messageBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
-        if !isNextMessageSameSender(at: indexPath) {
+        if !isNextMessageSameSender(at: indexPath) && isFromCurrentSender(message: message) {
             return NSAttributedString(string: "read", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .footnote)])
             }
-        return NSAttributedString(string: "deliverd", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
+        return nil
     }
     
     func cellTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
@@ -140,9 +143,9 @@ extension ChatDetailsViewController: MessagesDataSource, MessagesLayoutDelegate 
     }
         
     func cellBottomLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
-        return 30.0
+        return (!isNextMessageSameSender(at: indexPath) && isFromCurrentSender(message: message)) ? 16 : 0
     }
-        
+
     func messageTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         return 0
     }

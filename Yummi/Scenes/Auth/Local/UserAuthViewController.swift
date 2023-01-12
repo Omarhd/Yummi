@@ -7,18 +7,35 @@
 
 import UIKit
 import ProgressHUD
+import AuthenticationServices
 
 class UserAuthViewController: UIViewController {
 
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
  
+    @IBOutlet weak var signInWithApple: ASAuthorizationAppleIDButton!
+
     fileprivate let authPresenter = AuthPrsenter(authApiServices: AuthAPIServices())
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.authPresenter.attachView(self)
+        
+    }
+    
+    @IBAction func signInWithAppleAction(_ sender: Any) {
+        let provider = ASAuthorizationAppleIDProvider()
+        let request = provider.createRequest()
+        
+        request.requestedScopes = [.fullName, .email]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        
+        controller.performRequests()
     }
     
     @IBAction func goAction(_ sender: UIButton) {
@@ -43,6 +60,30 @@ class UserAuthViewController: UIViewController {
         let user = UserRequest(phoneNumber: phone, password: password)
         self.authPresenter.login(user: user)
 
+    }
+}
+
+extension UserAuthViewController: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return view.window!
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        showErrorMessage("Faild to authurization")
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let credentials as ASAuthorizationAppleIDCredential:
+            let name = credentials.fullName
+            let email = credentials.email
+            let user = credentials.user
+            
+            break
+            
+        default:
+            break
+        }
     }
 }
 

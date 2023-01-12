@@ -56,3 +56,20 @@ class CardView: UIView {
         cornerRadius = 8
     }
 }
+
+class RoundedImages: UIImageView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initailSetup()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        initailSetup()
+    }
+    
+    private func initailSetup() {
+        layer.cornerRadius = frame.height / 2
+    }
+}

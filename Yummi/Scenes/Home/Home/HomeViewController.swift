@@ -12,6 +12,7 @@ import Instructions
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var storysCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
     @IBOutlet weak var chefCollectionView: UICollectionView!
@@ -32,6 +33,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Utility().doLocalAuthentication()
         
         updateUserInterface()
         homePresenter.attachView(self)
@@ -70,6 +73,7 @@ class HomeViewController: UIViewController {
     }
 
     private func registerNibs() {
+        storysCollectionView.register(UINib(nibName: StorysCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: StorysCollectionViewCell.identifire)
         categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifire)
         popularCollectionView.register(UINib(nibName: PopularCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: PopularCollectionViewCell.identifire)
         chefCollectionView.register(UINib(nibName: ChefCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: ChefCollectionViewCell.identifire)
@@ -77,6 +81,12 @@ class HomeViewController: UIViewController {
     }
     
     fileprivate func showSkeletonAnimationView() {
+        
+        storysCollectionView.isSkeletonable = true
+        storysCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
+                                                            animation: nil,
+                                                            transition: .crossDissolve(0.25))
+
         categoryCollectionView.isSkeletonable = true
         categoryCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
                                                             animation: nil,
@@ -94,6 +104,10 @@ class HomeViewController: UIViewController {
     }
     
     fileprivate func stopSkeletonAnimationView() {
+        
+        self.storysCollectionView.stopSkeletonAnimation()
+        self.storysCollectionView.hideSkeleton()
+
         self.categoryCollectionView.stopSkeletonAnimation()
         self.categoryCollectionView.hideSkeleton()
         
@@ -102,6 +116,12 @@ class HomeViewController: UIViewController {
 
         self.chefCollectionView.stopSkeletonAnimation()
         self.chefCollectionView.hideSkeleton()
+    }
+    
+    fileprivate func presentLockScene() {
+        let lockScene = BiometricsAuthViewController()
+        lockScene.modalPresentationStyle = .overFullScreen
+        self.present(lockScene, animated: true)
     }
 }
 
@@ -112,6 +132,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         var identifire: String = ""
         
         switch skeletonView {
+        case storysCollectionView:
+            identifire = StorysCollectionViewCell.identifire
         case categoryCollectionView:
             identifire = CategoryCollectionViewCell.identifire
         case popularCollectionView:
@@ -127,6 +149,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
+        case storysCollectionView:
+            return categories.count
         case categoryCollectionView:
             return categories.count
         case popularCollectionView:
@@ -140,6 +164,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
+            
+        case storysCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StorysCollectionViewCell.identifire, for: indexPath) as! StorysCollectionViewCell
+            cell.setupUI(with: dishs[indexPath.row])
+            
+            return cell
+            
         case categoryCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifire, for: indexPath) as! CategoryCollectionViewCell
             cell.setupUI(with: categories[indexPath.row])
@@ -301,7 +332,7 @@ extension HomeViewController: CategoriesViewDelegate {
     }
     
     fileprivate func reloadCollectionsData() {
-        
+        self.storysCollectionView.reloadData()
         self.categoryCollectionView.reloadData()
         self.popularCollectionView.reloadData()
         self.chefCollectionView.reloadData()

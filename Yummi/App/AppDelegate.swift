@@ -39,6 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error)
             }
         }
+        
+        print("screenType:", UIDevice.current.screenType)
+
         return true
     }
     

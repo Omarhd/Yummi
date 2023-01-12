@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3o5-oR-beP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3o5-oR-beP">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,7 +13,7 @@
         <array key="Cairo-Bold.ttf">
             <string>Cairo-Bold</string>
         </array>
-        <array key="Cairo-VariableFont_slnt,wght.ttf">
+        <array key="Cairo-Regular.ttf">
             <string>Cairo-Regular</string>
         </array>
     </customFonts>
@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vf0-CV-lkx">
-                                <rect key="frame" x="0.0" y="92" width="414" height="553"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="501"/>
                                 <color key="backgroundColor" name="BG"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="VX7-c5-V1j"/>
@@ -109,10 +109,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-x6-Ax0">
-                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart.badge.plus.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JZM-70-aw2">
-                                        <rect key="frame" x="87" y="282" width="241" height="240"/>
+                                        <rect key="frame" x="87" y="256" width="241" height="240"/>
                                         <color key="tintColor" name="AppColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="240" id="Mm0-sR-QoB"/>
@@ -146,10 +146,10 @@
                     <navigationItem key="navigationItem" title="My Cart" id="7i7-He-jsk">
                         <rightBarButtonItems>
                             <barButtonItem style="done" id="NyC-Cj-kqI">
-                                <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5pT-ug-lxA">
+                                <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5pT-ug-lxA">
                                     <rect key="frame" x="302" y="0.0" width="92" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="tintColor" red="0.17833182219999999" green="0.46382504699999999" blue="0.27014327049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" name="CartTintColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="Done">
                                         <fontDescription key="titleFontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
@@ -213,6 +213,9 @@
         </namedColor>
         <namedColor name="BG">
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CartTintColor">
+            <color red="0.12200000137090683" green="0.32499998807907104" blue="0.019999999552965164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

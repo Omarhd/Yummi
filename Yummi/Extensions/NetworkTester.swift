@@ -39,6 +39,7 @@ class Reachability {
         isReachableOnWWAN = true
         try start()
     }
+    
     var status: Network.Status {
         return  !isConnectedToNetwork ? .unreachable :
         isReachableViaWiFi    ? .wifi :
