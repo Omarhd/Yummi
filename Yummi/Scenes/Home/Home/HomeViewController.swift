@@ -21,15 +21,15 @@ class HomeViewController: UIViewController {
     fileprivate var allCategories: BaseCategoriesResponse?
     
     let coachMarksController = CoachMarksController()
-
+    
     var isLoadingStarted = true
-
+    
     // MARK:- refrence to manage object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+    
     var categories: [Category] = []
     var dishs: [Popular] = []
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +48,11 @@ class HomeViewController: UIViewController {
         self.coachMarksController.skipView = skipView
         
         registerNibs()
-    
+        
         let gesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
         gesture.direction = .down
         view.addGestureRecognizer(gesture)
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,7 +60,7 @@ class HomeViewController: UIViewController {
         
         if !AppManager.getUserSeenAppInstructionForHome() {
             self.coachMarksController.start(in: .viewController(self))
-           }
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -71,7 +71,7 @@ class HomeViewController: UIViewController {
     @objc func handleSwipe() {
         self.homePresenter.getAllCategories()
     }
-
+    
     private func registerNibs() {
         storysCollectionView.register(UINib(nibName: StorysCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: StorysCollectionViewCell.identifire)
         categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifire)
@@ -84,9 +84,9 @@ class HomeViewController: UIViewController {
         
         storysCollectionView.isSkeletonable = true
         storysCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
-                                                            animation: nil,
-                                                            transition: .crossDissolve(0.25))
-
+                                                          animation: nil,
+                                                          transition: .crossDissolve(0.25))
+        
         categoryCollectionView.isSkeletonable = true
         categoryCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
                                                             animation: nil,
@@ -107,13 +107,13 @@ class HomeViewController: UIViewController {
         
         self.storysCollectionView.stopSkeletonAnimation()
         self.storysCollectionView.hideSkeleton()
-
+        
         self.categoryCollectionView.stopSkeletonAnimation()
         self.categoryCollectionView.hideSkeleton()
         
         self.popularCollectionView.stopSkeletonAnimation()
         self.popularCollectionView.hideSkeleton()
-
+        
         self.chefCollectionView.stopSkeletonAnimation()
         self.chefCollectionView.hideSkeleton()
     }
@@ -126,9 +126,9 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, SkeletonCollectionViewDataSource {
-  
+    
     func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> SkeletonView.ReusableCellIdentifier {
-       
+        
         var identifire: String = ""
         
         switch skeletonView {
@@ -204,7 +204,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             detailsController.categories = self.categories
             
             navigationController?.pushViewController(detailsController, animated: true)
-
+            
         case popularCollectionView:
             let detailsController =  DishesDetailsViewController.instantiate(storyBoardName: "DishesDetails")
             detailsController.dish = self.dishs[indexPath.row]
@@ -233,7 +233,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 
                 let mapAction = UIAction(title: "Share",
                                          image: UIImage(systemName: "square.and.arrow.up")) { _ in
-                    //                                    self.showMap(vacationSpot: dish)
+                    
+                    self.doShare(shareItems: [self.context])
                 }
                 
                 let shareAction = UIAction(
@@ -242,7 +243,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                         self.addToCart(dish: dish)
                     }
                 
-                return UIMenu(title: "", image: nil,
+                return UIMenu(title: "Options", image: nil,
                               children: [mapAction, shareAction])
             }
     }
@@ -260,14 +261,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UITargetedPreview(view: cell)
             
         case popularCollectionView:
-//            guard let identifier = configuration.identifier as? String,
-//                  let index = Int(identifier),
-//                  let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0))
-//                    as? PopularCollectionViewCell
-//            else {
-//                return nil
-//            }
-//            return UITargetedPreview(view: cell.dishIamge)
+            //            guard let identifier = configuration.identifier as? String,
+            //                  let index = Int(identifier),
+            //                  let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0))
+            //                    as? PopularCollectionViewCell
+            //            else {
+            //                return nil
+            //            }
+            //            return UITargetedPreview(view: cell.dishIamge)
             return nil
         default: return nil
         }
@@ -280,11 +281,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return
         case popularCollectionView:
             guard let identifier = configuration.identifier as? String,
-                let index = Int(identifier)
+                  let index = Int(identifier)
             else {
                 return
             }
-
+            
             animator.addCompletion {
                 let detailsController =  DishesDetailsViewController.instantiate(storyBoardName: "DishesDetails")
                 detailsController.dish = self.dishs[index]
@@ -293,7 +294,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
         case chefCollectionView:
             return
-       
+            
         default:
             return
         }
@@ -310,10 +311,10 @@ extension HomeViewController: CategoriesViewDelegate {
     func startLoading() {
         showSkeletonAnimationView()
     }
-        
+    
     func stopLoading() {
         stopSkeletonAnimationView()
-
+        
     }
     
     func showErrorMessage(_ message: String) {
@@ -324,7 +325,7 @@ extension HomeViewController: CategoriesViewDelegate {
         self.allCategories = categories
         self.categories = categories.data.categories
         self.dishs = categories.data.populars
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             self.reloadCollectionsData()
         }

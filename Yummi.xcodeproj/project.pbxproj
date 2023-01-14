@@ -108,6 +108,7 @@
 		4CA365A82945D8AB00C9AF68 /* BiometricsAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA365A62945D8AB00C9AF68 /* BiometricsAuthViewController.xib */; };
 		4CA414F3294CAD84008DDD45 /* StorysCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA414F1294CAD84008DDD45 /* StorysCollectionViewCell.swift */; };
 		4CA414F4294CAD84008DDD45 /* StorysCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA414F2294CAD84008DDD45 /* StorysCollectionViewCell.xib */; };
+		4CAC0BD0296FED2E00DC874C /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC0BCF296FED2E00DC874C /* Share.swift */; };
 		4CAE2883293764E200F170F9 /* ChatImagesExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE2882293764E200F170F9 /* ChatImagesExtensions.swift */; };
 		4CAE288529389F4200F170F9 /* MessageDateHeaderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE288429389F4200F170F9 /* MessageDateHeaderExtensions.swift */; };
 		4CB46C49290D8ECD00BEEE06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */; };
@@ -302,6 +303,7 @@
 		4CA365A62945D8AB00C9AF68 /* BiometricsAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BiometricsAuthViewController.xib; sourceTree = "<group>"; };
 		4CA414F1294CAD84008DDD45 /* StorysCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorysCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CA414F2294CAD84008DDD45 /* StorysCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorysCollectionViewCell.xib; sourceTree = "<group>"; };
+		4CAC0BCF296FED2E00DC874C /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		4CAE2882293764E200F170F9 /* ChatImagesExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatImagesExtensions.swift; sourceTree = "<group>"; };
 		4CAE288429389F4200F170F9 /* MessageDateHeaderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDateHeaderExtensions.swift; sourceTree = "<group>"; };
 		4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -680,6 +682,7 @@
 				4C49407E29227DFF001FB1CC /* Buttons.swift */,
 				4CA365A22945C70500C9AF68 /* Device.swift */,
 				4CD73DEE29622A3200EE0F20 /* StreachTableViewHeader.swift */,
+				4CAC0BCF296FED2E00DC874C /* Share.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1368,6 +1371,7 @@
 				4C9822A128C63CEE00C4D4F5 /* TouchIDAuthentication.swift in Sources */,
 				4CDD10C628DE1B9E00BD760C /* Latest.intentdefinition in Sources */,
 				4C1C281228FEB1580043886B /* PlacesTableViewCell.swift in Sources */,
+				4CAC0BD0296FED2E00DC874C /* Share.swift in Sources */,
 				4CD73DEF29622A3200EE0F20 /* StreachTableViewHeader.swift in Sources */,
 				4C9EA40B28C3A83B0053FE38 /* AppDelegate.swift in Sources */,
 				4CC5998229408D20005D5413 /* LocationsViewController.swift in Sources */,
