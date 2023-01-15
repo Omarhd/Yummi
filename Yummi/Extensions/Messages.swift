@@ -80,7 +80,7 @@ class Messages {
         view.configureDropShadow()
         view.contentMode = .scaleAspectFill
         view.configureContent(title: title, body: body)
-        view.configureTheme(.error, iconStyle: .default)
+        view.configureTheme(.error, iconStyle: .subtle)
         view.layoutMarginAdditions = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         view.button?.isHidden = false
         view.button?.setTitle("Add Items", for: .normal)

@@ -20,6 +20,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var totalPriceLabel: UILabel!
         
     fileprivate let cartPresenter = CartPresenter()
+    var dish: Popular!
 
     var cartItems: [Products] = []
     var totalPrice: String?
@@ -89,6 +90,7 @@ class CartViewController: UIViewController {
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.cartItems.count
     }
@@ -102,6 +104,14 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         self.totalPrice = "\(total)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let detailsController =  CartItemDetailViewController()
+        detailsController.cartItems = self.cartItems[indexPath.row]
+
+        self.present(detailsController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

@@ -25,6 +25,8 @@
 		4C3AD11028DB8E930000BB90 /* ServicesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD10F28DB8E930000BB90 /* ServicesFeed.swift */; };
 		4C3AD11228DB8F5E0000BB90 /* ServicesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD11128DB8F5E0000BB90 /* ServicesClient.swift */; };
 		4C3AD11428DB90C00000BB90 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD11328DB90C00000BB90 /* HomeModel.swift */; };
+		4C3DED09297401A2005B8D8F /* CartItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DED07297401A2005B8D8F /* CartItemDetailViewController.swift */; };
+		4C3DED0A297401A2005B8D8F /* CartItemDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DED08297401A2005B8D8F /* CartItemDetailViewController.xib */; };
 		4C4322FA28F042A400CE5729 /* AppearanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4322F928F042A400CE5729 /* AppearanceTableViewController.swift */; };
 		4C475D5528D4A0CE0074D3D0 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */; };
 		4C475D6A28D5B4FB0074D3D0 /* Google-Info in Resources */ = {isa = PBXBuildFile; fileRef = 4C475D6928D5B4FB0074D3D0 /* Google-Info */; };
@@ -211,6 +213,8 @@
 		4C3AD10F28DB8E930000BB90 /* ServicesFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesFeed.swift; sourceTree = "<group>"; };
 		4C3AD11128DB8F5E0000BB90 /* ServicesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesClient.swift; sourceTree = "<group>"; };
 		4C3AD11328DB90C00000BB90 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		4C3DED07297401A2005B8D8F /* CartItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemDetailViewController.swift; sourceTree = "<group>"; };
+		4C3DED08297401A2005B8D8F /* CartItemDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemDetailViewController.xib; sourceTree = "<group>"; };
 		4C3E44AF294A6EE700D09D59 /* Yummi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Yummi.entitlements; sourceTree = "<group>"; };
 		4C4322F928F042A400CE5729 /* AppearanceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceTableViewController.swift; sourceTree = "<group>"; };
 		4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
@@ -465,6 +469,15 @@
 			path = ServicesFeed;
 			sourceTree = "<group>";
 		};
+		4C3DED0629740175005B8D8F /* Cart Details */ = {
+			isa = PBXGroup;
+			children = (
+				4C3DED07297401A2005B8D8F /* CartItemDetailViewController.swift */,
+				4C3DED08297401A2005B8D8F /* CartItemDetailViewController.xib */,
+			);
+			path = "Cart Details";
+			sourceTree = "<group>";
+		};
 		4C49406429226837001FB1CC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +548,7 @@
 		4C98229428C544F900C4D4F5 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				4C3DED0629740175005B8D8F /* Cart Details */,
 				4C9822A728C682A100C4D4F5 /* CartCells */,
 				4C98229528C5450D00C4D4F5 /* CartViewController.swift */,
 				4C19B98629278EC200FF4AF5 /* CartPresenter.swift */,
@@ -1198,6 +1212,7 @@
 				4C4940762922684F001FB1CC /* Cairo-Medium.ttf in Resources */,
 				4C81A4AE28D87DCB00958762 /* Search.storyboard in Resources */,
 				4C4940722922684F001FB1CC /* README.txt in Resources */,
+				4C3DED0A297401A2005B8D8F /* CartItemDetailViewController.xib in Resources */,
 				4C9EA46328C3AF600053FE38 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1338,6 +1353,7 @@
 				4C9EA46F28C3B8990053FE38 /* SlideCollectionViewCell.swift in Sources */,
 				4C98229828C55EC800C4D4F5 /* NotificationsTableViewController.swift in Sources */,
 				4C9EA45928C3AB390053FE38 /* Bundle.swift in Sources */,
+				4C3DED09297401A2005B8D8F /* CartItemDetailViewController.swift in Sources */,
 				4C9822AD28C6842E00C4D4F5 /* CategoryDetailsViewController.swift in Sources */,
 				4C9EA44D28C3A9E00053FE38 /* HTTPMethods.swift in Sources */,
 				4CAE2883293764E200F170F9 /* ChatImagesExtensions.swift in Sources */,
