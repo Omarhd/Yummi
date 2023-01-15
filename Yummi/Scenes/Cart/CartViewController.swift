@@ -8,6 +8,7 @@
 import UIKit
 import ProgressHUD
 import LocalAuthentication
+import SwiftMessages
 
 class CartViewController: UIViewController {
 
@@ -38,6 +39,9 @@ class CartViewController: UIViewController {
     
     private func registerNibs() {
         tableView.register(UINib(nibName: CartItemsTableViewCell.identifire, bundle: nil), forCellReuseIdentifier: CartItemsTableViewCell.identifire)
+        tableView.estimatedRowHeight = 80.0
+        tableView.rowHeight = UITableView.automaticDimension
+
     }
     
     @IBAction func doneAction(_ sender: Any) {
@@ -106,12 +110,44 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let detailsController =  CartItemDetailViewController()
         detailsController.cartItems = self.cartItems[indexPath.row]
 
         self.present(detailsController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let index = indexPath.row
+        let identifier = "\(index)" as NSString
+        let cell = tableView.dequeueReusableCell(withIdentifier: CartItemsTableViewCell.identifire, for: indexPath) as! CartItemsTableViewCell
+        cell.setupUI(with: self.cartItems[indexPath.row])
+        
+        return UIContextMenuConfiguration(
+            identifier: identifier, previewProvider: nil) { _ in
+                
+                let mapAction = UIAction(title: "Share",
+                                         image: UIImage(systemName: "square.and.arrow.up")) { _ in
+                    
+                    self.doShare(shareItems: [cell.contentView.asImage()])
+                }
+                
+                let shareAction = UIAction(
+                    title: "Remove",
+                    image: UIImage(systemName: "trash"),
+                    attributes: .destructive,
+                    state: .mixed) { _ in
+//                        self.addToCart(dish: dish)
+                    }
+                
+                return UIMenu(title: "Options", image: nil,
+                              children: [mapAction, shareAction])
+            }
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
