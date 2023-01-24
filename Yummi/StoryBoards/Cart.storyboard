@@ -13,7 +13,7 @@
         <array key="Cairo-Bold.ttf">
             <string>Cairo-Bold</string>
         </array>
-        <array key="Cairo-Regular.ttf">
+        <array key="Cairo-VariableFont_slnt,wght.ttf">
             <string>Cairo-Regular</string>
         </array>
     </customFonts>
@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vf0-CV-lkx">
-                                <rect key="frame" x="0.0" y="144" width="414" height="501"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="553"/>
                                 <color key="backgroundColor" name="BG"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="VX7-c5-V1j"/>
@@ -109,10 +109,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-x6-Ax0">
-                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart.badge.plus.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JZM-70-aw2">
-                                        <rect key="frame" x="87" y="256" width="241" height="240"/>
+                                        <rect key="frame" x="87" y="282" width="241" height="240"/>
                                         <color key="tintColor" name="AppColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="240" id="Mm0-sR-QoB"/>
@@ -143,7 +143,8 @@
                             <constraint firstItem="2EX-Hr-AeA" firstAttribute="top" secondItem="Vf0-CV-lkx" secondAttribute="bottom" constant="8" symbolic="YES" id="tvL-v4-ohb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Cart" id="7i7-He-jsk">
+                    <navigationItem key="navigationItem" title="My Cart" largeTitleDisplayMode="never" id="7i7-He-jsk">
+                        <barButtonItem key="backBarButtonItem" title=" " id="YkL-ii-csa"/>
                         <rightBarButtonItems>
                             <barButtonItem style="done" id="NyC-Cj-kqI">
                                 <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5pT-ug-lxA">

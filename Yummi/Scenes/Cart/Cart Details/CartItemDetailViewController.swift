@@ -21,6 +21,8 @@ class CartItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.isModalInPresentation = true
+
         self.itemImage.kf.setImage(with: cartItems.img?.asURL)
         self.itemName.text = self.cartItems.name
         self.itemPrice.text = self.cartItems.price.description

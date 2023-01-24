@@ -69,19 +69,19 @@ I have an array of objects and I want to filter them by two conditions, either i
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nih-bY-axV" customClass="CardView" customModule="Yummi" customModuleProvider="target">
-                    <rect key="frame" x="136.66666666666666" y="79" width="119.99999999999997" height="50"/>
+                    <rect key="frame" x="136.66666666666666" y="8" width="119.99999999999997" height="40"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nfy-av-hoO">
-                            <rect key="frame" x="8" y="8" width="104" height="34"/>
+                            <rect key="frame" x="8" y="8" width="104" height="24"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pbu-0m-UDZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="34"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="24"/>
                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIO-zH-bx3">
-                                    <rect key="frame" x="64" y="0.0" width="40" height="34"/>
+                                    <rect key="frame" x="64" y="0.0" width="40" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="40" id="T9A-Kz-W3V"/>
                                     </constraints>
@@ -96,7 +96,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="nfy-av-hoO" secondAttribute="trailing" constant="8" id="Fj8-9E-HZr"/>
                         <constraint firstAttribute="width" constant="120" id="MOh-DA-6BR"/>
-                        <constraint firstAttribute="height" constant="50" id="Rgh-ml-Aw0"/>
+                        <constraint firstAttribute="height" constant="40" id="Rgh-ml-Aw0"/>
                         <constraint firstAttribute="bottom" secondItem="nfy-av-hoO" secondAttribute="bottom" constant="8" id="Z98-8W-XK8"/>
                         <constraint firstItem="nfy-av-hoO" firstAttribute="leading" secondItem="nih-bY-axV" secondAttribute="leading" constant="8" id="fMj-xL-vkr"/>
                         <constraint firstItem="nfy-av-hoO" firstAttribute="top" secondItem="nih-bY-axV" secondAttribute="top" constant="8" id="tYc-Qe-YY7"/>
@@ -114,7 +114,7 @@ I have an array of objects and I want to filter them by two conditions, either i
                 <constraint firstItem="D1O-c1-iUW" firstAttribute="leading" secondItem="pMF-2f-Rue" secondAttribute="leading" constant="16" id="MfF-FW-mXw"/>
                 <constraint firstItem="O8h-QH-M6s" firstAttribute="top" secondItem="j6U-rR-iLr" secondAttribute="top" id="bjU-d6-45S"/>
                 <constraint firstItem="nih-bY-axV" firstAttribute="centerX" secondItem="j6U-rR-iLr" secondAttribute="centerX" id="cx3-1U-0TD"/>
-                <constraint firstItem="nih-bY-axV" firstAttribute="top" secondItem="pMF-2f-Rue" secondAttribute="top" constant="20" id="tuD-xI-wve"/>
+                <constraint firstItem="nih-bY-axV" firstAttribute="top" secondItem="j6U-rR-iLr" secondAttribute="top" constant="8" id="tuD-xI-wve"/>
             </constraints>
             <point key="canvasLocation" x="561" y="77"/>
         </view>

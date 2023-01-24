@@ -25,7 +25,7 @@ class Messages {
     }
     
     
-    public func showTopNotificaionForPoorNetwork() {
+    public func showTopNotificaionForPoorNetwork(completion: @escaping (Bool) -> Void) {
         
         let view = MessageView.viewFromNib(layout: .messageView)
         view.configureTheme(.error)
@@ -34,8 +34,15 @@ class Messages {
         view.configureContent(title: "No Connection", body: "The Internet connection appears to be offline.")
         view.configureTheme(.error, iconStyle: .default)
         view.layoutMarginAdditions = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        view.button?.isHidden = true
+        view.button?.isHidden = false
         (view.backgroundView as? CornerRoundingView)?.layer.cornerRadius = 10
+        view.button?.setTitle("Retry", for: .normal)
+        view.button?.setImage(UIImage(systemName: "arrow.clockwise.circle"), for: .normal)
+        view.buttonTapHandler = { _ in SwiftMessages.hide(); completion(true)}
+
+        var config = SwiftMessages.defaultConfig
+        config.duration = .forever
+        SwiftMessages.show(config: config, view: view)
         
         SwiftMessages.show(view: view)
     }

@@ -119,7 +119,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         let detailsController =  CartItemDetailViewController()
         detailsController.cartItems = self.cartItems[indexPath.row]
 
-        self.present(detailsController, animated: true)
+        self.navigationController?.pushViewController(detailsController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
