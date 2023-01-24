@@ -9,6 +9,7 @@ import UIKit
 import ProgressHUD
 import SkeletonView
 import Instructions
+import UIView_Shimmer
 
 class HomeViewController: UIViewController {
     
@@ -173,6 +174,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
         case categoryCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifire, for: indexPath) as! CategoryCollectionViewCell
+            cell.setTemplateWithSubviews(true)
             cell.setupUI(with: categories[indexPath.row])
             
             return cell

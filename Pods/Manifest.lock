@@ -14,6 +14,7 @@ PODS:
   - SwiftMessages (9.0.6):
     - SwiftMessages/App (= 9.0.6)
   - SwiftMessages/App (9.0.6)
+  - UIView-Shimmer (1.0.4)
 
 DEPENDENCIES:
   - FloatingPanel
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - SkeletonView
   - SnapKit
   - SwiftMessages
+  - UIView-Shimmer (~> 1.0)
 
 SPEC REPOS:
   trunk:
@@ -38,6 +40,7 @@ SPEC REPOS:
     - SkeletonView
     - SnapKit
     - SwiftMessages
+    - UIView-Shimmer
 
 SPEC CHECKSUMS:
   FloatingPanel: 3cee815e9ded75b632543fa73ab655a1ef941452
@@ -50,7 +53,8 @@ SPEC CHECKSUMS:
   SkeletonView: 915a80ecc2b6421ab7ac0f0212321c0cc1406472
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+  UIView-Shimmer: ff0a32c73d67c7dbdea3d9e530538b10d18aea56
 
-PODFILE CHECKSUM: 3613a3460928acb6a91fe739521ca0f517b127aa
+PODFILE CHECKSUM: a79ceefcbd9a0e732fb7365ce258644d64610bf7
 
 COCOAPODS: 1.11.3

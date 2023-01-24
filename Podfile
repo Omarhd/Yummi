@@ -16,6 +16,7 @@ target 'Yummi' do
     pod 'MessageKit'
     pod 'SnapKit'
     pod 'IQKeyboardManagerSwift'
+    pod 'UIView-Shimmer', '~> 1.0'
 
   target 'YummiTests' do
     inherit! :search_paths

@@ -6,12 +6,21 @@
 //
 
 import UIKit
+import UIView_Shimmer
 
 class CategoryDetailsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     var categories: [Category] = []
+    
+    
+    private var isLoading = true {
+        didSet {
+            tableView.isUserInteractionEnabled = !isLoading
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
