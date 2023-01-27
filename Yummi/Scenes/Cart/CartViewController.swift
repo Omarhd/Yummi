@@ -25,7 +25,8 @@ class CartViewController: UIViewController {
 
     var cartItems: [Products] = []
     var totalPrice: String?
-    
+    var selectedCells:[Int] = []
+
     let touchMe = BiometricIDAuth()
 
     override func viewDidLoad() {
@@ -45,14 +46,9 @@ class CartViewController: UIViewController {
     }
     
     @IBAction func doneAction(_ sender: Any) {
-//        if UserDefaults.standard.hasLoggedIn {
-//            doAuth()
-//        } else {
-            
-            let auth = UserAuthViewController.instantiate(storyBoardName: "Auth")
-            auth.modalPresentationStyle = .formSheet
-            self.present(auth, animated: true, completion: nil)
-//        }
+        let auth = UserAuthViewController.instantiate(storyBoardName: "Auth")
+        auth.modalPresentationStyle = .formSheet
+        self.present(auth, animated: true, completion: nil)
     }
     
     fileprivate func presentDeleteAlert() {
@@ -72,6 +68,12 @@ class CartViewController: UIViewController {
         
         self.present(alertController, animated: true)
     }
+    
+    @IBAction func edtiCartAction(_ sender: UIBarButtonItem) {
+        self.tableView.isEditing = !self.tableView.isEditing
+        sender.title = (self.tableView.isEditing) ? "Done" : "Edit"
+    }
+    
     
     @IBAction func trashAction(_ sender: Any) {
         
@@ -103,6 +105,8 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CartItemsTableViewCell.identifire, for: indexPath) as! CartItemsTableViewCell
         
         cell.setupUI(with: cartItems[indexPath.row])
+        cell.accessoryType = self.selectedCells.contains(indexPath.row) ? .checkmark : .disclosureIndicator
+        
         
         let total = Double(self.cartItems.count) * cartItems[indexPath.row].price
         self.totalPrice = "\(total)"
@@ -122,6 +126,34 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(detailsController, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to
+                   destinationIndexPath: IndexPath) {
+        let movedobjTemp = cartItems[sourceIndexPath.item]
+        cartItems.remove(at: sourceIndexPath.item)
+        cartItems.insert (movedobjTemp, at: destinationIndexPath.item)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            cartItems.remove(at: indexPath.item)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func deSelectCell(tableView: UITableView, indexPath: IndexPath) {
+        
+    }
+    
+    func selectCell(tableView: UITableView, indexPath: IndexPath) {
+        
+    }
+
+    
     func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         let index = indexPath.row
         let identifier = "\(index)" as NSString
@@ -131,22 +163,44 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         return UIContextMenuConfiguration(
             identifier: identifier, previewProvider: nil) { _ in
                 
-                let mapAction = UIAction(title: "Share",
+                let shareAction = UIAction(title: "Share",
                                          image: UIImage(systemName: "square.and.arrow.up")) { _ in
                     
                     self.doShare(shareItems: [cell.contentView.asImage()])
                 }
                 
-                let shareAction = UIAction(
+                let deleteAction = UIAction(
                     title: "Remove",
                     image: UIImage(systemName: "trash"),
                     attributes: .destructive,
                     state: .mixed) { _ in
-//                        self.addToCart(dish: dish)
+                        let item = self.cartItems[indexPath.row]
+                        self.cartPresenter.deleteItem(item: item)
+                    }
+                
+                var selectionTitle: String = "Select"
+                var selectionImage: String = "checkmark.circle"
+                
+                if self.selectedCells.contains(index) {
+                    selectionTitle = "Unselect"
+                    selectionImage = "circle"
+                }
+                
+                let selectAction = UIAction(
+                    title: selectionTitle,
+                    image: UIImage(systemName: selectionImage),
+                    state: .off) { _ in
+                        if self.selectedCells.contains(index) {
+                            let index = self.selectedCells.firstIndex(of: index)
+                            self.selectedCells.remove(at: index!)
+                        }else {
+                            self.selectedCells.append(indexPath.row)
+                        }
+                        self.tableView.reloadData()
                     }
                 
                 return UIMenu(title: "Options", image: nil,
-                              children: [mapAction, shareAction])
+                              children: [deleteAction, shareAction, selectAction])
             }
     }
     
@@ -157,52 +211,6 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         return UISwipeActionsConfiguration(actions: [action])
-    }
-}
-
-extension CartViewController {
-    
-    fileprivate func doAuth() {
-        touchMe.authenticateUser() { [weak self] message in
-            if let message = message {
-                let alertView = UIAlertController(title: "Error",
-                                                  message: message,
-                                                  preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "Darn!", style: .default)
-                alertView.addAction(okAction)
-                self?.present(alertView, animated: true)
-                
-            } else {
-//                self?.performSegue(withIdentifier: "dismissLogin", sender: self)
-            }
-        }
-    }
-    
-    func checkLogin(username: String, password: String) -> Bool {
-      guard username == UserDefaults.standard.value(forKey: "username") as? String else {
-        return false
-      }
-      
-      do {
-        let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName,
-                                                account: username,
-                                                accessGroup: KeychainConfiguration.accessGroup)
-        let keychainPassword = try passwordItem.readPassword()
-        return password == keychainPassword
-      }
-      catch {
-        fatalError("Error reading password from keychain - \(error)")
-      }
-      return false
-    }
-    
-    private func showLoginFailedAlert() {
-      let alertView = UIAlertController(title: "Login Problem",
-                                        message: "Wrong username or password.",
-                                        preferredStyle:. alert)
-      let okAction = UIAlertAction(title: "Foiled Again!", style: .default)
-      alertView.addAction(okAction)
-      present(alertView, animated: true)
     }
 }
 

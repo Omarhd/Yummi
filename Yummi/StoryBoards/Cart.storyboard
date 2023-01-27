@@ -13,7 +13,7 @@
         <array key="Cairo-Bold.ttf">
             <string>Cairo-Bold</string>
         </array>
-        <array key="Cairo-VariableFont_slnt,wght.ttf">
+        <array key="Cairo-Regular.ttf">
             <string>Cairo-Regular</string>
         </array>
     </customFonts>
@@ -26,86 +26,137 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vf0-CV-lkx">
-                                <rect key="frame" x="0.0" y="92" width="414" height="553"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vf0-CV-lkx">
+                                <rect key="frame" x="0.0" y="92" width="414" height="656"/>
                                 <color key="backgroundColor" name="BG"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="VX7-c5-V1j"/>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="MMD-7y-fGx"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EX-Hr-AeA" customClass="CardView" customModule="Yummi" customModuleProvider="target">
-                                <rect key="frame" x="20" y="653" width="374" height="140"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EX-Hr-AeA" customClass="CardView" customModule="Yummi" customModuleProvider="target">
+                                <rect key="frame" x="16" y="756" width="382" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J96-0V-J6r">
-                                        <rect key="frame" x="8" y="8" width="358" height="124"/>
+                                        <rect key="frame" x="16" y="8" width="350" height="104"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pi7-VG-3uH">
-                                                <rect key="frame" x="0.0" y="0.0" width="358" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="29.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RY9-N4-vj2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="29.5"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiZ-UN-9Qc">
-                                                        <rect key="frame" x="179" y="0.0" width="179" height="36"/>
+                                                        <rect key="frame" x="175" y="0.0" width="175" height="29.5"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fmw-6Z-ATO">
-                                                <rect key="frame" x="0.0" y="44" width="358" height="36"/>
+                                                <rect key="frame" x="0.0" y="37.5" width="350" height="29"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Charge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECn-SM-YLZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="29"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMt-3J-iVt">
-                                                        <rect key="frame" x="179" y="0.0" width="179" height="36"/>
+                                                        <rect key="frame" x="175" y="0.0" width="175" height="29"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RyW-9L-osc">
-                                                <rect key="frame" x="0.0" y="88" width="358" height="36"/>
+                                                <rect key="frame" x="0.0" y="74.5" width="350" height="29.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veR-vv-i4W">
-                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="29.5"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLd-Na-Oca">
-                                                        <rect key="frame" x="179" y="0.0" width="179" height="36"/>
+                                                        <rect key="frame" x="175" y="0.0" width="175" height="29.5"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </stackView>
                                         </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" name="BG"/>
+                                <color key="backgroundColor" name="Cells"/>
                                 <constraints>
                                     <constraint firstItem="J96-0V-J6r" firstAttribute="top" secondItem="2EX-Hr-AeA" secondAttribute="top" constant="8" id="3u3-uT-d4l"/>
                                     <constraint firstAttribute="bottom" secondItem="J96-0V-J6r" secondAttribute="bottom" constant="8" id="7oq-YL-LlN"/>
-                                    <constraint firstItem="J96-0V-J6r" firstAttribute="leading" secondItem="2EX-Hr-AeA" secondAttribute="leading" constant="8" id="Gnc-IJ-aBi"/>
-                                    <constraint firstAttribute="trailing" secondItem="J96-0V-J6r" secondAttribute="trailing" constant="8" id="HLL-vD-7UK"/>
-                                    <constraint firstAttribute="height" constant="140" id="Pmv-qZ-Jew"/>
+                                    <constraint firstItem="J96-0V-J6r" firstAttribute="leading" secondItem="2EX-Hr-AeA" secondAttribute="leading" constant="16" id="Gnc-IJ-aBi"/>
+                                    <constraint firstAttribute="trailing" secondItem="J96-0V-J6r" secondAttribute="trailing" constant="16" id="HLL-vD-7UK"/>
+                                    <constraint firstAttribute="height" constant="120" id="Pmv-qZ-Jew"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" systemColor="opaqueSeparatorColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-x6-Ax0">
@@ -130,29 +181,34 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
-                            <constraint firstItem="2EX-Hr-AeA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="0s7-JM-RlI"/>
+                            <constraint firstItem="2EX-Hr-AeA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="0s7-JM-RlI"/>
                             <constraint firstItem="Vf0-CV-lkx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1sA-fi-GNs"/>
                             <constraint firstItem="gLJ-x6-Ax0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="3ji-pn-ZIw"/>
                             <constraint firstItem="gLJ-x6-Ax0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7RU-2M-XON"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2EX-Hr-AeA" secondAttribute="trailing" constant="20" id="9Gb-XM-lm7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2EX-Hr-AeA" secondAttribute="trailing" constant="16" id="9Gb-XM-lm7"/>
                             <constraint firstItem="Vf0-CV-lkx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="FNz-Ri-P5G"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gLJ-x6-Ax0" secondAttribute="trailing" id="O1S-ZL-xdM"/>
                             <constraint firstAttribute="bottom" secondItem="gLJ-x6-Ax0" secondAttribute="bottom" id="UMH-iY-WZV"/>
                             <constraint firstItem="Vf0-CV-lkx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="bXA-B2-FwR"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="2EX-Hr-AeA" secondAttribute="bottom" constant="20" id="edT-mY-LZP"/>
+                            <constraint firstAttribute="bottom" secondItem="2EX-Hr-AeA" secondAttribute="bottom" constant="20" id="edT-mY-LZP"/>
                             <constraint firstItem="2EX-Hr-AeA" firstAttribute="top" secondItem="Vf0-CV-lkx" secondAttribute="bottom" constant="8" symbolic="YES" id="tvL-v4-ohb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Cart" largeTitleDisplayMode="never" id="7i7-He-jsk">
                         <barButtonItem key="backBarButtonItem" title=" " id="YkL-ii-csa"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" springLoaded="YES" style="plain" id="scN-wH-w2B">
+                            <connections>
+                                <action selector="edtiCartAction:" destination="Y6W-OH-hqX" id="V6q-Lo-uIX"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem style="done" id="NyC-Cj-kqI">
+                            <barButtonItem title="Send" id="NyC-Cj-kqI">
                                 <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5pT-ug-lxA">
                                     <rect key="frame" x="302" y="0.0" width="92" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" name="CartTintColor"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="tinted" title="Done">
+                                    <buttonConfiguration key="configuration" style="tinted" title="Send">
                                         <fontDescription key="titleFontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </buttonConfiguration>
@@ -218,6 +274,12 @@
         <namedColor name="CartTintColor">
             <color red="0.12200000137090683" green="0.32499998807907104" blue="0.019999999552965164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Cells">
+            <color red="0.94900000095367432" green="0.94999998807907104" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

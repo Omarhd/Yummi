@@ -7,7 +7,6 @@
 
 import UIKit
 import ProgressHUD
-import SkeletonView
 import Instructions
 import UIView_Shimmer
 
@@ -34,9 +33,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Utility().doLocalAuthentication()
-        
+                
+        presentLockScene()
         updateUserInterface()
         homePresenter.attachView(self)
         self.homePresenter.getAllCategories()
@@ -54,6 +52,12 @@ class HomeViewController: UIViewController {
         gesture.direction = .down
         view.addGestureRecognizer(gesture)
         
+    }
+    
+    private func presentLockScene() {
+        let lockScene = LocalAuthViewController()
+        lockScene.modalPresentationStyle = .fullScreen
+        self.present(lockScene, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,73 +84,9 @@ class HomeViewController: UIViewController {
         chefCollectionView.register(UINib(nibName: ChefCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: ChefCollectionViewCell.identifire)
         
     }
-    
-    fileprivate func showSkeletonAnimationView() {
-        
-        storysCollectionView.isSkeletonable = true
-        storysCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
-                                                          animation: nil,
-                                                          transition: .crossDissolve(0.25))
-        
-        categoryCollectionView.isSkeletonable = true
-        categoryCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
-                                                            animation: nil,
-                                                            transition: .crossDissolve(0.25))
-        
-        popularCollectionView.isSkeletonable = true
-        popularCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
-                                                           animation: nil,
-                                                           transition: .crossDissolve(0.25))
-        
-        chefCollectionView.isSkeletonable = true
-        chefCollectionView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray),
-                                                        animation: nil,
-                                                        transition: .crossDissolve(0.25))
-    }
-    
-    fileprivate func stopSkeletonAnimationView() {
-        
-        self.storysCollectionView.stopSkeletonAnimation()
-        self.storysCollectionView.hideSkeleton()
-        
-        self.categoryCollectionView.stopSkeletonAnimation()
-        self.categoryCollectionView.hideSkeleton()
-        
-        self.popularCollectionView.stopSkeletonAnimation()
-        self.popularCollectionView.hideSkeleton()
-        
-        self.chefCollectionView.stopSkeletonAnimation()
-        self.chefCollectionView.hideSkeleton()
-    }
-    
-    fileprivate func presentLockScene() {
-        let lockScene = BiometricsAuthViewController()
-        lockScene.modalPresentationStyle = .overFullScreen
-        self.present(lockScene, animated: true)
-    }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, SkeletonCollectionViewDataSource {
-    
-    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> SkeletonView.ReusableCellIdentifier {
-        
-        var identifire: String = ""
-        
-        switch skeletonView {
-        case storysCollectionView:
-            identifire = StorysCollectionViewCell.identifire
-        case categoryCollectionView:
-            identifire = CategoryCollectionViewCell.identifire
-        case popularCollectionView:
-            identifire = PopularCollectionViewCell.identifire
-        case chefCollectionView:
-            identifire = ChefCollectionViewCell.identifire
-        default :
-            break
-        }
-        return identifire
-    }
-    
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
@@ -310,6 +250,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 extension HomeViewController: CategoriesViewDelegate {
+   
     func startLoading() {
         showSkeletonAnimationView()
     }

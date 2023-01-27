@@ -111,14 +111,11 @@ extension SearchViewController: UISearchResultsUpdating, UISearchControllerDeleg
     func filterForSearchTextAndScopeButton(searchText: String, scopeButton : String = "All") {
 
         filteredShapes = shapeList.filter { shape in
-            self.emptyResultView.isHidden = true
-
             let scopeMatch = (scopeButton == "All" || shape.name.lowercased().contains(scopeButton.lowercased()))
             if(searchController.searchBar.text != "") {
                 let searchTextMatch = shape.name.lowercased().contains(searchText.lowercased())
                 return scopeMatch && searchTextMatch
             } else {
-                self.emptyResultView.isHidden = true
                 return scopeMatch
             }
         }
