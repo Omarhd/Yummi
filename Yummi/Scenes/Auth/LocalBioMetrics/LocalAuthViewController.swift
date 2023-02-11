@@ -19,7 +19,6 @@ class LocalAuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        blurAnimation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,7 +68,7 @@ class LocalAuthViewController: UIViewController {
         let visualEffectView = UIVisualEffectView(effect: blurEffect)
         visualEffectView.frame = self.mainView.bounds
         visualEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        visualEffectView.alpha = 0
+        visualEffectView.alpha = 0.4
         
         self.mainView.addSubview(visualEffectView)
         
@@ -78,5 +77,11 @@ class LocalAuthViewController: UIViewController {
                 visualEffectView.alpha = 1
             }
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        blurAnimation()
     }
 }

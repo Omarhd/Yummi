@@ -2,20 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleIdentifier</key>
-	<string></string>
-	<key>NSCameraUsageDescription</key>
-	<string></string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string></string>
 	<key>APP_DISPLAY_NAME</key>
 	<string>${APP_DISPLAY_NAME}</string>
-	<key>SLASH</key>
-	<string>$(SLASH)</string>
-	<key>BASE_URL</key>
-	<string>$(BASE_URL)</string>
 	<key>AUTH_URL</key>
 	<string>$(AUTH_URL)</string>
+	<key>BASE_URL</key>
+	<string>$(BASE_URL)</string>
+	<key>SLASH</key>
+	<string>$(SLASH)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -35,5 +29,13 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+		<string>processing</string>
+		<string>push-to-talk</string>
+		<string>voip</string>
+	</array>
 </dict>
 </plist>

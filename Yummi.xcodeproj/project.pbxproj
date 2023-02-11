@@ -120,6 +120,7 @@
 		4CB46C49290D8ECD00BEEE06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */; };
 		4CB46C75290E72BA00BEEE06 /* NotificationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */; };
 		4CB46C77290E734600BEEE06 /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C76290E734600BEEE06 /* NotificationsModel.swift */; };
+		4CBBAA1329979B9D00C292AA /* CallsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAA1229979B9D00C292AA /* CallsManager.swift */; };
 		4CC2116D291960CE00B2EA1E /* Arabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2116C291960CE00B2EA1E /* Arabic.strings */; };
 		4CC2116F291960E100B2EA1E /* English.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2116E291960E100B2EA1E /* English.strings */; };
 		4CC396B2290E7E03009C6149 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC396B1290E7E03009C6149 /* NotificationsTableViewCell.swift */; };
@@ -320,6 +321,7 @@
 		4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailsViewController.swift; sourceTree = "<group>"; };
 		4CB46C76290E734600BEEE06 /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
+		4CBBAA1229979B9D00C292AA /* CallsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsManager.swift; sourceTree = "<group>"; };
 		4CC2116C291960CE00B2EA1E /* Arabic.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Arabic.strings; sourceTree = "<group>"; };
 		4CC2116E291960E100B2EA1E /* English.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = English.strings; sourceTree = "<group>"; };
 		4CC396B1290E7E03009C6149 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
@@ -960,6 +962,14 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		4CBBAA1129979B6400C292AA /* Calls */ = {
+			isa = PBXGroup;
+			children = (
+				4CBBAA1229979B9D00C292AA /* CallsManager.swift */,
+			);
+			path = Calls;
+			sourceTree = "<group>";
+		};
 		4CC396B0290E7DE4009C6149 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -971,6 +981,7 @@
 		4CC7408B293441AE00E37B81 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				4CBBAA1129979B6400C292AA /* Calls */,
 				4CC740922934479000E37B81 /* ChatDetails */,
 				4CC7408C293441C300E37B81 /* ChatViewController.swift */,
 				4CC74090293442D200E37B81 /* ChatPresenter.swift */,
@@ -1389,6 +1400,7 @@
 				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
 				4CA414F3294CAD84008DDD45 /* StorysCollectionViewCell.swift in Sources */,
 				4CFDC50D28CE995600E5B753 /* SceneMode.swift in Sources */,
+				4CBBAA1329979B9D00C292AA /* CallsManager.swift in Sources */,
 				4C9EA44928C3A9B10053FE38 /* Results.swift in Sources */,
 				4C9EA45528C3AAAE0053FE38 /* AppManager.swift in Sources */,
 				4C9EA45328C3AA0B0053FE38 /* APiErrors.swift in Sources */,
@@ -1611,6 +1623,8 @@
 				INFOPLIST_FILE = Yummi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
@@ -1622,6 +1636,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1817,6 +1832,8 @@
 				INFOPLIST_FILE = Yummi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
@@ -1828,6 +1845,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1864,6 +1882,8 @@
 				INFOPLIST_FILE = Yummi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
@@ -1875,6 +1895,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2054,6 +2075,8 @@
 				INFOPLIST_FILE = Yummi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = ayya;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location when you share location with user in chat";
@@ -2065,6 +2088,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -13,6 +13,8 @@ import IQKeyboardManagerSwift
 
 class ChatDetailsViewController: MessagesViewController {
     
+    let callManager = CallsManager()
+    
     let currentUser = Sender(senderId: "self", displayName: "Me")
     let otherUser = Sender(senderId: "tech", displayName: "Tech Support")
     
@@ -21,6 +23,12 @@ class ChatDetailsViewController: MessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let callButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(startCall))
+        callButton.image = UIImage(systemName: "phone.fill")
+        self.navigationItem.rightBarButtonItem = callButton
+        
+        reciveFakeCall()
         
         self.messagesCollectionView.backgroundColor = UIColor(named: "BG")
         setupProtocols()
@@ -57,6 +65,22 @@ class ChatDetailsViewController: MessagesViewController {
         messages.append(Message(sender: otherUser, messageId: "10", sentDate: Date().addingTimeInterval(-12500), kind: .photo(Media(placeholderImage: UIImage(systemName: "square.and.arrow.up.on.square.fill")!, size: CGSize(width: 250, height: 100)))))
         messages.append(Message(sender: currentUser, messageId: "11", sentDate: Date().addingTimeInterval(-16590), kind: .text("Hello")))
         
+    }
+    
+    @objc func startCall() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            let id = UUID()
+            let name = self.title
+            self.callManager.startCall(id, handle: name ?? "New contact")
+        })
+    }
+    
+    @objc func reciveFakeCall() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            let id = UUID()
+            let name = self.title
+            self.callManager.reportIncommingCalls(id, handle: name ?? "FPi")
+        })
     }
     
     fileprivate func setupProtocols() {

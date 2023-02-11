@@ -39,7 +39,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let chatDetailsViewController = ChatDetailsViewController()
-        chatDetailsViewController.title = "Support"
+        chatDetailsViewController.title = self.mocData[indexPath.row].name
         self.navigationController?.pushViewController(chatDetailsViewController, animated: true)
     }
 }
