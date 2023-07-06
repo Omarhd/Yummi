@@ -17,7 +17,7 @@ extension ChatDetailsViewController: InputBarAccessoryViewDelegate {
         for component in inputBar.inputTextView.components {
             if let text = component as? String {
                 print(text)
-                messages.append(Message(sender: currentSender(), messageId: "3", sentDate: Date(), kind: .text(text)))
+                messages.append(Messages(sender: currentSender(), messageId: "3", sentDate: Date(), kind: .text(text)))
                 scrollToLastMessage()
                 inputBar.inputTextView.text = ""
                 self.messagesCollectionView.reloadData()

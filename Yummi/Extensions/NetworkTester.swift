@@ -166,13 +166,13 @@ struct Network {
 public func updateUserInterface() {
     switch Network.reachability.status {
     case .unreachable:
-        Messages().showTopNotificaionForPoorNetwork { status in
+        AlertMessages().showTopNotificaionForPoorNetwork { status in
             updateUserInterface()
         }
     case .wan:
-        Messages().showTopNotificaionForGoodNetwork()
+        AlertMessages().showTopNotificaionForGoodNetwork()
     case .wifi:
-        Messages().showTopNotificaionForGoodNetwork()
+        AlertMessages().showTopNotificaionForGoodNetwork()
     }
     print("Reachability Summary")
     print("Status:", Network.reachability.status)

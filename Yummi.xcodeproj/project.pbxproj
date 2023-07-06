@@ -120,6 +120,18 @@
 		4CB46C49290D8ECD00BEEE06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */; };
 		4CB46C75290E72BA00BEEE06 /* NotificationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */; };
 		4CB46C77290E734600BEEE06 /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB46C76290E734600BEEE06 /* NotificationsModel.swift */; };
+		4CBAA0BA29A26167003116F0 /* WebRtcConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA0B929A26167003116F0 /* WebRtcConfigurations.swift */; };
+		4CBAA0BD29A262A8003116F0 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 4CBAA0BC29A262A8003116F0 /* Starscream */; };
+		4CBAA0C029A26444003116F0 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = 4CBAA0BF29A26444003116F0 /* WebRTC */; };
+		4CBAA0C329A26A98003116F0 /* SignalClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA0C229A26A98003116F0 /* SignalClient.swift */; };
+		4CBAA0C529A26ABC003116F0 /* WebRtcClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA0C429A26ABC003116F0 /* WebRtcClient.swift */; };
+		4CBAA0C729A26AD9003116F0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA0C629A26AD9003116F0 /* Message.swift */; };
+		4CBAA0CA29A26B15003116F0 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA0C929A26B15003116F0 /* SocketProvider.swift */; };
+		4CBAA0CC29A26B2D003116F0 /* StarScreamProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA0CB29A26B2D003116F0 /* StarScreamProvider.swift */; };
+		4CBAA0CF29A26B60003116F0 /* RTCStauts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA0CE29A26B60003116F0 /* RTCStauts.swift */; };
+		4CBAA0D129A26B83003116F0 /* SessionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA0D029A26B83003116F0 /* SessionDescription.swift */; };
+		4CBAA0D329A26BA3003116F0 /* ICECanididate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA0D229A26BA3003116F0 /* ICECanididate.swift */; };
+		4CBAA0DE29A36C41003116F0 /* NativeWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA0DD29A36C41003116F0 /* NativeWebSocket.swift */; };
 		4CBBAA1329979B9D00C292AA /* CallsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAA1229979B9D00C292AA /* CallsManager.swift */; };
 		4CC2116D291960CE00B2EA1E /* Arabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2116C291960CE00B2EA1E /* Arabic.strings */; };
 		4CC2116F291960E100B2EA1E /* English.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2116E291960E100B2EA1E /* English.strings */; };
@@ -144,7 +156,7 @@
 		4CE1D44728DF7632005E5ADF /* Products.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1D44428DF7632005E5ADF /* Products.xcdatamodeld */; };
 		4CE1D4C628DF7C5B005E5ADF /* Products+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1D44828DF769D005E5ADF /* Products+CoreDataClass.swift */; };
 		4CE1D4C728DF7C5F005E5ADF /* Products+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1D44928DF769D005E5ADF /* Products+CoreDataProperties.swift */; };
-		4CE8490328D24F7700282725 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8490228D24F7700282725 /* Messages.swift */; };
+		4CE8490328D24F7700282725 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8490228D24F7700282725 /* AlertMessages.swift */; };
 		4CE8490528D2509C00282725 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8490428D2509C00282725 /* UserDefaults.swift */; };
 		4CFDC50028CA84A400E5B753 /* SearchBarNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFDC4FF28CA84A400E5B753 /* SearchBarNavigationController.swift */; };
 		4CFDC50B28CE974200E5B753 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFDC50A28CE974200E5B753 /* SettingsTableViewController.swift */; };
@@ -321,6 +333,16 @@
 		4CB46C48290D8ECD00BEEE06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4CB46C74290E72BA00BEEE06 /* NotificationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailsViewController.swift; sourceTree = "<group>"; };
 		4CB46C76290E734600BEEE06 /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
+		4CBAA0B929A26167003116F0 /* WebRtcConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRtcConfigurations.swift; sourceTree = "<group>"; };
+		4CBAA0C229A26A98003116F0 /* SignalClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalClient.swift; sourceTree = "<group>"; };
+		4CBAA0C429A26ABC003116F0 /* WebRtcClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRtcClient.swift; sourceTree = "<group>"; };
+		4CBAA0C629A26AD9003116F0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		4CBAA0C929A26B15003116F0 /* SocketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketProvider.swift; sourceTree = "<group>"; };
+		4CBAA0CB29A26B2D003116F0 /* StarScreamProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarScreamProvider.swift; sourceTree = "<group>"; };
+		4CBAA0CE29A26B60003116F0 /* RTCStauts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCStauts.swift; sourceTree = "<group>"; };
+		4CBAA0D029A26B83003116F0 /* SessionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDescription.swift; sourceTree = "<group>"; };
+		4CBAA0D229A26BA3003116F0 /* ICECanididate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICECanididate.swift; sourceTree = "<group>"; };
+		4CBAA0DD29A36C41003116F0 /* NativeWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeWebSocket.swift; sourceTree = "<group>"; };
 		4CBBAA1229979B9D00C292AA /* CallsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsManager.swift; sourceTree = "<group>"; };
 		4CC2116C291960CE00B2EA1E /* Arabic.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Arabic.strings; sourceTree = "<group>"; };
 		4CC2116E291960E100B2EA1E /* English.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = English.strings; sourceTree = "<group>"; };
@@ -346,7 +368,7 @@
 		4CE1D44628DF7632005E5ADF /* Auth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Auth.xcdatamodel; sourceTree = "<group>"; };
 		4CE1D44828DF769D005E5ADF /* Products+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Products+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4CE1D44928DF769D005E5ADF /* Products+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Products+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4CE8490228D24F7700282725 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		4CE8490228D24F7700282725 /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
 		4CE8490428D2509C00282725 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		4CFDC4FF28CA84A400E5B753 /* SearchBarNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarNavigationController.swift; sourceTree = "<group>"; };
 		4CFDC50A28CE974200E5B753 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -370,6 +392,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E579E1F4CD215DB7F322627B /* Pods_Yummi.framework in Frameworks */,
+				4CBAA0C029A26444003116F0 /* WebRTC in Frameworks */,
+				4CBAA0BD29A262A8003116F0 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,7 +748,7 @@
 				4C9EA46928C3B54D0053FE38 /* UIViews.swift */,
 				4C98229028C5372C00C4D4F5 /* ViewControllerNavigators.swift */,
 				4CFDC50C28CE995600E5B753 /* SceneMode.swift */,
-				4CE8490228D24F7700282725 /* Messages.swift */,
+				4CE8490228D24F7700282725 /* AlertMessages.swift */,
 				4CE8490428D2509C00282725 /* UserDefaults.swift */,
 				4C1C281529030DCD0043886B /* NetworkTester.swift */,
 				4C1C2817290311F20043886B /* SwiftMessages.swift */,
@@ -740,6 +764,7 @@
 		4C9EA43D28C3A8B70053FE38 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4CBAA0B829A2612E003116F0 /* WEB RTC */,
 				4C9EA44228C3A9640053FE38 /* APis */,
 				4C9EA44128C3A95A0053FE38 /* Core */,
 			);
@@ -749,6 +774,7 @@
 		4C9EA43E28C3A90B0053FE38 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				4CBAA0B929A26167003116F0 /* WebRtcConfigurations.swift */,
 				4C475D5428D4A0CE0074D3D0 /* ServerConfig.swift */,
 				4C9EA47828C3D4F80053FE38 /* Release.xcconfig */,
 				4C475D5A28D4A8E00074D3D0 /* Debug.xcconfig */,
@@ -962,6 +988,46 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		4CBAA0B829A2612E003116F0 /* WEB RTC */ = {
+			isa = PBXGroup;
+			children = (
+				4CBAA0CD29A26B4D003116F0 /* Extensions */,
+				4CBAA0C829A26AE6003116F0 /* SocketProviders */,
+				4CBAA0C129A26A86003116F0 /* Services */,
+			);
+			path = "WEB RTC";
+			sourceTree = "<group>";
+		};
+		4CBAA0C129A26A86003116F0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4CBAA0C229A26A98003116F0 /* SignalClient.swift */,
+				4CBAA0C429A26ABC003116F0 /* WebRtcClient.swift */,
+				4CBAA0C629A26AD9003116F0 /* Message.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4CBAA0C829A26AE6003116F0 /* SocketProviders */ = {
+			isa = PBXGroup;
+			children = (
+				4CBAA0C929A26B15003116F0 /* SocketProvider.swift */,
+				4CBAA0CB29A26B2D003116F0 /* StarScreamProvider.swift */,
+				4CBAA0DD29A36C41003116F0 /* NativeWebSocket.swift */,
+			);
+			path = SocketProviders;
+			sourceTree = "<group>";
+		};
+		4CBAA0CD29A26B4D003116F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4CBAA0CE29A26B60003116F0 /* RTCStauts.swift */,
+				4CBAA0D029A26B83003116F0 /* SessionDescription.swift */,
+				4CBAA0D229A26BA3003116F0 /* ICECanididate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4CBBAA1129979B6400C292AA /* Calls */ = {
 			isa = PBXGroup;
 			children = (
@@ -1093,6 +1159,10 @@
 				4CDD10C828DE1B9E00BD760C /* PBXTargetDependency */,
 			);
 			name = Yummi;
+			packageProductDependencies = (
+				4CBAA0BC29A262A8003116F0 /* Starscream */,
+				4CBAA0BF29A26444003116F0 /* WebRTC */,
+			);
 			productName = Yummi;
 			productReference = 4C9EA40728C3A83B0053FE38 /* Yummi.app */;
 			productType = "com.apple.product-type.application";
@@ -1188,6 +1258,10 @@
 				Base,
 			);
 			mainGroup = 4C9EA3FE28C3A83B0053FE38;
+			packageReferences = (
+				4CBAA0BB29A262A8003116F0 /* XCRemoteSwiftPackageReference "Starscream" */,
+				4CBAA0BE29A26444003116F0 /* XCRemoteSwiftPackageReference "WebRTC" */,
+			);
 			productRefGroup = 4C9EA40828C3A83B0053FE38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1395,6 +1469,8 @@
 				4C98229628C5450D00C4D4F5 /* CartViewController.swift in Sources */,
 				4C3AD11028DB8E930000BB90 /* ServicesFeed.swift in Sources */,
 				4CC74091293442D200E37B81 /* ChatPresenter.swift in Sources */,
+				4CBAA0C329A26A98003116F0 /* SignalClient.swift in Sources */,
+				4CBAA0D129A26B83003116F0 /* SessionDescription.swift in Sources */,
 				4C1C281428FEB97C0043886B /* LocationModel.swift in Sources */,
 				4C9741912908578F0066A41A /* ProfileTableViewController.swift in Sources */,
 				4C9EA45D28C3AB600053FE38 /* StringLocalization.swift in Sources */,
@@ -1402,6 +1478,7 @@
 				4CFDC50D28CE995600E5B753 /* SceneMode.swift in Sources */,
 				4CBBAA1329979B9D00C292AA /* CallsManager.swift in Sources */,
 				4C9EA44928C3A9B10053FE38 /* Results.swift in Sources */,
+				4CBAA0D329A26BA3003116F0 /* ICECanididate.swift in Sources */,
 				4C9EA45528C3AAAE0053FE38 /* AppManager.swift in Sources */,
 				4C9EA45328C3AA0B0053FE38 /* APiErrors.swift in Sources */,
 				4C9822B128C6846600C4D4F5 /* CategoryDetailsTableViewCell.swift in Sources */,
@@ -1410,6 +1487,7 @@
 				4CC74094293447AB00E37B81 /* ChatDetailsViewController.swift in Sources */,
 				4CE8490528D2509C00282725 /* UserDefaults.swift in Sources */,
 				4C49407D29227BE6001FB1CC /* UserDataModel.swift in Sources */,
+				4CBAA0DE29A36C41003116F0 /* NativeWebSocket.swift in Sources */,
 				4C9E3D60297F4C5C0076C2CC /* Model.swift in Sources */,
 				4C9EA40F28C3A83B0053FE38 /* HomeViewController.swift in Sources */,
 				4C9EA44628C3A9930053FE38 /* AuthClient.swift in Sources */,
@@ -1417,6 +1495,7 @@
 				4C1C281228FEB1580043886B /* PlacesTableViewCell.swift in Sources */,
 				4C1132BF2982914400E44513 /* UserAuthPresenter.swift in Sources */,
 				4C1132C02982914400E44513 /* UserAuthViewController.swift in Sources */,
+				4CBAA0CC29A26B2D003116F0 /* StarScreamProvider.swift in Sources */,
 				4CAC0BD0296FED2E00DC874C /* Share.swift in Sources */,
 				4C11329A29809EA100E44513 /* HomeSkeletonViewExtension.swift in Sources */,
 				4CD73DEF29622A3200EE0F20 /* StreachTableViewHeader.swift in Sources */,
@@ -1431,11 +1510,14 @@
 				4C1132B62982805800E44513 /* LocalAuthViewController.swift in Sources */,
 				4C9EA46C28C3B66A0053FE38 /* StaticDataModel.swift in Sources */,
 				4C1C280728FEA0E50043886B /* TrackingViewController.swift in Sources */,
+				4CBAA0C529A26ABC003116F0 /* WebRtcClient.swift in Sources */,
 				4C49407F29227DFF001FB1CC /* Buttons.swift in Sources */,
+				4CBAA0C729A26AD9003116F0 /* Message.swift in Sources */,
 				4C9EA49128C4C8830053FE38 /* ChefCollectionViewCell.swift in Sources */,
 				4C21936B28D737AD0018E8E8 /* BalaceViewController.swift in Sources */,
 				4CC7408D293441C300E37B81 /* ChatViewController.swift in Sources */,
 				4C9EA45128C3A9FE0053FE38 /* EndPoints.swift in Sources */,
+				4CBAA0BA29A26167003116F0 /* WebRtcConfigurations.swift in Sources */,
 				4C11329829809DCC00E44513 /* HomeEmptyViewExtension.swift in Sources */,
 				4CB46C49290D8ECD00BEEE06 /* MainTabBarController.swift in Sources */,
 				4C475D5528D4A0CE0074D3D0 /* ServerConfig.swift in Sources */,
@@ -1463,13 +1545,15 @@
 				4C19B9852926E65400FF4AF5 /* HomeInstructionsExtensions.swift in Sources */,
 				4C1132BE2982914400E44513 /* UserAuthModel.swift in Sources */,
 				4CE1D4C728DF7C5F005E5ADF /* Products+CoreDataProperties.swift in Sources */,
-				4CE8490328D24F7700282725 /* Messages.swift in Sources */,
+				4CE8490328D24F7700282725 /* AlertMessages.swift in Sources */,
 				4C9EA46828C3B29B0053FE38 /* OnBoardingViewController.swift in Sources */,
 				4C3AD10D28DB8E1C0000BB90 /* HomePresenter.swift in Sources */,
 				4C9822AA28C682BE00C4D4F5 /* CartItemsTableViewCell.swift in Sources */,
 				4C9EA44B28C3A9CB0053FE38 /* APiClient.swift in Sources */,
+				4CBAA0CF29A26B60003116F0 /* RTCStauts.swift in Sources */,
 				4C1C281629030DCD0043886B /* NetworkTester.swift in Sources */,
 				4C3AD11428DB90C00000BB90 /* HomeModel.swift in Sources */,
+				4CBAA0CA29A26B15003116F0 /* SocketProvider.swift in Sources */,
 				4C9EA48C28C40D860053FE38 /* PopularCollectionViewCell.swift in Sources */,
 				4C9EA46A28C3B54D0053FE38 /* UIViews.swift in Sources */,
 				4C9EA46128C3ABDD0053FE38 /* Global.swift in Sources */,
@@ -1618,7 +1702,7 @@
 				CODE_SIGN_ENTITLEMENTS = Yummi/Yummi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FD7KN86W7E;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
@@ -1827,7 +1911,7 @@
 				CODE_SIGN_ENTITLEMENTS = Yummi/Yummi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FD7KN86W7E;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
@@ -1877,7 +1961,7 @@
 				CODE_SIGN_ENTITLEMENTS = Yummi/Yummi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FD7KN86W7E;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
@@ -2070,7 +2154,7 @@
 				CODE_SIGN_ENTITLEMENTS = Yummi/YummiStaging.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FD7KN86W7E;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yummi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Yummie - Local";
@@ -2156,7 +2240,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FD7KN86W7E;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Latest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Latest;
@@ -2186,7 +2270,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FD7KN86W7E;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Latest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Latest;
@@ -2216,7 +2300,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FD7KN86W7E;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Latest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Latest;
@@ -2246,7 +2330,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FD7KN86W7E;
+				DEVELOPMENT_TEAM = 2C4XF58Z9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Latest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Latest;
@@ -2326,6 +2410,38 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4CBAA0BB29A262A8003116F0 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.4;
+			};
+		};
+		4CBAA0BE29A26444003116F0 /* XCRemoteSwiftPackageReference "WebRTC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stasel/WebRTC";
+			requirement = {
+				kind = exactVersion;
+				version = 109.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4CBAA0BC29A262A8003116F0 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CBAA0BB29A262A8003116F0 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+		4CBAA0BF29A26444003116F0 /* WebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CBAA0BE29A26444003116F0 /* XCRemoteSwiftPackageReference "WebRTC" */;
+			productName = WebRTC;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4CE1D44428DF7632005E5ADF /* Products.xcdatamodeld */ = {

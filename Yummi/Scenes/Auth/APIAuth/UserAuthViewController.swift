@@ -44,7 +44,7 @@ class UserAuthViewController: UIViewController {
               let password = passwordTextField.text, password.isNotEmpty
         else {
             
-            Messages().showErrorMessage(title: "Error", body: "please fill all fields")
+            AlertMessages().showErrorMessage(title: "Error", body: "please fill all fields")
             sender.shake()
             Vibration.heavy.vibrate()
             return
@@ -52,7 +52,7 @@ class UserAuthViewController: UIViewController {
         }
         
         guard phone.isVaildPhone else {
-            Messages().showErrorMessage(title: "Error", body: "sorry but phone isn't valid")
+            AlertMessages().showErrorMessage(title: "Error", body: "sorry but phone isn't valid")
             sender.shake()
             Vibration.heavy.vibrate()
             return }
@@ -101,7 +101,7 @@ extension UserAuthViewController: AuthViewDelegate {
     }
     
     func showErrorMessage(_ message: String) {
-        Messages().showErrorMessage(title: "Error", body: message)
+        AlertMessages().showErrorMessage(title: "Error", body: message)
         isModalInPresentation = false
     }
     

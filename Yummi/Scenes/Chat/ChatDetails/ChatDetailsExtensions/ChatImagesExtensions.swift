@@ -47,7 +47,7 @@ extension ChatDetailsViewController: UIImagePickerControllerDelegate, UINavigati
         self.dismiss(animated: true) { [weak self] in
             
             guard let image = info[.originalImage] as? UIImage else  { return }
-            self!.messages.append(Message(sender: self!.currentUser, messageId: "20", sentDate: Date(), kind: .photo(Media(placeholderImage: image, size: CGSize(width: 250, height: 250)))))
+            self!.messages.append(Messages(sender: self!.currentUser, messageId: "20", sentDate: Date(), kind: .photo(Media(placeholderImage: image, size: CGSize(width: 250, height: 250)))))
             self?.messagesCollectionView.reloadData()
             self?.scrollToLastMessage()
             

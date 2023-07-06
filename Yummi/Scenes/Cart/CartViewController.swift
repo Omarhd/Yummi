@@ -78,7 +78,7 @@ class CartViewController: UIViewController {
     @IBAction func trashAction(_ sender: Any) {
         
         if self.cartItems.isEmpty {
-            Messages().showErrorMessage(title: "Empty", body: "Cart Already Empty need to add items")
+            AlertMessages().showErrorMessage(title: "Empty", body: "Cart Already Empty need to add items")
         } else {
             presentDeleteAlert()
         }

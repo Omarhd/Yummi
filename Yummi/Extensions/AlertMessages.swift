@@ -8,7 +8,7 @@
 import UIKit
 import SwiftMessages
 
-class Messages {
+class AlertMessages {
     public func showTopNotificaionForGoodNetwork() {
         
         let view = MessageView.viewFromNib(layout: .messageView)

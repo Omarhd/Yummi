@@ -13,7 +13,7 @@ struct Sender: SenderType {
     var displayName: String
 }
 
-struct Message: MessageType {
+struct Messages: MessageType {
     
     var sender: MessageKit.SenderType
     var messageId: String

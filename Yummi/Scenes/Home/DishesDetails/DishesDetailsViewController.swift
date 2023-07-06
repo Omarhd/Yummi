@@ -81,9 +81,9 @@ class DishesDetailsViewController: UIViewController {
         
         do {
             try self.context.save()
-            Messages().showSuccessMessage(title: "Added", body: "Success added item to Cart")
+            AlertMessages().showSuccessMessage(title: "Added", body: "Success added item to Cart")
         } catch {
-            Messages().showErrorMessage(title: "Error", body: "can't added item to Cart")
+            AlertMessages().showErrorMessage(title: "Error", body: "can't added item to Cart")
         }
     }
     

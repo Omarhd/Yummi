@@ -54,11 +54,11 @@ class CartPresenter {
        
         do {
             try self.context.save()
-            Messages().showSuccessMessage(title: "Done", body: "Removed item.")
+            AlertMessages().showSuccessMessage(title: "Done", body: "Removed item.")
             self.cartView?.stopLoading()
 
         } catch {
-            Messages().showErrorMessage(title: "Error", body: "Can't Remove items for now.")
+            AlertMessages().showErrorMessage(title: "Error", body: "Can't Remove items for now.")
             self.cartView?.stopLoading()
 
         }
@@ -85,11 +85,11 @@ class CartPresenter {
         
         do {
             try self.context.save()
-            Messages().showSuccessMessage(title: "Done", body: "Cart is Clear.")
+            AlertMessages().showSuccessMessage(title: "Done", body: "Cart is Clear.")
             self.cartView?.stopLoading()
 
         } catch {
-            Messages().showErrorMessage(title: "Error", body: "Can't Remove items for now.")
+            AlertMessages().showErrorMessage(title: "Error", body: "Can't Remove items for now.")
             self.cartView?.stopLoading()
         }
         

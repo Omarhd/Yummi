@@ -11,6 +11,7 @@ enum BuildSettingsKey: String {
     
     case BASE_URL
     case AUTH_URL
+    case SIGNAL_LINE_SERVER
     
     var value: String {
         get {
@@ -25,23 +26,34 @@ class ServerConfig {
     
     var baseURL: String?
     var authURL: String?
+    var siganlLineServer: String?
     
     func setupBaseUrls() {
 #if RELEASE
         self.baseURL = BuildSettingsKey.BASE_URL.value
         self.authURL = BuildSettingsKey.AUTH_URL.value
+        self.siganlLineServer = BuildSettingsKey.SIGNAL_LINE_SERVER.value
+        
 #elseif DEBUG
         self.baseURL = BuildSettingsKey.BASE_URL.value
         self.authURL = BuildSettingsKey.AUTH_URL.value
+        self.siganlLineServer = BuildSettingsKey.SIGNAL_LINE_SERVER.value
+
 #elseif STAGING
         self.baseURL = BuildSettingsKey.BASE_URL.value
         self.authURL = BuildSettingsKey.AUTH_URL.value
+        self.siganlLineServer = BuildSettingsKey.SIGNAL_LINE_SERVER.value
+
 #elseif LOCAL
         self.baseURL = BuildSettingsKey.BASE_URL.value
         self.authURL = BuildSettingsKey.AUTH_URL.value
+        self.siganlLineServer = BuildSettingsKey.SIGNAL_LINE_SERVER.value
+
 #else
         self.baseURL = BuildSettingsKey.BASE_URL.value
         self.authURL = BuildSettingsKey.AUTH_URL.value
+        self.siganlLineServer = BuildSettingsKey.SIGNAL_LINE_SERVER.value
+
 #endif
         
     }

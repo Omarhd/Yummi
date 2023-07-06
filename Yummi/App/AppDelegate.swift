@@ -12,7 +12,8 @@ import IQKeyboardManagerSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
+    private let config = Config.default
+
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -127,6 +128,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    private func buildSignalingClient() -> SignalingClient {
+        
+        // iOS 13 has native websocket support. For iOS 12 or lower we will use 3rd party library.
+        let webSocketProvider: WebSocketProvider
+        
+        if #available(iOS 13.0, *) {
+            webSocketProvider = NativeWebSocket(url: self.config.signalingServerUrl)
+        } else {
+            webSocketProvider = StarscreamWebSocket(url: self.config.signalingServerUrl)
+        }
+        
+        return SignalingClient(webSocket: webSocketProvider)
     }
 }
 
